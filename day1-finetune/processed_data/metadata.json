@@ -1,0 +1,24 @@
+{
+  "dataset_info": {
+    "total_samples": 80,
+    "train_samples": 64,
+    "valid_samples": 16,
+    "positive_samples": 48,
+    "negative_samples": 32
+  },
+  "token_analysis": {
+    "total_samples": 80,
+    "mean_length": 1555.4875,
+    "median_length": 1554.0,
+    "min_length": 1161,
+    "max_length": 1936,
+    "std_length": 170.2202245438244,
+    "overflow_count": 0,
+    "overflow_rate": 0.0
+  },
+  "processing_info": {
+    "source_dataset": "neural-bridge/rag-dataset-12000",
+    "preprocessing": "RAFT + Chat Template",
+    "model_target": "LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct"
+  }
+}
