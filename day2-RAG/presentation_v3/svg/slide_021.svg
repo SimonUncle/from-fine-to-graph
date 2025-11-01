@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad021" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow021">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad021)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 4</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">Metadata Filtering 🏷️</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">시간/카테고리로 먼저 거르기</text>
+  <g transform="translate(200, 270)">
+    <rect x="0" y="0" width="720" height="650" rx="20" fill="#ffebee" filter="url(#shadow021)"/>
+    <text x="360" y="50" font-size="32" fill="#c62828" text-anchor="middle" font-weight="bold">❌ 필터링 없음</text>
+    <g transform="translate(50, 100)">
+      <text x="310" y="0" font-size="24" fill="#666" text-anchor="middle" font-weight="bold">13개 모든 문서 검색</text>
+      <rect x="20" y="20" width="600" height="60" rx="10" fill="white"/>
+      <text x="320" y="58" font-size="20" fill="#666" text-anchor="middle">김치찌개 레시피 (2023)</text>
+      <rect x="20" y="95" width="600" height="60" rx="10" fill="white"/>
+      <text x="320" y="133" font-size="20" fill="#666" text-anchor="middle">백종원 김치찌개 (2024)</text>
+      <rect x="20" y="170" width="600" height="60" rx="10" fill="white"/>
+      <text x="320" y="208" font-size="20" fill="#666" text-anchor="middle">조리 용어 사전 (2020) ← 무관</text>
+      <rect x="20" y="245" width="600" height="60" rx="10" fill="white"/>
+      <text x="320" y="283" font-size="20" fill="#666" text-anchor="middle">칼질 기법 (2021) ← 무관</text>
+      <rect x="20" y="320" width="600" height="60" rx="10" fill="white"/>
+      <text x="320" y="358" font-size="20" fill="#666" text-anchor="middle">... (나머지 9개)</text>
+    </g>
+    <text x="360" y="530" font-size="24" fill="#c62828" text-anchor="middle" font-weight="bold">검색 시간: 150ms</text>
+    <text x="360" y="570" font-size="22" fill="#999" text-anchor="middle">불필요한 문서까지 모두 처리</text>
+  </g>
+  <g transform="translate(1000, 270)">
+    <rect x="0" y="0" width="720" height="650" rx="20" fill="#e8f5e9" filter="url(#shadow021)"/>
+    <text x="360" y="50" font-size="32" fill="#2e7d32" text-anchor="middle" font-weight="bold">✅ Metadata 필터</text>
+    <g transform="translate(50, 100)">
+      <text x="310" y="0" font-size="24" fill="#666" text-anchor="middle" font-weight="bold">조건: 2024년 + 레시피 카테고리</text>
+      <rect x="20" y="20" width="600" height="120" rx="10" fill="#c8e6c9"/>
+      <text x="320" y="50" font-size="20" fill="#2e7d32" text-anchor="middle" font-weight="bold">백종원 김치찌개 (2024, 레시피)</text>
+      <text x="320" y="80" font-size="18" fill="#666" text-anchor="middle">category: "레시피"</text>
+      <text x="320" y="110" font-size="18" fill="#666" text-anchor="middle">year: 2024</text>
+      <rect x="20" y="155" width="600" height="120" rx="10" fill="#c8e6c9"/>
+      <text x="320" y="185" font-size="20" fill="#2e7d32" text-anchor="middle" font-weight="bold">흑백요리사 김치찌개 (2024, 레시피)</text>
+      <text x="320" y="215" font-size="18" fill="#666" text-anchor="middle">category: "레시피"</text>
+      <text x="320" y="245" font-size="18" fill="#666" text-anchor="middle">year: 2024</text>
+      <text x="310" y="310" font-size="22" fill="#999" text-anchor="middle">... 총 5개만 필터됨</text>
+    </g>
+    <text x="360" y="470" font-size="24" fill="#2e7d32" text-anchor="middle" font-weight="bold">검색 시간: 60ms (60% 감소!)</text>
+    <text x="360" y="520" font-size="22" fill="#4caf50" text-anchor="middle">✓ 관련 문서만 처리</text>
+    <text x="360" y="555" font-size="22" fill="#4caf50" text-anchor="middle">✓ 속도 향상</text>
+    <text x="360" y="590" font-size="22" fill="#4caf50" text-anchor="middle">✓ 정확도 향상</text>
+  </g>
+  <g transform="translate(200, 960)">
+    <rect x="0" y="0" width="1520" height="80" rx="20" fill="white" opacity="0.2" filter="url(#shadow021)"/>
+    <text x="760" y="50" font-size="28" fill="white" text-anchor="middle" font-weight="bold">💡 Vector Search 전에 Metadata로 사전 필터링! 속도↑ 정확도↑</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 21 / 38</text>
+</svg>

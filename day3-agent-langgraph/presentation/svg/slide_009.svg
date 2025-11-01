@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="shadow009"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/></filter></defs>
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Graph 구축 이론</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">StateGraph + Node + Edge + Compile</text>
+
+  <g transform="translate(260, 240)">
+    <rect width="1400" height="740" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow009)"/>
+    
+    <text x="700" y="60" font-family="Arial, sans-serif" font-size="40" fill="#667eea" text-anchor="middle" font-weight="bold">🔧 Graph 구축 4단계</text>
+
+    <!-- Step 1 -->
+    <g transform="translate(60, 120)">
+      <rect width="1280" height="130" rx="15" fill="#e8eaf6"/>
+      <circle cx="50" cy="65" r="30" fill="#667eea"/>
+      <text x="50" y="75" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="120" y="50" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">StateGraph 생성</text>
+      <rect x="120" y="70" width="1100" height="50" rx="10" fill="white"/>
+      <text x="140" y="102" font-family="monospace" font-size="20" fill="#667eea">graph = StateGraph(TravelState)</text>
+    </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(60, 270)">
+      <rect width="1280" height="130" rx="15" fill="#f3e5f5"/>
+      <circle cx="50" cy="65" r="30" fill="#9b59b6"/>
+      <text x="50" y="75" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="120" y="50" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">Node 추가</text>
+      <rect x="120" y="70" width="1100" height="50" rx="10" fill="white"/>
+      <text x="140" y="102" font-family="monospace" font-size="20" fill="#9b59b6">graph.add_node("search", search_hotels)</text>
+    </g>
+
+    <!-- Step 3 -->
+    <g transform="translate(60, 420)">
+      <rect width="1280" height="130" rx="15" fill="#fff3e0"/>
+      <circle cx="50" cy="65" r="30" fill="#ff9800"/>
+      <text x="50" y="75" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="120" y="50" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">Edge 연결</text>
+      <rect x="120" y="70" width="1100" height="50" rx="10" fill="white"/>
+      <text x="140" y="102" font-family="monospace" font-size="20" fill="#ff9800">graph.add_edge("search", "book")</text>
+    </g>
+
+    <!-- Step 4 -->
+    <g transform="translate(60, 570)">
+      <rect width="1280" height="130" rx="15" fill="#e8f5e9"/>
+      <circle cx="50" cy="65" r="30" fill="#27AE60"/>
+      <text x="50" y="75" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">4</text>
+      <text x="120" y="50" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">Compile 실행</text>
+      <rect x="120" y="70" width="1100" height="50" rx="10" fill="white"/>
+      <text x="140" y="102" font-family="monospace" font-size="20" fill="#27AE60">app = graph.compile()</text>
+    </g>
+  </g>
+</svg>

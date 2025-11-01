@@ -48,6 +48,23 @@ pip install jupyter ipywidgets
 ```
 
 ## 📖 노트북별 상세 가이드
+### 노트북 실행 참고 (다이어그램 렌더링)
+- `main-practice/00-concepts.ipynb`의 비교 다이어그램은 HTML 카드로 표시되어 별도 설치 없이 즉시 확인할 수 있습니다.
+
+- `main-practice/00-concepts.ipynb` 다이어그램은 Graphviz로 생성됩니다.
+  ```bash
+  # Colab
+  apt-get install -qq graphviz
+  pip install graphviz
+  ```
+  설치 후 노트북의 렌더링 셀을 실행하면 SVG로 출력됩니다.
+
+- `main-practice/00-concepts.ipynb`에서 파인튜닝 전략 비교 그래프를 확인하려면 아래 확장을 한 번만 설치/로딩하세요.
+  ```bash
+  pip install mermaid-magic
+  ```
+  노트북 셀에서 `%load_ext mermaid_magic` 실행 후 `%%mermaid` 셀을 실행하면 그래프가 렌더링됩니다.
+
 
 ### 01_data_preprocessing_and_validation.ipynb
 **목표**: 한국어 RAG 데이터셋 준비 및 RAFT 방법론 적용

@@ -1,0 +1,124 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow0112">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Conditional Edge 두 가지 방식</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">시작점 분기 vs 중간 분기</text>
+
+  <!-- Method 1: set_conditional_entry_point -->
+  <g transform="translate(160, 240)">
+    <rect width="740" height="740" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0112)"/>
+    <text x="370" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">1️⃣ Entry Point 분기</text>
+    <text x="370" y="105" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">START 직후 바로 분기</text>
+
+    <!-- Diagram -->
+    <g transform="translate(370, 180)">
+      <!-- START -->
+      <circle cx="0" cy="0" r="40" fill="#667eea" filter="url(#shadow0112)"/>
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">START</text>
+
+      <!-- Decision Diamond -->
+      <path d="M -80 80 L 0 40 L 80 80 L 0 120 Z" fill="#ff9800" filter="url(#shadow0112)"/>
+      <text x="0" y="88" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">분기</text>
+
+      <!-- Three paths -->
+      <line x1="-60" y1="120" x2="-200" y2="220" stroke="#27AE60" stroke-width="3"/>
+      <line x1="0" y1="120" x2="0" y2="220" stroke="#27AE60" stroke-width="3"/>
+      <line x1="60" y1="120" x2="200" y2="220" stroke="#27AE60" stroke-width="3"/>
+
+      <!-- Node A -->
+      <rect x="-280" y="240" width="160" height="60" rx="10" fill="#27AE60" filter="url(#shadow0112)"/>
+      <text x="-200" y="280" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Node A</text>
+
+      <!-- Node B -->
+      <rect x="-80" y="240" width="160" height="60" rx="10" fill="#27AE60" filter="url(#shadow0112)"/>
+      <text x="0" y="280" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Node B</text>
+
+      <!-- Node C -->
+      <rect x="120" y="240" width="160" height="60" rx="10" fill="#27AE60" filter="url(#shadow0112)"/>
+      <text x="200" y="280" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Node C</text>
+    </g>
+
+    <!-- Code -->
+    <rect x="40" y="560" width="660" height="150" rx="10" fill="#1e1e1e"/>
+    <text x="60" y="600" font-family="monospace" font-size="18" fill="#d4d4d4">graph.</text>
+    <text x="140" y="600" font-family="monospace" font-size="18" fill="#dcdcaa">set_conditional_entry_point</text>
+    <text x="540" y="600" font-family="monospace" font-size="18" fill="#d4d4d4">(</text>
+
+    <text x="80" y="635" font-family="monospace" font-size="18" fill="#9cdcfe">  router_fn</text>
+    <text x="220" y="635" font-family="monospace" font-size="18" fill="#d4d4d4">,</text>
+
+    <text x="80" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">  {</text>
+    <text x="120" y="670" font-family="monospace" font-size="18" fill="#ce9178">"A"</text>
+    <text x="170" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">: </text>
+    <text x="200" y="670" font-family="monospace" font-size="18" fill="#ce9178">"node_a"</text>
+    <text x="320" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">, ...</text>
+    <text x="400" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">}</text>
+
+    <text x="60" y="705" font-family="monospace" font-size="18" fill="#d4d4d4">)</text>
+  </g>
+
+  <!-- Method 2: add_conditional_edges -->
+  <g transform="translate(1020, 240)">
+    <rect width="740" height="740" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow0112)"/>
+    <text x="370" y="60" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">2️⃣ 중간 노드 분기</text>
+    <text x="370" y="105" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">특정 노드 실행 후 분기</text>
+
+    <!-- Diagram -->
+    <g transform="translate(370, 180)">
+      <!-- START -->
+      <circle cx="0" cy="0" r="40" fill="#667eea" filter="url(#shadow0112)"/>
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">START</text>
+
+      <!-- Arrow -->
+      <line x1="0" y1="40" x2="0" y2="100" stroke="#667eea" stroke-width="3"/>
+
+      <!-- Process Node -->
+      <rect x="-80" y="120" width="160" height="60" rx="10" fill="#667eea" filter="url(#shadow0112)"/>
+      <text x="0" y="160" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Process</text>
+
+      <!-- Decision Diamond -->
+      <path d="M -80 260 L 0 220 L 80 260 L 0 300 Z" fill="#ff9800" filter="url(#shadow0112)"/>
+      <text x="0" y="268" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">분기</text>
+
+      <!-- Two paths -->
+      <line x1="-60" y1="300" x2="-160" y2="380" stroke="#27AE60" stroke-width="3"/>
+      <line x1="60" y1="300" x2="160" y2="380" stroke="#27AE60" stroke-width="3"/>
+
+      <!-- Node X -->
+      <rect x="-240" y="400" width="160" height="60" rx="10" fill="#27AE60" filter="url(#shadow0112)"/>
+      <text x="-160" y="440" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Node X</text>
+
+      <!-- Node Y -->
+      <rect x="80" y="400" width="160" height="60" rx="10" fill="#27AE60" filter="url(#shadow0112)"/>
+      <text x="160" y="440" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Node Y</text>
+    </g>
+
+    <!-- Code -->
+    <rect x="40" y="560" width="660" height="150" rx="10" fill="#1e1e1e"/>
+    <text x="60" y="600" font-family="monospace" font-size="18" fill="#d4d4d4">graph.</text>
+    <text x="140" y="600" font-family="monospace" font-size="18" fill="#dcdcaa">add_conditional_edges</text>
+    <text x="460" y="600" font-family="monospace" font-size="18" fill="#d4d4d4">(</text>
+
+    <text x="80" y="635" font-family="monospace" font-size="18" fill="#ce9178">  "process"</text>
+    <text x="220" y="635" font-family="monospace" font-size="18" fill="#d4d4d4">,</text>
+    <text x="280" y="635" font-family="monospace" font-size="18" fill="#9cdcfe"> decide_fn</text>
+    <text x="440" y="635" font-family="monospace" font-size="18" fill="#d4d4d4">,</text>
+
+    <text x="80" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">  {</text>
+    <text x="120" y="670" font-family="monospace" font-size="18" fill="#ce9178">"X"</text>
+    <text x="170" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">: </text>
+    <text x="200" y="670" font-family="monospace" font-size="18" fill="#ce9178">"node_x"</text>
+    <text x="320" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">, ...</text>
+    <text x="400" y="670" font-family="monospace" font-size="18" fill="#d4d4d4">}</text>
+
+    <text x="60" y="705" font-family="monospace" font-size="18" fill="#d4d4d4">)</text>
+  </g>
+</svg>

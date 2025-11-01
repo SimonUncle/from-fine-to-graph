@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#45B7D1" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1" text-anchor="middle">Section 6: Hybrid Search</text>
+
+  <!-- Quiz badge -->
+  <rect x="1700" y="60" width="140" height="50" rx="25" fill="#F39C12" opacity="0.3"/>
+  <text x="1770" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#F39C12" text-anchor="middle">💡 Quiz</text>
+
+  <text x="960" y="180" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">연습 문제</text>
+  <text x="960" y="240" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"BM25가 더 유리한 상황은?"</text>
+
+  <g transform="translate(960, 260)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Question -->
+  <rect x="200" y="320" width="1520" height="140" rx="20" fill="#FFFFBA" opacity="0.4" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="375" font-size="50" text-anchor="middle">❓</text>
+  <text x="400" y="370" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50">시나리오</text>
+  <text x="400" y="420" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">다음 중 <tspan font-weight="bold">BM25가 Vector Search보다 더 유리</tspan>한 상황은?</text>
+
+  <!-- Options -->
+  <g transform="translate(200, 500)">
+    <!-- Option A -->
+    <rect x="0" y="0" width="700" height="100" rx="15" fill="#D5F4E6" opacity="0.5" stroke="#27AE60" stroke-width="4"/>
+    <circle cx="50" cy="50" r="25" fill="#27AE60" opacity="0.7" stroke="#27AE60" stroke-width="3"/>
+    <text x="50" y="60" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">A</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#27AE60">"민법 제103조 조문 검색" ✅</text>
+  </g>
+
+  <g transform="translate(1020, 500)">
+    <!-- Option B -->
+    <rect x="0" y="0" width="700" height="100" rx="15" fill="#FFB3BA" opacity="0.2" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="50" cy="50" r="25" fill="#FF6B6B" opacity="0.5" stroke="#FF6B6B" stroke-width="2"/>
+    <text x="50" y="60" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">B</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50">"소송 절차가 어떻게 되나요?"</text>
+  </g>
+
+  <g transform="translate(200, 630)">
+    <!-- Option C -->
+    <rect x="0" y="0" width="700" height="100" rx="15" fill="#BAFFC9" opacity="0.2" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="50" cy="50" r="25" fill="#4ECDC4" opacity="0.5" stroke="#4ECDC4" stroke-width="2"/>
+    <text x="50" y="60" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">C</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50">"계약 파기 가능한가요?"</text>
+  </g>
+
+  <g transform="translate(1020, 630)">
+    <!-- Option D -->
+    <rect x="0" y="0" width="700" height="100" rx="15" fill="#BAE1FF" opacity="0.2" stroke="#45B7D1" stroke-width="2"/>
+    <circle cx="50" cy="50" r="25" fill="#45B7D1" opacity="0.5" stroke="#45B7D1" stroke-width="2"/>
+    <text x="50" y="60" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">D</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50">"손해배상의 개념은?"</text>
+  </g>
+
+  <!-- Answer explanation -->
+  <rect x="200" y="770" width="1520" height="210" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3"/>
+  <text x="270" y="820" font-size="45" text-anchor="middle">💡</text>
+  <text x="380" y="815" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#27AE60">정답: A. 정확한 조문 검색</text>
+  <text x="380" y="860" font-family="system-ui, sans-serif" font-size="22" fill="#229954">
+    <tspan font-weight="bold">BM25는 키워드 매칭</tspan>에 강합니다! "민법 제103조"처럼 <tspan font-weight="bold">정확한 고유명사나 번호</tspan>가 중요할 때 최고!
+  </text>
+  <text x="380" y="900" font-family="system-ui, sans-serif" font-size="22" fill="#229954">
+    반면 B, C, D는 추상적/의미적 질문이라 Vector Search가 더 유리합니다.
+  </text>
+  <text x="380" y="940" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+    💡 실전 팁: 고유명사, 조문 번호, 날짜, 전문 용어 → BM25 강점 | 추상적 개념 → Vector 강점
+  </text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">40 / 63</text>
+</svg>

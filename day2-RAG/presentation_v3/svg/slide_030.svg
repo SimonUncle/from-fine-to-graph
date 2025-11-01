@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad030" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow030"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad030)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 5</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">CRAG ⚖️</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">Corrective RAG - 3가지 액션으로 보정</text>
+  <g transform="translate(150, 270)">
+    <rect x="0" y="0" width="1620" height="630" rx="20" fill="white" opacity="0.95" filter="url(#shadow030)"/>
+    <text x="810" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">CRAG: 문서 관련성 평가 후 액션 결정</text>
+    <g transform="translate(100, 110)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="480" height="450" rx="15" fill="#e8f5e9"/>
+        <text x="240" y="45" font-size="28" fill="#2e7d32" text-anchor="middle" font-weight="bold">✅ Correct</text>
+        <text x="240" y="85" font-size="22" fill="#666" text-anchor="middle">(관련성 ≥ 0.8)</text>
+        <g transform="translate(40, 120)">
+          <text x="0" y="0" font-size="20" fill="#666">평가:</text>
+          <text x="0" y="35" font-size="20" fill="#2e7d32" font-weight="bold">"문서가 매우 관련있음"</text>
+          <text x="0" y="90" font-size="20" fill="#666">액션:</text>
+          <text x="0" y="125" font-size="20" fill="#2e7d32" font-weight="bold">→ 그대로 사용</text>
+          <text x="0" y="160" font-size="20" fill="#2e7d32" font-weight="bold">→ 답변 생성</text>
+          <text x="0" y="220" font-size="18" fill="#999">예시: "김치찌개 레시피"</text>
+          <text x="0" y="250" font-size="18" fill="#999">질문에 정확히 일치하는</text>
+          <text x="0" y="280" font-size="18" fill="#999">레시피 문서 발견</text>
+        </g>
+      </g>
+      <g transform="translate(520, 0)">
+        <rect x="0" y="0" width="480" height="450" rx="15" fill="#fff9c4"/>
+        <text x="240" y="45" font-size="28" fill="#f57f17" text-anchor="middle" font-weight="bold">❓ Ambiguous</text>
+        <text x="240" y="85" font-size="22" fill="#666" text-anchor="middle">(0.5 ≤ 관련성 < 0.8)</text>
+        <g transform="translate(40, 120)">
+          <text x="0" y="0" font-size="20" fill="#666">평가:</text>
+          <text x="0" y="35" font-size="20" fill="#f57f17" font-weight="bold">"애매함, 불확실"</text>
+          <text x="0" y="90" font-size="20" fill="#666">액션:</text>
+          <text x="0" y="125" font-size="20" fill="#f57f17" font-weight="bold">→ 웹 검색 추가</text>
+          <text x="0" y="160" font-size="20" fill="#f57f17" font-weight="bold">→ 외부 지식 보충</text>
+          <text x="0" y="220" font-size="18" fill="#999">예시: "최신 김치찌개</text>
+          <text x="0" y="250" font-size="18" fill="#999">트렌드"</text>
+          <text x="0" y="280" font-size="18" fill="#999">→ 웹에서 2025 레시피</text>
+        </g>
+      </g>
+      <g transform="translate(1040, 0)">
+        <rect x="0" y="0" width="480" height="450" rx="15" fill="#ffebee"/>
+        <text x="240" y="45" font-size="28" fill="#c62828" text-anchor="middle" font-weight="bold">❌ Incorrect</text>
+        <text x="240" y="85" font-size="22" fill="#666" text-anchor="middle">(관련성 < 0.5)</text>
+        <g transform="translate(40, 120)">
+          <text x="0" y="0" font-size="20" fill="#666">평가:</text>
+          <text x="0" y="35" font-size="20" fill="#c62828" font-weight="bold">"완전히 무관함"</text>
+          <text x="0" y="90" font-size="20" fill="#666">액션:</text>
+          <text x="0" y="125" font-size="20" fill="#c62828" font-weight="bold">→ 재검색 (다른 전략)</text>
+          <text x="0" y="160" font-size="20" fill="#c62828" font-weight="bold">→ 혹은 "모름" 반환</text>
+          <text x="0" y="220" font-size="18" fill="#999">예시: "김치찌개" 질문에</text>
+          <text x="0" y="250" font-size="18" fill="#999">"자동차 수리" 문서</text>
+          <text x="0" y="280" font-size="18" fill="#999">→ 다시 검색 필요</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(150, 930)">
+    <rect x="0" y="0" width="1620" height="80" rx="20" fill="#667eea" filter="url(#shadow030)"/>
+    <text x="810" y="50" font-size="28" fill="white" text-anchor="middle" font-weight="bold">💡 CRAG: 문서 품질을 3단계로 평가하고 각각 다른 액션! (신뢰도 향상)</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 30 / 38</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 8: RAGAS</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">Faithfulness</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"답변이 검색 문서에만 근거하는가?"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Definition -->
+  <rect x="200" y="300" width="1520" height="140" rx="20" fill="#FFE6E6" opacity="0.4" stroke="#FF6B6B" stroke-width="3" filter="url(#shadow)"/>
+  <text x="270" y="355" font-size="50" text-anchor="middle">📝</text>
+  <text x="400" y="350" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#E74C3C">정의</text>
+  <text x="400" y="390" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">LLM이 생성한 답변이 검색된 문서(Context)에만 근거하는지 측정</text>
+  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="22" fill="#E74C3C" font-weight="bold">→ 환각(Hallucination) 감지!</text>
+
+  <!-- Formula -->
+  <g transform="translate(200, 470)">
+    <rect x="0" y="0" width="1520" height="200" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="760" y="50" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">계산 공식</text>
+
+    <rect x="400" y="80" width="920" height="90" rx="15" fill="#FFFFBA" opacity="0.4"/>
+    <text x="860" y="130" font-family="Monaco, monospace" font-size="32" fill="#2C3E50" text-anchor="middle" font-weight="bold">Faithfulness = 지원되는 문장 수 / 전체 문장 수</text>
+  </g>
+
+  <!-- Example -->
+  <g transform="translate(200, 700)">
+    <rect x="0" y="0" width="1520" height="260" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="760" y="45" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">실제 예시</text>
+
+    <g transform="translate(40, 70)">
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1">검색 문서 (Context):</text>
+      <text x="0" y="65" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">"민법 제103조: 선량한 풍속 기타 사회질서에 위반한 법률행위는 무효다."</text>
+
+      <text x="0" y="120" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#27AE60">✅ Good Answer (Faithfulness = 1.0):</text>
+      <text x="0" y="155" font-family="system-ui, sans-serif" font-size="20" fill="#229954">"민법 제103조에 따르면 공서양속에 위반한 법률행위는 무효입니다."</text>
+
+      <text x="800" y="120" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#E74C3C">❌ Bad Answer (Faithfulness = 0.5):</text>
+      <text x="800" y="155" font-family="system-ui, sans-serif" font-size="20" fill="#C0392B">"민법 제103조에 따르면 무효이며, 형사처벌 대상입니다."</text>
+      <text x="800" y="185" font-family="system-ui, sans-serif" font-size="18" fill="#E74C3C">(형사처벌은 문서에 없음 → 환각!)</text>
+    </g>
+  </g>
+
+  <!-- Bottom tip -->
+  <rect x="200" y="990" width="1520" height="60" rx="15" fill="#FFF3CD" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="1028" font-size="36" text-anchor="middle">💡</text>
+  <text x="360" y="1023" font-family="system-ui, sans-serif" font-size="22" fill="#F39C12">Faithfulness 0.9 이상 목표! 낮으면 LLM이 근거 없는 정보 추가 중</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">49 / 63</text>
+</svg>

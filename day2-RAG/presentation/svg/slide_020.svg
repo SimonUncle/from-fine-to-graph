@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#4ECDC4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#4ECDC4" text-anchor="middle">Section 4: Query Refinement</text>
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">HyDE 기법</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"가상 답변으로 검색"</text>
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+  <rect x="200" y="300" width="1520" height="550" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="960" y="360" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50" text-anchor="middle">🔮 HyDE (Hypothetical Document Embeddings)</text>
+  <g transform="translate(400, 420)">
+    <rect x="0" y="0" width="300" height="100" rx="15" fill="#FFB3BA" opacity="0.3"/>
+    <text x="150" y="55" font-family="system-ui, sans-serif" font-size="20" fill="#2C3E50" text-anchor="middle">1️⃣ 사용자 질문</text>
+    <path d="M 300 50 L 350 50" stroke="#95A5A6" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="350" y="0" width="400" height="100" rx="15" fill="#BAFFC9" opacity="0.3"/>
+    <text x="550" y="55" font-family="system-ui, sans-serif" font-size="20" fill="#2C3E50" text-anchor="middle">2️⃣ LLM이 가상 답변 생성</text>
+    <path d="M 750 50 L 800 50" stroke="#95A5A6" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="800" y="0" width="300" height="100" rx="15" fill="#BAE1FF" opacity="0.3"/>
+    <text x="950" y="55" font-family="system-ui, sans-serif" font-size="20" fill="#2C3E50" text-anchor="middle">3️⃣ 가상 답변으로 검색</text>
+  </g>
+  <text x="960" y="600" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">왜 효과적인가?</text>
+  <text x="960" y="650" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D" text-anchor="middle">답변 형태의 텍스트는 문서 형태와 더 유사함 → 검색 정확도 향상!</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#95A5A6"/></marker></defs>
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">20 / 63</text>
+</svg>

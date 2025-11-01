@@ -1,0 +1,105 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad014" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow014">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad014)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 3</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    Prompt Engineering 📝
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    시스템 프롬프트 개선하기
+  </text>
+
+  <!-- Main Content -->
+  <g transform="translate(150, 260)">
+    <!-- Left: System Prompt -->
+    <rect x="0" y="0" width="800" height="680" rx="20" fill="#263238" filter="url(#shadow014)"/>
+
+    <rect x="0" y="0" width="800" height="60" rx="20" fill="#37474f"/>
+    <text x="30" y="40" font-size="24" fill="#81c784" font-weight="bold">🤖 System Prompt</text>
+
+    <g transform="translate(30, 90)" font-family="monospace">
+      <text x="0" y="0" font-size="20" fill="#b0bec5"># RAG 시스템의 역할 정의</text>
+      <text x="0" y="45" font-size="20" fill="#e0e0e0">system_prompt = </text>
+      <text x="240" y="45" font-size="20" fill="#c5e1a5">"""</text>
+
+      <text x="0" y="90" font-size="20" fill="#81c784">당신은 한식 레시피 전문가입니다.</text>
+
+      <text x="0" y="135" font-size="20" fill="#e0e0e0">주어진 문서를 기반으로</text>
+      <text x="0" y="170" font-size="20" fill="#e0e0e0">정확하고 상세한 답변을 제공하세요.</text>
+
+      <text x="0" y="215" font-size="20" fill="#ff8a80" font-weight="bold">규칙:</text>
+      <text x="0" y="250" font-size="20" fill="#e0e0e0">1. 반드시 제공된 문서 내용만 사용</text>
+      <text x="0" y="285" font-size="20" fill="#e0e0e0">2. 모르는 내용은 솔직히 "모른다" 표현</text>
+      <text x="0" y="320" font-size="20" fill="#e0e0e0">3. 문서에 없는 내용 추측 금지</text>
+      <text x="0" y="355" font-size="20" fill="#e0e0e0">4. 단계별로 명확하게 설명</text>
+
+      <text x="0" y="400" font-size="20" fill="#ffb74d" font-weight="bold">형식:</text>
+      <text x="0" y="435" font-size="20" fill="#e0e0e0">- 재료 목록: 구체적 양 포함</text>
+      <text x="0" y="470" font-size="20" fill="#e0e0e0">- 조리 순서: 번호 매겨 설명</text>
+      <text x="0" y="505" font-size="20" fill="#e0e0e0">- 팁: 맛있게 만드는 노하우</text>
+
+      <text x="0" y="550" font-size="20" fill="#c5e1a5">"""</text>
+    </g>
+  </g>
+
+  <!-- Right: User Prompt -->
+  <g transform="translate(970, 260)">
+    <rect x="0" y="0" width="800" height="680" rx="20" fill="#263238" filter="url(#shadow014)"/>
+
+    <rect x="0" y="0" width="800" height="60" rx="20" fill="#37474f"/>
+    <text x="30" y="40" font-size="24" fill="#64b5f6" font-weight="bold">👤 User Prompt (Template)</text>
+
+    <g transform="translate(30, 90)" font-family="monospace">
+      <text x="0" y="0" font-size="20" fill="#b0bec5"># 사용자 질문 + 검색된 문서</text>
+      <text x="0" y="45" font-size="20" fill="#e0e0e0">user_prompt = </text>
+      <text x="220" y="45" font-size="20" fill="#c5e1a5">f"""</text>
+
+      <text x="0" y="90" font-size="20" fill="#64b5f6" font-weight="bold">질문:</text>
+      <text x="0" y="125" font-size="20" fill="#e0e0e0">{query}</text>
+
+      <text x="0" y="170" font-size="20" fill="#fff176" font-weight="bold">참고 문서:</text>
+      <text x="0" y="205" font-size="20" fill="#e0e0e0">{retrieved_docs}</text>
+
+      <text x="0" y="250" font-size="20" fill="#ff8a80">---</text>
+
+      <text x="0" y="295" font-size="20" fill="#81c784">위 문서를 참고하여</text>
+      <text x="0" y="330" font-size="20" fill="#81c784">질문에 답변해주세요.</text>
+
+      <text x="0" y="375" font-size="20" fill="#b0bec5">답변이 없으면:</text>
+      <text x="0" y="410" font-size="20" fill="#e0e0e0">"제공된 문서에 해당 정보가</text>
+      <text x="0" y="445" font-size="20" fill="#e0e0e0"> 없습니다"라고 답변하세요.</text>
+
+      <text x="0" y="490" font-size="20" fill="#c5e1a5">"""</text>
+    </g>
+  </g>
+
+  <!-- Bottom Tips -->
+  <g transform="translate(150, 970)">
+    <rect x="0" y="0" width="1620" height="80" rx="20" fill="white" opacity="0.2" filter="url(#shadow014)"/>
+    <text x="810" y="50" font-size="28" fill="white" text-anchor="middle" font-weight="bold">
+      💡 명확한 System Prompt는 Hallucination 방지 + 답변 품질 향상의 첫 단계!
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 14 / 38
+  </text>
+</svg>

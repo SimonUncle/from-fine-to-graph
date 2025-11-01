@@ -1,0 +1,131 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad009" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow009">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad009)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.5"/>
+    <text x="100" y="35" font-size="24" fill="#d84315" text-anchor="middle" font-weight="bold">Part 1</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="#d84315" text-anchor="middle" font-weight="bold">
+    기초 이론 정리 📝
+  </text>
+  <text x="960" y="200" font-size="32" fill="#e64a19" text-anchor="middle">
+    Part 1 복습 퀴즈
+  </text>
+
+  <!-- Summary Cards -->
+  <g transform="translate(150, 260)">
+    <!-- Card 1: Embedding -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="520" height="180" rx="20" fill="white" opacity="0.95" filter="url(#shadow009)"/>
+      <circle cx="60" cy="90" r="40" fill="#4facfe"/>
+      <text x="60" y="100" font-size="36" fill="white" text-anchor="middle">1</text>
+
+      <text x="130" y="65" font-size="28" fill="#333" font-weight="bold">Embedding</text>
+      <text x="130" y="105" font-size="20" fill="#666">텍스트 → 숫자 벡터</text>
+      <text x="130" y="140" font-size="18" fill="#999">컴퓨터가 이해할 수 있는 형태로 변환</text>
+    </g>
+
+    <!-- Card 2: Vector Space -->
+    <g transform="translate(560, 0)">
+      <rect x="0" y="0" width="520" height="180" rx="20" fill="white" opacity="0.95" filter="url(#shadow009)"/>
+      <circle cx="60" cy="90" r="40" fill="#a8edea"/>
+      <text x="60" y="100" font-size="36" fill="white" text-anchor="middle">2</text>
+
+      <text x="130" y="65" font-size="28" fill="#333" font-weight="bold">Vector Space</text>
+      <text x="130" y="105" font-size="20" fill="#666">단어를 지도에 배치</text>
+      <text x="130" y="140" font-size="18" fill="#999">비슷한 의미는 가까이, 다른 의미는 멀리</text>
+    </g>
+
+    <!-- Card 3: Cosine Similarity -->
+    <g transform="translate(1120, 0)">
+      <rect x="0" y="0" width="520" height="180" rx="20" fill="white" opacity="0.95" filter="url(#shadow009)"/>
+      <circle cx="60" cy="90" r="40" fill="#fbc2eb"/>
+      <text x="60" y="100" font-size="36" fill="white" text-anchor="middle">3</text>
+
+      <text x="130" y="65" font-size="28" fill="#333" font-weight="bold">Cosine Similarity</text>
+      <text x="130" y="105" font-size="20" fill="#666">각도로 유사도 측정</text>
+      <text x="130" y="140" font-size="18" fill="#999">0~1 사이 값, 높을수록 비슷함</text>
+    </g>
+
+    <!-- Card 4: Chunking -->
+    <g transform="translate(0, 220)">
+      <rect x="0" y="0" width="520" height="180" rx="20" fill="white" opacity="0.95" filter="url(#shadow009)"/>
+      <circle cx="60" cy="90" r="40" fill="#fa709a"/>
+      <text x="60" y="100" font-size="36" fill="white" text-anchor="middle">4</text>
+
+      <text x="130" y="65" font-size="28" fill="#333" font-weight="bold">Chunking</text>
+      <text x="130" y="105" font-size="20" fill="#666">긴 텍스트를 적절히 분할</text>
+      <text x="130" y="140" font-size="18" fill="#999">512 토큰 제한, 의미 명확성 유지</text>
+    </g>
+
+    <!-- Card 5: Overlap -->
+    <g transform="translate(560, 220)">
+      <rect x="0" y="0" width="520" height="180" rx="20" fill="white" opacity="0.95" filter="url(#shadow009)"/>
+      <circle cx="60" cy="90" r="40" fill="#c1dfc4"/>
+      <text x="60" y="100" font-size="36" fill="white" text-anchor="middle">5</text>
+
+      <text x="130" y="65" font-size="28" fill="#333" font-weight="bold">Overlap</text>
+      <text x="130" y="105" font-size="20" fill="#666">청크 간 겹치는 부분</text>
+      <text x="130" y="140" font-size="18" fill="#999">문맥 유지, 보통 10-20% 설정</text>
+    </g>
+
+    <!-- Card 6: RecursiveSplitter -->
+    <g transform="translate(1120, 220)">
+      <rect x="0" y="0" width="520" height="180" rx="20" fill="white" opacity="0.95" filter="url(#shadow009)"/>
+      <circle cx="60" cy="90" r="40" fill="#667eea"/>
+      <text x="60" y="100" font-size="36" fill="white" text-anchor="middle">6</text>
+
+      <text x="130" y="65" font-size="28" fill="#333" font-weight="bold">RecursiveSplitter</text>
+      <text x="130" y="105" font-size="20" fill="#666">LangChain의 Chunking 도구</text>
+      <text x="130" y="140" font-size="18" fill="#999">우선순위 구분자로 자연스럽게 분할</text>
+    </g>
+  </g>
+
+  <!-- Quiz Section -->
+  <g transform="translate(150, 700)">
+    <rect x="0" y="0" width="1620" height="280" rx="20" fill="#ff6b6b" filter="url(#shadow009)"/>
+
+    <text x="810" y="50" font-size="36" fill="white" text-anchor="middle" font-weight="bold">🎯 퀴즈 타임!</text>
+
+    <g transform="translate(100, 100)">
+      <rect x="0" y="0" width="1420" height="150" rx="15" fill="white" opacity="0.95"/>
+
+      <text x="710" y="45" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">
+        Q. "김치찌개"와 "된장찌개"의 Cosine Similarity가 0.95가 나왔다면?
+      </text>
+
+      <g transform="translate(180, 80)">
+        <rect x="0" y="0" width="280" height="50" rx="10" fill="#e8f5e9"/>
+        <text x="140" y="33" font-size="22" fill="#2e7d32" text-anchor="middle">A. 매우 비슷함 ✅</text>
+
+        <rect x="320" y="0" width="280" height="50" rx="10" fill="#ffebee"/>
+        <text x="460" y="33" font-size="22" fill="#c62828" text-anchor="middle">B. 매우 다름</text>
+
+        <rect x="640" y="0" width="280" height="50" rx="10" fill="#ffebee"/>
+        <text x="780" y="33" font-size="22" fill="#c62828" text-anchor="middle">C. 무관함</text>
+
+        <rect x="960" y="0" width="280" height="50" rx="10" fill="#ffebee"/>
+        <text x="1100" y="33" font-size="22" fill="#c62828" text-anchor="middle">D. 반대 의미</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1040" font-size="20" fill="#d84315" text-anchor="middle" opacity="0.8">
+    Slide 9 / 38 | Part 1 완료! 🎉
+  </text>
+</svg>

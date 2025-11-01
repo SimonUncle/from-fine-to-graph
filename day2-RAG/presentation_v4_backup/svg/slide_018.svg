@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow17">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="#fafbff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">BM25 Algorithm</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">키워드 빈도 기반 검색</text>
+  
+  <g transform="translate(150, 240)">
+    <rect width="770" height="340" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow17)"/>
+    <text x="385" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">Vector Search</text>
+    <circle cx="385" cy="160" r="50" fill="#e3f2fd"/>
+    <text x="385" y="175" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle">🔢</text>
+    <text x="385" y="250" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle">의미 유사도</text>
+    <text x="385" y="290" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">"김치찌개" ≈ "김치탕"</text>
+  </g>
+  
+  <g transform="translate(1000, 240)">
+    <rect width="770" height="340" rx="20" fill="white" stroke="#11998e" stroke-width="4" filter="url(#shadow17)"/>
+    <text x="385" y="60" font-family="Arial, sans-serif" font-size="36" fill="#11998e" text-anchor="middle" font-weight="bold">BM25</text>
+    <circle cx="385" cy="160" r="50" fill="#e8f5e9"/>
+    <text x="385" y="175" font-family="Arial, sans-serif" font-size="36" fill="#11998e" text-anchor="middle">📝</text>
+    <text x="385" y="250" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle">키워드 매칭</text>
+    <text x="385" y="290" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">"김치찌개" = "김치찌개"</text>
+  </g>
+  
+  <g transform="translate(360, 640)">
+    <rect width="1200" height="350" rx="20" fill="url(#grad17)" filter="url(#shadow17)"/>
+    <text x="600" y="60" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle" font-weight="bold">🎯 BM25 동작 원리</text>
+    <g transform="translate(80, 120)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">1️⃣ 단어 빈도 (TF)</text>
+      <text x="300" y="0" font-family="Arial, sans-serif" font-size="24" fill="white">문서에 "김치찌개" 몇 번 등장?</text>
+      <text x="0" y="60" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">2️⃣ 문서 희귀도 (IDF)</text>
+      <text x="300" y="60" font-family="Arial, sans-serif" font-size="24" fill="white">"김치찌개"가 희귀한 단어일수록 가치↑</text>
+      <text x="0" y="120" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">3️⃣ 문서 길이 정규화</text>
+      <text x="300" y="120" font-family="Arial, sans-serif" font-size="24" fill="white">긴 문서는 패널티</text>
+      <text x="0" y="180" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">→ 최종 점수</text>
+      <text x="300" y="180" font-family="Arial, sans-serif" font-size="24" fill="white">TF × IDF × 길이 보정</text>
+    </g>
+  </g>
+</svg>

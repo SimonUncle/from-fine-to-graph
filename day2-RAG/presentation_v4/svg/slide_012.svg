@@ -1,0 +1,76 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow005">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Metadata Filtering</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">메타데이터로 검색 범위 좁히기</text>
+
+  <!-- Left: Concept -->
+  <g transform="translate(150, 240)">
+    <rect width="800" height="320" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow005)"/>
+    <text x="400" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">💡 핵심 아이디어</text>
+
+    <text x="400" y="110" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">유사도 검색 전에 먼저 필터링!</text>
+
+    <rect x="100" y="150" width="600" height="150" rx="15" fill="#e3f2fd"/>
+    <text x="400" y="190" font-family="monospace" font-size="24" fill="#666" text-anchor="middle">date >= "2024-01-01"</text>
+    <text x="400" y="230" font-family="monospace" font-size="24" fill="#666" text-anchor="middle">category = "AI"</text>
+    <text x="400" y="270" font-family="monospace" font-size="24" fill="#666" text-anchor="middle">author = "전문가"</text>
+  </g>
+
+  <!-- Right: Example -->
+  <g transform="translate(970, 240)">
+    <rect width="800" height="320" rx="20" fill="white" stroke="#11998e" stroke-width="4" filter="url(#shadow005)"/>
+    <text x="400" y="50" font-family="Arial, sans-serif" font-size="32" fill="#11998e" text-anchor="middle" font-weight="bold">📋 실제 예시</text>
+
+    <text x="400" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">질문: "최근 AI 뉴스는?"</text>
+
+    <rect x="100" y="150" width="600" height="150" rx="15" fill="#e8f5e9"/>
+    <text x="120" y="185" font-family="Arial, sans-serif" font-size="24" fill="#2e7d32">✅ 시간 필터: 최근 1개월</text>
+    <text x="120" y="225" font-family="Arial, sans-serif" font-size="24" fill="#2e7d32">✅ 카테고리: "AI", "Tech"</text>
+    <text x="120" y="265" font-family="Arial, sans-serif" font-size="24" fill="#2e7d32">✅ 출처 신뢰도: 4.0 이상</text>
+  </g>
+
+  <!-- Benefits -->
+  <g transform="translate(150, 620)">
+    <rect width="1620" height="320" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow005)"/>
+    <text x="810" y="60" font-family="Arial, sans-serif" font-size="40" fill="#667eea" text-anchor="middle" font-weight="bold">✨ 장점</text>
+
+    <g transform="translate(80, 120)">
+      <circle cx="30" cy="30" r="25" fill="#667eea"/>
+      <text x="30" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="80" y="40" font-family="Arial, sans-serif" font-size="26" fill="#333">검색 속도 향상 (범위 축소)</text>
+    </g>
+
+    <g transform="translate(840, 120)">
+      <circle cx="30" cy="30" r="25" fill="#667eea"/>
+      <text x="30" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="80" y="40" font-family="Arial, sans-serif" font-size="26" fill="#333">정확도 증가 (관련 문서만)</text>
+    </g>
+
+    <g transform="translate(80, 200)">
+      <circle cx="30" cy="30" r="25" fill="#667eea"/>
+      <text x="30" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="80" y="40" font-family="Arial, sans-serif" font-size="26" fill="#333">비용 절감 (처리 문서 감소)</text>
+    </g>
+
+    <g transform="translate(840, 200)">
+      <circle cx="30" cy="30" r="25" fill="#667eea"/>
+      <text x="30" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">4</text>
+      <text x="80" y="40" font-family="Arial, sans-serif" font-size="26" fill="#333">시간 민감 쿼리 처리 가능</text>
+    </g>
+  </g>
+
+  <!-- Bottom Tip -->
+  <g transform="translate(360, 980)">
+    <rect width="1200" height="80" rx="15" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow005)"/>
+    <text x="600" y="55" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">💡 실전 팁: Vector Search와 조합하면 최고 효과! (Hybrid Filtering)</text>
+  </g>
+</svg>

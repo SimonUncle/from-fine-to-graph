@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow021">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Multi-Agent 실전 예제</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">서울 여행 계획 팀</text>
+
+  <!-- Query -->
+  <g transform="translate(360, 220)">
+    <rect width="1200" height="120" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow021)"/>
+    <text x="600" y="50" font-family="Arial, sans-serif" font-size="28" fill="#667eea" text-anchor="middle" font-weight="bold">👤 사용자 요청</text>
+    <text x="600" y="95" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">"3일간 서울 여행, 예산 50만원, 맛집 위주로 추천해줘"</text>
+  </g>
+
+  <!-- Multi-Agent System -->
+  <g transform="translate(200, 380)">
+    <!-- Coordinator -->
+    <rect width="1520" height="100" rx="20" fill="#667eea" filter="url(#shadow021)"/>
+    <text x="760" y="65" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">🎯 Coordinator Agent: 요청 분석 &amp; 작업 분배</text>
+
+    <!-- Arrows down -->
+    <line x1="380" y1="100" x2="380" y2="160" stroke="#667eea" stroke-width="4"/>
+    <line x1="760" y1="100" x2="760" y2="160" stroke="#667eea" stroke-width="4"/>
+    <line x1="1140" y1="100" x2="1140" y2="160" stroke="#667eea" stroke-width="4"/>
+
+    <!-- Agent 1: Hotel -->
+    <g transform="translate(0, 160)">
+      <rect width="460" height="280" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow021)"/>
+      <text x="230" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff6b6b" text-anchor="middle" font-weight="bold">🏨 숙박 Agent</text>
+
+      <rect x="40" y="80" width="380" height="170" rx="15" fill="#ffebee"/>
+      <text x="230" y="115" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">작업:</text>
+      <text x="60" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666">• 예산: 15만원 (30%)</text>
+      <text x="60" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">• 위치: 명동/종로 중심</text>
+      <text x="60" y="210" font-family="Arial, sans-serif" font-size="20" fill="#666">• 결과: 게스트하우스 3곳</text>
+    </g>
+
+    <!-- Agent 2: Food -->
+    <g transform="translate(530, 160)">
+      <rect width="460" height="280" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow021)"/>
+      <text x="230" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff9800" text-anchor="middle" font-weight="bold">🍴 맛집 Agent</text>
+
+      <rect x="40" y="80" width="380" height="170" rx="15" fill="#fff3e0"/>
+      <text x="230" y="115" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">작업:</text>
+      <text x="60" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666">• 예산: 25만원 (50%)</text>
+      <text x="60" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">• 조건: 4.5★ 이상</text>
+      <text x="60" y="210" font-family="Arial, sans-serif" font-size="20" fill="#666">• 결과: 한식/양식 10곳</text>
+    </g>
+
+    <!-- Agent 3: Transport -->
+    <g transform="translate(1060, 160)">
+      <rect width="460" height="280" rx="20" fill="white" stroke="#9c27b0" stroke-width="4" filter="url(#shadow021)"/>
+      <text x="230" y="50" font-family="Arial, sans-serif" font-size="32" fill="#9c27b0" text-anchor="middle" font-weight="bold">🚇 교통 Agent</text>
+
+      <rect x="40" y="80" width="380" height="170" rx="15" fill="#f3e5f5"/>
+      <text x="230" y="115" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">작업:</text>
+      <text x="60" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666">• 예산: 10만원 (20%)</text>
+      <text x="60" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">• 경로: 최적 동선 계획</text>
+      <text x="60" y="210" font-family="Arial, sans-serif" font-size="20" fill="#666">• 결과: 3일 이동 계획</text>
+    </g>
+
+    <!-- Arrows up -->
+    <line x1="380" y1="440" x2="380" y2="500" stroke="#27AE60" stroke-width="4"/>
+    <line x1="760" y1="440" x2="760" y2="500" stroke="#27AE60" stroke-width="4"/>
+    <line x1="1140" y1="440" x2="1140" y2="500" stroke="#27AE60" stroke-width="4"/>
+
+    <!-- Final Output -->
+    <rect y="500" width="1520" height="120" rx="20" fill="#27AE60" filter="url(#shadow021)"/>
+    <text x="760" y="555" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">✅ 통합 결과: 3일 완벽 여행 계획서</text>
+    <text x="760" y="595" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">숙소 3곳 + 맛집 10곳 + 최적 동선 + 실시간 업데이트</text>
+  </g>
+</svg>

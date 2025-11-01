@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow024">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="endGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">실무 적용 가이드</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">언제 어떤 패턴을 사용할까?</text>
+
+  <!-- Decision Tree -->
+  <g transform="translate(200, 240)">
+    <!-- Question Box -->
+    <rect width="1520" height="120" rx="20" fill="url(#endGrad)" filter="url(#shadow024)"/>
+    <text x="760" y="50" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">🤔 어떤 문제를 해결하려고 하나요?</text>
+    <text x="760" y="95" font-family="Arial, sans-serif" font-size="26" fill="white" text-anchor="middle">작업의 특성에 따라 적합한 패턴을 선택하세요</text>
+
+    <!-- Use Case 1 -->
+    <g transform="translate(0, 160)">
+      <rect width="480" height="280" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow024)"/>
+      <text x="240" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">📝 단순 자동화</text>
+      <text x="240" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">→ 기본 ReAct Agent</text>
+
+      <rect x="40" y="120" width="400" height="130" rx="12" fill="#e8eaf6"/>
+      <text x="240" y="155" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 문서 요약</text>
+      <text x="240" y="185" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 단순 정보 검색</text>
+      <text x="240" y="215" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 이메일 자동 응답</text>
+    </g>
+
+    <!-- Use Case 2 -->
+    <g transform="translate(520, 160)">
+      <rect width="480" height="280" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow024)"/>
+      <text x="240" y="50" font-family="Arial, sans-serif" font-size="32" fill="#27AE60" text-anchor="middle" font-weight="bold">🎯 품질 중요</text>
+      <text x="240" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">→ HITL 패턴</text>
+
+      <rect x="40" y="120" width="400" height="130" rx="12" fill="#e8f5e9"/>
+      <text x="240" y="155" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 고객 응대 메시지</text>
+      <text x="240" y="185" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 중요 보고서 작성</text>
+      <text x="240" y="215" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 의사결정 지원</text>
+    </g>
+
+    <!-- Use Case 3 -->
+    <g transform="translate(1040, 160)">
+      <rect width="480" height="280" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow024)"/>
+      <text x="240" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff9800" text-anchor="middle" font-weight="bold">⚡ 복잡한 작업</text>
+      <text x="240" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">→ Multi-Agent</text>
+
+      <rect x="40" y="120" width="400" height="130" rx="12" fill="#fff3e0"/>
+      <text x="240" y="155" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 여행 계획 (숙박+교통+맛집)</text>
+      <text x="240" y="185" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 시장 분석 (뉴스+주가+SNS)</text>
+      <text x="240" y="215" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✓ 프로젝트 관리 (일정+리소스)</text>
+    </g>
+  </g>
+
+  <!-- Best Practices -->
+  <g transform="translate(200, 680)">
+    <rect width="1520" height="280" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow024)"/>
+    <text x="760" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">💡 실전 체크리스트</text>
+
+    <g transform="translate(80, 110)">
+      <circle cx="30" cy="20" r="22" fill="#27AE60"/>
+      <text x="30" y="30" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="80" y="28" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">State 설계: 필요한 데이터만 State에 포함</text>
+
+      <circle cx="30" cy="80" r="22" fill="#27AE60"/>
+      <text x="30" y="90" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="80" y="88" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">도구 선택: 신뢰할 수 있는 API/DB만 연결</text>
+
+      <circle cx="30" cy="140" r="22" fill="#27AE60"/>
+      <text x="30" y="150" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="80" y="148" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">에러 처리: 실패 시나리오 항상 고려</text>
+
+      <circle cx="800" cy="20" r="22" fill="#27AE60"/>
+      <text x="800" y="30" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="850" y="28" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">테스트: 작은 예제로 먼저 검증</text>
+
+      <circle cx="800" cy="80" r="22" fill="#27AE60"/>
+      <text x="800" y="90" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="850" y="88" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">로깅: 디버깅을 위한 상세 로그 남기기</text>
+
+      <circle cx="800" cy="140" r="22" fill="#27AE60"/>
+      <text x="800" y="150" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="850" y="148" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">비용: LLM 호출 횟수 최적화</text>
+    </g>
+  </g>
+
+  <!-- Thank You Message -->
+  <text x="960" y="1020" font-family="Arial, sans-serif" font-size="40" fill="#667eea" text-anchor="middle" font-weight="bold">🎉 Day 3 완료! 여러분의 Agent를 만들어보세요!</text>
+</svg>

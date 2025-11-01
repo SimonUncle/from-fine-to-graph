@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs><filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/></filter><linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" /><stop offset="100%" style="stop-color:#F0FFF4;stop-opacity:1" /></linearGradient></defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#27AE60" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#27AE60" text-anchor="middle">Section 10: 마무리</text>
+  <text x="960" y="180" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">성능 개선 요약</text>
+  <text x="960" y="240" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Before vs After 극적인 변화"</text>
+  <g transform="translate(960, 260)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+  <g transform="translate(200, 340)"><rect x="0" y="0" width="680" height="420" rx="20" fill="#FFE6E6" opacity="0.5" stroke="#E74C3C" stroke-width="4" filter="url(#shadow)"/>
+  <text x="340" y="70" font-family="system-ui, sans-serif" font-size="42" font-weight="bold" fill="#E74C3C" text-anchor="middle">Before: Naive RAG</text>
+  <g transform="translate(60, 120)"><text x="0" y="30" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Context Precision</text><text x="480" y="30" font-family="system-ui, sans-serif" font-size="38" fill="#E74C3C" font-weight="bold" text-anchor="end">0.45</text>
+  <text x="0" y="90" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Context Recall</text><text x="480" y="90" font-family="system-ui, sans-serif" font-size="38" fill="#E74C3C" font-weight="bold" text-anchor="end">0.51</text>
+  <text x="0" y="150" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Answer Relevancy</text><text x="480" y="150" font-family="system-ui, sans-serif" font-size="38" fill="#E74C3C" font-weight="bold" text-anchor="end">0.68</text>
+  <text x="0" y="210" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Faithfulness</text><text x="480" y="210" font-family="system-ui, sans-serif" font-size="38" fill="#E74C3C" font-weight="bold" text-anchor="end">0.72</text>
+  <rect x="0" y="240" width="560" height="80" rx="15" fill="#FFFFFF" opacity="0.7"/><text x="280" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#E74C3C" text-anchor="middle" font-weight="bold">환각률: 28%</text></g></g>
+  <g transform="translate(960, 550)"><text x="0" y="0" font-size="80" text-anchor="middle" fill="#7F8C8D">→</text><text x="0" y="90" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#27AE60" text-anchor="middle">8가지 기법 적용</text></g>
+  <g transform="translate(1040, 340)"><rect x="0" y="0" width="680" height="420" rx="20" fill="#D5F4E6" opacity="0.9" stroke="#27AE60" stroke-width="4" filter="url(#shadow)"/>
+  <text x="340" y="70" font-family="system-ui, sans-serif" font-size="42" font-weight="bold" fill="#27AE60" text-anchor="middle">After: Advanced RAG</text>
+  <g transform="translate(60, 120)"><text x="0" y="30" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Context Precision</text><text x="480" y="30" font-family="system-ui, sans-serif" font-size="38" fill="#27AE60" font-weight="bold" text-anchor="end">0.91 (+102%)</text>
+  <text x="0" y="90" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Context Recall</text><text x="480" y="90" font-family="system-ui, sans-serif" font-size="38" fill="#27AE60" font-weight="bold" text-anchor="end">0.90 (+76%)</text>
+  <text x="0" y="150" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Answer Relevancy</text><text x="480" y="150" font-family="system-ui, sans-serif" font-size="38" fill="#27AE60" font-weight="bold" text-anchor="end">0.90 (+32%)</text>
+  <text x="0" y="210" font-family="system-ui, sans-serif" font-size="28" fill="#2C3E50">Faithfulness</text><text x="480" y="210" font-family="system-ui, sans-serif" font-size="38" fill="#27AE60" font-weight="bold" text-anchor="end">0.93 (+29%)</text>
+  <rect x="0" y="240" width="560" height="80" rx="15" fill="#FFFFFF" opacity="0.9"/><text x="280" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle" font-weight="bold">환각률: 7% (-75%)</text></g></g>
+  <rect x="200" y="790" width="1520" height="180" rx="20" fill="#FFF3CD" stroke="#F39C12" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="850" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#2C3E50" text-anchor="middle">💡 핵심 교훈</text>
+  <g transform="translate(240, 880)"><text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">✅ <tspan font-weight="bold">단일 기법보다 조합</tspan>이 중요: Hybrid+Rerank+CRAG = 최고 성능</text>
+  <text x="0" y="75" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">✅ <tspan font-weight="bold">RAGAS로 측정</tspan> 필수: 감이 아닌 데이터로 의사결정</text>
+  <text x="0" y="120" font-family="system-ui, sans-serif" font-size="24" fill="#27AE60" font-weight="bold">✅ Production 준비 완료: 모든 메트릭 0.9 이상 달성!</text></g>
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">62 / 63</text>
+</svg>

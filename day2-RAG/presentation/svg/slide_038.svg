@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#45B7D1" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1" text-anchor="middle">Section 6: Hybrid Search</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">성능 비교</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Naive vs Hybrid - 극적인 차이"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Comparison table -->
+  <g transform="translate(200, 300)">
+    <!-- Header -->
+    <rect x="0" y="0" width="1520" height="80" rx="15" fill="#2C3E50"/>
+    <text x="190" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">방식</text>
+    <text x="570" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Context Precision</text>
+    <text x="950" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Context Recall</text>
+    <text x="1330" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">검색 시간</text>
+
+    <!-- Naive RAG -->
+    <rect x="0" y="100" width="1520" height="100" rx="10" fill="#FFE6E6" opacity="0.3" stroke="#E74C3C" stroke-width="2"/>
+    <text x="190" y="160" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">Naive RAG</text>
+    <text x="570" y="160" font-family="system-ui, sans-serif" font-size="28" fill="#E74C3C" text-anchor="middle">0.45</text>
+    <text x="950" y="160" font-family="system-ui, sans-serif" font-size="28" fill="#E74C3C" text-anchor="middle">0.51</text>
+    <text x="1330" y="160" font-family="system-ui, sans-serif" font-size="28" fill="#E74C3C" text-anchor="middle">0.8s</text>
+
+    <!-- Vector Only -->
+    <rect x="0" y="220" width="1520" height="100" rx="10" fill="#BAE1FF" opacity="0.3" stroke="#45B7D1" stroke-width="2"/>
+    <text x="190" y="280" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">Vector만</text>
+    <text x="570" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">0.76 <tspan font-size="20">(+69%)</tspan></text>
+    <text x="950" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">0.65 <tspan font-size="20">(+27%)</tspan></text>
+    <text x="1330" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">1.2s</text>
+
+    <!-- BM25 Only -->
+    <rect x="0" y="340" width="1520" height="100" rx="10" fill="#FFEAA7" opacity="0.3" stroke="#F39C12" stroke-width="2"/>
+    <text x="190" y="400" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">BM25만</text>
+    <text x="570" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">0.62 <tspan font-size="20">(+38%)</tspan></text>
+    <text x="950" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">0.71 <tspan font-size="20">(+39%)</tspan></text>
+    <text x="1330" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">0.5s</text>
+
+    <!-- Hybrid (RRF only) -->
+    <rect x="0" y="460" width="1520" height="100" rx="10" fill="#96CEB4" opacity="0.3" stroke="#27AE60" stroke-width="2"/>
+    <text x="190" y="520" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">Hybrid (RRF)</text>
+    <text x="570" y="520" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.83 <tspan font-size="20">(+84%)</tspan></text>
+    <text x="950" y="520" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.81 <tspan font-size="20">(+59%)</tspan></text>
+    <text x="1330" y="520" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">1.4s</text>
+
+    <!-- Hybrid + Reranker -->
+    <rect x="0" y="580" width="1520" height="100" rx="10" fill="#D5F4E6" opacity="0.7" stroke="#27AE60" stroke-width="4"/>
+    <text x="190" y="640" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#2C3E50" text-anchor="middle">Hybrid+Rerank 🏆</text>
+    <text x="570" y="640" font-family="system-ui, sans-serif" font-size="32" fill="#27AE60" text-anchor="middle" font-weight="bold">0.89 <tspan font-size="22">(+98%)</tspan></text>
+    <text x="950" y="640" font-family="system-ui, sans-serif" font-size="32" fill="#27AE60" text-anchor="middle" font-weight="bold">0.87 <tspan font-size="22">(+71%)</tspan></text>
+    <text x="1330" y="640" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">2.1s</text>
+  </g>
+
+  <!-- Insights -->
+  <rect x="200" y="720" width="1520" height="260" rx="20" fill="#FFF3CD" stroke="#F39C12" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="780" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50" text-anchor="middle">💡 핵심 인사이트</text>
+
+  <g transform="translate(280, 820)">
+    <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">1️⃣ 단일 방식의 한계</text>
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">Vector나 BM25 하나만으로는 불충분 (최대 +69%)</text>
+
+    <text x="0" y="80" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">2️⃣ Hybrid의 힘</text>
+    <text x="350" y="80" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">두 방식 결합으로 +84% 향상! 의미 + 키워드 동시 활용</text>
+
+    <text x="0" y="130" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">3️⃣ Reranker의 추가 가치</text>
+    <text x="350" y="130" font-family="system-ui, sans-serif" font-size="22" fill="#27AE60" font-weight="bold">정밀 재정렬로 +98% 달성! 약간의 속도 희생으로 최고 품질</text>
+
+    <text x="0" y="180" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#E74C3C">⚖️ 트레이드오프</text>
+    <text x="350" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#E67E22">속도 민감: RRF만 | 품질 최우선: Reranker 추가</text>
+  </g>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">38 / 63</text>
+</svg>

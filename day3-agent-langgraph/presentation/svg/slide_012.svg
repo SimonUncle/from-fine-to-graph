@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="shadow012"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/></filter></defs>
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Human-in-the-Loop (HITL)</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">사용자 피드백을 워크플로우에 통합</text>
+
+  <!-- Core Concept -->
+  <g transform="translate(260, 240)">
+    <rect width="1400" height="200" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow012)"/>
+    <text x="700" y="60" font-family="Arial, sans-serif" font-size="36" fill="#ff9800" text-anchor="middle" font-weight="bold">💡 핵심 개념</text>
+    <text x="700" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">Agent가 중요한 결정 전에 <tspan font-weight="bold" fill="#ff9800">멈춰서</tspan> 사용자 승인을 받고</text>
+    <text x="700" y="150" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">피드백을 반영하여 <tspan font-weight="bold" fill="#ff9800">재개</tspan>합니다</text>
+  </g>
+
+  <!-- Flow Diagram -->
+  <g transform="translate(360, 480)">
+    <!-- Step 1: Start -->
+    <circle cx="150" cy="70" r="55" fill="#667eea" filter="url(#shadow012)"/>
+    <text x="150" y="82" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">START</text>
+
+    <!-- Arrow -->
+    <line x1="205" y1="70" x2="295" y2="70" stroke="#667eea" stroke-width="4"/>
+    <polygon points="295,70 280,60 280,80" fill="#667eea"/>
+
+    <!-- Step 2: interrupt() -->
+    <rect x="310" y="20" width="220" height="100" rx="15" fill="#ff9800" filter="url(#shadow012)"/>
+    <text x="420" y="60" font-family="Arial, sans-serif" font-size="26" fill="white" text-anchor="middle" font-weight="bold">⏸️ interrupt()</text>
+    <text x="420" y="95" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">State 저장</text>
+
+    <!-- Arrow -->
+    <line x1="530" y1="70" x2="620" y2="70" stroke="#ff9800" stroke-width="4"/>
+    <polygon points="620,70 605,60 605,80" fill="#ff9800"/>
+
+    <!-- Step 3: User Review -->
+    <rect x="635" y="20" width="220" height="100" rx="15" fill="#9c27b0" filter="url(#shadow012)"/>
+    <text x="745" y="60" font-family="Arial, sans-serif" font-size="26" fill="white" text-anchor="middle" font-weight="bold">👤 User</text>
+    <text x="745" y="95" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">피드백 제공</text>
+
+    <!-- Arrow -->
+    <line x1="855" y1="70" x2="945" y2="70" stroke="#9c27b0" stroke-width="4"/>
+    <polygon points="945,70 930,60 930,80" fill="#9c27b0"/>
+
+    <!-- Step 4: resume() -->
+    <rect x="960" y="20" width="220" height="100" rx="15" fill="#27AE60" filter="url(#shadow012)"/>
+    <text x="1070" y="60" font-family="Arial, sans-serif" font-size="26" fill="white" text-anchor="middle" font-weight="bold">▶️ resume()</text>
+    <text x="1070" y="95" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">재개</text>
+  </g>
+
+  <!-- Two Key Functions -->
+  <g transform="translate(160, 620)">
+    <!-- interrupt() -->
+    <rect width="760" height="320" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow012)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#ff9800" text-anchor="middle" font-weight="bold">⏸️ interrupt()</text>
+
+    <rect x="40" y="80" width="680" height="200" rx="15" fill="#fff3e0"/>
+    <text x="380" y="120" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">동작:</text>
+    <text x="60" y="160" font-family="Arial, sans-serif" font-size="22" fill="#666">1. 현재 State 저장</text>
+    <text x="60" y="195" font-family="Arial, sans-serif" font-size="22" fill="#666">2. 사용자에게 정보 전달</text>
+    <text x="60" y="230" font-family="Arial, sans-serif" font-size="22" fill="#666">3. 피드백 대기</text>
+  </g>
+
+  <!-- resume() + Checkpointing -->
+  <g transform="translate(1000, 620)">
+    <rect width="760" height="320" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow012)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">▶️ resume()</text>
+
+    <rect x="40" y="80" width="680" height="200" rx="15" fill="#e8f5e9"/>
+    <text x="380" y="120" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">동작:</text>
+    <text x="60" y="160" font-family="Arial, sans-serif" font-size="22" fill="#666">1. 사용자 피드백 수신</text>
+    <text x="60" y="195" font-family="Arial, sans-serif" font-size="22" fill="#666">2. State 업데이트</text>
+    <text x="60" y="230" font-family="Arial, sans-serif" font-size="22" fill="#666">3. 다음 노드로 진행</text>
+  </g>
+
+  <!-- Bottom: Key Point -->
+  <g transform="translate(260, 970)">
+    <rect width="1400" height="80" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow012)"/>
+    <text x="700" y="55" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle"><tspan fill="#667eea" font-weight="bold">🔑 핵심 포인트</tspan>: interrupt()로 멈추고 사용자 의견을 받아 resume()으로 재개</text>
+  </g>
+</svg>

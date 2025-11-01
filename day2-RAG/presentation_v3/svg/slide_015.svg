@@ -1,0 +1,121 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad015" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow015">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad015)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.5"/>
+    <text x="100" y="35" font-size="24" fill="#d84315" text-anchor="middle" font-weight="bold">Part 3</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="#d84315" text-anchor="middle" font-weight="bold">
+    Before / After 📊
+  </text>
+  <text x="960" y="200" font-size="32" fill="#e64a19" text-anchor="middle">
+    Prompt Engineering 효과
+  </text>
+
+  <!-- Comparison -->
+  <g transform="translate(150, 260)">
+    <!-- BEFORE -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="780" height="600" rx="20" fill="#ffebee" filter="url(#shadow015)"/>
+
+      <text x="390" y="50" font-size="36" fill="#c62828" text-anchor="middle" font-weight="bold">❌ Before</text>
+      <text x="390" y="90" font-size="24" fill="#e57373" text-anchor="middle">프롬프트 없음</text>
+
+      <!-- Example Response -->
+      <g transform="translate(50, 130)">
+        <rect x="0" y="0" width="680" height="400" rx="15" fill="white"/>
+
+        <text x="340" y="35" font-size="22" fill="#666" text-anchor="middle" font-weight="bold">질문: 김치찌개 만드는 법?</text>
+
+        <rect x="20" y="60" width="640" height="310" rx="10" fill="#fafafa"/>
+        <g transform="translate(40, 90)">
+          <text x="0" y="0" font-size="20" fill="#c62828" font-weight="bold">🤖 답변:</text>
+          <text x="0" y="40" font-size="18" fill="#666">김치찌개는 한국의 전통 음식이에요.</text>
+          <text x="0" y="75" font-size="18" fill="#666">김치와 고기를 넣고 끓이면 됩니다.</text>
+
+          <text x="0" y="120" font-size="18" fill="#ff5722" font-weight="bold">여기서 중요한 팁!</text>
+          <text x="0" y="155" font-size="18" fill="#666">마늘은 많이 넣을수록 좋아요. ← 📄❌</text>
+          <text x="0" y="190" font-size="18" fill="#666">고춧가루도 2스푼 추가하세요. ← 📄❌</text>
+
+          <text x="0" y="235" font-size="18" fill="#9e9e9e" font-style="italic">(문서에 없는 내용을 추측함)</text>
+        </g>
+      </g>
+
+      <!-- Performance -->
+      <circle cx="390" cy="570" r="40" fill="#ef5350"/>
+      <text x="390" y="585" font-size="32" fill="white" text-anchor="middle" font-weight="bold">35%</text>
+    </g>
+
+    <!-- AFTER -->
+    <g transform="translate(840, 0)">
+      <rect x="0" y="0" width="780" height="600" rx="20" fill="#e8f5e9" filter="url(#shadow015)"/>
+
+      <text x="390" y="50" font-size="36" fill="#2e7d32" text-anchor="middle" font-weight="bold">✅ After</text>
+      <text x="390" y="90" font-size="24" fill="#66bb6a" text-anchor="middle">System Prompt 적용</text>
+
+      <!-- Example Response -->
+      <g transform="translate(50, 130)">
+        <rect x="0" y="0" width="680" height="400" rx="15" fill="white"/>
+
+        <text x="340" y="35" font-size="22" fill="#666" text-anchor="middle" font-weight="bold">질문: 김치찌개 만드는 법?</text>
+
+        <rect x="20" y="60" width="640" height="310" rx="10" fill="#fafafa"/>
+        <g transform="translate(40, 90)">
+          <text x="0" y="0" font-size="20" fill="#2e7d32" font-weight="bold">🤖 답변:</text>
+          <text x="0" y="40" font-size="18" fill="#666" font-weight="bold">재료:</text>
+          <text x="0" y="70" font-size="18" fill="#666">- 배추김치 200g</text>
+          <text x="0" y="100" font-size="18" fill="#666">- 돼지고기 150g</text>
+
+          <text x="0" y="140" font-size="18" fill="#666" font-weight="bold">조리법:</text>
+          <text x="0" y="170" font-size="18" fill="#666">1. 김치를 먹기 좋게 자릅니다</text>
+          <text x="0" y="200" font-size="18" fill="#666">2. 고기와 함께 20분간 끓입니다</text>
+
+          <text x="0" y="240" font-size="18" fill="#4caf50">(모두 문서 기반 답변 ✓)</text>
+        </g>
+      </g>
+
+      <!-- Performance -->
+      <circle cx="390" cy="570" r="40" fill="#4caf50"/>
+      <text x="390" y="585" font-size="32" fill="white" text-anchor="middle" font-weight="bold">55%</text>
+    </g>
+  </g>
+
+  <!-- Bottom Improvement -->
+  <g transform="translate(150, 890)">
+    <rect x="0" y="0" width="1620" height="140" rx="20" fill="#4caf50" filter="url(#shadow015)"/>
+
+    <text x="810" y="50" font-size="36" fill="white" text-anchor="middle" font-weight="bold">📈 성능 향상</text>
+
+    <g transform="translate(300, 80)">
+      <circle cx="0" cy="15" r="35" fill="#ef5350"/>
+      <text x="0" y="25" font-size="28" fill="white" text-anchor="middle" font-weight="bold">35%</text>
+
+      <text x="80" y="25" font-size="48" fill="white" text-anchor="middle">→</text>
+
+      <circle cx="160" cy="15" r="35" fill="#2e7d32"/>
+      <text x="160" y="25" font-size="28" fill="white" text-anchor="middle" font-weight="bold">55%</text>
+
+      <text x="280" y="25" font-size="36" fill="white" text-anchor="middle" font-weight="bold">+20%</text>
+      <text x="600" y="25" font-size="28" fill="white" text-anchor="middle">Hallucination 감소, 답변 품질 향상</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="#d84315" text-anchor="middle" opacity="0.8">
+    Slide 15 / 38
+  </text>
+</svg>

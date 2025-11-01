@@ -1,0 +1,76 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgLight2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8ecff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cardShadow2">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgLight2)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1920" height="140" fill="#667eea"/>
+  <text x="960" y="90" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+    학습 로드맵
+  </text>
+
+  <!-- Part 1 -->
+  <g transform="translate(340, 220)">
+    <rect width="480" height="200" rx="20" fill="white" filter="url(#cardShadow2)"/>
+    <circle cx="60" cy="100" r="30" fill="#667eea" opacity="0.2"/>
+    <text x="60" y="112" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">1</text>
+    <text x="120" y="80" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">RAG 기초</text>
+    <text x="120" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">Naive RAG 구현</text>
+    <text x="120" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666">실패 패턴 분석</text>
+    <text x="120" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">개선 방향 도출</text>
+  </g>
+
+  <!-- Part 2 -->
+  <g transform="translate(1100, 220)">
+    <rect width="480" height="200" rx="20" fill="white" filter="url(#cardShadow2)"/>
+    <circle cx="60" cy="100" r="30" fill="#764ba2" opacity="0.2"/>
+    <text x="60" y="112" font-family="Arial, sans-serif" font-size="32" fill="#764ba2" text-anchor="middle" font-weight="bold">2</text>
+    <text x="120" y="80" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">쿼리 개선</text>
+    <text x="120" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">Multi-Query</text>
+    <text x="120" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666">HyDE</text>
+    <text x="120" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">Step-Back</text>
+  </g>
+
+  <!-- Part 3 -->
+  <g transform="translate(340, 480)">
+    <rect width="480" height="200" rx="20" fill="white" filter="url(#cardShadow2)"/>
+    <circle cx="60" cy="100" r="30" fill="#4facfe" opacity="0.2"/>
+    <text x="60" y="112" font-family="Arial, sans-serif" font-size="32" fill="#4facfe" text-anchor="middle" font-weight="bold">3</text>
+    <text x="120" y="80" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">Hybrid Search</text>
+    <text x="120" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">Vector + BM25</text>
+    <text x="120" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666">RRF Fusion</text>
+    <text x="120" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">Reranking</text>
+  </g>
+
+  <!-- Part 4 -->
+  <g transform="translate(1100, 480)">
+    <rect width="480" height="200" rx="20" fill="white" filter="url(#cardShadow2)"/>
+    <circle cx="60" cy="100" r="30" fill="#fa709a" opacity="0.2"/>
+    <text x="60" y="112" font-family="Arial, sans-serif" font-size="32" fill="#fa709a" text-anchor="middle" font-weight="bold">4</text>
+    <text x="120" y="80" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">평가 및 튜닝</text>
+    <text x="120" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">CRAG</text>
+    <text x="120" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666">RAGAS 평가</text>
+    <text x="120" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">파라미터 튜닝</text>
+  </g>
+
+  <!-- Progress bar -->
+  <rect x="340" y="760" width="1240" height="70" rx="35" fill="#e8ecff"/>
+  <rect x="340" y="760" width="310" height="70" rx="35" fill="#667eea"/>
+  <text x="960" y="805" font-family="Arial, sans-serif" font-size="28" fill="#667eea" text-anchor="middle" font-weight="bold">
+    총 9개 실습으로 완성하는 RAG
+  </text>
+
+  <!-- Footer -->
+  <text x="960" y="950" font-family="Arial, sans-serif" font-size="36" fill="#333" text-anchor="middle" font-weight="bold">
+    실전 프로덕션 RAG 완전 정복
+  </text>
+</svg>

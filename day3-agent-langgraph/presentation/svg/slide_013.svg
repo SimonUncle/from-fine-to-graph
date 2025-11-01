@@ -1,0 +1,45 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="shadow013"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/></filter></defs>
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">HITL 실전: 여행 계획 승인</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Before/After 비교</text>
+
+  <!-- Before -->
+  <g transform="translate(150, 240)">
+    <rect width="760" height="740" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow013)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#ff6b6b" text-anchor="middle" font-weight="bold">❌ HITL 없음</text>
+
+    <rect x="50" y="100" width="660" height="240" rx="15" fill="#ffebee"/>
+    <text x="380" y="140" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">Agent 동작:</text>
+    <text x="80" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666">1. 호텔 검색 → 자동 예약</text>
+    <text x="80" y="220" font-family="Arial, sans-serif" font-size="20" fill="#666">2. 일정 생성 → 바로 확정</text>
+    <text x="80" y="260" font-family="Arial, sans-serif" font-size="20" fill="#666">3. 사용자 확인 없음</text>
+
+    <rect x="50" y="370" width="660" height="320" rx="15" fill="#fff5f5"/>
+    <text x="380" y="420" font-family="Arial, sans-serif" font-size="24" fill="#e74c3c" text-anchor="middle" font-weight="bold">문제점:</text>
+    <text x="80" y="470" font-family="Arial, sans-serif" font-size="20" fill="#666">• 잘못된 예약 가능성</text>
+    <text x="80" y="510" font-family="Arial, sans-serif" font-size="20" fill="#666">• 사용자 선호도 무시</text>
+    <text x="80" y="550" font-family="Arial, sans-serif" font-size="20" fill="#666">• 수정 불가</text>
+    <text x="80" y="590" font-family="Arial, sans-serif" font-size="20" fill="#666">• 비용 낭비 위험</text>
+  </g>
+
+  <!-- After -->
+  <g transform="translate(1010, 240)">
+    <rect width="760" height="740" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow013)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">✅ HITL 적용</text>
+
+    <rect x="50" y="100" width="660" height="320" rx="15" fill="#e8f5e9"/>
+    <text x="380" y="140" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">Agent 동작:</text>
+    <text x="80" y="180" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">1. 호텔 검색 완료</text>
+    <text x="80" y="220" font-family="Arial, sans-serif" font-size="20" fill="#ff9800" font-weight="bold">   ⏸️ interrupt("검토 필요")</text>
+    <text x="80" y="260" font-family="Arial, sans-serif" font-size="20" fill="#666">2. 사용자: "2번 호텔로 변경"</text>
+    <text x="80" y="300" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">   ▶️ resume(feedback)</text>
+    <text x="80" y="340" font-family="Arial, sans-serif" font-size="20" fill="#666">3. 수정된 호텔로 예약</text>
+
+    <rect x="50" y="450" width="660" height="240" rx="15" fill="#f0fff4"/>
+    <text x="380" y="500" font-family="Arial, sans-serif" font-size="24" fill="#27AE60" text-anchor="middle" font-weight="bold">장점:</text>
+    <text x="80" y="550" font-family="Arial, sans-serif" font-size="20" fill="#666">✓ 사용자 통제권 유지</text>
+    <text x="80" y="590" font-family="Arial, sans-serif" font-size="20" fill="#666">✓ 실시간 수정 가능</text>
+    <text x="80" y="630" font-family="Arial, sans-serif" font-size="20" fill="#666">✓ 만족도 향상</text>
+  </g>
+</svg>

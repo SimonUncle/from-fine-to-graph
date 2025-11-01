@@ -1,0 +1,110 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad002" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow002">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad002)"/>
+
+  <!-- Title -->
+  <text x="960" y="120" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    오늘의 여정 🗺️
+  </text>
+  <text x="960" y="180" font-size="28" fill="white" text-anchor="middle" opacity="0.9">
+    7개 파트로 배우는 Advanced RAG
+  </text>
+
+  <!-- Timeline -->
+  <g transform="translate(200, 280)">
+    <!-- Part 0 -->
+    <g transform="translate(0, 0)">
+      <circle cx="60" cy="30" r="35" fill="white" opacity="0.3"/>
+      <text x="60" y="40" font-size="28" fill="white" text-anchor="middle" font-weight="bold">0</text>
+      <rect x="120" y="0" width="400" height="60" rx="15" fill="white" opacity="0.95" filter="url(#shadow002)"/>
+      <text x="150" y="40" font-size="24" fill="#333" font-weight="bold">인트로</text>
+    </g>
+
+    <!-- Part 1 -->
+    <g transform="translate(0, 90)">
+      <circle cx="60" cy="30" r="35" fill="#4facfe"/>
+      <text x="60" y="40" font-size="28" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <rect x="120" y="0" width="400" height="60" rx="15" fill="white" opacity="0.95" filter="url(#shadow002)"/>
+      <text x="150" y="40" font-size="24" fill="#333" font-weight="bold">기초 이론 - RAG의 토대</text>
+      <text x="540" y="40" font-size="20" fill="white">Embedding, Chunking</text>
+    </g>
+
+    <!-- Part 2 -->
+    <g transform="translate(0, 180)">
+      <circle cx="60" cy="30" r="35" fill="#fa709a"/>
+      <text x="60" y="40" font-size="28" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <rect x="120" y="0" width="400" height="60" rx="15" fill="white" opacity="0.95" filter="url(#shadow002)"/>
+      <text x="150" y="40" font-size="24" fill="#333" font-weight="bold">문제 인식 - Naive RAG</text>
+      <text x="540" y="40" font-size="20" fill="white">5가지 실패 패턴</text>
+    </g>
+
+    <!-- Part 3 -->
+    <g transform="translate(0, 270)">
+      <circle cx="60" cy="30" r="35" fill="#a8edea"/>
+      <text x="60" y="40" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">3</text>
+      <rect x="120" y="0" width="400" height="60" rx="15" fill="white" opacity="0.95" filter="url(#shadow002)"/>
+      <text x="150" y="40" font-size="24" fill="#333" font-weight="bold">Query 개선 - 질문 똑똑하게</text>
+      <text x="540" y="40" font-size="20" fill="white">Multi-Query, HyDE</text>
+    </g>
+
+    <!-- Part 4 -->
+    <g transform="translate(0, 360)">
+      <circle cx="60" cy="30" r="35" fill="#fbc2eb"/>
+      <text x="60" y="40" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">4</text>
+      <rect x="120" y="0" width="400" height="60" rx="15" fill="white" opacity="0.95" filter="url(#shadow002)"/>
+      <text x="150" y="40" font-size="24" fill="#333" font-weight="bold">검색 개선 - 찾기 더 정확하게</text>
+      <text x="540" y="40" font-size="20" fill="white">Hybrid, Reranking</text>
+    </g>
+
+    <!-- Part 5 -->
+    <g transform="translate(0, 450)">
+      <circle cx="60" cy="30" r="35" fill="#fed6e3"/>
+      <text x="60" y="40" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">5</text>
+      <rect x="120" y="0" width="400" height="60" rx="15" fill="white" opacity="0.95" filter="url(#shadow002)"/>
+      <text x="150" y="40" font-size="24" fill="#333" font-weight="bold">자가 평가 - 스스로 판단</text>
+      <text x="540" y="40" font-size="20" fill="white">Self-RAG, CRAG</text>
+    </g>
+
+    <!-- Part 6 -->
+    <g transform="translate(0, 540)">
+      <circle cx="60" cy="30" r="35" fill="#c1dfc4"/>
+      <text x="60" y="40" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">6</text>
+      <rect x="120" y="0" width="400" height="60" rx="15" fill="white" opacity="0.95" filter="url(#shadow002)"/>
+      <text x="150" y="40" font-size="24" fill="#333" font-weight="bold">평가 & 튜닝 - 성능 측정</text>
+      <text x="540" y="40" font-size="20" fill="white">RAGAS, Parameters</text>
+    </g>
+  </g>
+
+  <!-- Right Side Stats -->
+  <g transform="translate(1100, 300)">
+    <rect x="0" y="0" width="600" height="500" rx="20" fill="white" opacity="0.15" filter="url(#shadow002)"/>
+
+    <text x="300" y="60" font-size="32" fill="white" text-anchor="middle" font-weight="bold">🎯 학습 목표</text>
+
+    <g transform="translate(50, 120)">
+      <text x="0" y="0" font-size="24" fill="white">✓ Naive RAG의 한계 이해</text>
+      <text x="0" y="60" font-size="24" fill="white">✓ Query 개선 4가지 기법</text>
+      <text x="0" y="120" font-size="24" fill="white">✓ Hybrid Search 구현</text>
+      <text x="0" y="180" font-size="24" fill="white">✓ Reranking 원리</text>
+      <text x="0" y="240" font-size="24" fill="white">✓ RAGAS 평가 지표</text>
+    </g>
+
+    <rect x="100" y="420" width="400" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="300" y="453" font-size="24" fill="white" text-anchor="middle" font-weight="bold">35% → 85%+ 성능 향상</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1040" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 2 / 38
+  </text>
+</svg>

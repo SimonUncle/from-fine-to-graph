@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="exampleGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow7">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">김치찌개 예시로 이해하기</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Naive RAG 작동 흐름</text>
+
+  <!-- Left: Vector DB -->
+  <g transform="translate(150, 240)">
+    <rect width="720" height="700" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow7)"/>
+    <text x="360" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">벡터 DB (13개 문서)</text>
+
+    <!-- Doc 1 -->
+    <rect x="50" y="90" width="620" height="80" rx="15" fill="#ffcdd2"/>
+    <text x="360" y="120" font-family="Arial, sans-serif" font-size="22" fill="#c62828" text-anchor="middle" font-weight="bold">김치찌개 레시피</text>
+    <text x="360" y="150" font-family="Arial, sans-serif" font-size="18" fill="#666" text-anchor="middle">배추김치, 돼지고기, 두부, 파...</text>
+
+    <!-- Doc 2 -->
+    <rect x="50" y="185" width="620" height="80" rx="15" fill="#f8bbd0"/>
+    <text x="360" y="215" font-family="Arial, sans-serif" font-size="22" fill="#880e4f" text-anchor="middle" font-weight="bold">된장찌개 레시피</text>
+    <text x="360" y="245" font-family="Arial, sans-serif" font-size="18" fill="#666" text-anchor="middle">된장, 두부, 애호박, 감자...</text>
+
+    <!-- Doc 3 -->
+    <rect x="50" y="280" width="620" height="80" rx="15" fill="#fff9c4"/>
+    <text x="360" y="310" font-family="Arial, sans-serif" font-size="22" fill="#f57f17" text-anchor="middle" font-weight="bold">불고기 레시피</text>
+    <text x="360" y="340" font-family="Arial, sans-serif" font-size="18" fill="#666" text-anchor="middle">쇠고기, 간장, 설탕, 마늘...</text>
+
+    <!-- Others -->
+    <rect x="50" y="375" width="620" height="280" rx="15" fill="#e0e0e0"/>
+    <text x="360" y="420" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">... (나머지 10개 문서)</text>
+    <text x="360" y="460" font-family="Arial, sans-serif" font-size="20" fill="#999" text-anchor="middle">백종원 김치찌개, 흑백요리사 레시피</text>
+    <text x="360" y="490" font-family="Arial, sans-serif" font-size="20" fill="#999" text-anchor="middle">조리 용어 사전, 칼질 기법</text>
+    <text x="360" y="520" font-family="Arial, sans-serif" font-size="20" fill="#999" text-anchor="middle">보관법, 영양 정보 등</text>
+    <text x="360" y="590" font-family="Arial, sans-serif" font-size="22" fill="#27AE60" text-anchor="middle" font-weight="bold">총 13개 Chunk</text>
+    <text x="360" y="625" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">(임베딩 벡터로 변환)</text>
+  </g>
+
+  <!-- Right: Query & Retrieval -->
+  <g transform="translate(920, 240)">
+    <rect width="850" height="700" rx="20" fill="white" stroke="#11998e" stroke-width="4" filter="url(#shadow7)"/>
+
+    <!-- Query -->
+    <text x="425" y="50" font-family="Arial, sans-serif" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">사용자 질문</text>
+    <rect x="100" y="70" width="650" height="70" rx="15" fill="#e3f2fd"/>
+    <text x="425" y="113" font-family="Arial, sans-serif" font-size="28" fill="#1976d2" text-anchor="middle" font-weight="bold">"김치찌개 레시피 알려줘"</text>
+
+    <!-- Similarity Search -->
+    <text x="425" y="190" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">Cosine Similarity 계산</text>
+
+    <!-- Top 3 Results -->
+    <!-- Rank 1 -->
+    <rect x="100" y="230" width="650" height="80" rx="15" fill="#c8e6c9"/>
+    <circle cx="140" cy="270" r="25" fill="#4caf50"/>
+    <text x="140" y="279" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">1</text>
+    <text x="190" y="260" font-family="Arial, sans-serif" font-size="24" fill="#2e7d32" font-weight="bold">김치찌개 레시피</text>
+    <text x="190" y="290" font-family="Arial, sans-serif" font-size="20" fill="#666">유사도: 0.92 (매우 높음)</text>
+
+    <!-- Rank 2 -->
+    <rect x="100" y="325" width="650" height="80" rx="15" fill="#dcedc8"/>
+    <circle cx="140" cy="365" r="25" fill="#7cb342"/>
+    <text x="140" y="374" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">2</text>
+    <text x="190" y="355" font-family="Arial, sans-serif" font-size="24" fill="#558b2f" font-weight="bold">백종원 김치찌개</text>
+    <text x="190" y="385" font-family="Arial, sans-serif" font-size="20" fill="#666">유사도: 0.88 (높음)</text>
+
+    <!-- Rank 3 -->
+    <rect x="100" y="420" width="650" height="80" rx="15" fill="#f0f4c3"/>
+    <circle cx="140" cy="460" r="25" fill="#9e9d24"/>
+    <text x="140" y="469" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">3</text>
+    <text x="190" y="450" font-family="Arial, sans-serif" font-size="24" fill="#827717" font-weight="bold">된장찌개 레시피</text>
+    <text x="190" y="480" font-family="Arial, sans-serif" font-size="20" fill="#666">유사도: 0.75 (중간)</text>
+
+    <!-- LLM Generation -->
+    <rect x="50" y="550" width="750" height="120" rx="15" fill="url(#exampleGrad7)"/>
+    <text x="425" y="595" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">LLM이 Top-3 문서 기반으로</text>
+    <text x="425" y="635" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">답변 생성</text>
+  </g>
+</svg>

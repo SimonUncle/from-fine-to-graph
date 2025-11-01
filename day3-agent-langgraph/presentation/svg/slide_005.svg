@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow005">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="80" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">실전 예시: 여행 Agent</text>
+  <text x="960" y="140" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">서울 3박4일 여행 계획</text>
+
+  <!-- Flow -->
+  <!-- Step 1: Perception -->
+  <g transform="translate(260, 200)">
+    <rect width="1400" height="140" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow005)"/>
+    <circle cx="70" cy="70" r="35" fill="#27AE60"/>
+    <text x="70" y="80" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">1</text>
+    
+    <text x="150" y="50" font-family="Arial, sans-serif" font-size="28" fill="#27AE60" font-weight="bold">👁️ Perception (인식)</text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="22" fill="#666">사용자: "예산 100만원으로 서울 3박4일 여행 계획 짜줘"</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 960 340 L 960 380" stroke="#667eea" stroke-width="4"/>
+  <polygon points="960,380 950,365 970,365" fill="#667eea"/>
+
+  <!-- Step 2: Reasoning -->
+  <g transform="translate(260, 400)">
+    <rect width="1400" height="180" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow005)"/>
+    <circle cx="70" cy="90" r="35" fill="#ff9800"/>
+    <text x="70" y="100" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">2</text>
+    
+    <text x="150" y="50" font-family="Arial, sans-serif" font-size="28" fill="#ff9800" font-weight="bold">🧠 Reasoning (추론)</text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="20" fill="#666">• 예산 100만원 분석 → 숙박 40만원, 식비 30만원, 교통 15만원, 관광 15만원</text>
+    <text x="150" y="130" font-family="Arial, sans-serif" font-size="20" fill="#666">• 필요한 정보: 날씨, 영업시간, 호텔 가격, 교통편, 맛집 리뷰</text>
+    <text x="150" y="165" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">→ 계획: 날씨 확인 → 호텔 검색 → 교통 계획 → 일정 생성</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 960 580 L 960 620" stroke="#667eea" stroke-width="4"/>
+  <polygon points="960,620 950,605 970,605" fill="#667eea"/>
+
+  <!-- Step 3: Action -->
+  <g transform="translate(260, 640)">
+    <rect width="1400" height="240" rx="20" fill="white" stroke="#9b59b6" stroke-width="4" filter="url(#shadow005)"/>
+    <circle cx="70" cy="120" r="35" fill="#9b59b6"/>
+    <text x="70" y="130" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">3</text>
+    
+    <text x="150" y="50" font-family="Arial, sans-serif" font-size="28" fill="#9b59b6" font-weight="bold">⚡ Action (행동)</text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">✓ 날씨 API 호출: "서울 다음주 맑음, 평균 18°C"</text>
+    <text x="150" y="130" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">✓ 호텔 API 검색: "명동 호텔 3박 35만원"</text>
+    <text x="150" y="165" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">✓ 지도 API 거리 계산: "경복궁 → 북촌 2.1km"</text>
+    <text x="150" y="200" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">✓ 리뷰 DB 검색: "광장시장 맛집 Top 5"</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 960 880 L 960 920" stroke="#667eea" stroke-width="4"/>
+  <polygon points="960,920 950,905 970,905" fill="#667eea"/>
+
+  <!-- Step 4: Memory & Output -->
+  <g transform="translate(260, 940)">
+    <rect width="680" height="120" rx="20" fill="white" stroke="#e74c3c" stroke-width="4" filter="url(#shadow005)"/>
+    <circle cx="60" cy="60" r="35" fill="#e74c3c"/>
+    <text x="60" y="70" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">4</text>
+    
+    <text x="130" y="50" font-family="Arial, sans-serif" font-size="26" fill="#e74c3c" font-weight="bold">💾 Memory (저장)</text>
+    <text x="130" y="90" font-family="Arial, sans-serif" font-size="20" fill="#666">검색 결과 저장 → 다음 단계 활용</text>
+  </g>
+
+  <g transform="translate(980, 940)">
+    <rect width="680" height="120" rx="20" fill="#4caf50" filter="url(#shadow005)"/>
+    <text x="340" y="55" font-family="Arial, sans-serif" font-size="26" fill="white" text-anchor="middle" font-weight="bold">✅ 최종 결과</text>
+    <text x="340" y="90" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">상세한 3박4일 일정 + 예산 내역</text>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 7: CRAG</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">코드 예시</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"CRAG 전체 구현"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Code section -->
+  <rect x="150" y="300" width="1620" height="680" rx="20" fill="#1E1E1E"/>
+
+  <text x="190" y="350" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># CRAG: Corrective RAG 전체 파이프라인</text>
+
+  <text x="190" y="400" font-family="Monaco, monospace" font-size="18" fill="#C586C0">def</text>
+  <text x="240" y="400" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA"> crag_pipeline</text>
+  <text x="440" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="460" y="400" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="550" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">):</text>
+
+  <text x="230" y="450" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 1. Initial Retrieval</text>
+  <text x="230" y="490" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">    docs</text>
+  <text x="320" y="490" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="370" y="490" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vectorstore</text>
+  <text x="540" y="490" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="560" y="490" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">similarity_search</text>
+  <text x="800" y="490" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="820" y="490" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="910" y="490" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">, </text>
+  <text x="940" y="490" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">k</text>
+  <text x="970" y="490" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="1000" y="490" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">5</text>
+  <text x="1020" y="490" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="230" y="550" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 2. Self-Evaluation (LLM이 검색 품질 평가)</text>
+  <text x="230" y="590" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">    eval_prompt</text>
+  <text x="420" y="590" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="270" y="630" font-family="Monaco, monospace" font-size="18" fill="#CE9178">        "다음 문서가 질문에 답할 수 있나요? Correct/Incorrect/Ambiguous로 답하세요."</text>
+  <text x="230" y="670" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">    evaluation</text>
+  <text x="420" y="670" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="470" y="670" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">llm</text>
+  <text x="530" y="670" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="550" y="670" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">generate</text>
+  <text x="690" y="670" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="710" y="670" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">eval_prompt</text>
+  <text x="900" y="670" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="230" y="720" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 3. Adaptive Action (평가 결과에 따라 다른 전략)</text>
+  <text x="230" y="760" font-family="Monaco, monospace" font-size="18" fill="#C586C0">    if</text>
+  <text x="290" y="760" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> evaluation</text>
+  <text x="480" y="760" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> == </text>
+  <text x="540" y="760" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"Correct"</text>
+  <text x="700" y="760" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">:</text>
+  <text x="270" y="800" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># ✅ 그대로 사용</text>
+  <text x="270" y="835" font-family="Monaco, monospace" font-size="18" fill="#C586C0">return</text>
+  <text x="360" y="835" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> docs</text>
+
+  <text x="230" y="880" font-family="Monaco, monospace" font-size="18" fill="#C586C0">    elif</text>
+  <text x="330" y="880" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> evaluation</text>
+  <text x="520" y="880" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> == </text>
+  <text x="580" y="880" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"Incorrect"</text>
+  <text x="770" y="880" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">:</text>
+  <text x="270" y="920" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># ❌ Web Search 보완</text>
+  <text x="270" y="955" font-family="Monaco, monospace" font-size="18" fill="#C586C0">return</text>
+  <text x="360" y="955" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA"> web_search</text>
+  <text x="520" y="955" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="540" y="955" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="630" y="955" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">46 / 63</text>
+</svg>

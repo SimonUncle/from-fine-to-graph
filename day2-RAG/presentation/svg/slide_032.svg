@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <rect x="80" y="60" width="450" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="305" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 5: Metadata Filtering</text>
+
+  <!-- Quiz badge -->
+  <rect x="1700" y="60" width="140" height="50" rx="25" fill="#F39C12" opacity="0.3"/>
+  <text x="1770" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#F39C12" text-anchor="middle">💡 Quiz</text>
+
+  <text x="960" y="180" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">연습 문제</text>
+  <text x="960" y="240" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"적절한 필터 조건은?"</text>
+
+  <g transform="translate(960, 260)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="-90" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Question -->
+  <rect x="200" y="320" width="1520" height="140" rx="20" fill="#FFFFBA" opacity="0.4" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="375" font-size="50" text-anchor="middle">❓</text>
+  <text x="400" y="370" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50">시나리오</text>
+  <text x="400" y="420" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">사용자가 "<tspan font-weight="bold">최근 2년간 부동산 관련 판례</tspan>"를 요청했습니다.</text>
+
+  <!-- Options -->
+  <!-- Option A -->
+  <g transform="translate(200, 500)">
+    <rect x="0" y="0" width="700" height="100" rx="15" fill="#FFB3BA" opacity="0.2" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="50" cy="50" r="25" fill="#FF6B6B" opacity="0.5" stroke="#FF6B6B" stroke-width="2"/>
+    <text x="50" y="60" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">A</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50">filter = {{"category": "판례"}}</text>
+  </g>
+
+  <!-- Option B -->
+  <g transform="translate(1020, 500)">
+    <rect x="0" y="0" width="700" height="100" rx="15" fill="#BAFFC9" opacity="0.2" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="50" cy="50" r="25" fill="#4ECDC4" opacity="0.5" stroke="#4ECDC4" stroke-width="2"/>
+    <text x="50" y="60" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">B</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50">filter = {{"year": {{"$gte": 2023}}}}</text>
+  </g>
+
+  <!-- Option C (Correct) -->
+  <g transform="translate(200, 630)">
+    <rect x="0" y="0" width="1520" height="100" rx="15" fill="#D5F4E6" opacity="0.5" stroke="#27AE60" stroke-width="4"/>
+    <circle cx="50" cy="50" r="25" fill="#27AE60" opacity="0.7" stroke="#27AE60" stroke-width="3"/>
+    <text x="50" y="60" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">C</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#27AE60">filter = {{"$and": [{{"year": {{"$gte": 2023}}}}, {{"category": "부동산"}}, {{"type": "판례"}}]}} ✅</text>
+  </g>
+
+  <!-- Answer explanation -->
+  <rect x="200" y="770" width="1520" height="210" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3"/>
+  <text x="270" y="820" font-size="45" text-anchor="middle">💡</text>
+  <text x="380" y="815" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#27AE60">정답: C. Hybrid Filtering</text>
+  <text x="380" y="860" font-family="system-ui, sans-serif" font-size="22" fill="#229954">
+    <tspan font-weight="bold">시간(year >= 2023)</tspan> + <tspan font-weight="bold">카테고리(부동산)</tspan> + <tspan font-weight="bold">타입(판례)</tspan> 모두 필요!
+  </text>
+  <text x="380" y="900" font-family="system-ui, sans-serif" font-size="22" fill="#229954">
+    A는 오래된 판례 포함, B는 부동산 외 다른 분야 포함 → 부정확
+  </text>
+  <text x="380" y="940" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+    💡 실전 팁: 요구사항의 모든 조건(시간, 카테고리, 타입)을 AND로 결합!
+  </text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">32 / 63</text>
+</svg>

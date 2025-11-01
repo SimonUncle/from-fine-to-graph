@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <rect x="80" y="60" width="320" height="50" rx="25" fill="#FF6B6B" opacity="0.2"/>
+  <text x="240" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#FF6B6B" text-anchor="middle">Section 2: 실패 분석</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">5가지 실패 패턴</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Naive RAG가 실패하는 이유"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Failure Pattern Cards -->
+  <!-- Pattern 1 -->
+  <g transform="translate(200, 320)">
+    <rect x="0" y="0" width="650" height="160" rx="20" fill="#FFB3BA" opacity="0.2" stroke="#FF6B6B" stroke-width="3"/>
+    <circle cx="80" cy="80" r="55" fill="#FF6B6B" opacity="0.3"/>
+    <text x="80" y="95" font-size="50" text-anchor="middle">🔍</text>
+    <text x="170" y="55" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50">1. Semantic Gap</text>
+    <text x="170" y="95" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">"도박빚" ≠ "도박 채무" - 키워드 불일치</text>
+    <text x="170" y="130" font-family="system-ui, sans-serif" font-size="18" fill="#95A5A6">벡터만으로는 동의어/유의어 매칭 실패</text>
+  </g>
+
+  <!-- Pattern 2 -->
+  <g transform="translate(1070, 320)">
+    <rect x="0" y="0" width="650" height="160" rx="20" fill="#BAFFC9" opacity="0.2" stroke="#4ECDC4" stroke-width="3"/>
+    <circle cx="80" cy="80" r="55" fill="#4ECDC4" opacity="0.3"/>
+    <text x="80" y="95" font-size="50" text-anchor="middle">📄</text>
+    <text x="170" y="55" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50">2. Context 부족</text>
+    <text x="170" y="95" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">단편적 정보만 검색 - 관련 조항 누락</text>
+    <text x="170" y="130" font-family="system-ui, sans-serif" font-size="18" fill="#95A5A6">Top-K가 3개뿐이라 중요 문서 놓침</text>
+  </g>
+
+  <!-- Pattern 3 -->
+  <g transform="translate(200, 510)">
+    <rect x="0" y="0" width="650" height="160" rx="20" fill="#BAE1FF" opacity="0.2" stroke="#45B7D1" stroke-width="3"/>
+    <circle cx="80" cy="80" r="55" fill="#45B7D1" opacity="0.3"/>
+    <text x="80" y="95" font-size="50" text-anchor="middle">❓</text>
+    <text x="170" y="55" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50">3. 모호한 질문</text>
+    <text x="170" y="95" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">"계약 파기" - 어떤 계약? 언제?</text>
+    <text x="170" y="130" font-family="system-ui, sans-serif" font-size="18" fill="#95A5A6">중의성 있는 질문은 잘못된 문서 검색</text>
+  </g>
+
+  <!-- Pattern 4 -->
+  <g transform="translate(1070, 510)">
+    <rect x="0" y="0" width="650" height="160" rx="20" fill="#E0BBE4" opacity="0.2" stroke="#9B59B6" stroke-width="3"/>
+    <circle cx="80" cy="80" r="55" fill="#9B59B6" opacity="0.3"/>
+    <text x="80" y="95" font-size="50" text-anchor="middle">📅</text>
+    <text x="170" y="55" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50">4. 최신성 부족</text>
+    <text x="170" y="95" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">2020년 구법 vs 2024년 신법 혼재</text>
+    <text x="170" y="130" font-family="system-ui, sans-serif" font-size="18" fill="#95A5A6">시간 메타데이터 없어 구법 검색</text>
+  </g>
+
+  <!-- Pattern 5 -->
+  <g transform="translate(635, 700)">
+    <rect x="0" y="0" width="650" height="160" rx="20" fill="#FFEAA7" opacity="0.3" stroke="#F39C12" stroke-width="3"/>
+    <circle cx="80" cy="80" r="55" fill="#F39C12" opacity="0.3"/>
+    <text x="80" y="95" font-size="50" text-anchor="middle">📉</text>
+    <text x="170" y="55" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50">5. 낮은 관련성</text>
+    <text x="170" y="95" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">유사도 0.65 문서도 Top-3에 포함</text>
+    <text x="170" y="130" font-family="system-ui, sans-serif" font-size="18" fill="#95A5A6">Threshold 없어 노이즈 문서 혼입</text>
+  </g>
+
+  <!-- Bottom solution preview -->
+  <rect x="200" y="900" width="1520" height="110" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="2"/>
+  <text x="270" y="945" font-size="40" text-anchor="middle">✅</text>
+  <text x="370" y="940" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#27AE60">해결 방법</text>
+  <text x="370" y="980" font-family="system-ui, sans-serif" font-size="22" fill="#229954">다음 Section부터 각 문제에 대한 해결책을 배웁니다: Query Refinement, Hybrid Search, Metadata Filtering, CRAG</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">9 / 63</text>
+</svg>

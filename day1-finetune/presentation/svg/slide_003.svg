@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs><style>
+.t{font-family:Arial,sans-serif;font-size:72px;font-weight:900;fill:#2C3E50}
+.st{font-family:Arial,sans-serif;font-size:36px;font-weight:500;fill:#7F8C8D}
+.h1{font-family:Arial,sans-serif;font-size:56px;font-weight:700;fill:#2C3E50}
+.h2{font-family:Arial,sans-serif;font-size:42px;font-weight:700;fill:#2C3E50}
+.bd{font-family:Arial,sans-serif;font-size:32px;font-weight:400;fill:#2C3E50}
+.sm{font-family:Arial,sans-serif;font-size:28px;font-weight:400;fill:#2C3E50}
+.tp{font-family:Arial,sans-serif;font-size:28px;font-weight:500;fill:#7F8C8D}
+</style></defs>
+<rect width="1920" height="1080" fill="white"/>
+<circle cx="885" cy="180" r="12" fill="#FFB6C1"/><circle cx="915" cy="180" r="12" fill="#98D8C8"/><circle cx="945" cy="180" r="12" fill="#B19CD9"/><circle cx="975" cy="180" r="12" fill="#6C9BCF"/><circle cx="1005" cy="180" r="12" fill="#F4D35E"/>
+<text x="960" y="260" class="h1" text-anchor="middle">학습 방법</text>
+<rect x="200" y="380" width="750" height="420" rx="30" fill="#FFB6C1" opacity="0.1"/>
+<text x="575" y="460" class="h2" text-anchor="middle">💬 이 강의 (이론)</text>
+<text x="575" y="560" class="bd" text-anchor="middle">왜 이 기술이 필요한가?</text>
+<text x="575" y="620" class="bd" text-anchor="middle">어떤 원리로 작동하는가?</text>
+<text x="575" y="680" class="bd" text-anchor="middle">다른 방법과 무엇이 다른가?</text>
+<text x="575" y="760" class="sm" text-anchor="middle">개념과 원리 이해</text>
+<rect x="1000" y="380" width="700" height="420" rx="30" fill="#98D8C8" opacity="0.1"/>
+<text x="1350" y="460" class="h2" text-anchor="middle">💻 노트북 (실습)</text>
+<text x="1350" y="560" class="bd" text-anchor="middle">코드로 직접 실행</text>
+<text x="1350" y="620" class="bd" text-anchor="middle">데이터 처리부터 평가까지</text>
+<text x="1350" y="680" class="bd" text-anchor="middle">결과를 눈으로 확인</text>
+<text x="1350" y="760" class="sm" text-anchor="middle">Prerequisites 6개 + Main 4개</text>
+<rect x="80" y="980" width="1760" height="80" rx="15" fill="#F8F9FA"/><text x="120" y="1035" class="tp">💡 강의로 이론을 이해하고, 노트북으로 직접 실습합니다</text>
+</svg>

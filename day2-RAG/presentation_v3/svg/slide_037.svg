@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad037" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow037"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad037)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 7</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">실무 적용 가이드 💼</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">어떤 기법을 언제 쓸까?</text>
+  <g transform="translate(200, 270)">
+    <rect x="0" y="0" width="1520" height="680" rx="20" fill="white" opacity="0.95" filter="url(#shadow037)"/>
+    <text x="760" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">상황별 RAG 전략</text>
+    <g transform="translate(80, 110)">
+      <rect x="0" y="0" width="680" height="220" rx="15" fill="#e8f5e9"/>
+      <text x="340" y="40" font-size="28" fill="#2e7d32" text-anchor="middle" font-weight="bold">🚀 빠른 프로토타입 (1-2일)</text>
+      <g transform="translate(40, 75)">
+        <text x="0" y="0" font-size="22" fill="#666" font-weight="bold">추천 구성:</text>
+        <text x="0" y="40" font-size="20" fill="#666">✓ Naive RAG + Prompt Engineering</text>
+        <text x="0" y="75" font-size="20" fill="#666">✓ chunk_size=400, top_k=5</text>
+        <text x="0" y="120" font-size="20" fill="#2e7d32" font-weight="bold">→ 55-60% 정확도, 빠른 구현</text>
+      </g>
+      <rect x="760" y="0" width="680" height="220" rx="15" fill="#fff9c4"/>
+      <text x="1100" y="40" font-size="28" fill="#f57f17" text-anchor="middle" font-weight="bold">⚡ 균형잡힌 성능 (1주)</text>
+      <g transform="translate(800, 75)">
+        <text x="0" y="0" font-size="22" fill="#666" font-weight="bold">추천 구성:</text>
+        <text x="0" y="40" font-size="20" fill="#666">✓ Hybrid Search (Vector + BM25)</text>
+        <text x="0" y="75" font-size="20" fill="#666">✓ Multi-Query + Metadata Filter</text>
+        <text x="0" y="120" font-size="20" fill="#f57f17" font-weight="bold">→ 70-75% 정확도, 적절한 속도</text>
+      </g>
+      <rect x="0" y="250" width="680" height="220" rx="15" fill="#e3f2fd"/>
+      <text x="340" y="290" font-size="28" fill="#1976d2" text-anchor="middle" font-weight="bold">🎯 최고 정확도 (2-3주)</text>
+      <g transform="translate(40, 325)">
+        <text x="0" y="0" font-size="22" fill="#666" font-weight="bold">추천 구성:</text>
+        <text x="0" y="40" font-size="20" fill="#666">✓ Hybrid + Cross-Encoder Rerank</text>
+        <text x="0" y="75" font-size="20" fill="#666">✓ RAG-Fusion + Self-RAG</text>
+        <text x="0" y="120" font-size="20" fill="#1976d2" font-weight="bold">→ 80-85%+ 정확도, 비용↑</text>
+      </g>
+      <rect x="760" y="250" width="680" height="220" rx="15" fill="#fff3e0"/>
+      <text x="1100" y="290" font-size="28" fill="#e65100" text-anchor="middle" font-weight="bold">💎 프로덕션 (지속)</text>
+      <g transform="translate(800, 325)">
+        <text x="0" y="0" font-size="22" fill="#666" font-weight="bold">추천 구성:</text>
+        <text x="0" y="40" font-size="20" fill="#666">✓ Modular RAG (Router + CRAG)</text>
+        <text x="0" y="75" font-size="20" fill="#666">✓ RAGAS 지속 모니터링</text>
+        <text x="0" y="120" font-size="20" fill="#e65100" font-weight="bold">→ 85%+, 상황별 adaptive</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(200, 980)">
+    <rect x="0" y="0" width="1520" height="70" rx="20" fill="#667eea" filter="url(#shadow037)"/>
+    <text x="760" y="47" font-size="28" fill="white" text-anchor="middle" font-weight="bold">💡 단계별로 구축! 먼저 Naive → 성능 측정 → 점진적 개선</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 37 / 38</text>
+</svg>

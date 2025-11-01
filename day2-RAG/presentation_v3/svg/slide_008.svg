@@ -1,0 +1,124 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad008" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow008">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad008)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 1</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="52" fill="white" text-anchor="middle" font-weight="bold">
+    RecursiveCharacterTextSplitter 💻
+  </text>
+  <text x="960" y="200" font-size="28" fill="white" text-anchor="middle" opacity="0.9">
+    실전 코드로 Chunking 구현하기
+  </text>
+
+  <!-- Code Block -->
+  <g transform="translate(200, 250)">
+    <rect x="0" y="0" width="1520" height="620" rx="20" fill="#263238" filter="url(#shadow008)"/>
+
+    <!-- Code Title -->
+    <rect x="0" y="0" width="1520" height="60" rx="20" fill="#37474f"/>
+    <text x="30" y="40" font-size="24" fill="#81c784" font-weight="bold">📄 01_naive_rag_baseline.ipynb</text>
+
+    <!-- Line numbers and code -->
+    <g transform="translate(30, 90)" font-family="monospace">
+      <!-- Line 1 -->
+      <text x="0" y="0" font-size="20" fill="#546e7a">1</text>
+      <text x="60" y="0" font-size="20" fill="#ff7043">from</text>
+      <text x="135" y="0" font-size="20" fill="#e0e0e0"> langchain.text_splitter </text>
+      <text x="530" y="0" font-size="20" fill="#ff7043">import</text>
+      <text x="650" y="0" font-size="20" fill="#e0e0e0"> RecursiveCharacterTextSplitter</text>
+
+      <!-- Line 2 -->
+      <text x="0" y="45" font-size="20" fill="#546e7a">2</text>
+
+      <!-- Line 3 -->
+      <text x="0" y="90" font-size="20" fill="#546e7a">3</text>
+      <text x="60" y="90" font-size="20" fill="#b0bec5"># Chunking 설정: 500자씩 자르고, 50자는 겹치게</text>
+
+      <!-- Line 4 -->
+      <text x="0" y="135" font-size="20" fill="#546e7a">4</text>
+      <text x="60" y="135" font-size="20" fill="#e0e0e0">text_splitter = RecursiveCharacterTextSplitter(</text>
+
+      <!-- Line 5 -->
+      <text x="0" y="180" font-size="20" fill="#546e7a">5</text>
+      <text x="100" y="180" font-size="20" fill="#81c784">chunk_size</text>
+      <text x="280" y="180" font-size="20" fill="#e0e0e0">=</text>
+      <text x="320" y="180" font-size="20" fill="#ffab91">500</text>
+      <text x="380" y="180" font-size="20" fill="#e0e0e0">,</text>
+      <text x="480" y="180" font-size="20" fill="#b0bec5"># 한 청크의 최대 글자 수</text>
+
+      <!-- Line 6 -->
+      <text x="0" y="225" font-size="20" fill="#546e7a">6</text>
+      <text x="100" y="225" font-size="20" fill="#81c784">chunk_overlap</text>
+      <text x="330" y="225" font-size="20" fill="#e0e0e0">=</text>
+      <text x="370" y="225" font-size="20" fill="#ffab91">50</text>
+      <text x="420" y="225" font-size="20" fill="#e0e0e0">,</text>
+      <text x="480" y="225" font-size="20" fill="#b0bec5"># 앞 청크와 겹치는 글자 수</text>
+
+      <!-- Line 7 -->
+      <text x="0" y="270" font-size="20" fill="#546e7a">7</text>
+      <text x="100" y="270" font-size="20" fill="#81c784">length_function</text>
+      <text x="360" y="270" font-size="20" fill="#e0e0e0">=len,</text>
+      <text x="480" y="270" font-size="20" fill="#b0bec5"># 길이 계산 함수</text>
+
+      <!-- Line 8 -->
+      <text x="0" y="315" font-size="20" fill="#546e7a">8</text>
+      <text x="100" y="315" font-size="20" fill="#81c784">separators</text>
+      <text x="290" y="315" font-size="20" fill="#e0e0e0">=[</text>
+      <text x="330" y="315" font-size="20" fill="#c5e1a5">"\n\n"</text>
+      <text x="430" y="315" font-size="20" fill="#e0e0e0">,</text>
+      <text x="470" y="315" font-size="20" fill="#c5e1a5">"\n"</text>
+      <text x="550" y="315" font-size="20" fill="#e0e0e0">,</text>
+      <text x="590" y="315" font-size="20" fill="#c5e1a5">" "</text>
+      <text x="660" y="315" font-size="20" fill="#e0e0e0">]</text>
+      <text x="720" y="315" font-size="20" fill="#b0bec5"># 우선순위로 자를 구분자</text>
+
+      <!-- Line 9 -->
+      <text x="0" y="360" font-size="20" fill="#546e7a">9</text>
+      <text x="60" y="360" font-size="20" fill="#e0e0e0">)</text>
+
+      <!-- Line 10 -->
+      <text x="0" y="405" font-size="20" fill="#546e7a">10</text>
+
+      <!-- Line 11 -->
+      <text x="0" y="450" font-size="20" fill="#546e7a">11</text>
+      <text x="60" y="450" font-size="20" fill="#b0bec5"># 문서를 청크로 분할</text>
+
+      <!-- Line 12 -->
+      <text x="0" y="495" font-size="20" fill="#546e7a">12</text>
+      <text x="60" y="495" font-size="20" fill="#e0e0e0">chunks = text_splitter.split_documents(documents)</text>
+    </g>
+  </g>
+
+  <!-- Explanation Box -->
+  <g transform="translate(200, 900)">
+    <rect x="0" y="0" width="1520" height="130" rx="20" fill="white" opacity="0.95" filter="url(#shadow008)"/>
+
+    <text x="760" y="45" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">🔍 Separators 동작 원리</text>
+
+    <g transform="translate(100, 70)">
+      <text x="0" y="0" font-size="22" fill="#666">1️⃣ 먼저 <tspan font-weight="bold" fill="#667eea">"\n\n"</tspan> (문단 구분)으로 자르기 시도</text>
+      <text x="0" y="40" font-size="22" fill="#666">2️⃣ 안되면 <tspan font-weight="bold" fill="#667eea">"\n"</tspan> (줄바꿈)으로 시도 → 3️⃣ 최종적으로 <tspan font-weight="bold" fill="#667eea">" "</tspan> (띄어쓰기)로 자름</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 8 / 38
+  </text>
+</svg>

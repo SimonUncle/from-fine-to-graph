@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: Advanced RAG Systems - 강의 슬라이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .slide-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            max-width: 1920px;
+            width: 100%;
+            position: relative;
+        }
+
+        .slide-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .slide-info {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ecdc4, #44a08d);
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .keyboard-hint {
+            margin-top: 20px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+
+        .slide-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 20px auto;
+        }
+
+        .slide-grid.active {
+            display: grid;
+        }
+
+        .slide-thumbnail {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .slide-thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .slide-thumbnail img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .slide-thumbnail .slide-number {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .view-toggle {
+            margin-bottom: 20px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+        }
+
+        .error-message {
+            background: rgba(231, 76, 60, 0.2);
+            border: 2px solid rgba(231, 76, 60, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                padding: 15px 20px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎓 Day 2: Advanced RAG Systems</h1>
+        <p class="subtitle">Naive → Advanced → Modular RAG</p>
+    </div>
+
+    <div class="view-toggle">
+        <button class="btn" onclick="toggleView()">
+            <span id="view-icon">📊</span>
+            <span id="view-text">그리드 보기</span>
+        </button>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <!-- Slideshow View -->
+    <div class="slide-container" id="slideshow">
+        <div class="slide-wrapper">
+            <div class="slide-content" id="slide-display">
+                <div class="loading">슬라이드를 로딩 중...</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="btn" id="prev-btn" onclick="prevSlide()">
+                ⬅️ 이전
+            </button>
+            <div class="slide-info">
+                <span id="current-slide">1</span> / <span id="total-slides">63</span>
+            </div>
+            <button class="btn" id="next-btn" onclick="nextSlide()">
+                다음 ➡️
+            </button>
+        </div>
+    </div>
+
+    <!-- Grid View -->
+    <div class="slide-grid" id="grid-view"></div>
+
+    <div class="keyboard-hint">
+        ⌨️ 키보드: ← 이전 | → 다음 | ESC 그리드 보기
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 63;
+        let viewMode = 'slideshow'; // 'slideshow' or 'grid'
+
+        // 핵심 슬라이드 목록 (실제로 존재하는 슬라이드)
+        const existingSlides = [1, 2, 3, 4, 5, 6, 8, 9, 19, 26, 33, 48, 63];
+
+        function updateSlide() {
+            const slideDisplay = document.getElementById('slide-display');
+            const slideNum = currentSlide.toString().padStart(3, '0');
+            const slidePath = `svg/slide_${slideNum}.svg`;
+
+            // 슬라이드가 존재하는지 확인
+            fetch(slidePath)
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error('Slide not found');
+                    }
+                })
+                .then(svgContent => {
+                    slideDisplay.innerHTML = svgContent;
+                })
+                .catch(error => {
+                    slideDisplay.innerHTML = `
+                        <div class="error-message">
+                            <h2>⚠️ 슬라이드 ${slideNum}번</h2>
+                            <p>이 슬라이드는 아직 생성되지 않았습니다.</p>
+                            <p style="margin-top: 10px; font-size: 0.9em;">
+                                <code>python3 generate_remaining_slides.py</code> 실행 후<br>
+                                내용을 추가해주세요.
+                            </p>
+                            ${existingSlides.includes(currentSlide) ?
+                                '<p style="margin-top: 15px;">🔄 페이지를 새로고침해보세요.</p>' :
+                                '<p style="margin-top: 15px;">💡 핵심 슬라이드: ' + existingSlides.join(', ') + '</p>'
+                            }
+                        </div>
+                    `;
+                });
+
+            document.getElementById('current-slide').textContent = currentSlide;
+            document.getElementById('prev-btn').disabled = currentSlide === 1;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides;
+
+            // Progress bar update
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+
+            // Update URL
+            history.pushState(null, '', `?slide=${currentSlide}`);
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        function goToSlide(num) {
+            if (num >= 1 && num <= totalSlides) {
+                currentSlide = num;
+                updateSlide();
+                if (viewMode === 'grid') {
+                    toggleView(); // Switch back to slideshow
+                }
+            }
+        }
+
+        function toggleView() {
+            const slideshow = document.getElementById('slideshow');
+            const gridView = document.getElementById('grid-view');
+            const viewIcon = document.getElementById('view-icon');
+            const viewText = document.getElementById('view-text');
+
+            if (viewMode === 'slideshow') {
+                // Switch to grid
+                viewMode = 'grid';
+                slideshow.style.display = 'none';
+                gridView.classList.add('active');
+                viewIcon.textContent = '▶️';
+                viewText.textContent = '슬라이드쇼';
+
+                // Generate thumbnails if not already done
+                if (gridView.children.length === 0) {
+                    generateThumbnails();
+                }
+            } else {
+                // Switch to slideshow
+                viewMode = 'slideshow';
+                slideshow.style.display = 'block';
+                gridView.classList.remove('active');
+                viewIcon.textContent = '📊';
+                viewText.textContent = '그리드 보기';
+            }
+        }
+
+        function generateThumbnails() {
+            const gridView = document.getElementById('grid-view');
+            gridView.innerHTML = '';
+
+            for (let i = 1; i <= totalSlides; i++) {
+                const slideNum = i.toString().padStart(3, '0');
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'slide-thumbnail';
+                thumbnail.onclick = () => goToSlide(i);
+
+                const isExisting = existingSlides.includes(i);
+                const status = isExisting ? '✅' : '📝';
+
+                thumbnail.innerHTML = `
+                    <img src="svg/slide_${slideNum}.svg"
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 1920 1080\\'><rect width=\\'1920\\' height=\\'1080\\' fill=\\'%23f0f0f0\\'/><text x=\\'960\\' y=\\'540\\' font-size=\\'100\\' text-anchor=\\'middle\\' fill=\\'%23999\\'>Template</text></svg>'"
+                         alt="Slide ${slideNum}">
+                    <div class="slide-number">${status} Slide ${slideNum}</div>
+                `;
+
+                gridView.appendChild(thumbnail);
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (viewMode === 'slideshow') {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            }
+            if (e.key === 'Escape') toggleView();
+        });
+
+        // Initialize from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const slideParam = urlParams.get('slide');
+        if (slideParam) {
+            const slideNum = parseInt(slideParam);
+            if (slideNum >= 1 && slideNum <= totalSlides) {
+                currentSlide = slideNum;
+            }
+        }
+
+        // Initial load
+        updateSlide();
+    </script>
+</body>
+</html>

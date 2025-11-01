@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff5252;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow5">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#fff5f5"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">
+    5가지 실패 패턴
+  </text>
+  <text x="960" y="150" font-family="Arial, sans-serif" font-size="28" fill="#666" text-anchor="middle">
+    Naive RAG가 실패하는 이유
+  </text>
+
+  <!-- Failure 1 -->
+  <g transform="translate(150, 220)">
+    <rect width="800" height="150" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow5)"/>
+    <circle cx="75" cy="75" r="40" fill="#ffebee"/>
+    <text x="75" y="90" font-family="Arial, sans-serif" font-size="40" fill="#e74c3c" text-anchor="middle" font-weight="bold">1</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="32" fill="#333" font-weight="bold">
+      Semantic Gap (의미 간극)
+    </text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="22" fill="#666">
+      사용자 질문과 문서의 표현 방식이 달라 검색 실패
+    </text>
+    <text x="150" y="125" font-family="Arial, sans-serif" font-size="20" fill="#999">
+      예: "최신 동향" vs "트렌드", "방법" vs "how-to"
+    </text>
+  </g>
+
+  <!-- Failure 2 -->
+  <g transform="translate(970, 220)">
+    <rect width="800" height="150" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow5)"/>
+    <circle cx="75" cy="75" r="40" fill="#ffebee"/>
+    <text x="75" y="90" font-family="Arial, sans-serif" font-size="40" fill="#e74c3c" text-anchor="middle" font-weight="bold">2</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="32" fill="#333" font-weight="bold">
+      Context Fragmentation
+    </text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="22" fill="#666">
+      문서를 청크로 나누면서 맥락이 분절됨
+    </text>
+    <text x="150" y="125" font-family="Arial, sans-serif" font-size="20" fill="#999">
+      예: "이것", "그것" 같은 대명사 처리 불가
+    </text>
+  </g>
+
+  <!-- Failure 3 -->
+  <g transform="translate(150, 410)">
+    <rect width="800" height="150" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow5)"/>
+    <circle cx="75" cy="75" r="40" fill="#ffebee"/>
+    <text x="75" y="90" font-family="Arial, sans-serif" font-size="40" fill="#e74c3c" text-anchor="middle" font-weight="bold">3</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="32" fill="#333" font-weight="bold">
+      Ambiguous Query (모호한 질문)
+    </text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="22" fill="#666">
+      질문이 모호하거나 다의적이어서 정확한 검색 어려움
+    </text>
+    <text x="150" y="125" font-family="Arial, sans-serif" font-size="20" fill="#999">
+      예: "그거" "저번에 말한 것" 같은 애매한 표현
+    </text>
+  </g>
+
+  <!-- Failure 4 -->
+  <g transform="translate(970, 410)">
+    <rect width="800" height="150" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow5)"/>
+    <circle cx="75" cy="75" r="40" fill="#ffebee"/>
+    <text x="75" y="90" font-family="Arial, sans-serif" font-size="40" fill="#e74c3c" text-anchor="middle" font-weight="bold">4</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="32" fill="#333" font-weight="bold">
+      Stale Information (오래된 정보)
+    </text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="22" fill="#666">
+      DB 업데이트가 안 되어 구식 정보 반환
+    </text>
+    <text x="150" y="125" font-family="Arial, sans-serif" font-size="20" fill="#999">
+      예: 2023년 데이터로 2024년 질문에 답변
+    </text>
+  </g>
+
+  <!-- Failure 5 -->
+  <g transform="translate(150, 600)">
+    <rect width="800" height="150" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow5)"/>
+    <circle cx="75" cy="75" r="40" fill="#ffebee"/>
+    <text x="75" y="90" font-family="Arial, sans-serif" font-size="40" fill="#e74c3c" text-anchor="middle" font-weight="bold">5</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="32" fill="#333" font-weight="bold">
+      Low Relevance (낮은 관련성)
+    </text>
+    <text x="150" y="95" font-family="Arial, sans-serif" font-size="22" fill="#666">
+      유사도만으로 판단해 관련 없는 문서 반환
+    </text>
+    <text x="150" y="125" font-family="Arial, sans-serif" font-size="20" fill="#999">
+      예: 키워드만 비슷하고 내용은 무관한 문서
+    </text>
+  </g>
+
+  <!-- Solution Preview -->
+  <g transform="translate(970, 600)">
+    <rect width="800" height="150" rx="20" fill="url(#redGrad)" filter="url(#shadow5)"/>
+    <text x="400" y="55" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">
+      🎯 해결 방향
+    </text>
+    <text x="400" y="95" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+      ✨ Query Refinement (쿼리 개선)
+    </text>
+    <text x="400" y="130" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+      ✨ Hybrid Search + Reranking (검색 개선)
+    </text>
+  </g>
+
+  <!-- Bottom -->
+  <g transform="translate(360, 820)">
+    <rect width="1200" height="180" rx="20" fill="#333" filter="url(#shadow5)"/>
+    <text x="600" y="60" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">
+      💡 핵심 인사이트
+    </text>
+    <text x="600" y="110" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">
+      이 5가지 문제를 해결하는 것이 Advanced RAG의 목표!
+    </text>
+    <text x="600" y="150" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" opacity="0.8">
+      다음 슬라이드부터 각 문제의 해결 방법을 배웁니다
+    </text>
+  </g>
+</svg>

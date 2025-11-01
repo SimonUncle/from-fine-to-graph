@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 7: CRAG</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">Ambiguous 액션</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"애매모호 → 재검색 + 문서 필터링"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Scenario -->
+  <rect x="200" y="300" width="1520" height="180" rx="20" fill="#FFF3CD" stroke="#F39C12" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="360" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#F39C12" text-anchor="middle">⚠️ Ambiguous 상황</text>
+  <text x="960" y="410" font-family="system-ui, sans-serif" font-size="24" fill="#D68910" text-anchor="middle">검색된 문서가 <tspan font-weight="bold">부분적으로만 관련</tspan></text>
+  <text x="960" y="450" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">예: "임대차 분쟁 해결" → 민법 일반 조항만 검색 (관련도 0.65)</text>
+
+  <!-- Example -->
+  <g transform="translate(200, 510)">
+    <rect x="0" y="0" width="1520" height="240" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="760" y="45" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">실제 사례</text>
+
+    <!-- Query -->
+    <rect x="40" y="70" width="680" height="80" rx="15" fill="#FFFFBA" opacity="0.3" stroke="#F39C12" stroke-width="2"/>
+    <text x="60" y="105" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50">질문</text>
+    <text x="60" y="135" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">"임대차 보증금 분쟁 해결 절차"</text>
+
+    <!-- Retrieved (Mixed) -->
+    <rect x="800" y="70" width="680" height="80" rx="15" fill="#FFF3CD" opacity="0.3" stroke="#F39C12" stroke-width="2"/>
+    <text x="820" y="105" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#F39C12">검색 결과 (Top-3) ⚠️</text>
+    <text x="820" y="135" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">민법 일반, 계약법 개론, 소송 절차 개요...</text>
+
+    <!-- Evaluation -->
+    <rect x="40" y="180" width="1440" height="50" rx="10" fill="#F39C12" opacity="0.2"/>
+    <text x="60" y="213" font-family="system-ui, sans-serif" font-size="20" fill="#F39C12" font-weight="bold">평가 결과: ⚠️ AMBIGUOUS (관련도 0.65) → 재검색 + 필터링!</text>
+  </g>
+
+  <!-- Refinement Actions -->
+  <g transform="translate(200, 780)">
+    <rect x="0" y="0" width="1520" height="220" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+    <text x="760" y="45" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#27AE60" text-anchor="middle">액션: Knowledge Refinement (지식 정제)</text>
+
+    <g transform="translate(40, 70)">
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">1️⃣ 문서 분해 (Decomposition)</text>
+      <text x="550" y="30" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">긴 문서를 문장 단위로 쪼개기</text>
+
+      <text x="0" y="75" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">2️⃣ 관련 문장 필터 (Filtering)</text>
+      <text x="550" y="75" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">각 문장의 관련도 평가 → 0.7 이상만 선택</text>
+
+      <text x="0" y="120" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">3️⃣ 재구성 (Reconstruction)</text>
+      <text x="550" y="120" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">선택된 문장들만 모아 새 문서 생성</text>
+
+      <rect x="0" y="140" width="1440" height="50" rx="10" fill="#FFFFFF"/>
+      <text x="720" y="172" font-family="system-ui, sans-serif" font-size="20" fill="#27AE60" font-weight="bold" text-anchor="middle">결과: 노이즈 제거 + 핵심만 남음 → 정확도 향상!</text>
+    </g>
+  </g>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">45 / 63</text>
+</svg>

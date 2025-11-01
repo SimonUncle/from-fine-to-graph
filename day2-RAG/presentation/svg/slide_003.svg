@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="960" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#2C3E50" text-anchor="middle">
+    전체 로드맵
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="180" font-family="system-ui, sans-serif" font-size="32" fill="#7F8C8D" text-anchor="middle">
+    "3단계 진화: Naive → Advanced → Modular"
+  </text>
+
+  <!-- Colorful dots -->
+  <g transform="translate(960, 200)">
+    <circle cx="-60" cy="0" r="6" fill="#FF6B6B"/>
+    <circle cx="-30" cy="0" r="6" fill="#4ECDC4"/>
+    <circle cx="0" cy="0" r="6" fill="#45B7D1"/>
+    <circle cx="30" cy="0" r="6" fill="#96CEB4"/>
+    <circle cx="60" cy="0" r="6" fill="#FFEAA7"/>
+  </g>
+
+  <!-- Roadmap cards - Row 1 -->
+  <g transform="translate(140, 270)">
+    <!-- Card 01 -->
+    <rect x="0" y="0" width="260" height="180" rx="16" fill="#FF6B6B" opacity="0.2" stroke="#FF6B6B" stroke-width="3"/>
+    <text x="130" y="60" font-size="48" text-anchor="middle">📝</text>
+    <text x="130" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">01</text>
+    <text x="130" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">Naive RAG</text>
+    <text x="130" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">기본 구조</text>
+
+    <!-- Arrow -->
+    <path d="M 270 90 L 310 90" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Card 02 -->
+    <rect x="320" y="0" width="260" height="180" rx="16" fill="#FF6B6B" opacity="0.2" stroke="#FF6B6B" stroke-width="3"/>
+    <text x="450" y="60" font-size="48" text-anchor="middle">❌</text>
+    <text x="450" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">02</text>
+    <text x="450" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">실패 분석</text>
+    <text x="450" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">5가지 패턴</text>
+
+    <path d="M 590 90 L 630 90" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Card 03 -->
+    <rect x="640" y="0" width="260" height="180" rx="16" fill="#4ECDC4" opacity="0.2" stroke="#4ECDC4" stroke-width="3"/>
+    <text x="770" y="60" font-size="48" text-anchor="middle">💬</text>
+    <text x="770" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">03</text>
+    <text x="770" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">프롬프트</text>
+    <text x="770" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">개선 전략</text>
+
+    <path d="M 910 90 L 950 90" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Card 04 -->
+    <rect x="960" y="0" width="260" height="180" rx="16" fill="#4ECDC4" opacity="0.2" stroke="#4ECDC4" stroke-width="3"/>
+    <text x="1090" y="60" font-size="48" text-anchor="middle">🔄</text>
+    <text x="1090" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">04</text>
+    <text x="1090" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">Query 개선</text>
+    <text x="1090" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">3가지 기법</text>
+
+    <path d="M 1230 90 L 1270 90" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Card 05 -->
+    <rect x="1280" y="0" width="260" height="180" rx="16" fill="#4ECDC4" opacity="0.2" stroke="#4ECDC4" stroke-width="3"/>
+    <text x="1410" y="60" font-size="48" text-anchor="middle">🏷️</text>
+    <text x="1410" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">05</text>
+    <text x="1410" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">메타데이터</text>
+    <text x="1410" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">필터링</text>
+  </g>
+
+  <!-- Roadmap cards - Row 2 -->
+  <g transform="translate(460, 500)">
+    <!-- Card 06 -->
+    <rect x="0" y="0" width="260" height="180" rx="16" fill="#45B7D1" opacity="0.2" stroke="#45B7D1" stroke-width="3"/>
+    <text x="130" y="60" font-size="48" text-anchor="middle">🔥</text>
+    <text x="130" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">06</text>
+    <text x="130" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">Hybrid Search</text>
+    <text x="130" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">Vector+BM25</text>
+
+    <path d="M 270 90 L 310 90" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Card 07 -->
+    <rect x="320" y="0" width="260" height="180" rx="16" fill="#96CEB4" opacity="0.2" stroke="#96CEB4" stroke-width="3"/>
+    <text x="450" y="60" font-size="48" text-anchor="middle">✅</text>
+    <text x="450" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">07</text>
+    <text x="450" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">CRAG</text>
+    <text x="450" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">품질 평가</text>
+
+    <path d="M 590 90 L 630 90" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Card 08 -->
+    <rect x="640" y="0" width="260" height="180" rx="16" fill="#96CEB4" opacity="0.2" stroke="#96CEB4" stroke-width="3"/>
+    <text x="770" y="60" font-size="48" text-anchor="middle">📊</text>
+    <text x="770" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">08</text>
+    <text x="770" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">RAGAS</text>
+    <text x="770" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">종합 평가</text>
+
+    <path d="M 910 90 L 950 90" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Card 09 -->
+    <rect x="960" y="0" width="260" height="180" rx="16" fill="#FFEAA7" opacity="0.3" stroke="#FFEAA7" stroke-width="3"/>
+    <text x="1090" y="60" font-size="48" text-anchor="middle">🎯</text>
+    <text x="1090" y="110" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">09</text>
+    <text x="1090" y="145" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">Tuning</text>
+    <text x="1090" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D" text-anchor="middle">최적화</text>
+  </g>
+
+  <!-- Bottom legend -->
+  <g transform="translate(300, 750)">
+    <rect x="0" y="0" width="220" height="60" rx="12" fill="#FF6B6B" opacity="0.2"/>
+    <text x="110" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">Stage 1: 문제 발견</text>
+
+    <rect x="260" y="0" width="220" height="60" rx="12" fill="#4ECDC4" opacity="0.2"/>
+    <text x="370" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">Stage 2: 쿼리 개선</text>
+
+    <rect x="520" y="0" width="220" height="60" rx="12" fill="#45B7D1" opacity="0.2"/>
+    <text x="630" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">Stage 3: 검색 고도화</text>
+
+    <rect x="780" y="0" width="220" height="60" rx="12" fill="#96CEB4" opacity="0.2"/>
+    <text x="890" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">Stage 4: 평가 & 튜닝</text>
+
+    <rect x="1040" y="0" width="220" height="60" rx="12" fill="#FFEAA7" opacity="0.3"/>
+    <text x="1150" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">Final: 최적화</text>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#95A5A6"/>
+    </marker>
+  </defs>
+
+  <!-- Page number -->
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">
+    3 / 63
+  </text>
+</svg>

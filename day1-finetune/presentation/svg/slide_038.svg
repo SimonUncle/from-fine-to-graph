@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs><style>
+.t{font-family:Arial,sans-serif;font-size:72px;font-weight:900;fill:#2C3E50}
+.st{font-family:Arial,sans-serif;font-size:36px;font-weight:500;fill:#7F8C8D}
+.h1{font-family:Arial,sans-serif;font-size:56px;font-weight:700;fill:#2C3E50}
+.h2{font-family:Arial,sans-serif;font-size:42px;font-weight:700;fill:#2C3E50}
+.bd{font-family:Arial,sans-serif;font-size:32px;font-weight:400;fill:#2C3E50}
+.sm{font-family:Arial,sans-serif;font-size:28px;font-weight:400;fill:#2C3E50}
+.tp{font-family:Arial,sans-serif;font-size:28px;font-weight:500;fill:#7F8C8D}
+</style></defs>
+<rect width="1920" height="1080" fill="white"/>
+<circle cx="885" cy="180" r="12" fill="#FFB6C1"/><circle cx="915" cy="180" r="12" fill="#98D8C8"/><circle cx="945" cy="180" r="12" fill="#B19CD9"/><circle cx="975" cy="180" r="12" fill="#6C9BCF"/><circle cx="1005" cy="180" r="12" fill="#F4D35E"/>
+<text x="960" y="260" class="h1" text-anchor="middle">Label 마스킹 원리</text>
+<text x="960" y="360" class="h2" text-anchor="middle" fill="#B19CD9">답변만 학습하기</text>
+<rect x="200" y="460" width="700" height="360" rx="25" fill="#FFB6C1" opacity="0.1"/>
+<text x="550" y="540" class="h2" text-anchor="middle">질문 부분</text>
+<text x="550" y="630" class="bd" text-anchor="middle">학습하지 않음 (mask)</text>
+<text x="550" y="690" class="bd" text-anchor="middle">-100으로 표시</text>
+<text x="550" y="750" class="bd" text-anchor="middle">Loss 계산 제외</text>
+<rect x="1020" y="460" width="700" height="360" rx="25" fill="#98D8C8" opacity="0.1"/>
+<text x="1370" y="540" class="h2" text-anchor="middle">답변 부분</text>
+<text x="1370" y="630" class="bd" text-anchor="middle">학습 대상</text>
+<text x="1370" y="690" class="bd" text-anchor="middle">실제 토큰 ID</text>
+<text x="1370" y="750" class="bd" text-anchor="middle">Loss 계산 포함</text>
+<rect x="80" y="980" width="1760" height="80" rx="15" fill="#F8F9FA"/><text x="120" y="1035" class="tp">💡 질문 형식을 외우는 게 아니라, 답변 생성에만 집중</text>
+</svg>

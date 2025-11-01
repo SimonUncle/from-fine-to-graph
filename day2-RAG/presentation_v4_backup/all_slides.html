@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Slides - Day 2 RAG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+        .info {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+            gap: 40px;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        .slide {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            page-break-after: always;
+            page-break-inside: avoid;
+        }
+        .slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .back-btn:hover {
+            background: #764ba2;
+        }
+        @media print {
+            .back-btn { display: none; }
+            .info { display: none; }
+            h1 { display: none; }
+            body {
+                padding: 0;
+                background: white;
+            }
+            .slides-grid {
+                display: block;
+                max-width: 100%;
+            }
+            .slide {
+                page-break-after: always;
+                page-break-inside: avoid;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border-radius: 0;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .slide:last-child {
+                page-break-after: auto;
+            }
+            .slide img {
+                max-width: 100%;
+                max-height: 100vh;
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← 돌아가기</a>
+
+    <h1>📚 Day 2 - Advanced RAG Systems (24 Slides)</h1>
+    <div class="info">
+        💡 Cmd/Ctrl + P로 PDF 저장 가능 | 클릭하면 개별 슬라이드로 이동
+    </div>
+
+    <div class="slides-grid">
+        <div class="slide"><img src="svg/slide_001.svg?v=1" alt="Slide 1"></div>
+        <div class="slide"><img src="svg/slide_002.svg?v=1" alt="Slide 2"></div>
+        <div class="slide"><img src="svg/slide_003.svg?v=1" alt="Slide 3"></div>
+        <div class="slide"><img src="svg/slide_004.svg?v=1" alt="Slide 4"></div>
+        <div class="slide"><img src="svg/slide_005.svg?v=1" alt="Slide 5"></div>
+        <div class="slide"><img src="svg/slide_006.svg?v=1" alt="Slide 6"></div>
+        <div class="slide"><img src="svg/slide_007.svg?v=1" alt="Slide 7"></div>
+        <div class="slide"><img src="svg/slide_008.svg?v=1" alt="Slide 8"></div>
+        <div class="slide"><img src="svg/slide_009.svg?v=1" alt="Slide 9"></div>
+        <div class="slide"><img src="svg/slide_010.svg?v=1" alt="Slide 10"></div>
+        <div class="slide"><img src="svg/slide_011.svg?v=1" alt="Slide 11"></div>
+        <div class="slide"><img src="svg/slide_012.svg?v=1" alt="Slide 12"></div>
+        <div class="slide"><img src="svg/slide_013.svg?v=1" alt="Slide 13"></div>
+        <div class="slide"><img src="svg/slide_014.svg?v=1" alt="Slide 14"></div>
+        <div class="slide"><img src="svg/slide_015.svg?v=1" alt="Slide 15"></div>
+        <div class="slide"><img src="svg/slide_016.svg?v=1" alt="Slide 16"></div>
+        <div class="slide"><img src="svg/slide_017.svg?v=1" alt="Slide 17"></div>
+        <div class="slide"><img src="svg/slide_018.svg?v=1" alt="Slide 18"></div>
+        <div class="slide"><img src="svg/slide_019.svg?v=1" alt="Slide 19"></div>
+        <div class="slide"><img src="svg/slide_020.svg?v=1" alt="Slide 20"></div>
+        <div class="slide"><img src="svg/slide_021.svg?v=1" alt="Slide 21"></div>
+        <div class="slide"><img src="svg/slide_022.svg?v=1" alt="Slide 22"></div>
+        <div class="slide"><img src="svg/slide_023.svg?v=1" alt="Slide 23"></div>
+        <div class="slide"><img src="svg/slide_024.svg?v=1" alt="Slide 24"></div>
+    </div>
+</body>
+</html>

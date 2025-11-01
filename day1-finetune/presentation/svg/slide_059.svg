@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs><style>
+.t{font-family:Arial,sans-serif;font-size:72px;font-weight:900;fill:#2C3E50}
+.st{font-family:Arial,sans-serif;font-size:36px;font-weight:500;fill:#7F8C8D}
+.h1{font-family:Arial,sans-serif;font-size:56px;font-weight:700;fill:#2C3E50}
+.h2{font-family:Arial,sans-serif;font-size:42px;font-weight:700;fill:#2C3E50}
+.bd{font-family:Arial,sans-serif;font-size:32px;font-weight:400;fill:#2C3E50}
+.sm{font-family:Arial,sans-serif;font-size:28px;font-weight:400;fill:#2C3E50}
+.tp{font-family:Arial,sans-serif;font-size:28px;font-weight:500;fill:#7F8C8D}
+</style></defs>
+<rect width="1920" height="1080" fill="white"/>
+<circle cx="885" cy="180" r="12" fill="#FFB6C1"/><circle cx="915" cy="180" r="12" fill="#98D8C8"/><circle cx="945" cy="180" r="12" fill="#B19CD9"/><circle cx="975" cy="180" r="12" fill="#6C9BCF"/><circle cx="1005" cy="180" r="12" fill="#F4D35E"/>
+<text x="960" y="260" class="h1" text-anchor="middle">Embedding Similarity</text>
+<text x="960" y="360" class="h2" text-anchor="middle" fill="#B19CD9">의미 거리 측정</text>
+<rect x="150" y="450" width="520" height="370" rx="25" fill="#FFB6C1" opacity="0.1"/>
+<text x="410" y="530" class="h2" text-anchor="middle">1. 임베딩</text>
+<text x="410" y="620" class="bd" text-anchor="middle">문장 →</text>
+<text x="410" y="680" class="bd" text-anchor="middle">벡터</text>
+<rect x="720" y="450" width="520" height="370" rx="25" fill="#98D8C8" opacity="0.1"/>
+<text x="980" y="530" class="h2" text-anchor="middle">2. 거리 계산</text>
+<text x="980" y="620" class="bd" text-anchor="middle">Cosine</text>
+<text x="980" y="680" class="bd" text-anchor="middle">Similarity</text>
+<rect x="1290" y="450" width="430" height="370" rx="25" fill="#6C9BCF" opacity="0.1"/>
+<text x="1505" y="530" class="h2" text-anchor="middle">3. 장점</text>
+<text x="1505" y="620" class="bd" text-anchor="middle">동의어</text>
+<text x="1505" y="680" class="bd" text-anchor="middle">인식</text>
+<text x="1505" y="740" class="bd" text-anchor="middle">"절감"≈"줄임"</text>
+<rect x="80" y="980" width="1760" height="80" rx="15" fill="#F8F9FA"/><text x="120" y="1035" class="tp">💡 의미가 비슷하면 벡터도 가까워진다</text>
+</svg>

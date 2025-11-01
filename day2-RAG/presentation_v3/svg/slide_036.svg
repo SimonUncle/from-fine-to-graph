@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad036" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow036"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad036)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 7</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">전체 성능 비교 📊</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">Naive → Advanced → Modular RAG 여정</text>
+  <g transform="translate(300, 280)">
+    <rect x="0" y="0" width="1320" height="650" rx="20" fill="white" opacity="0.95" filter="url(#shadow036)"/>
+    <text x="660" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">RAG 진화 단계별 성능</text>
+    <g transform="translate(100, 120)">
+      <circle cx="100" cy="100" r="80" fill="#ef5350"/>
+      <text x="100" y="115" font-size="48" fill="white" text-anchor="middle" font-weight="bold">35%</text>
+      <text x="100" y="240" font-size="28" fill="#666" text-anchor="middle" font-weight="bold">Naive RAG</text>
+      <g transform="translate(20, 280)">
+        <text x="0" y="0" font-size="20" fill="#999">• Vector Search만</text>
+        <text x="0" y="35" font-size="20" fill="#999">• Top-K만 사용</text>
+        <text x="0" y="70" font-size="20" fill="#999">• 필터링 없음</text>
+      </g>
+      <circle cx="400" cy="100" r="90" fill="#fbc02d"/>
+      <text x="400" y="115" font-size="48" fill="white" text-anchor="middle" font-weight="bold">65%</text>
+      <text x="400" y="240" font-size="28" fill="#666" text-anchor="middle" font-weight="bold">Query Refinement</text>
+      <g transform="translate(280, 280)">
+        <text x="0" y="0" font-size="20" fill="#999">• Prompt Engineering</text>
+        <text x="0" y="35" font-size="20" fill="#999">• Multi-Query/HyDE</text>
+        <text x="0" y="70" font-size="20" fill="#999">• Metadata Filtering</text>
+      </g>
+      <circle cx="750" cy="100" r="100" fill="#1976d2"/>
+      <text x="750" y="115" font-size="48" fill="white" text-anchor="middle" font-weight="bold">75%</text>
+      <text x="750" y="240" font-size="28" fill="#666" text-anchor="middle" font-weight="bold">Hybrid Search</text>
+      <g transform="translate(630, 280)">
+        <text x="0" y="0" font-size="20" fill="#999">• Vector + BM25</text>
+        <text x="0" y="35" font-size="20" fill="#999">• RRF 통합</text>
+        <text x="0" y="70" font-size="20" fill="#999">• 속도 & 정확도</text>
+      </g>
+      <circle cx="1050" cy="100" r="110" fill="#2e7d32"/>
+      <text x="1050" y="120" font-size="56" fill="white" text-anchor="middle" font-weight="bold">85%+</text>
+      <text x="1050" y="240" font-size="28" fill="#666" text-anchor="middle" font-weight="bold">Modular RAG</text>
+      <g transform="translate(920, 280)">
+        <text x="0" y="0" font-size="20" fill="#999">• Cross-Encoder Rerank</text>
+        <text x="0" y="35" font-size="20" fill="#999">• Self-RAG + CRAG</text>
+        <text x="0" y="70" font-size="20" fill="#999">• 최고 정확도</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(300, 960)">
+    <rect x="0" y="0" width="1320" height="80" rx="20" fill="#4caf50" filter="url(#shadow036)"/>
+    <text x="660" y="50" font-size="32" fill="white" text-anchor="middle" font-weight="bold">🎉 35% → 85%+, 무려 150% 성능 향상!</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 36 / 38</text>
+</svg>

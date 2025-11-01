@@ -1,0 +1,104 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow0092">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">StateGraph 컴파일 4단계</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">그래프를 실행 가능한 App으로 변환</text>
+
+  <!-- 4 Steps -->
+  <g transform="translate(180, 240)">
+    <!-- Step 1 -->
+    <g>
+      <rect width="700" height="140" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0092)"/>
+      <circle cx="50" cy="70" r="30" fill="#667eea"/>
+      <text x="50" y="82" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">1</text>
+
+      <text x="110" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" font-weight="bold">Create StateGraph</text>
+      <text x="110" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333">graph = StateGraph(TravelState)</text>
+      <text x="110" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">→ State 정의 기반 그래프 생성</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="450" y="185" font-family="Arial, sans-serif" font-size="50" fill="#667eea">↓</text>
+
+    <!-- Step 2 -->
+    <g transform="translate(0, 210)">
+      <rect width="700" height="140" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow0092)"/>
+      <circle cx="50" cy="70" r="30" fill="#27AE60"/>
+      <text x="50" y="82" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">2</text>
+
+      <text x="110" y="50" font-family="Arial, sans-serif" font-size="32" fill="#27AE60" font-weight="bold">Add Nodes</text>
+      <text x="110" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333">graph.add_node("search", fn)</text>
+      <text x="110" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">→ 작업 함수들을 노드로 등록</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="450" y="395" font-family="Arial, sans-serif" font-size="50" fill="#27AE60">↓</text>
+
+    <!-- Step 3 -->
+    <g transform="translate(0, 420)">
+      <rect width="700" height="140" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow0092)"/>
+      <circle cx="50" cy="70" r="30" fill="#ff9800"/>
+      <text x="50" y="82" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">3</text>
+
+      <text x="110" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff9800" font-weight="bold">Add Edges</text>
+      <text x="110" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333">graph.add_edge(START, "search")</text>
+      <text x="110" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">→ 노드 간 연결 관계 정의</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="450" y="605" font-family="Arial, sans-serif" font-size="50" fill="#ff9800">↓</text>
+
+    <!-- Step 4 -->
+    <g transform="translate(0, 630)">
+      <rect width="700" height="140" rx="20" fill="white" stroke="#e91e63" stroke-width="4" filter="url(#shadow0092)"/>
+      <circle cx="50" cy="70" r="30" fill="#e91e63"/>
+      <text x="50" y="82" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">4</text>
+
+      <text x="110" y="50" font-family="Arial, sans-serif" font-size="32" fill="#e91e63" font-weight="bold">Compile</text>
+      <text x="110" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333">app = graph.compile()</text>
+      <text x="110" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666">→ 실행 가능한 App으로 변환 ✨</text>
+    </g>
+  </g>
+
+  <!-- Right: Visual Diagram -->
+  <g transform="translate(1040, 280)">
+    <rect width="680" height="640" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0092)"/>
+    <text x="340" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">🎯 최종 구조</text>
+
+    <!-- START -->
+    <circle cx="340" cy="130" r="38" fill="#667eea" filter="url(#shadow0092)"/>
+    <text x="340" y="142" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">START</text>
+
+    <!-- Arrow down -->
+    <line x1="340" y1="168" x2="340" y2="220" stroke="#667eea" stroke-width="4"/>
+    <polygon points="340,220 330,205 350,205" fill="#667eea"/>
+
+    <!-- Node 1 -->
+    <rect x="190" y="240" width="300" height="70" rx="15" fill="#27AE60" filter="url(#shadow0092)"/>
+    <text x="340" y="285" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">search_node</text>
+
+    <!-- Arrow down -->
+    <line x1="340" y1="310" x2="340" y2="360" stroke="#27AE60" stroke-width="4"/>
+    <polygon points="340,360 330,345 350,345" fill="#27AE60"/>
+
+    <!-- Node 2 -->
+    <rect x="190" y="380" width="300" height="70" rx="15" fill="#ff9800" filter="url(#shadow0092)"/>
+    <text x="340" y="425" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">plan_node</text>
+
+    <!-- Arrow down -->
+    <line x1="340" y1="450" x2="340" y2="500" stroke="#ff9800" stroke-width="4"/>
+    <polygon points="340,500 330,485 350,485" fill="#ff9800"/>
+
+    <!-- END -->
+    <circle cx="340" cy="550" r="38" fill="#e91e63" filter="url(#shadow0092)"/>
+    <text x="340" y="562" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">END</text>
+  </g>
+</svg>

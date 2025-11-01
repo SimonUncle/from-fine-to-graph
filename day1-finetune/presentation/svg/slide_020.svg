@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs><style>
+.t{font-family:Arial,sans-serif;font-size:72px;font-weight:900;fill:#2C3E50}
+.st{font-family:Arial,sans-serif;font-size:36px;font-weight:500;fill:#7F8C8D}
+.h1{font-family:Arial,sans-serif;font-size:56px;font-weight:700;fill:#2C3E50}
+.h2{font-family:Arial,sans-serif;font-size:42px;font-weight:700;fill:#2C3E50}
+.bd{font-family:Arial,sans-serif;font-size:32px;font-weight:400;fill:#2C3E50}
+.sm{font-family:Arial,sans-serif;font-size:28px;font-weight:400;fill:#2C3E50}
+.tp{font-family:Arial,sans-serif;font-size:28px;font-weight:500;fill:#7F8C8D}
+</style></defs>
+<rect width="1920" height="1080" fill="white"/>
+<circle cx="885" cy="180" r="12" fill="#FFB6C1"/><circle cx="915" cy="180" r="12" fill="#98D8C8"/><circle cx="945" cy="180" r="12" fill="#B19CD9"/><circle cx="975" cy="180" r="12" fill="#6C9BCF"/><circle cx="1005" cy="180" r="12" fill="#F4D35E"/>
+<text x="960" y="260" class="h1" text-anchor="middle">QLoRA = LoRA + 양자화</text>
+<rect x="150" y="360" width="1620" height="130" rx="25" fill="#B19CD9" opacity="0.15"/>
+<text x="960" y="445" class="h2" text-anchor="middle">두 기술의 결합</text>
+<rect x="250" y="530" width="650" height="340" rx="25" fill="#FFB6C1" opacity="0.1"/>
+<text x="575" y="600" class="h2" text-anchor="middle">원본 모델 W₀</text>
+<text x="575" y="680" class="bd" text-anchor="middle">4-bit로 압축 (NF4)</text>
+<text x="575" y="740" class="bd" text-anchor="middle">고정 (frozen)</text>
+<text x="575" y="800" class="sm" text-anchor="middle">메모리 75% 절감</text>
+<rect x="1020" y="530" width="650" height="340" rx="25" fill="#98D8C8" opacity="0.1"/>
+<text x="1345" y="600" class="h2" text-anchor="middle">LoRA 어댑터 B×A</text>
+<text x="1345" y="680" class="bd" text-anchor="middle">16-bit 유지 (BF16)</text>
+<text x="1345" y="740" class="bd" text-anchor="middle">학습 (trainable)</text>
+<text x="1345" y="800" class="sm" text-anchor="middle">rank=64, alpha=128</text>
+<text x="960" y="920" class="h2" text-anchor="middle">추론: 압축된 모델 + 정밀한 어댑터</text>
+<rect x="80" y="980" width="1760" height="80" rx="15" fill="#F8F9FA"/><text x="120" y="1035" class="tp">💡 원본은 4-bit 압축, 어댑터는 16-bit 정밀도 유지</text>
+</svg>

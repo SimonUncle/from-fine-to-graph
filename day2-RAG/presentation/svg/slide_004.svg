@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <!-- Section badge -->
+  <rect x="80" y="60" width="280" height="50" rx="25" fill="#FF6B6B" opacity="0.2"/>
+  <text x="220" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#FF6B6B" text-anchor="middle">
+    Section 1: Naive RAG
+  </text>
+
+  <!-- Header -->
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">
+    Naive RAG란?
+  </text>
+
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">
+    "검색 증강 생성 (Retrieval-Augmented Generation)의 기본 형태"
+  </text>
+
+  <!-- Colorful dots -->
+  <g transform="translate(960, 240)">
+    <circle cx="-60" cy="0" r="6" fill="#FF6B6B"/>
+    <circle cx="-30" cy="0" r="6" fill="#4ECDC4"/>
+    <circle cx="0" cy="0" r="6" fill="#45B7D1"/>
+    <circle cx="30" cy="0" r="6" fill="#96CEB4"/>
+    <circle cx="60" cy="0" r="6" fill="#FFEAA7"/>
+  </g>
+
+  <!-- Main content area -->
+  <g transform="translate(120, 300)">
+    <!-- Left: Definition -->
+    <rect x="0" y="0" width="760" height="500" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    <text x="380" y="50" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50" text-anchor="middle">
+      📚 핵심 개념
+    </text>
+
+    <text x="40" y="120" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#34495E">
+      RAG = 검색 + 생성
+    </text>
+    <text x="40" y="170" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+      • LLM이 모르는 정보를 외부에서 검색
+    </text>
+    <text x="40" y="210" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+      • 검색된 문서를 컨텍스트로 활용
+    </text>
+    <text x="40" y="250" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+      • LLM이 정확한 답변 생성
+    </text>
+
+    <line x1="40" y1="280" x2="720" y2="280" stroke="#E0E0E0" stroke-width="2"/>
+
+    <text x="40" y="330" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#34495E">
+      왜 필요한가?
+    </text>
+    <text x="40" y="375" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+      ✅ 환각(Hallucination) 방지
+    </text>
+    <text x="40" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+      ✅ 최신 정보 활용 (학습 데이터 외)
+    </text>
+    <text x="40" y="455" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+      ✅ 도메인 특화 지식 제공
+    </text>
+
+    <!-- Right: Architecture diagram -->
+    <rect x="820" y="0" width="860" height="500" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    <text x="1250" y="50" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50" text-anchor="middle">
+      🏗️ Naive RAG 아키텍처
+    </text>
+
+    <!-- Flowchart -->
+    <!-- Step 1: Question -->
+    <rect x="1020" y="100" width="460" height="70" rx="35" fill="#FFB3BA" opacity="0.3" stroke="#FF6B6B" stroke-width="2"/>
+    <text x="1250" y="142" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">
+      1️⃣ 사용자 질문
+    </text>
+
+    <!-- Arrow down -->
+    <path d="M 1250 170 L 1250 200" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowdown)"/>
+
+    <!-- Step 2: Vector Search -->
+    <rect x="1020" y="200" width="460" height="70" rx="15" fill="#BAFFC9" opacity="0.3" stroke="#4ECDC4" stroke-width="2"/>
+    <text x="1250" y="242" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">
+      2️⃣ Vector Search (FAISS)
+    </text>
+
+    <!-- Arrow down -->
+    <path d="M 1250 270 L 1250 300" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowdown)"/>
+
+    <!-- Step 3: Retrieved Docs -->
+    <rect x="1020" y="300" width="460" height="70" rx="15" fill="#BAE1FF" opacity="0.3" stroke="#45B7D1" stroke-width="2"/>
+    <text x="1250" y="342" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">
+      3️⃣ 검색된 문서 (Top-K)
+    </text>
+
+    <!-- Arrow down -->
+    <path d="M 1250 370 L 1250 400" stroke="#95A5A6" stroke-width="3" fill="none" marker-end="url(#arrowdown)"/>
+
+    <!-- Step 4: LLM Generation -->
+    <rect x="1020" y="400" width="460" height="70" rx="35" fill="#E0BBE4" opacity="0.3" stroke="#9B59B6" stroke-width="2"/>
+    <text x="1250" y="442" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">
+      4️⃣ LLM 답변 생성
+    </text>
+  </g>
+
+  <!-- Bottom info box -->
+  <rect x="120" y="840" width="1680" height="160" rx="20" fill="#FFFFBA" opacity="0.3"/>
+  <text x="960" y="890" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#2C3E50" text-anchor="middle">
+    💡 Naive RAG의 특징
+  </text>
+  <text x="960" y="935" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">
+    <tspan font-weight="bold">Simple</tspan>: 구현이 간단하고 빠름  |  <tspan font-weight="bold">Effective</tspan>: 기본적인 환각 방지  |  <tspan font-weight="bold" fill="#E74C3C">Limitation</tspan>: 검색 품질에 의존적
+  </text>
+  <text x="960" y="975" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D" text-anchor="middle">
+    다음 슬라이드에서 Naive RAG의 한계점을 살펴보겠습니다
+  </text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowdown" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10, 3 5" fill="#95A5A6"/>
+    </marker>
+  </defs>
+
+  <!-- Page number -->
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">
+    4 / 63
+  </text>
+</svg>

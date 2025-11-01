@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow019">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">HandOffs 패턴</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Agent 간 상태 전달하기</text>
+
+  <!-- Concept Box -->
+  <g transform="translate(200, 220)">
+    <rect width="1520" height="180" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow019)"/>
+    <text x="760" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">💡 HandOffs란?</text>
+    <text x="760" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">한 Agent가 작업을 완료하면 다음 Agent에게 결과를 전달</text>
+    <text x="760" y="150" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">→ 복잡한 작업을 전문화된 Agent들이 순차적으로 처리</text>
+  </g>
+
+  <!-- Flow Diagram -->
+  <g transform="translate(200, 440)">
+    <!-- Agent 1 -->
+    <rect width="360" height="240" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow019)"/>
+    <text x="180" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">🤖 Agent 1</text>
+    <text x="180" y="95" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">숙박 전문가</text>
+
+    <rect x="40" y="120" width="280" height="90" rx="12" fill="#e8eaf6"/>
+    <text x="180" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">📋 작업: 호텔 검색</text>
+    <text x="180" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✅ 결과: 3곳 추천</text>
+
+    <!-- Arrow 1 -->
+    <text x="430" y="140" font-family="Arial, sans-serif" font-size="60" fill="#27AE60">→</text>
+
+    <!-- Agent 2 -->
+    <g transform="translate(580, 0)">
+      <rect width="360" height="240" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow019)"/>
+      <text x="180" y="50" font-family="Arial, sans-serif" font-size="32" fill="#27AE60" text-anchor="middle" font-weight="bold">🤖 Agent 2</text>
+      <text x="180" y="95" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">교통 전문가</text>
+
+      <rect x="40" y="120" width="280" height="90" rx="12" fill="#e8f5e9"/>
+      <text x="180" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">📋 작업: 이동 경로</text>
+      <text x="180" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✅ 결과: 지하철+버스</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <text x="1010" y="140" font-family="Arial, sans-serif" font-size="60" fill="#ff9800">→</text>
+
+    <!-- Agent 3 -->
+    <g transform="translate(1160, 0)">
+      <rect width="360" height="240" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow019)"/>
+      <text x="180" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff9800" text-anchor="middle" font-weight="bold">🤖 Agent 3</text>
+      <text x="180" y="95" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">맛집 전문가</text>
+
+      <rect x="40" y="120" width="280" height="90" rx="12" fill="#fff3e0"/>
+      <text x="180" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">📋 작업: 맛집 추천</text>
+      <text x="180" y="180" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">✅ 결과: 5곳 선정</text>
+    </g>
+  </g>
+
+  <!-- Code Example -->
+  <g transform="translate(200, 720)">
+    <rect width="1520" height="280" rx="20" fill="#1e1e1e" stroke="#667eea" stroke-width="4" filter="url(#shadow019)"/>
+    <text x="760" y="50" font-family="Arial, sans-serif" font-size="30" fill="white" text-anchor="middle" font-weight="bold">코드 예시: Agent 간 전달</text>
+
+    <text x="80" y="110" font-family="monospace" font-size="22" fill="#c586c0">def</text>
+    <text x="140" y="110" font-family="monospace" font-size="22" fill="#dcdcaa"> hotel_agent</text>
+    <text x="340" y="110" font-family="monospace" font-size="22" fill="#d4d4d4">(state):</text>
+
+    <text x="120" y="150" font-family="monospace" font-size="22" fill="#d4d4d4">hotels = search_hotels(state[</text>
+    <text x="600" y="150" font-family="monospace" font-size="22" fill="#ce9178">"destination"</text>
+    <text x="790" y="150" font-family="monospace" font-size="22" fill="#d4d4d4">])</text>
+
+    <text x="120" y="190" font-family="monospace" font-size="22" fill="#c586c0">return</text>
+    <text x="240" y="190" font-family="monospace" font-size="22" fill="#d4d4d4"> {</text>
+    <text x="280" y="190" font-family="monospace" font-size="22" fill="#9cdcfe">"hotels"</text>
+    <text x="420" y="190" font-family="monospace" font-size="22" fill="#d4d4d4">: hotels}  </text>
+    <text x="620" y="190" font-family="monospace" font-size="20" fill="#6a9955"># Agent 2로 전달</text>
+
+    <text x="80" y="240" font-family="monospace" font-size="22" fill="#d4d4d4">graph.add_edge(</text>
+    <text x="340" y="240" font-family="monospace" font-size="22" fill="#ce9178">"hotel_agent"</text>
+    <text x="560" y="240" font-family="monospace" font-size="22" fill="#d4d4d4">, </text>
+    <text x="600" y="240" font-family="monospace" font-size="22" fill="#ce9178">"transport_agent"</text>
+    <text x="900" y="240" font-family="monospace" font-size="22" fill="#d4d4d4">)</text>
+  </g>
+</svg>

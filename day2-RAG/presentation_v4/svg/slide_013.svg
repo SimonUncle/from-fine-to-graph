@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow013">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Metadata Filtering 실전</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Before/After 비교</text>
+
+  <!-- Before: Without Filter -->
+  <g transform="translate(150, 240)">
+    <rect width="760" height="380" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow013)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#ff6b6b" text-anchor="middle" font-weight="bold">❌ 필터 없음</text>
+
+    <text x="380" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">질문: "최신 AI 뉴스는?"</text>
+
+    <rect x="50" y="140" width="660" height="200" rx="15" fill="#ffebee"/>
+    <text x="380" y="175" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">🔍 전체 1000개 문서 검색</text>
+    <text x="380" y="215" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">⏱️ 검색 시간: 3.2초</text>
+    <text x="380" y="255" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">📉 관련 문서: 12개 (1.2%)</text>
+    <text x="380" y="295" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">❌ 2019년 오래된 기사 포함</text>
+
+    <rect x="50" y="360" width="660" height="50" rx="10" fill="#ef5350"/>
+    <text x="380" y="393" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">비효율 + 부정확</text>
+  </g>
+
+  <!-- After: With Filter -->
+  <g transform="translate(1010, 240)">
+    <rect width="760" height="380" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow013)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">✅ 필터 적용</text>
+
+    <text x="380" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">질문: "최신 AI 뉴스는?"</text>
+
+    <rect x="50" y="140" width="660" height="200" rx="15" fill="#e8f5e9"/>
+    <text x="380" y="175" font-family="Arial, sans-serif" font-size="22" fill="#27AE60" font-weight="bold">📅 date >= 2024-06-01</text>
+    <text x="380" y="215" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">🔍 50개 문서만 검색</text>
+    <text x="380" y="255" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">⏱️ 검색 시간: 0.3초 (10배 빠름)</text>
+    <text x="380" y="295" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">📈 관련 문서: 48개 (96%)</text>
+
+    <rect x="50" y="360" width="660" height="50" rx="10" fill="#4caf50"/>
+    <text x="380" y="393" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">빠르고 정확!</text>
+  </g>
+
+  <!-- Bottom: Performance Gain -->
+  <g transform="translate(360, 640)">
+    <rect width="1200" height="380" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow013)"/>
+    <text x="600" y="60" font-family="Arial, sans-serif" font-size="40" fill="#667eea" text-anchor="middle" font-weight="bold">💡 실전 적용 사례</text>
+
+    <g transform="translate(100, 130)">
+      <circle cx="30" cy="30" r="25" fill="#667eea"/>
+      <text x="30" y="40" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="26" fill="#333" font-weight="bold">시간 필터: "최근", "올해", "작년" → date 범위</text>
+
+      <circle cx="30" cy="110" r="25" fill="#667eea"/>
+      <text x="30" y="120" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="80" y="115" font-family="Arial, sans-serif" font-size="26" fill="#333" font-weight="bold">카테고리 필터: "AI 뉴스" → category = ["AI", "Tech", "ML"]</text>
+
+      <circle cx="30" cy="190" r="25" fill="#667eea"/>
+      <text x="30" y="200" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="80" y="195" font-family="Arial, sans-serif" font-size="26" fill="#333" font-weight="bold">출처 필터: 신뢰도 4.0 이상만 검색</text>
+    </g>
+  </g>
+</svg>

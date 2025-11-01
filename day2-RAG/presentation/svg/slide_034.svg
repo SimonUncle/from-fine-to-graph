@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="rrfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#96CEB4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27AE60;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#45B7D1" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1" text-anchor="middle">Section 6: Hybrid Search</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">RRF 융합 방식</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Reciprocal Rank Fusion"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Left: Problem -->
+  <g transform="translate(200, 300)">
+    <rect x="0" y="0" width="700" height="580" rx="20" fill="#FFE6E6" stroke="#E74C3C" stroke-width="3" filter="url(#shadow)"/>
+    <text x="350" y="60" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#E74C3C" text-anchor="middle">❌ 단순 병합의 문제</text>
+
+    <!-- Vector results -->
+    <rect x="40" y="100" width="300" height="180" rx="15" fill="#BAE1FF" opacity="0.3"/>
+    <text x="190" y="130" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">Vector Search</text>
+    <text x="60" y="165" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">1위: Doc A (0.95)</text>
+    <text x="60" y="195" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">2위: Doc B (0.88)</text>
+    <text x="60" y="225" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">3위: Doc C (0.82)</text>
+    <text x="60" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">7위: Doc D (0.65)</text>
+
+    <!-- BM25 results -->
+    <rect x="360" y="100" width="300" height="180" rx="15" fill="#FFEAA7" opacity="0.3"/>
+    <text x="510" y="130" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">BM25 Search</text>
+    <text x="380" y="165" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">1위: Doc D (18.2)</text>
+    <text x="380" y="195" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">2위: Doc C (14.5)</text>
+    <text x="380" y="225" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">3위: Doc E (12.1)</text>
+    <text x="380" y="255" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">8위: Doc A (7.3)</text>
+
+    <text x="350" y="320" font-family="system-ui, sans-serif" font-size="28" fill="#E74C3C" text-anchor="middle">⚠️ 어떻게 합칠까?</text>
+
+    <rect x="40" y="350" width="620" height="200" rx="15" fill="#FFFFFF"/>
+    <text x="350" y="390" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#E74C3C" text-anchor="middle">문제점</text>
+    <text x="60" y="430" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">1. 점수 스케일이 다름</text>
+    <text x="80" y="460" font-family="system-ui, sans-serif" font-size="17" fill="#7F8C8D">(Vector: 0~1, BM25: 0~30)</text>
+    <text x="60" y="495" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">2. 단순 합치면 BM25가 지배적</text>
+    <text x="60" y="530" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">3. 순위가 역전될 수 있음</text>
+  </g>
+
+  <!-- Right: Solution -->
+  <g transform="translate(1020, 300)">
+    <rect x="0" y="0" width="700" height="580" rx="20" fill="url(#rrfGrad)" filter="url(#shadow)"/>
+    <text x="350" y="60" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">✅ RRF로 해결!</text>
+
+    <!-- RRF Formula -->
+    <rect x="40" y="100" width="620" height="140" rx="15" fill="#FFFFFF" opacity="0.95"/>
+    <text x="350" y="140" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">RRF 공식</text>
+    <text x="350" y="185" font-family="Monaco, monospace" font-size="22" fill="#34495E" text-anchor="middle">RRF(d) = Σ 1 / (k + rank(d))</text>
+    <text x="350" y="220" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D" text-anchor="middle">k=60 (기본값, 조정 가능)</text>
+
+    <!-- Example calculation -->
+    <rect x="40" y="260" width="620" height="280" rx="15" fill="#FFFFFF" opacity="0.95"/>
+    <text x="350" y="300" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#27AE60" text-anchor="middle">예시: Doc D의 RRF 점수</text>
+
+    <text x="60" y="345" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">Vector 순위: 7위</text>
+    <text x="80" y="375" font-family="Monaco, monospace" font-size="17" fill="#7F8C8D">→ 1/(60+7) = 0.0149</text>
+
+    <text x="60" y="415" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">BM25 순위: 1위</text>
+    <text x="80" y="445" font-family="Monaco, monospace" font-size="17" fill="#7F8C8D">→ 1/(60+1) = 0.0164</text>
+
+    <text x="60" y="485" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#27AE60">최종 RRF 점수</text>
+    <text x="80" y="515" font-family="Monaco, monospace" font-size="19" fill="#27AE60" font-weight="bold">= 0.0149 + 0.0164 = 0.0313</text>
+
+  </g>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">34 / 63</text>
+</svg>

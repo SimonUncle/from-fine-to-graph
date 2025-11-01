@@ -1,0 +1,49 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad031" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow031"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad031)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.5"/>
+    <text x="100" y="35" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">Part 5</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="#333" text-anchor="middle" font-weight="bold">Modular RAG 아키텍처 🏗️</text>
+  <text x="960" y="200" font-size="32" fill="#666" text-anchor="middle">Router + Self-RAG + CRAG 통합</text>
+  <g transform="translate(300, 280)">
+    <rect x="0" y="0" width="1320" height="650" rx="20" fill="white" opacity="0.95" filter="url(#shadow031)"/>
+    <text x="660" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">통합 Modular RAG 플로우</text>
+    <g transform="translate(150, 120)">
+      <rect x="0" y="0" width="1000" height="80" rx="15" fill="#e3f2fd"/>
+      <text x="500" y="50" font-size="28" fill="#1976d2" text-anchor="middle" font-weight="bold">1️⃣ Query Router: 질문 복잡도 판단</text>
+    </g>
+    <g transform="translate(400, 230)">
+      <rect x="0" y="0" width="450" height="80" rx="15" fill="#f3e5f5"/>
+      <text x="225" y="50" font-size="24" fill="#7b1fa2" text-anchor="middle" font-weight="bold">2️⃣ 검색 전략 선택</text>
+    </g>
+    <g transform="translate(150, 340)">
+      <rect x="0" y="0" width="450" height="80" rx="15" fill="#fff3e0"/>
+      <text x="225" y="50" font-size="24" fill="#e65100" text-anchor="middle" font-weight="bold">3️⃣ 초기 검색 & 답변</text>
+    </g>
+    <g transform="translate(650, 340)">
+      <rect x="0" y="0" width="500" height="80" rx="15" fill="#e8f5e9"/>
+      <text x="250" y="50" font-size="24" fill="#2e7d32" text-anchor="middle" font-weight="bold">4️⃣ Self-RAG: 품질 평가</text>
+    </g>
+    <g transform="translate(150, 450)">
+      <rect x="0" y="0" width="1000" height="80" rx="15" fill="#fff9c4"/>
+      <text x="500" y="50" font-size="24" fill="#f57f17" text-anchor="middle" font-weight="bold">5️⃣ CRAG: Correct / Ambiguous / Incorrect 분류</text>
+    </g>
+    <g transform="translate(350, 560)">
+      <rect x="0" y="0" width="600" height="60" rx="15" fill="#4caf50"/>
+      <text x="300" y="42" font-size="26" fill="white" text-anchor="middle" font-weight="bold">✅ 최종 답변 반환</text>
+    </g>
+  </g>
+  <g transform="translate(200, 960)">
+    <rect x="0" y="0" width="1520" height="80" rx="20" fill="#667eea" filter="url(#shadow031)"/>
+    <text x="760" y="50" font-size="28" fill="white" text-anchor="middle" font-weight="bold">💡 Modular RAG = 여러 기법을 상황에 맞게 조합! (최고 정확도 85%+)</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="#333" text-anchor="middle" opacity="0.8">Slide 31 / 38 | Part 5 완료! 🎯</text>
+</svg>

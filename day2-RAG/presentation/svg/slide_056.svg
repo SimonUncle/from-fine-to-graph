@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#FFEAA7" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#F39C12" text-anchor="middle">Section 9: Tuning</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">튜닝 파라미터</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Chunk Size / Top-K / Threshold"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Three parameters -->
+  <g transform="translate(200, 300)">
+    <!-- Chunk Size -->
+    <rect x="0" y="0" width="460" height="280" rx="20" fill="#FFE6E6" opacity="0.3" stroke="#FF6B6B" stroke-width="3" filter="url(#shadow)"/>
+    <text x="230" y="60" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#E74C3C" text-anchor="middle">1️⃣ Chunk Size</text>
+    <text x="230" y="110" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50" text-anchor="middle">문서 쪼갤 크기</text>
+
+    <text x="40" y="160" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">작게 (256): 정확하지만 맥락 손실</text>
+    <text x="40" y="195" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">크게 (1024): 맥락 좋지만 노이즈</text>
+
+    <rect x="40" y="215" width="380" height="50" rx="10" fill="#FFFFBA" opacity="0.3"/>
+    <text x="230" y="248" font-family="system-ui, sans-serif" font-size="20" fill="#27AE60" font-weight="bold" text-anchor="middle">권장: 512 (균형점)</text>
+
+    <!-- Top-K -->
+    <rect x="530" y="0" width="460" height="280" rx="20" fill="#E3F2FD" opacity="0.3" stroke="#45B7D1" stroke-width="3" filter="url(#shadow)"/>
+    <text x="760" y="60" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#1976D2" text-anchor="middle">2️⃣ Top-K</text>
+    <text x="760" y="110" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50" text-anchor="middle">검색할 문서 개수</text>
+
+    <text x="570" y="160" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">작게 (k=1): 빠르지만 정보 부족</text>
+    <text x="570" y="195" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">크게 (k=10): 정보 많지만 노이즈</text>
+
+    <rect x="570" y="215" width="380" height="50" rx="10" fill="#E3F2FD" opacity="0.5"/>
+    <text x="760" y="248" font-family="system-ui, sans-serif" font-size="20" fill="#27AE60" font-weight="bold" text-anchor="middle">권장: k=5 (균형점)</text>
+
+    <!-- Threshold -->
+    <rect x="1060" y="0" width="460" height="280" rx="20" fill="#F3E5F5" opacity="0.3" stroke="#9B59B6" stroke-width="3" filter="url(#shadow)"/>
+    <text x="1290" y="60" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#7B1FA2" text-anchor="middle">3️⃣ Threshold</text>
+    <text x="1290" y="110" font-family="system-ui, sans-serif" font-size="22" fill="#2C3E50" text-anchor="middle">유사도 임계값</text>
+
+    <text x="1100" y="160" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">낮게 (0.1): 관련 낮은 문서 포함</text>
+    <text x="1100" y="195" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">높게 (0.7): 너무 엄격, 누락 위험</text>
+
+    <rect x="1100" y="215" width="380" height="50" rx="10" fill="#F3E5F5" opacity="0.5"/>
+    <text x="1290" y="248" font-family="system-ui, sans-serif" font-size="20" fill="#27AE60" font-weight="bold" text-anchor="middle">권장: 0.3 (균형점)</text>
+  </g>
+
+  <!-- Tuning process -->
+  <rect x="200" y="610" width="1520" height="300" rx="20" fill="#FFF3CD" stroke="#F39C12" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="670" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50" text-anchor="middle">📊 튜닝 프로세스</text>
+
+  <g transform="translate(240, 710)">
+    <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">1️⃣ Baseline 설정</text>
+    <text x="300" y="30" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">→ 기본값으로 시작 (512 / k=5 / 0.3)</text>
+
+    <text x="0" y="75" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">2️⃣ 하나씩 변경</text>
+    <text x="300" y="75" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">→ Chunk Size 실험 (256 vs 512 vs 1024)</text>
+
+    <text x="0" y="120" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">3️⃣ RAGAS 평가</text>
+    <text x="300" y="120" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">→ 4가지 메트릭으로 성능 측정</text>
+
+    <text x="0" y="165" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">4️⃣ 최적값 선택</text>
+    <text x="300" y="165" font-family="system-ui, sans-serif" font-size="22" fill="#27AE60" font-weight="bold">→ 가장 높은 점수의 파라미터 조합 선택!</text>
+  </g>
+
+  <!-- Warning -->
+  <rect x="200" y="940" width="1520" height="70" rx="15" fill="#FFE6E6" stroke="#E74C3C" stroke-width="3"/>
+  <text x="270" y="983" font-size="40" text-anchor="middle">⚠️</text>
+  <text x="360" y="978" font-family="system-ui, sans-serif" font-size="24" fill="#E74C3C">주의: 여러 파라미터 동시 변경 금지! 하나씩 실험해야 원인 파악 가능</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">56 / 63</text>
+</svg>

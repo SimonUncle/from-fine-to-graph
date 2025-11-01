@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="s004"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/></filter></defs>
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Agent 4대 핵심 구성요소</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Perception → Reasoning → Action → Memory</text>
+
+  <g transform="translate(360, 300)">
+    <rect width="560" height="280" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#s004)"/>
+    <text x="280" y="60" font-family="Arial, sans-serif" font-size="40" fill="#27AE60" text-anchor="middle" font-weight="bold">👁️ Perception</text>
+    <text x="280" y="120" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle">환경 관찰 &amp; 데이터 수집</text>
+    <text x="40" y="170" font-family="Arial, sans-serif" font-size="22" fill="#666">• 사용자 입력 이해</text>
+    <text x="40" y="210" font-family="Arial, sans-serif" font-size="22" fill="#666">• 외부 상태 인식</text>
+  </g>
+
+  <g transform="translate(1000, 300)">
+    <rect width="560" height="280" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#s004)"/>
+    <text x="280" y="60" font-family="Arial, sans-serif" font-size="40" fill="#ff9800" text-anchor="middle" font-weight="bold">🧠 Reasoning</text>
+    <text x="280" y="120" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle">판단 &amp; 계획 수립</text>
+    <text x="40" y="170" font-family="Arial, sans-serif" font-size="22" fill="#666">• 목표 분석</text>
+    <text x="40" y="210" font-family="Arial, sans-serif" font-size="22" fill="#666">• 전략 결정</text>
+  </g>
+
+  <g transform="translate(360, 640)">
+    <rect width="560" height="280" rx="20" fill="white" stroke="#9b59b6" stroke-width="4" filter="url(#s004)"/>
+    <text x="280" y="60" font-family="Arial, sans-serif" font-size="40" fill="#9b59b6" text-anchor="middle" font-weight="bold">⚡ Action</text>
+    <text x="280" y="120" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle">도구 실행 &amp; 외부 작업</text>
+    <text x="40" y="170" font-family="Arial, sans-serif" font-size="22" fill="#666">• API 호출</text>
+    <text x="40" y="210" font-family="Arial, sans-serif" font-size="22" fill="#666">• 데이터 조작</text>
+  </g>
+
+  <g transform="translate(1000, 640)">
+    <rect width="560" height="280" rx="20" fill="white" stroke="#e74c3c" stroke-width="4" filter="url(#s004)"/>
+    <text x="280" y="60" font-family="Arial, sans-serif" font-size="40" fill="#e74c3c" text-anchor="middle" font-weight="bold">💾 Memory</text>
+    <text x="280" y="120" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle">상태 저장 &amp; 학습</text>
+    <text x="40" y="170" font-family="Arial, sans-serif" font-size="22" fill="#666">• 대화 이력</text>
+    <text x="40" y="210" font-family="Arial, sans-serif" font-size="22" fill="#666">• 중간 결과</text>
+  </g>
+</svg>

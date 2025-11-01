@@ -1,0 +1,41 @@
+# Generated data
+day1-finetune/processed_data/
+
+# LoRA checkpoints
+day1-finetune/main-practice/lora_*/
+day1-finetune/main-practice/runs/
+day1-finetune/main-practice/exaone_*/
+
+# Gradio deploy
+day1-finetune/main-practice/gradio_deploy/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+

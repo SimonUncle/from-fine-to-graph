@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad001" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow001">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad001)"/>
+
+  <!-- Main Title Box -->
+  <g transform="translate(960, 400)">
+    <rect x="-700" y="-150" width="1400" height="300" rx="30" fill="white" opacity="0.95" filter="url(#shadow001)"/>
+
+    <!-- Day 2 Label -->
+    <rect x="-100" y="-120" width="200" height="50" rx="25" fill="#667eea"/>
+    <text x="0" y="-85" font-size="28" fill="white" text-anchor="middle" font-weight="bold">DAY 2</text>
+
+    <!-- Main Title -->
+    <text x="0" y="0" font-size="72" fill="#333" text-anchor="middle" font-weight="bold">
+      Advanced RAG Systems
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="60" font-size="36" fill="#666" text-anchor="middle">
+      Naive → Advanced → Modular RAG
+    </text>
+
+    <!-- Bottom Line -->
+    <text x="0" y="120" font-size="24" fill="#999" text-anchor="middle">
+      검색 증강 생성 시스템의 진화
+    </text>
+  </g>
+
+  <!-- Bottom Info -->
+  <g transform="translate(960, 920)">
+    <circle cx="-300" cy="0" r="40" fill="white" opacity="0.2"/>
+    <text x="-300" y="10" font-size="32" fill="white" text-anchor="middle">📚</text>
+
+    <circle cx="0" cy="0" r="40" fill="white" opacity="0.2"/>
+    <text x="0" y="10" font-size="32" fill="white" text-anchor="middle">🔍</text>
+
+    <circle cx="300" cy="0" r="40" fill="white" opacity="0.2"/>
+    <text x="300" y="10" font-size="32" fill="white" text-anchor="middle">🤖</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1040" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    CJ Lecture Series - 2025
+  </text>
+</svg>

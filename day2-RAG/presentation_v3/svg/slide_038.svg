@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad038" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow038"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad038)"/>
+  <text x="960" y="140" font-size="72" fill="white" text-anchor="middle" font-weight="bold">Day 2 완료! 🎉</text>
+  <text x="960" y="220" font-size="40" fill="white" text-anchor="middle" opacity="0.9">Advanced RAG Systems</text>
+  <g transform="translate(300, 300)">
+    <rect x="0" y="0" width="1320" height="550" rx="20" fill="white" opacity="0.95" filter="url(#shadow038)"/>
+    <text x="660" y="60" font-size="36" fill="#333" text-anchor="middle" font-weight="bold">오늘 배운 내용 요약</text>
+    <g transform="translate(100, 130)">
+      <circle cx="30" cy="15" r="25" fill="#1976d2"/>
+      <text x="30" y="23" font-size="20" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="80" y="23" font-size="26" fill="#666">기초 이론: Embedding, Chunking, Cosine Similarity</text>
+      <circle cx="30" cy="75" r="25" fill="#7b1fa2"/>
+      <text x="30" y="83" font-size="20" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="80" y="83" font-size="26" fill="#666">문제 인식: Naive RAG 5가지 실패 패턴</text>
+      <circle cx="30" cy="135" r="25" fill="#e65100"/>
+      <text x="30" y="143" font-size="20" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="80" y="143" font-size="26" fill="#666">Query 개선: Prompt, Multi-Query, HyDE, RAG-Fusion</text>
+      <circle cx="30" cy="195" r="25" fill="#2e7d32"/>
+      <text x="30" y="203" font-size="20" fill="white" text-anchor="middle" font-weight="bold">4</text>
+      <text x="80" y="203" font-size="26" fill="#666">검색 개선: Metadata, BM25, Hybrid, Cross-Encoder</text>
+      <circle cx="30" cy="255" r="25" fill="#f57f17"/>
+      <text x="30" y="263" font-size="20" fill="white" text-anchor="middle" font-weight="bold">5</text>
+      <text x="80" y="263" font-size="26" fill="#666">자가 평가: Query Router, Self-RAG, CRAG</text>
+      <circle cx="30" cy="315" r="25" fill="#c62828"/>
+      <text x="30" y="323" font-size="20" fill="white" text-anchor="middle" font-weight="bold">6</text>
+      <text x="80" y="323" font-size="26" fill="#666">평가 & 튜닝: RAGAS, chunk_size, top_k, threshold</text>
+    </g>
+  </g>
+  <g transform="translate(300, 880)">
+    <rect x="0" y="0" width="1320" height="140" rx="20" fill="#263238" filter="url(#shadow038)"/>
+    <text x="660" y="45" font-size="32" fill="#81c784" text-anchor="middle" font-weight="bold">🚀 Next Steps: Day 3 - LangGraph Agents</text>
+    <text x="660" y="90" font-size="26" fill="#e0e0e0" text-anchor="middle">ReAct Agents, Tool Registry, Multi-Agent Handoffs</text>
+  </g>
+  <text x="960" y="1065" font-size="24" fill="white" text-anchor="middle" opacity="0.9">수고하셨습니다! 💚 Slide 38 / 38</text>
+</svg>

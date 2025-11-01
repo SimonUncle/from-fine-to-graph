@@ -1,0 +1,77 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow002">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Agent란 무엇인가?</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">자율적으로 작동하는 지능형 시스템</text>
+
+  <!-- Definition Box -->
+  <g transform="translate(260, 220)">
+    <rect width="1400" height="180" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow002)"/>
+    <text x="700" y="60" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">💡 정의</text>
+    <text x="700" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">Agent는 <tspan font-weight="bold" fill="#667eea">환경을 인식</tspan>하고, <tspan font-weight="bold" fill="#667eea">사고</tspan>하며, <tspan font-weight="bold" fill="#667eea">행동</tspan>하여</text>
+    <text x="700" y="150" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">목표를 달성하는 자율적인 시스템입니다</text>
+  </g>
+
+  <!-- 3 Key Characteristics -->
+  <g transform="translate(160, 450)">
+    <!-- Characteristic 1 -->
+    <rect width="520" height="480" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow002)"/>
+    <text x="260" y="60" font-family="Arial, sans-serif" font-size="40" fill="#27AE60" text-anchor="middle" font-weight="bold">🤖 자율성</text>
+    <text x="260" y="110" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">(Autonomy)</text>
+
+    <rect x="40" y="140" width="440" height="300" rx="15" fill="#e8f5e9"/>
+    <text x="260" y="190" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">스스로 판단하고 실행</text>
+    
+    <text x="60" y="240" font-family="Arial, sans-serif" font-size="20" fill="#666">• 사용자 개입 최소화</text>
+    <text x="60" y="280" font-family="Arial, sans-serif" font-size="20" fill="#666">• 상황에 맞는 결정</text>
+    <text x="60" y="320" font-family="Arial, sans-serif" font-size="20" fill="#666">• 목표 지향적 행동</text>
+    
+    <text x="260" y="380" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">예: 여행 Agent가 예산과</text>
+    <text x="260" y="410" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">취향을 고려해 자동으로</text>
+    <text x="260" y="440" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">호텔을 선택</text>
+  </g>
+
+  <!-- Characteristic 2 -->
+  <g transform="translate(700, 450)">
+    <rect width="520" height="480" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow002)"/>
+    <text x="260" y="60" font-family="Arial, sans-serif" font-size="40" fill="#ff9800" text-anchor="middle" font-weight="bold">🛠️ 도구 사용</text>
+    <text x="260" y="110" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">(Tool Use)</text>
+
+    <rect x="40" y="140" width="440" height="300" rx="15" fill="#fff3e0"/>
+    <text x="260" y="190" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">외부 도구와 API 활용</text>
+    
+    <text x="60" y="240" font-family="Arial, sans-serif" font-size="20" fill="#666">• 검색 엔진</text>
+    <text x="60" y="280" font-family="Arial, sans-serif" font-size="20" fill="#666">• 데이터베이스 쿼리</text>
+    <text x="60" y="320" font-family="Arial, sans-serif" font-size="20" fill="#666">• API 호출</text>
+    
+    <text x="260" y="380" font-family="Arial, sans-serif" font-size="20" fill="#ff9800" font-weight="bold">예: 날씨 API로 기온 확인,</text>
+    <text x="260" y="410" font-family="Arial, sans-serif" font-size="20" fill="#ff9800" font-weight="bold">지도 API로 거리 계산,</text>
+    <text x="260" y="440" font-family="Arial, sans-serif" font-size="20" fill="#ff9800" font-weight="bold">예약 API로 호텔 예약</text>
+  </g>
+
+  <!-- Characteristic 3 -->
+  <g transform="translate(1240, 450)">
+    <rect width="520" height="480" rx="20" fill="white" stroke="#9b59b6" stroke-width="4" filter="url(#shadow002)"/>
+    <text x="260" y="60" font-family="Arial, sans-serif" font-size="40" fill="#9b59b6" text-anchor="middle" font-weight="bold">🔄 피드백 루프</text>
+    <text x="260" y="110" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">(Feedback Loop)</text>
+
+    <rect x="40" y="140" width="440" height="300" rx="15" fill="#f3e5f5"/>
+    <text x="260" y="190" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">결과를 보고 재시도</text>
+    
+    <text x="60" y="240" font-family="Arial, sans-serif" font-size="20" fill="#666">• 실행 결과 관찰</text>
+    <text x="60" y="280" font-family="Arial, sans-serif" font-size="20" fill="#666">• 오류 시 재시도</text>
+    <text x="60" y="320" font-family="Arial, sans-serif" font-size="20" fill="#666">• 전략 수정</text>
+    
+    <text x="260" y="380" font-family="Arial, sans-serif" font-size="20" fill="#9b59b6" font-weight="bold">예: 호텔 검색 실패 시</text>
+    <text x="260" y="410" font-family="Arial, sans-serif" font-size="20" fill="#9b59b6" font-weight="bold">다른 지역이나 가격대로</text>
+    <text x="260" y="440" font-family="Arial, sans-serif" font-size="20" fill="#9b59b6" font-weight="bold">재검색</text>
+  </g>
+</svg>

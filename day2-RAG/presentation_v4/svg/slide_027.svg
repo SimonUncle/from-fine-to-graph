@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="finalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#finalGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1700" cy="200" r="150" fill="white" opacity="0.1"/>
+  <circle cx="200" cy="900" r="200" fill="white" opacity="0.08"/>
+
+  <!-- Main Content -->
+  <text x="960" y="320" font-family="Arial Black, sans-serif" font-size="96" fill="white" text-anchor="middle" font-weight="900">
+    축하합니다! 🎉
+  </text>
+
+  <text x="960" y="420" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle">
+    Day 2: Advanced RAG Systems 완료
+  </text>
+
+  <!-- Achievement Box -->
+  <g transform="translate(360, 500)">
+    <rect width="1200" height="450" rx="20" fill="white" opacity="0.95"/>
+    <text x="600" y="70" font-family="Arial, sans-serif" font-size="44" fill="#333" text-anchor="middle" font-weight="bold">
+      🎓 학습한 내용
+    </text>
+
+    <g transform="translate(100, 130)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ 임베딩과 벡터 DB: 의미 기반 검색의 기초
+      </text>
+      <text x="0" y="50" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ Naive RAG의 5가지 실패 패턴 분석
+      </text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ 프롬프트 엔지니어링으로 답변 품질 개선
+      </text>
+      <text x="0" y="150" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ Metadata Filtering: 조건 기반 사전 필터링
+      </text>
+      <text x="0" y="200" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ Hybrid Search: Vector + BM25 + Reranking
+      </text>
+      <text x="0" y="250" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ CRAG: 검색 품질 자가 평가 및 보완
+      </text>
+      <text x="0" y="300" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ RAGAS: 과학적 평가 프레임워크
+      </text>
+    </g>
+  </g>
+</svg>

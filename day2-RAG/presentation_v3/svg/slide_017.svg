@@ -1,0 +1,107 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad017" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow017">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad017)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.5"/>
+    <text x="100" y="35" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">Part 3</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="#333" text-anchor="middle" font-weight="bold">
+    Sub-Question Decomposition 🧩
+  </text>
+  <text x="960" y="200" font-size="32" fill="#666" text-anchor="middle">
+    큰 질문 → 작은 질문들로 분해
+  </text>
+
+  <!-- Main Flow -->
+  <g transform="translate(250, 260)">
+    <!-- Original Complex Query -->
+    <rect x="0" y="0" width="1420" height="130" rx="20" fill="#ffebee" filter="url(#shadow017)"/>
+    <text x="710" y="40" font-size="28" fill="#c62828" text-anchor="middle" font-weight="bold">복잡한 질문 (여러 요소 포함)</text>
+    <rect x="200" y="60" width="1020" height="60" rx="10" fill="white"/>
+    <text x="710" y="105" font-size="24" fill="#666" text-anchor="middle">
+      "김치찌개를 맛있게 만들려면 어떤 김치를 쓰고, 얼마나 끓여야 해?"
+    </text>
+  </g>
+
+  <!-- Decomposition Arrow -->
+  <g transform="translate(960, 410)">
+    <rect x="-120" y="0" width="240" height="70" rx="20" fill="#667eea"/>
+    <text x="0" y="45" font-size="26" fill="white" text-anchor="middle" font-weight="bold">🤖 분해</text>
+  </g>
+
+  <polygon points="960,400 960,360 940,380 960,360 980,380" fill="#667eea"/>
+  <polygon points="960,500 960,540 940,520 960,540 980,520" fill="#667eea"/>
+
+  <!-- Sub-Questions -->
+  <g transform="translate(250, 560)">
+    <!-- Sub Q1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="680" height="100" rx="20" fill="#e3f2fd" filter="url(#shadow017)"/>
+      <circle cx="60" cy="50" r="30" fill="#1976d2"/>
+      <text x="60" y="60" font-size="24" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="120" y="40" font-size="22" fill="#1976d2" font-weight="bold">Sub-Question 1</text>
+      <text x="120" y="75" font-size="20" fill="#666">김치찌개에 어떤 김치를 써야 해?</text>
+    </g>
+
+    <!-- Sub Q2 -->
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="680" height="100" rx="20" fill="#f3e5f5" filter="url(#shadow017)"/>
+      <circle cx="60" cy="50" r="30" fill="#7b1fa2"/>
+      <text x="60" y="60" font-size="24" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="120" y="40" font-size="22" fill="#7b1fa2" font-weight="bold">Sub-Question 2</text>
+      <text x="120" y="75" font-size="20" fill="#666">김치찌개는 얼마나 끓여야 해?</text>
+    </g>
+
+    <!-- Sub Q3 -->
+    <g transform="translate(370, 130)">
+      <rect x="0" y="0" width="680" height="100" rx="20" fill="#fff3e0" filter="url(#shadow017)"/>
+      <circle cx="60" cy="50" r="30" fill="#e65100"/>
+      <text x="60" y="60" font-size="24" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="120" y="40" font-size="22" fill="#e65100" font-weight="bold">Sub-Question 3</text>
+      <text x="120" y="75" font-size="20" fill="#666">김치찌개 맛있게 만드는 팁?</text>
+    </g>
+  </g>
+
+  <!-- Search & Combine -->
+  <g transform="translate(250, 820)">
+    <!-- Search -->
+    <rect x="0" y="0" width="680" height="90" rx="20" fill="#fff9c4" filter="url(#shadow017)"/>
+    <text x="340" y="35" font-size="26" fill="#f57f17" text-anchor="middle" font-weight="bold">🔍 각각 검색</text>
+    <text x="340" y="70" font-size="20" fill="#666" text-anchor="middle">3개 질문 독립 검색</text>
+
+    <!-- Combine -->
+    <rect x="740" y="0" width="680" height="90" rx="20" fill="#e8f5e9" filter="url(#shadow017)"/>
+    <text x="1080" y="35" font-size="26" fill="#2e7d32" text-anchor="middle" font-weight="bold">🔗 답변 통합</text>
+    <text x="1080" y="70" font-size="20" fill="#666" text-anchor="middle">3개 답변 → 1개 완성 답변</text>
+  </g>
+
+  <!-- Bottom Benefits -->
+  <g transform="translate(250, 940)">
+    <rect x="0" y="0" width="1420" height="100" rx="20" fill="#4caf50" filter="url(#shadow017)"/>
+    <text x="710" y="40" font-size="28" fill="white" text-anchor="middle" font-weight="bold">💡 장점</text>
+    <g transform="translate(100, 60)">
+      <text x="0" y="0" font-size="22" fill="white">✓ 복잡한 질문을 단순화</text>
+      <text x="500" y="0" font-size="22" fill="white">✓ 각 요소에 집중한 검색</text>
+      <text x="1000" y="0" font-size="22" fill="white">✓ 더 완전한 답변</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="#333" text-anchor="middle" opacity="0.8">
+    Slide 17 / 38
+  </text>
+</svg>

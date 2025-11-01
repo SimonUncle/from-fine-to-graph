@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="rerankerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B59B6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8E44AD;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#45B7D1" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1" text-anchor="middle">Section 6: Hybrid Search</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">Cross-Encoder Reranking</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"정밀 재정렬로 최종 품질 향상"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Why Reranking -->
+  <g transform="translate(200, 300)">
+    <rect x="0" y="0" width="1520" height="140" rx="20" fill="#FFF3CD" stroke="#F39C12" stroke-width="3" filter="url(#shadow)"/>
+    <text x="760" y="50" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">왜 Reranking이 필요한가?</text>
+    <text x="760" y="90" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">Bi-Encoder (Vector Search)는 <tspan font-weight="bold">빠르지만 정확도 한계</tspan></text>
+    <text x="760" y="120" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">Cross-Encoder는 <tspan font-weight="bold">느리지만 매우 정확</tspan> → 소수 문서만 재정렬!</text>
+  </g>
+
+  <!-- Comparison -->
+  <g transform="translate(200, 470)">
+    <!-- Bi-Encoder -->
+    <rect x="0" y="0" width="700" height="450" rx="20" fill="#BAE1FF" opacity="0.2" stroke="#45B7D1" stroke-width="3" filter="url(#shadow)"/>
+    <text x="350" y="50" font-family="system-ui, sans-serif" font-size="30" font-weight="bold" fill="#2C3E50" text-anchor="middle">Bi-Encoder (Vector)</text>
+
+    <!-- Diagram -->
+    <rect x="50" y="90" width="260" height="60" rx="10" fill="#FFFFBA" opacity="0.4"/>
+    <text x="180" y="128" font-family="system-ui, sans-serif" font-size="20" fill="#2C3E50" text-anchor="middle">Query</text>
+
+    <text x="180" y="185" font-family="system-ui, sans-serif" font-size="24" fill="#45B7D1">↓ Encode</text>
+
+    <rect x="50" y="200" width="260" height="60" rx="10" fill="#BAE1FF" opacity="0.5"/>
+    <text x="180" y="238" font-family="Monaco, monospace" font-size="18" fill="#2C3E50" text-anchor="middle">[0.2, -0.5, ...]</text>
+
+    <text x="360" y="238" font-family="system-ui, sans-serif" font-size="30" fill="#7F8C8D">↔</text>
+
+    <rect x="390" y="200" width="260" height="60" rx="10" fill="#BAE1FF" opacity="0.5"/>
+    <text x="520" y="238" font-family="Monaco, monospace" font-size="18" fill="#2C3E50" text-anchor="middle">[0.3, -0.4, ...]</text>
+
+    <text x="520" y="295" font-family="system-ui, sans-serif" font-size="24" fill="#45B7D1">↓ Cosine</text>
+
+    <rect x="390" y="310" width="260" height="60" rx="10" fill="#98FB98" opacity="0.5"/>
+    <text x="520" y="348" font-family="system-ui, sans-serif" font-size="22" fill="#27AE60" text-anchor="middle">유사도: 0.85</text>
+
+    <text x="50" y="410" font-family="system-ui, sans-serif" font-size="20" fill="#27AE60">✅ 장점: 매우 빠름 (병렬)</text>
+    <text x="50" y="440" font-family="system-ui, sans-serif" font-size="20" fill="#E74C3C">❌ 단점: 정밀도 낮음</text>
+
+    <!-- Cross-Encoder -->
+    <rect x="820" y="0" width="700" height="450" rx="20" fill="url(#rerankerGrad)" filter="url(#shadow)"/>
+    <text x="1170" y="50" font-family="system-ui, sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Cross-Encoder (Reranker)</text>
+
+    <!-- Diagram -->
+    <rect x="870" y="90" width="600" height="100" rx="10" fill="#FFFFFF" opacity="0.9"/>
+    <text x="1170" y="128" font-family="system-ui, sans-serif" font-size="20" fill="#2C3E50" text-anchor="middle">Query + Document (함께 입력!)</text>
+    <text x="1170" y="158" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D" text-anchor="middle">"도박 빚 + 민법 제103조 공서양속..."</text>
+
+    <text x="1170" y="225" font-family="system-ui, sans-serif" font-size="24" fill="#FFFFFF">↓ Deep Analysis</text>
+
+    <rect x="870" y="240" width="600" height="80" rx="10" fill="#FFFFFF" opacity="0.9"/>
+    <text x="1170" y="270" font-family="system-ui, sans-serif" font-size="20" fill="#2C3E50" text-anchor="middle">BERT/RoBERTa 12-layer 분석</text>
+    <text x="1170" y="300" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D" text-anchor="middle">문맥, 단어 관계, 의미론적 연관성</text>
+
+    <text x="1170" y="357" font-family="system-ui, sans-serif" font-size="24" fill="#FFFFFF">↓ Score</text>
+
+    <rect x="870" y="372" width="600" height="60" rx="10" fill="#98FB98" opacity="0.9"/>
+    <text x="1170" y="410" font-family="system-ui, sans-serif" font-size="22" fill="#27AE60" text-anchor="middle" font-weight="bold">관련도 점수: 0.92 (더 정확!)</text>
+
+  </g>
+
+  <!-- Bottom tip -->
+  <rect x="200" y="950" width="1520" height="70" rx="15" fill="#D5F4E6" stroke="#27AE60" stroke-width="3"/>
+  <text x="270" y="990" font-size="36" text-anchor="middle">💡</text>
+  <text x="360" y="985" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#27AE60">Best Practice</text>
+  <text x="360" y="1015" font-family="system-ui, sans-serif" font-size="20" fill="#229954">Bi-Encoder로 100개 검색 → Cross-Encoder로 Top-10 재정렬 = 속도 + 정확도!</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">36 / 63</text>
+</svg>

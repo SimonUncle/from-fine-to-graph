@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad012" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#feca57;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow012">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad012)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 2</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    5가지 실패 패턴 ⚠️
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    Naive RAG은 왜 잘 안될까?
+  </text>
+
+  <!-- Failure Pattern Cards -->
+  <g transform="translate(150, 260)">
+    <!-- Pattern 1: Semantic Gap -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="500" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow012)"/>
+
+      <circle cx="60" cy="60" r="40" fill="#e57373"/>
+      <text x="60" y="75" font-size="36" fill="white" text-anchor="middle" font-weight="bold">1</text>
+
+      <text x="130" y="50" font-size="28" fill="#c62828" font-weight="bold">의미 차이</text>
+      <text x="130" y="85" font-size="20" fill="#666">Semantic Gap</text>
+
+      <rect x="30" y="110" width="440" height="70" rx="10" fill="#ffebee"/>
+      <text x="250" y="137" font-size="18" fill="#666" text-anchor="middle">질문: "김치찌개 만드는 법"</text>
+      <text x="250" y="165" font-size="18" fill="#666" text-anchor="middle">검색 실패: "김치찌개 레시피" (다른 표현)</text>
+    </g>
+
+    <!-- Pattern 2: Context Fragmentation -->
+    <g transform="translate(540, 0)">
+      <rect x="0" y="0" width="500" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow012)"/>
+
+      <circle cx="60" cy="60" r="40" fill="#f48fb1"/>
+      <text x="60" y="75" font-size="36" fill="white" text-anchor="middle" font-weight="bold">2</text>
+
+      <text x="130" y="50" font-size="28" fill="#880e4f" font-weight="bold">문맥 파편화</text>
+      <text x="130" y="85" font-size="20" fill="#666">Context Fragmentation</text>
+
+      <rect x="30" y="110" width="440" height="70" rx="10" fill="#fce4ec"/>
+      <text x="250" y="137" font-size="18" fill="#666" text-anchor="middle">청크 1: "김치를 넣고..."</text>
+      <text x="250" y="165" font-size="18" fill="#666" text-anchor="middle">청크 2: "...20분간 끓인다" (연결 끊김)</text>
+    </g>
+
+    <!-- Pattern 3: Ambiguous Query -->
+    <g transform="translate(1080, 0)">
+      <rect x="0" y="0" width="500" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow012)"/>
+
+      <circle cx="60" cy="60" r="40" fill="#ffb74d"/>
+      <text x="60" y="75" font-size="36" fill="white" text-anchor="middle" font-weight="bold">3</text>
+
+      <text x="130" y="50" font-size="28" fill="#e65100" font-weight="bold">모호한 질문</text>
+      <text x="130" y="85" font-size="20" fill="#666">Ambiguous Query</text>
+
+      <rect x="30" y="110" width="440" height="70" rx="10" fill="#fff3e0"/>
+      <text x="250" y="137" font-size="18" fill="#666" text-anchor="middle">질문: "맛있게 만들려면?"</text>
+      <text x="250" y="165" font-size="18" fill="#666" text-anchor="middle">(무엇을? 어떤 요리를?)</text>
+    </g>
+
+    <!-- Pattern 4: Stale Information -->
+    <g transform="translate(270, 240)">
+      <rect x="0" y="0" width="500" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow012)"/>
+
+      <circle cx="60" cy="60" r="40" fill="#ba68c8"/>
+      <text x="60" y="75" font-size="36" fill="white" text-anchor="middle" font-weight="bold">4</text>
+
+      <text x="130" y="50" font-size="28" fill="#6a1b9a" font-weight="bold">오래된 정보</text>
+      <text x="130" y="85" font-size="20" fill="#666">Stale Information</text>
+
+      <rect x="30" y="110" width="440" height="70" rx="10" fill="#f3e5f5"/>
+      <text x="250" y="137" font-size="18" fill="#666" text-anchor="middle">2023년 레시피 검색됨</text>
+      <text x="250" y="165" font-size="18" fill="#666" text-anchor="middle">(최신 2025년 트렌드 반영 안됨)</text>
+    </g>
+
+    <!-- Pattern 5: Low Relevance -->
+    <g transform="translate(810, 240)">
+      <rect x="0" y="0" width="500" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow012)"/>
+
+      <circle cx="60" cy="60" r="40" fill="#81c784"/>
+      <text x="60" y="75" font-size="36" fill="white" text-anchor="middle" font-weight="bold">5</text>
+
+      <text x="130" y="50" font-size="28" fill="#2e7d32" font-weight="bold">낮은 관련성</text>
+      <text x="130" y="85" font-size="20" fill="#666">Low Relevance</text>
+
+      <rect x="30" y="110" width="440" height="70" rx="10" fill="#e8f5e9"/>
+      <text x="250" y="137" font-size="18" fill="#666" text-anchor="middle">Top-3에 "칼질 기법" 포함</text>
+      <text x="250" y="165" font-size="18" fill="#666" text-anchor="middle">(김치찌개와 무관한 문서)</text>
+    </g>
+  </g>
+
+  <!-- Problem Summary -->
+  <g transform="translate(150, 730)">
+    <rect x="0" y="0" width="1620" height="260" rx="20" fill="#263238" filter="url(#shadow012)"/>
+
+    <text x="810" y="50" font-size="36" fill="#ff8a80" text-anchor="middle" font-weight="bold">🚨 Naive RAG의 한계</text>
+
+    <g transform="translate(100, 100)">
+      <rect x="0" y="0" width="700" height="130" rx="15" fill="#37474f"/>
+      <text x="350" y="40" font-size="26" fill="#e0e0e0" text-anchor="middle" font-weight="bold">성능 지표</text>
+      <text x="350" y="75" font-size="24" fill="#ff8a80" text-anchor="middle">정확도: 약 35%</text>
+      <text x="350" y="110" font-size="22" fill="#b0bec5" text-anchor="middle">Context Recall: 40%</text>
+
+      <rect x="750" y="0" width="700" height="130" rx="15" fill="#37474f"/>
+      <text x="1100" y="40" font-size="26" fill="#e0e0e0" text-anchor="middle" font-weight="bold">해결 방향</text>
+      <text x="1100" y="75" font-size="22" fill="#81c784" text-anchor="middle">✓ Query 개선 (Part 3)</text>
+      <text x="1100" y="110" font-size="22" fill="#81c784" text-anchor="middle">✓ 검색 개선 (Part 4)</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1040" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 12 / 38
+  </text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#4ECDC4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#4ECDC4" text-anchor="middle">Section 4: Query Refinement</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">성능 비교</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"3가지 Query Refinement 기법 성능 분석"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Performance comparison table -->
+  <g transform="translate(200, 300)">
+    <!-- Header row -->
+    <rect x="0" y="0" width="1520" height="80" rx="15" fill="#2C3E50"/>
+    <text x="190" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">기법</text>
+    <text x="570" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Context Precision</text>
+    <text x="950" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Context Recall</text>
+    <text x="1330" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">비고</text>
+
+    <!-- Baseline -->
+    <rect x="0" y="100" width="1520" height="100" rx="10" fill="#FFE6E6" opacity="0.3" stroke="#E74C3C" stroke-width="2"/>
+    <text x="190" y="160" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">Naive RAG</text>
+    <text x="570" y="160" font-family="system-ui, sans-serif" font-size="28" fill="#E74C3C" text-anchor="middle">0.45</text>
+    <text x="950" y="160" font-family="system-ui, sans-serif" font-size="28" fill="#E74C3C" text-anchor="middle">0.51</text>
+    <text x="1330" y="160" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D" text-anchor="middle">기준선</text>
+
+    <!-- Multi-Query -->
+    <rect x="0" y="220" width="1520" height="100" rx="10" fill="#BAE1FF" opacity="0.3" stroke="#45B7D1" stroke-width="2"/>
+    <text x="190" y="280" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">Multi-Query</text>
+    <text x="570" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.76 <tspan font-size="20" fill="#7F8C8D">(+69%)</tspan></text>
+    <text x="950" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.78 <tspan font-size="20" fill="#7F8C8D">(+53%)</tspan></text>
+    <text x="1330" y="280" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D" text-anchor="middle">복잡한 질문에 강력</text>
+
+    <!-- HyDE -->
+    <rect x="0" y="340" width="1520" height="100" rx="10" fill="#BAFFC9" opacity="0.3" stroke="#4ECDC4" stroke-width="2"/>
+    <text x="190" y="400" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">HyDE</text>
+    <text x="570" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.68 <tspan font-size="20" fill="#7F8C8D">(+51%)</tspan></text>
+    <text x="950" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.72 <tspan font-size="20" fill="#7F8C8D">(+41%)</tspan></text>
+    <text x="1330" y="400" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D" text-anchor="middle">답변 형태 유사성</text>
+
+    <!-- Step-Back -->
+    <rect x="0" y="460" width="1520" height="100" rx="10" fill="#E0BBE4" opacity="0.3" stroke="#9B59B6" stroke-width="2"/>
+    <text x="190" y="520" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">Step-Back</text>
+    <text x="570" y="520" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.71 <tspan font-size="20" fill="#7F8C8D">(+58%)</tspan></text>
+    <text x="950" y="520" font-family="system-ui, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle">0.83 <tspan font-size="20" fill="#7F8C8D">(+63%)</tspan></text>
+    <text x="1330" y="520" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D" text-anchor="middle">배경 지식 강화</text>
+  </g>
+
+  <!-- Key insights -->
+  <rect x="200" y="660" width="1520" height="280" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="720" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#27AE60" text-anchor="middle">💡 핵심 인사이트</text>
+
+  <g transform="translate(280, 760)">
+    <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">1️⃣ Multi-Query</text>
+    <text x="300" y="30" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">가장 높은 Precision (+69%) - 복잡하고 다면적인 질문에 최적</text>
+
+    <text x="0" y="80" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">2️⃣ Step-Back</text>
+    <text x="300" y="80" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">가장 높은 Recall (+63%) - 배경 지식이 중요한 질문에 효과적</text>
+
+    <text x="0" y="130" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">3️⃣ HyDE</text>
+    <text x="300" y="130" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">균형잡힌 성능 - 답변 형태를 예측 가능할 때 유리</text>
+
+    <text x="0" y="180" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#F39C12">💡 실전 팁</text>
+    <text x="300" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#E67E22">모든 기법이 40-69% 개선! 상황에 맞게 조합하면 더 강력!</text>
+  </g>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">24 / 63</text>
+</svg>

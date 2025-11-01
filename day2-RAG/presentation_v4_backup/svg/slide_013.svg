@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadowMeta">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Metadata Filtering</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">시간/카테고리로 먼저 거르기</text>
+  
+  <g transform="translate(150, 240)">
+    <rect width="770" height="680" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadowMeta)"/>
+    <text x="385" y="60" font-family="Arial, sans-serif" font-size="36" fill="#ff6b6b" text-anchor="middle" font-weight="bold">❌ 필터링 없음</text>
+    <g transform="translate(50, 110)">
+      <text x="335" y="0" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">13개 모든 문서 검색</text>
+      <rect x="20" y="20" width="640" height="70" rx="10" fill="#ffe5e5"/>
+      <text x="340" y="62" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">김치찌개 레시피 (2023)</text>
+      <rect x="20" y="105" width="640" height="70" rx="10" fill="#ffe5e5"/>
+      <text x="340" y="147" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">백종원 김치찌개 (2024)</text>
+      <rect x="20" y="190" width="640" height="70" rx="10" fill="#ffe5e5"/>
+      <text x="340" y="232" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">조리 용어 사전 (2020) ← 무관</text>
+      <rect x="20" y="275" width="640" height="70" rx="10" fill="#ffe5e5"/>
+      <text x="340" y="317" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">칼질 기법 (2021) ← 무관</text>
+      <rect x="20" y="360" width="640" height="70" rx="10" fill="#f0f0f0"/>
+      <text x="340" y="402" font-family="Arial, sans-serif" font-size="22" fill="#999" text-anchor="middle">... (나머지 9개)</text>
+    </g>
+    <text x="385" y="570" font-family="Arial, sans-serif" font-size="26" fill="#c62828" text-anchor="middle" font-weight="bold">검색 시간: 150ms</text>
+    <text x="385" y="610" font-family="Arial, sans-serif" font-size="22" fill="#999" text-anchor="middle">불필요한 문서까지 모두 처리</text>
+  </g>
+  
+  <g transform="translate(1000, 240)">
+    <rect width="770" height="680" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadowMeta)"/>
+    <text x="385" y="60" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">✅ Metadata 필터</text>
+    <g transform="translate(50, 110)">
+      <text x="335" y="0" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">조건: 2024년 + 레시피 카테고리</text>
+      <rect x="20" y="20" width="640" height="130" rx="10" fill="#d4edda"/>
+      <text x="340" y="55" font-family="Arial, sans-serif" font-size="22" fill="#27AE60" text-anchor="middle" font-weight="bold">백종원 김치찌개 (2024, 레시피)</text>
+      <text x="340" y="90" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">category: "레시피"</text>
+      <text x="340" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">year: 2024</text>
+      <rect x="20" y="165" width="640" height="130" rx="10" fill="#d4edda"/>
+      <text x="340" y="200" font-family="Arial, sans-serif" font-size="22" fill="#27AE60" text-anchor="middle" font-weight="bold">흑백요리사 김치찌개 (2024)</text>
+      <text x="340" y="235" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">category: "레시피"</text>
+      <text x="340" y="265" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">year: 2024</text>
+      <text x="335" y="330" font-family="Arial, sans-serif" font-size="22" fill="#999" text-anchor="middle">... 총 5개만 필터됨</text>
+    </g>
+    <text x="385" y="500" font-family="Arial, sans-serif" font-size="26" fill="#27AE60" text-anchor="middle" font-weight="bold">검색 시간: 60ms (60% 감소!)</text>
+    <text x="385" y="555" font-family="Arial, sans-serif" font-size="24" fill="#27AE60" text-anchor="middle">✓ 관련 문서만 처리</text>
+    <text x="385" y="595" font-family="Arial, sans-serif" font-size="24" fill="#27AE60" text-anchor="middle">✓ 속도 향상</text>
+    <text x="385" y="635" font-family="Arial, sans-serif" font-size="24" fill="#27AE60" text-anchor="middle">✓ 정확도 향상</text>
+  </g>
+  
+  <g transform="translate(360, 970)">
+    <rect width="1200" height="80" rx="20" fill="#667eea" filter="url(#shadowMeta)"/>
+    <text x="600" y="52" font-family="Arial, sans-serif" font-size="30" fill="white" text-anchor="middle" font-weight="bold">💡 Vector Search 전에 Metadata로 사전 필터링! 속도↑ 정확도↑</text>
+  </g>
+</svg>

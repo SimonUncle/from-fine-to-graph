@@ -1,0 +1,133 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad020" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c1dfc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#deecdd;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow020">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad020)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.5"/>
+    <text x="100" y="35" font-size="24" fill="#2e7d32" text-anchor="middle" font-weight="bold">Part 3</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="#2e7d32" text-anchor="middle" font-weight="bold">
+    Query 기법 비교 📊
+  </text>
+  <text x="960" y="200" font-size="32" fill="#558b2f" text-anchor="middle">
+    어떤 기법을 언제 쓸까?
+  </text>
+
+  <!-- Comparison Table -->
+  <g transform="translate(150, 250)">
+    <rect x="0" y="0" width="1620" height="700" rx="20" fill="white" opacity="0.95" filter="url(#shadow020)"/>
+
+    <!-- Header Row -->
+    <rect x="0" y="0" width="1620" height="80" rx="20" fill="#4caf50"/>
+    <text x="200" y="50" font-size="26" fill="white" text-anchor="middle" font-weight="bold">기법</text>
+    <text x="500" y="50" font-size="26" fill="white" text-anchor="middle" font-weight="bold">해결 문제</text>
+    <text x="900" y="50" font-size="26" fill="white" text-anchor="middle" font-weight="bold">장점</text>
+    <text x="1350" y="50" font-size="26" fill="white" text-anchor="middle" font-weight="bold">추천 상황</text>
+
+    <!-- Row 1: Multi-Query -->
+    <g transform="translate(0, 100)">
+      <rect x="30" y="0" width="340" height="130" rx="15" fill="#e3f2fd"/>
+      <text x="200" y="35" font-size="24" fill="#1976d2" text-anchor="middle" font-weight="bold">Multi-Query</text>
+      <text x="200" y="70" font-size="20" fill="#666" text-anchor="middle">1개 → 3개</text>
+      <text x="200" y="100" font-size="20" fill="#666" text-anchor="middle">다른 표현</text>
+
+      <rect x="400" y="0" width="280" height="130" rx="15" fill="#e8f5e9"/>
+      <text x="540" y="50" font-size="20" fill="#2e7d32" text-anchor="middle">의미 차이</text>
+      <text x="540" y="85" font-size="20" fill="#2e7d32" text-anchor="middle">(Semantic Gap)</text>
+
+      <rect x="710" y="0" width="330" height="130" rx="15" fill="#fff9c4"/>
+      <text x="875" y="40" font-size="20" fill="#666" text-anchor="middle">다양한 관점</text>
+      <text x="875" y="75" font-size="20" fill="#666" text-anchor="middle">Recall 향상</text>
+
+      <rect x="1070" y="0" width="520" height="130" rx="15" fill="#f3e5f5"/>
+      <text x="1330" y="50" font-size="20" fill="#666" text-anchor="middle">질문 표현이</text>
+      <text x="1330" y="85" font-size="20" fill="#666" text-anchor="middle">애매할 때</text>
+    </g>
+
+    <!-- Row 2: Sub-Question -->
+    <g transform="translate(0, 250)">
+      <rect x="30" y="0" width="340" height="130" rx="15" fill="#f3e5f5"/>
+      <text x="200" y="35" font-size="24" fill="#7b1fa2" text-anchor="middle" font-weight="bold">Sub-Question</text>
+      <text x="200" y="70" font-size="20" fill="#666" text-anchor="middle">큰 질문 →</text>
+      <text x="200" y="100" font-size="20" fill="#666" text-anchor="middle">작은 질문들</text>
+
+      <rect x="400" y="0" width="280" height="130" rx="15" fill="#e8f5e9"/>
+      <text x="540" y="50" font-size="20" fill="#2e7d32" text-anchor="middle">복잡한 질문</text>
+      <text x="540" y="85" font-size="20" fill="#2e7d32" text-anchor="middle">(여러 요소)</text>
+
+      <rect x="710" y="0" width="330" height="130" rx="15" fill="#fff9c4"/>
+      <text x="875" y="40" font-size="20" fill="#666" text-anchor="middle">각 요소 집중</text>
+      <text x="875" y="75" font-size="20" fill="#666" text-anchor="middle">완전한 답변</text>
+
+      <rect x="1070" y="0" width="520" height="130" rx="15" fill="#f3e5f5"/>
+      <text x="1330" y="50" font-size="20" fill="#666" text-anchor="middle">여러 정보를</text>
+      <text x="1330" y="85" font-size="20" fill="#666" text-anchor="middle">한번에 물을 때</text>
+    </g>
+
+    <!-- Row 3: RAG-Fusion -->
+    <g transform="translate(0, 400)">
+      <rect x="30" y="0" width="340" height="130" rx="15" fill="#fff3e0"/>
+      <text x="200" y="35" font-size="24" fill="#e65100" text-anchor="middle" font-weight="bold">RAG-Fusion</text>
+      <text x="200" y="70" font-size="20" fill="#666" text-anchor="middle">Multi-Query +</text>
+      <text x="200" y="100" font-size="20" fill="#666" text-anchor="middle">RRF 통합</text>
+
+      <rect x="400" y="0" width="280" height="130" rx="15" fill="#e8f5e9"/>
+      <text x="540" y="50" font-size="20" fill="#2e7d32" text-anchor="middle">검색 결과</text>
+      <text x="540" y="85" font-size="20" fill="#2e7d32" text-anchor="middle">순위 편향</text>
+
+      <rect x="710" y="0" width="330" height="130" rx="15" fill="#fff9c4"/>
+      <text x="875" y="40" font-size="20" fill="#666" text-anchor="middle">민주적 순위</text>
+      <text x="875" y="75" font-size="20" fill="#666" text-anchor="middle">편향 감소</text>
+
+      <rect x="1070" y="0" width="520" height="130" rx="15" fill="#f3e5f5"/>
+      <text x="1330" y="50" font-size="20" fill="#666" text-anchor="middle">최고 정확도</text>
+      <text x="1330" y="85" font-size="20" fill="#666" text-anchor="middle">필요할 때 (비용↑)</text>
+    </g>
+
+    <!-- Row 4: HyDE -->
+    <g transform="translate(0, 550)">
+      <rect x="30" y="0" width="340" height="130" rx="15" fill="#ffebee"/>
+      <text x="200" y="35" font-size="24" fill="#c62828" text-anchor="middle" font-weight="bold">HyDE</text>
+      <text x="200" y="70" font-size="20" fill="#666" text-anchor="middle">가짜 답변</text>
+      <text x="200" y="100" font-size="20" fill="#666" text-anchor="middle">생성 후 검색</text>
+
+      <rect x="400" y="0" width="280" height="130" rx="15" fill="#e8f5e9"/>
+      <text x="540" y="50" font-size="20" fill="#2e7d32" text-anchor="middle">질문 vs 문서</text>
+      <text x="540" y="85" font-size="20" fill="#2e7d32" text-anchor="middle">길이/형식 차이</text>
+
+      <rect x="710" y="0" width="330" height="130" rx="15" fill="#fff9c4"/>
+      <text x="875" y="40" font-size="20" fill="#666" text-anchor="middle">유사도 향상</text>
+      <text x="875" y="75" font-size="20" fill="#666" text-anchor="middle">Semantic Gap↓</text>
+
+      <rect x="1070" y="0" width="520" height="130" rx="15" fill="#f3e5f5"/>
+      <text x="1330" y="50" font-size="20" fill="#666" text-anchor="middle">짧은 질문인데</text>
+      <text x="1330" y="85" font-size="20" fill="#666" text-anchor="middle">검색 안될 때</text>
+    </g>
+  </g>
+
+  <!-- Bottom Recommendation -->
+  <g transform="translate(150, 980)">
+    <rect x="0" y="0" width="1620" height="80" rx="20" fill="#4caf50" filter="url(#shadow020)"/>
+    <text x="810" y="50" font-size="28" fill="white" text-anchor="middle" font-weight="bold">
+      💡 추천: Prompt Engineering (필수) + RAG-Fusion (높은 정확도) or Multi-Query (빠름)
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="#2e7d32" text-anchor="middle" opacity="0.8">
+    Slide 20 / 38 | Part 3 완료! 🎯
+  </text>
+</svg>

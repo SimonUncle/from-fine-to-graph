@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad003" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow003">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad003)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 1</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    Embedding이란? 🔢
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    텍스트를 숫자 벡터로 변환하기
+  </text>
+
+  <!-- Main Content -->
+  <g transform="translate(200, 300)">
+    <!-- Left: Text -->
+    <rect x="0" y="0" width="600" height="500" rx="20" fill="white" opacity="0.95" filter="url(#shadow003)"/>
+
+    <text x="300" y="60" font-size="36" fill="#333" text-anchor="middle" font-weight="bold">텍스트</text>
+
+    <g transform="translate(80, 130)">
+      <rect x="0" y="0" width="440" height="80" rx="15" fill="#e3f2fd"/>
+      <text x="220" y="50" font-size="28" fill="#1976d2" text-anchor="middle" font-weight="bold">김치찌개</text>
+    </g>
+
+    <g transform="translate(80, 240)">
+      <rect x="0" y="0" width="440" height="80" rx="15" fill="#f3e5f5"/>
+      <text x="220" y="50" font-size="28" fill="#7b1fa2" text-anchor="middle" font-weight="bold">된장찌개</text>
+    </g>
+
+    <g transform="translate(80, 350)">
+      <rect x="0" y="0" width="440" height="80" rx="15" fill="#fff3e0"/>
+      <text x="220" y="50" font-size="28" fill="#e65100" text-anchor="middle" font-weight="bold">불고기</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(750, 250)">
+      <rect x="0" y="0" width="300" height="100" rx="50" fill="#4facfe"/>
+      <text x="150" y="55" font-size="32" fill="white" text-anchor="middle" font-weight="bold">Embedding</text>
+      <text x="150" y="85" font-size="18" fill="white" text-anchor="middle">Model</text>
+    </g>
+    <polygon points="1100,300 1180,300 1150,270 1180,300 1150,330" fill="#4facfe"/>
+
+    <!-- Right: Vector -->
+    <rect x="1200" y="0" width="520" height="500" rx="20" fill="white" opacity="0.95" filter="url(#shadow003)"/>
+
+    <text x="1460" y="60" font-size="36" fill="#333" text-anchor="middle" font-weight="bold">벡터 (숫자 배열)</text>
+
+    <g transform="translate(1250, 130)">
+      <rect x="0" y="0" width="420" height="80" rx="15" fill="#e8f5e9"/>
+      <text x="210" y="35" font-size="20" fill="#2e7d32" text-anchor="middle" font-family="monospace">[0.8, 0.9, 0.1, ...]</text>
+      <text x="210" y="65" font-size="16" fill="#666" text-anchor="middle">768차원</text>
+    </g>
+
+    <g transform="translate(1250, 240)">
+      <rect x="0" y="0" width="420" height="80" rx="15" fill="#f1f8e9"/>
+      <text x="210" y="35" font-size="20" fill="#558b2f" text-anchor="middle" font-family="monospace">[0.7, 0.8, 0.2, ...]</text>
+      <text x="210" y="65" font-size="16" fill="#666" text-anchor="middle">768차원</text>
+    </g>
+
+    <g transform="translate(1250, 350)">
+      <rect x="0" y="0" width="420" height="80" rx="15" fill="#fff9c4"/>
+      <text x="210" y="35" font-size="20" fill="#f57f17" text-anchor="middle" font-family="monospace">[0.3, 0.2, 0.9, ...]</text>
+      <text x="210" y="65" font-size="16" fill="#666" text-anchor="middle">768차원</text>
+    </g>
+  </g>
+
+  <!-- Bottom Explanation -->
+  <g transform="translate(200, 870)">
+    <rect x="0" y="0" width="1520" height="120" rx="20" fill="white" opacity="0.2" filter="url(#shadow003)"/>
+    <text x="760" y="45" font-size="28" fill="white" text-anchor="middle" font-weight="bold">💡 핵심 개념</text>
+    <text x="760" y="85" font-size="24" fill="white" text-anchor="middle">
+      컴퓨터는 텍스트를 이해할 수 없어요. 숫자로 바꿔야 계산이 가능합니다!
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1040" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 3 / 38
+  </text>
+</svg>

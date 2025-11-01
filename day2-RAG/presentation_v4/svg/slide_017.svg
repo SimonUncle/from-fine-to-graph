@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow017">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Query Refinement 실전</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Before/After 비교</text>
+
+  <!-- Before: Single Query -->
+  <g transform="translate(150, 240)">
+    <rect width="760" height="380" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow017)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#ff6b6b" text-anchor="middle" font-weight="bold">❌ 단일 쿼리</text>
+
+    <text x="380" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">질문: "김치찌개 맛있게 만드는 법?"</text>
+
+    <rect x="50" y="140" width="660" height="200" rx="15" fill="#ffebee"/>
+    <text x="380" y="175" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">🔍 검색 결과 (Top 3):</text>
+    <text x="80" y="215" font-family="Arial, sans-serif" font-size="20" fill="#666">1. 김치찌개 레시피 (유사도: 0.75)</text>
+    <text x="80" y="250" font-family="Arial, sans-serif" font-size="20" fill="#666">2. 찌개 종류 (유사도: 0.52)</text>
+    <text x="80" y="285" font-family="Arial, sans-serif" font-size="20" fill="#666">3. 된장찌개 만들기 (유사도: 0.48)</text>
+
+    <rect x="50" y="360" width="660" height="50" rx="10" fill="#ef5350"/>
+    <text x="380" y="393" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">문제: 관련 문서 1개만 검색됨</text>
+  </g>
+
+  <!-- After: Multi-Query -->
+  <g transform="translate(1010, 240)">
+    <rect width="760" height="380" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow017)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">✅ Multi-Query</text>
+
+    <text x="380" y="110" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">3개 쿼리로 확장:</text>
+
+    <rect x="50" y="140" width="660" height="200" rx="15" fill="#e8f5e9"/>
+    <text x="80" y="175" font-family="monospace" font-size="18" fill="#27AE60" font-weight="bold">Q1: "김치찌개 재료와 계량"</text>
+    <text x="80" y="200" font-family="Arial, sans-serif" font-size="18" fill="#666">→ 김치 200g, 돼지고기 150g...</text>
+
+    <text x="80" y="235" font-family="monospace" font-size="18" fill="#27AE60" font-weight="bold">Q2: "김치찌개 조리 순서"</text>
+    <text x="80" y="260" font-family="Arial, sans-serif" font-size="18" fill="#666">→ 고기볶고 → 김치볶고 → 끓이기</text>
+
+    <text x="80" y="295" font-family="monospace" font-size="18" fill="#27AE60" font-weight="bold">Q3: "김치찌개 맛내는 비법"</text>
+    <text x="80" y="320" font-family="Arial, sans-serif" font-size="18" fill="#666">→ 신김치 사용, 고춧가루 추가...</text>
+
+    <rect x="50" y="360" width="660" height="50" rx="10" fill="#4caf50"/>
+    <text x="380" y="393" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">관련 문서 9개 검색 (3배 증가!)</text>
+  </g>
+
+  <!-- Bottom: Performance Comparison -->
+  <g transform="translate(360, 660)">
+    <rect width="1200" height="320" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow017)"/>
+    <text x="600" y="60" font-family="Arial, sans-serif" font-size="40" fill="#667eea" text-anchor="middle" font-weight="bold">💡 성능 비교</text>
+
+    <g transform="translate(100, 120)">
+      <!-- Metric 1 -->
+      <rect x="0" y="0" width="320" height="160" rx="15" fill="#ffebee"/>
+      <text x="160" y="40" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">단일 쿼리</text>
+      <text x="160" y="80" font-family="Arial, sans-serif" font-size="48" fill="#ff6b6b" text-anchor="middle" font-weight="bold">33%</text>
+      <text x="160" y="120" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">관련 문서 발견율</text>
+
+      <!-- Arrow -->
+      <text x="390" y="100" font-family="Arial, sans-serif" font-size="60" fill="#667eea">→</text>
+
+      <!-- Metric 2 -->
+      <rect x="480" y="0" width="320" height="160" rx="15" fill="#e8f5e9"/>
+      <text x="640" y="40" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">Multi-Query</text>
+      <text x="640" y="80" font-family="Arial, sans-serif" font-size="48" fill="#27AE60" text-anchor="middle" font-weight="bold">87%</text>
+      <text x="640" y="120" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">관련 문서 발견율</text>
+
+      <!-- Improvement -->
+      <rect x="840" y="0" width="160" height="160" rx="15" fill="#fff3e0"/>
+      <text x="920" y="80" font-family="Arial, sans-serif" font-size="42" fill="#ff9800" text-anchor="middle" font-weight="bold">+54%</text>
+      <text x="920" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">개선</text>
+    </g>
+  </g>
+</svg>

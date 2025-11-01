@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow007">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">State 정의 이론</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">TypedDict + Annotated + Reducer</text>
+
+  <g transform="translate(260, 240)">
+    <rect width="1400" height="720" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow007)"/>
+    
+    <text x="700" y="60" font-family="Arial, sans-serif" font-size="40" fill="#27AE60" text-anchor="middle" font-weight="bold">📦 State 구조</text>
+
+    <rect x="60" y="100" width="1280" height="240" rx="15" fill="#e8f5e9"/>
+    <text x="700" y="150" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">기본 형태</text>
+    <rect x="100" y="180" width="1200" height="140" rx="10" fill="white"/>
+    <text x="120" y="215" font-family="monospace" font-size="22" fill="#333">from typing import TypedDict, Annotated</text>
+    <text x="120" y="250" font-family="monospace" font-size="22" fill="#333">from langgraph.graph.message import add_messages</text>
+    <text x="120" y="285" font-family="monospace" font-size="22" fill="#333"></text>
+    <text x="120" y="320" font-family="monospace" font-size="22" fill="#333">class State(TypedDict):</text>
+
+    <rect x="60" y="370" width="620" height="300" rx="15" fill="#f0fff4"/>
+    <text x="370" y="420" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">일반 필드</text>
+    <rect x="100" y="450" width="540" height="200" rx="10" fill="white"/>
+    <text x="120" y="485" font-family="monospace" font-size="20" fill="#666">  destination: str</text>
+    <text x="120" y="520" font-family="monospace" font-size="20" fill="#666">  budget: int</text>
+    <text x="120" y="555" font-family="monospace" font-size="20" fill="#666">  days: int</text>
+    <text x="120" y="590" font-family="monospace" font-size="20" fill="#666">  # 덮어쓰기 방식</text>
+
+    <rect x="720" y="370" width="620" height="300" rx="15" fill="#fff3e0"/>
+    <text x="1030" y="420" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">Reducer 필드</text>
+    <rect x="760" y="450" width="540" height="200" rx="10" fill="white"/>
+    <text x="780" y="485" font-family="monospace" font-size="20" fill="#ff9800">  messages: Annotated[</text>
+    <text x="780" y="520" font-family="monospace" font-size="20" fill="#ff9800">    list, add_messages</text>
+    <text x="780" y="555" font-family="monospace" font-size="20" fill="#ff9800">  ]</text>
+    <text x="780" y="590" font-family="monospace" font-size="20" fill="#666">  # 병합 방식 ✨</text>
+  </g>
+</svg>

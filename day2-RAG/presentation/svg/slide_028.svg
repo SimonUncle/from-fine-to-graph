@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="450" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="305" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 5: Metadata Filtering</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">필터링 전략</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"3가지 필터링 유형"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="-90" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Strategy cards -->
+  <!-- 1. Time-based -->
+  <g transform="translate(200, 300)">
+    <rect x="0" y="0" width="1520" height="180" rx="20" fill="#BAE1FF" opacity="0.3" stroke="#45B7D1" stroke-width="3" filter="url(#shadow)"/>
+    <circle cx="70" cy="90" r="40" fill="#45B7D1"/>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle">📅</text>
+
+    <text x="150" y="60" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50">1️⃣ Time-based Filtering</text>
+    <text x="150" y="105" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">시간 범위로 필터링 (year, month, date)</text>
+    <text x="150" y="140" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">예: year >= 2023, date > "2024-01-01"</text>
+    <text x="1350" y="95" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#27AE60">가장 많이 사용!</text>
+  </g>
+
+  <!-- 2. Category-based -->
+  <g transform="translate(200, 510)">
+    <rect x="0" y="0" width="1520" height="180" rx="20" fill="#BAFFC9" opacity="0.3" stroke="#4ECDC4" stroke-width="3" filter="url(#shadow)"/>
+    <circle cx="70" cy="90" r="40" fill="#4ECDC4"/>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle">🏷️</text>
+
+    <text x="150" y="60" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50">2️⃣ Category-based Filtering</text>
+    <text x="150" y="105" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">카테고리로 필터링 (category, type, source)</text>
+    <text x="150" y="140" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">예: category == "법률", type == "판례"</text>
+    <text x="1350" y="95" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#F39C12">분야 특화!</text>
+  </g>
+
+  <!-- 3. Hybrid (Combined) -->
+  <g transform="translate(200, 720)">
+    <rect x="0" y="0" width="1520" height="180" rx="20" fill="#E0BBE4" opacity="0.3" stroke="#9B59B6" stroke-width="3" filter="url(#shadow)"/>
+    <circle cx="70" cy="90" r="40" fill="#9B59B6"/>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle">🔗</text>
+
+    <text x="150" y="60" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50">3️⃣ Hybrid (Combined Filters)</text>
+    <text x="150" y="105" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">여러 필터 조합 (AND, OR 조건)</text>
+    <text x="150" y="140" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">예: (year >= 2023) AND (category == "법률")</text>
+    <text x="1350" y="95" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#E74C3C">정밀 검색!</text>
+  </g>
+
+  <!-- Benefits box -->
+  <rect x="200" y="930" width="1520" height="90" rx="15" fill="#D5F4E6" stroke="#27AE60" stroke-width="3"/>
+  <text x="270" y="975" font-size="40" text-anchor="middle">💡</text>
+  <text x="360" y="970" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#27AE60">핵심</text>
+  <text x="360" y="1005" font-family="system-ui, sans-serif" font-size="22" fill="#229954">Metadata 필터링은 검색 전에 후보군을 줄여 Precision과 속도 모두 향상!</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">28 / 63</text>
+</svg>

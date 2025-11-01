@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#95A5A6"/>
+    </marker>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#45B7D1" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1" text-anchor="middle">Section 6: Hybrid Search</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">전체 파이프라인</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Query → Hybrid → RRF → Rerank → LLM"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Pipeline flow -->
+  <g transform="translate(100, 300)">
+    <!-- Step 1: Query -->
+    <rect x="0" y="0" width="220" height="90" rx="15" fill="#FFB3BA" opacity="0.3" stroke="#FF6B6B" stroke-width="3" filter="url(#shadow)"/>
+    <text x="110" y="40" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#2C3E50" text-anchor="middle">1️⃣ Query</text>
+    <text x="110" y="70" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D" text-anchor="middle">"도박 빚 갚아야?"</text>
+
+    <path d="M 220 45 L 260 45" stroke="#95A5A6" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Step 2: Parallel Search -->
+    <g transform="translate(260, -80)">
+      <!-- Vector -->
+      <rect x="0" y="0" width="240" height="90" rx="15" fill="#BAE1FF" opacity="0.4" stroke="#45B7D1" stroke-width="2" filter="url(#shadow)"/>
+      <text x="120" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">2A. Vector</text>
+      <text x="120" y="60" font-family="system-ui, sans-serif" font-size="17" fill="#7F8C8D" text-anchor="middle">Top-10</text>
+      <text x="120" y="80" font-family="system-ui, sans-serif" font-size="15" fill="#7F8C8D" text-anchor="middle">의미 검색</text>
+    </g>
+
+    <g transform="translate(260, 35)">
+      <!-- BM25 -->
+      <rect x="0" y="0" width="240" height="90" rx="15" fill="#FFEAA7" opacity="0.4" stroke="#F39C12" stroke-width="2" filter="url(#shadow)"/>
+      <text x="120" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#2C3E50" text-anchor="middle">2B. BM25</text>
+      <text x="120" y="60" font-family="system-ui, sans-serif" font-size="17" fill="#7F8C8D" text-anchor="middle">Top-10</text>
+      <text x="120" y="80" font-family="system-ui, sans-serif" font-size="15" fill="#7F8C8D" text-anchor="middle">키워드 검색</text>
+    </g>
+
+    <!-- Merge arrows -->
+    <path d="M 500 -35 L 560 45" stroke="#95A5A6" stroke-width="3"/>
+    <path d="M 500 80 L 560 45" stroke="#95A5A6" stroke-width="3"/>
+    <path d="M 555 45 L 580 45" stroke="#95A5A6" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Step 3: RRF -->
+    <rect x="580" y="0" width="240" height="90" rx="15" fill="#96CEB4" opacity="0.5" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+    <text x="700" y="35" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#2C3E50" text-anchor="middle">3️⃣ RRF 융합</text>
+    <text x="700" y="60" font-family="system-ui, sans-serif" font-size="17" fill="#7F8C8D" text-anchor="middle">20개 → 15개</text>
+    <text x="700" y="80" font-family="system-ui, sans-serif" font-size="15" fill="#7F8C8D" text-anchor="middle">중복 제거 + 점수</text>
+
+    <path d="M 820 45 L 860 45" stroke="#95A5A6" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Step 4: Reranker -->
+    <rect x="860" y="0" width="240" height="90" rx="15" fill="#E0BBE4" opacity="0.5" stroke="#9B59B6" stroke-width="3" filter="url(#shadow)"/>
+    <text x="980" y="35" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#2C3E50" text-anchor="middle">4️⃣ Reranker</text>
+    <text x="980" y="60" font-family="system-ui, sans-serif" font-size="17" fill="#7F8C8D" text-anchor="middle">15개 → Top-5</text>
+    <text x="980" y="80" font-family="system-ui, sans-serif" font-size="15" fill="#7F8C8D" text-anchor="middle">정밀 재정렬</text>
+
+    <path d="M 1100 45 L 1140 45" stroke="#95A5A6" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Step 5: LLM -->
+    <rect x="1140" y="0" width="240" height="90" rx="15" fill="#FFD1DC" opacity="0.5" stroke="#E74C3C" stroke-width="3" filter="url(#shadow)"/>
+    <text x="1260" y="35" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#2C3E50" text-anchor="middle">5️⃣ LLM</text>
+    <text x="1260" y="60" font-family="system-ui, sans-serif" font-size="17" fill="#7F8C8D" text-anchor="middle">최종 답변</text>
+    <text x="1260" y="80" font-family="system-ui, sans-serif" font-size="15" fill="#7F8C8D" text-anchor="middle">Top-5로 생성</text>
+  </g>
+
+  <!-- Example with actual data -->
+  <g transform="translate(200, 450)">
+    <rect x="0" y="0" width="1520" height="480" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="760" y="50" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50" text-anchor="middle">📊 실전 예시: 각 단계별 결과</text>
+
+    <!-- Stage results -->
+    <g transform="translate(40, 80)">
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1">Vector (10개)</text>
+      <text x="0" y="65" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">Doc A, B, C, D, E, F, G, H, I, J</text>
+
+      <text x="0" y="120" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#F39C12">BM25 (10개)</text>
+      <text x="0" y="155" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">Doc C, K, L, A, M, N, O, P, Q, R</text>
+
+      <text x="0" y="210" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#27AE60">RRF 융합 (15개)</text>
+      <text x="0" y="245" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">C (0.033), A (0.031), D (0.028), K (0.027), B (0.025), ...</text>
+      <text x="0" y="270" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D">중복 제거 + RRF 점수 계산</text>
+
+      <text x="0" y="325" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#9B59B6">Reranker (Top-5)</text>
+      <text x="0" y="360" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">A (0.95), C (0.92), D (0.88), K (0.82), M (0.79)</text>
+      <text x="0" y="385" font-family="system-ui, sans-serif" font-size="16" fill="#7F8C8D">Cross-Encoder로 정밀 평가</text>
+
+      <text x="0" y="440" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#E74C3C">LLM 입력</text>
+      <text x="0" y="475" font-family="system-ui, sans-serif" font-size="18" fill="#27AE60" font-weight="bold">최고 품질 Top-5 문서로 정확한 답변 생성!</text>
+    </g>
+  </g>
+
+  <!-- Performance -->
+  <rect x="200" y="960" width="1520" height="80" rx="15" fill="#D5F4E6" stroke="#27AE60" stroke-width="3"/>
+  <text x="270" y="1000" font-size="40" text-anchor="middle">📈</text>
+  <text x="360" y="995" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#27AE60">최종 성능</text>
+  <text x="360" y="1030" font-family="system-ui, sans-serif" font-size="22" fill="#229954">Precision: 0.89 (+98%), Recall: 0.87 (+71%), Faithfulness: 0.93 - Hybrid Search 최강!</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">37 / 63</text>
+</svg>

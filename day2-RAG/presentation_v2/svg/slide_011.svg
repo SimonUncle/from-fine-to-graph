@@ -1,0 +1,133 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow11x">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#fff9f0"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">
+    CRAG (Corrective RAG)
+  </text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">
+    검색 품질을 스스로 평가하고 보완
+  </text>
+
+  <!-- Three Actions -->
+  <!-- Correct -->
+  <g transform="translate(150, 240)">
+    <rect width="500" height="360" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow11x)"/>
+    <rect width="500" height="80" rx="20" fill="#27AE60"/>
+    <text x="250" y="50" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">
+      Correct
+    </text>
+
+    <g transform="translate(40, 110)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">
+        검색 결과가 좋음
+      </text>
+      <text x="0" y="45" font-family="Arial, sans-serif" font-size="20" fill="#666">
+        유사도가 높음
+      </text>
+      <text x="0" y="75" font-family="Arial, sans-serif" font-size="20" fill="#666">
+        내용이 질문과 관련
+      </text>
+
+      <rect x="0" y="110" width="420" height="110" rx="15" fill="#e8f5e9"/>
+      <text x="210" y="150" font-family="Arial, sans-serif" font-size="24" fill="#27AE60" text-anchor="middle" font-weight="bold">
+        그대로 사용
+      </text>
+      <text x="210" y="185" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        추가 작업 불필요
+      </text>
+    </g>
+  </g>
+
+  <!-- Incorrect -->
+  <g transform="translate(710, 240)">
+    <rect width="500" height="360" rx="20" fill="white" stroke="#E74C3C" stroke-width="4" filter="url(#shadow11x)"/>
+    <rect width="500" height="80" rx="20" fill="#E74C3C"/>
+    <text x="250" y="50" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">
+      Incorrect
+    </text>
+
+    <g transform="translate(40, 110)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">
+        검색 결과가 나쁨
+      </text>
+      <text x="0" y="45" font-family="Arial, sans-serif" font-size="20" fill="#666">
+        유사도가 낮음
+      </text>
+      <text x="0" y="75" font-family="Arial, sans-serif" font-size="20" fill="#666">
+        내용이 무관
+      </text>
+
+      <rect x="0" y="110" width="420" height="110" rx="15" fill="#ffebee"/>
+      <text x="210" y="150" font-family="Arial, sans-serif" font-size="24" fill="#E74C3C" text-anchor="middle" font-weight="bold">
+        Web Search
+      </text>
+      <text x="210" y="185" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        외부 검색으로 보완
+      </text>
+    </g>
+  </g>
+
+  <!-- Ambiguous -->
+  <g transform="translate(1270, 240)">
+    <rect width="500" height="360" rx="20" fill="white" stroke="#F39C12" stroke-width="4" filter="url(#shadow11x)"/>
+    <rect width="500" height="80" rx="20" fill="#F39C12"/>
+    <text x="250" y="50" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">
+      Ambiguous
+    </text>
+
+    <g transform="translate(40, 110)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">
+        애매한 경우
+      </text>
+      <text x="0" y="45" font-family="Arial, sans-serif" font-size="20" fill="#666">
+        유사도 중간
+      </text>
+      <text x="0" y="75" font-family="Arial, sans-serif" font-size="20" fill="#666">
+        일부만 관련
+      </text>
+
+      <rect x="0" y="110" width="420" height="110" rx="15" fill="#fff3cd"/>
+      <text x="210" y="150" font-family="Arial, sans-serif" font-size="24" fill="#F39C12" text-anchor="middle" font-weight="bold">
+        Refine
+      </text>
+      <text x="210" y="185" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        문서 정제 후 재검색
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Highlight -->
+  <g transform="translate(360, 660)">
+    <rect width="1200" height="320" rx="20" fill="url(#goldGrad11)" filter="url(#shadow11x)"/>
+    <text x="600" y="70" font-family="Arial, sans-serif" font-size="44" fill="white" text-anchor="middle" font-weight="bold">
+      핵심 아이디어
+    </text>
+
+    <g transform="translate(100, 130)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" fill="white">
+        자가 평가: 검색된 문서 품질을 LLM이 직접 판단
+      </text>
+      <text x="0" y="50" font-family="Arial, sans-serif" font-size="28" fill="white">
+        적응형 액션: 품질에 따라 다른 전략 사용
+      </text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="28" fill="white">
+        보완 메커니즘: 부족하면 외부 검색으로 보강
+      </text>
+      <text x="0" y="150" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">
+        환각률 28% → 7%로 감소
+      </text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad035" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c1dfc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#deecdd;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow035"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad035)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.5"/>
+    <text x="100" y="35" font-size="24" fill="#2e7d32" text-anchor="middle" font-weight="bold">Part 6</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="#2e7d32" text-anchor="middle" font-weight="bold">Tuning 파라미터 ⚙️</text>
+  <text x="960" y="200" font-size="32" fill="#558b2f" text-anchor="middle">성능 최적화를 위한 3대 파라미터</text>
+  <g transform="translate(200, 270)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="490" height="580" rx="20" fill="white" opacity="0.95" filter="url(#shadow035)"/>
+      <text x="245" y="50" font-size="32" fill="#1976d2" text-anchor="middle" font-weight="bold">chunk_size</text>
+      <text x="245" y="90" font-size="24" fill="#666" text-anchor="middle">청크 크기</text>
+      <g transform="translate(40, 130)">
+        <rect x="0" y="0" width="410" height="80" rx="10" fill="#e3f2fd"/>
+        <text x="205" y="30" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">권장 범위</text>
+        <text x="205" y="60" font-size="24" fill="#1976d2" text-anchor="middle" font-weight="bold">200 ~ 500 글자</text>
+        <text x="0" y="120" font-size="22" fill="#666" font-weight="bold">효과:</text>
+        <text x="0" y="155" font-size="20" fill="#666">• 작을수록: 정확도 ↑</text>
+        <text x="0" y="190" font-size="20" fill="#666">  (의미 명확, 노이즈 ↓)</text>
+        <text x="0" y="235" font-size="20" fill="#666">• 클수록: 문맥 ↑</text>
+        <text x="0" y="270" font-size="20" fill="#666">  (정보 완전)</text>
+        <rect x="0" y="310" width="410" height="90" rx="10" fill="#fff9c4"/>
+        <text x="205" y="345" font-size="20" fill="#f57f17" text-anchor="middle" font-weight="bold">💡 Best Practice</text>
+        <text x="205" y="375" font-size="18" fill="#666" text-anchor="middle">300~400 글자 + overlap</text>
+      </g>
+    </g>
+    <g transform="translate(515, 0)">
+      <rect x="0" y="0" width="490" height="580" rx="20" fill="white" opacity="0.95" filter="url(#shadow035)"/>
+      <text x="245" y="50" font-size="32" fill="#7b1fa2" text-anchor="middle" font-weight="bold">top_k</text>
+      <text x="245" y="90" font-size="24" fill="#666" text-anchor="middle">검색 문서 개수</text>
+      <g transform="translate(40, 130)">
+        <rect x="0" y="0" width="410" height="80" rx="10" fill="#f3e5f5"/>
+        <text x="205" y="30" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">권장 범위</text>
+        <text x="205" y="60" font-size="24" fill="#7b1fa2" text-anchor="middle" font-weight="bold">3 ~ 10 개</text>
+        <text x="0" y="120" font-size="22" fill="#666" font-weight="bold">효과:</text>
+        <text x="0" y="155" font-size="20" fill="#666">• 적을수록: 정확도 ↑</text>
+        <text x="0" y="190" font-size="20" fill="#666">  (관련 문서만)</text>
+        <text x="0" y="235" font-size="20" fill="#666">• 많을수록: Recall ↑</text>
+        <text x="0" y="270" font-size="20" fill="#666">  (누락 방지)</text>
+        <rect x="0" y="310" width="410" height="90" rx="10" fill="#fff9c4"/>
+        <text x="205" y="345" font-size="20" fill="#f57f17" text-anchor="middle" font-weight="bold">💡 Best Practice</text>
+        <text x="205" y="375" font-size="18" fill="#666" text-anchor="middle">5개 (Naive) / 10개 (Rerank)</text>
+      </g>
+    </g>
+    <g transform="translate(1030, 0)">
+      <rect x="0" y="0" width="490" height="580" rx="20" fill="white" opacity="0.95" filter="url(#shadow035)"/>
+      <text x="245" y="50" font-size="32" fill="#e65100" text-anchor="middle" font-weight="bold">threshold</text>
+      <text x="245" y="90" font-size="24" fill="#666" text-anchor="middle">유사도 임계값</text>
+      <g transform="translate(40, 130)">
+        <rect x="0" y="0" width="410" height="80" rx="10" fill="#fff3e0"/>
+        <text x="205" y="30" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">권장 범위</text>
+        <text x="205" y="60" font-size="24" fill="#e65100" text-anchor="middle" font-weight="bold">0.3 ~ 0.7</text>
+        <text x="0" y="120" font-size="22" fill="#666" font-weight="bold">효과:</text>
+        <text x="0" y="155" font-size="20" fill="#666">• 높을수록: 정확도 ↑</text>
+        <text x="0" y="190" font-size="20" fill="#666">  (엄격 필터링)</text>
+        <text x="0" y="235" font-size="20" fill="#666">• 낮을수록: Recall ↑</text>
+        <text x="0" y="270" font-size="20" fill="#666">  (더 많이 검색)</text>
+        <rect x="0" y="310" width="410" height="90" rx="10" fill="#fff9c4"/>
+        <text x="205" y="345" font-size="20" fill="#f57f17" text-anchor="middle" font-weight="bold">💡 Best Practice</text>
+        <text x="205" y="375" font-size="18" fill="#666" text-anchor="middle">0.5~0.6 (균형있게)</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(200, 880)">
+    <rect x="0" y="0" width="1520" height="140" rx="20" fill="#4caf50" filter="url(#shadow035)"/>
+    <text x="760" y="45" font-size="32" fill="white" text-anchor="middle" font-weight="bold">💡 파라미터 튜닝 팁</text>
+    <g transform="translate(100, 75)">
+      <text x="0" y="0" font-size="24" fill="white">1️⃣ chunk_size: 300-400으로 시작 → RAGAS로 측정 → 조정</text>
+      <text x="0" y="40" font-size="24" fill="white">2️⃣ top_k: 5개 → 성능 안나오면 10개 (Reranking 필수)</text>
+    </g>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="#2e7d32" text-anchor="middle" opacity="0.8">Slide 35 / 38 | Part 6 완료! 🎯</text>
+</svg>

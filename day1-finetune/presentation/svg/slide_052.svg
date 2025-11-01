@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs><style>
+.t{font-family:Arial,sans-serif;font-size:72px;font-weight:900;fill:#2C3E50}
+.st{font-family:Arial,sans-serif;font-size:36px;font-weight:500;fill:#7F8C8D}
+.h1{font-family:Arial,sans-serif;font-size:56px;font-weight:700;fill:#2C3E50}
+.h2{font-family:Arial,sans-serif;font-size:42px;font-weight:700;fill:#2C3E50}
+.bd{font-family:Arial,sans-serif;font-size:32px;font-weight:400;fill:#2C3E50}
+.sm{font-family:Arial,sans-serif;font-size:28px;font-weight:400;fill:#2C3E50}
+.tp{font-family:Arial,sans-serif;font-size:28px;font-weight:500;fill:#7F8C8D}
+</style></defs>
+<rect width="1920" height="1080" fill="white"/>
+<circle cx="885" cy="180" r="12" fill="#FFB6C1"/><circle cx="915" cy="180" r="12" fill="#98D8C8"/><circle cx="945" cy="180" r="12" fill="#B19CD9"/><circle cx="975" cy="180" r="12" fill="#6C9BCF"/><circle cx="1005" cy="180" r="12" fill="#F4D35E"/>
+<text x="960" y="260" class="h1" text-anchor="middle">Mixed Precision Training</text>
+<text x="960" y="360" class="h2" text-anchor="middle" fill="#B19CD9">FP16 / BF16</text>
+<rect x="200" y="460" width="700" height="180" rx="25" fill="#FFB6C1" opacity="0.15"/><text x="550" y="520" class="h2" text-anchor="middle" font-weight="700">FP32 (원래)</text><text x="550" y="590" class="bd" text-anchor="middle">32-bit 정밀도</text><text x="550" y="645" class="bd" text-anchor="middle">정확하지만 느림</text><text x="550" y="700" class="bd" text-anchor="middle">메모리 많이 사용</text>
+<rect x="1020" y="460" width="700" height="180" rx="25" fill="#98D8C8" opacity="0.15"/><text x="1370" y="520" class="h2" text-anchor="middle" font-weight="700">FP16</text><text x="1370" y="590" class="bd" text-anchor="middle">16-bit 정밀도</text><text x="1370" y="645" class="bd" text-anchor="middle">빠르고 가벼움</text><text x="1370" y="700" class="bd" text-anchor="middle">범위 제한</text>
+<rect x="200" y="690" width="700" height="130" rx="25" fill="#6C9BCF" opacity="0.15"/><text x="550" y="750" class="h2" text-anchor="middle" font-weight="700">BF16 (추천)</text><text x="550" y="820" class="bd" text-anchor="middle">16-bit</text><text x="550" y="875" class="bd" text-anchor="middle">넓은 범위</text><text x="550" y="930" class="bd" text-anchor="middle">Overflow 적음</text>
+<rect x="1020" y="690" width="700" height="130" rx="25" fill="#F4D35E" opacity="0.15"/><text x="1370" y="750" class="h2" text-anchor="middle" font-weight="700">효과</text><text x="1370" y="820" class="bd" text-anchor="middle">메모리 50% 절감</text><text x="1370" y="875" class="bd" text-anchor="middle">속도 2배 향상</text>
+<text x="960" y="910" class="h2" text-anchor="middle" fill="#6C9BCF">다음: 평가 방법</text>
+<rect x="80" y="980" width="1760" height="80" rx="15" fill="#F8F9FA"/><text x="120" y="1035" class="tp">💡 실습에서는 BF16 사용 (Modern GPU)</text>
+</svg>

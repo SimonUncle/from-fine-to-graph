@@ -1,0 +1,106 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad006" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow006">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad006)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 1</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    Chunking 전략 ✂️
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    왜 텍스트를 잘라야 하나?
+  </text>
+
+  <!-- Main Content -->
+  <g transform="translate(150, 280)">
+    <!-- Problem: Full Document -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="800" height="280" rx="20" fill="#ffebee" filter="url(#shadow006)"/>
+
+      <text x="400" y="50" font-size="32" fill="#c62828" text-anchor="middle" font-weight="bold">❌ 전체 문서 한 번에</text>
+
+      <rect x="50" y="80" width="700" height="170" rx="15" fill="white"/>
+      <text x="400" y="120" font-size="22" fill="#666" text-anchor="middle">김치찌개는 한국의 대표적인 찌개 요리입니다. 배추김치를 주재료로</text>
+      <text x="400" y="155" font-size="22" fill="#666" text-anchor="middle">사용하며, 돼지고기, 두부, 파 등을 함께 넣어 끓입니다. 김치의 신맛과</text>
+      <text x="400" y="190" font-size="22" fill="#666" text-anchor="middle">고기의 감칠맛이 어우러져 깊은 맛을 냅니다. 찌개를 끓일 때는 물 대신</text>
+      <text x="400" y="225" font-size="22" fill="#666" text-anchor="middle">멸치 육수나 쌀뜨물을 사용하면 더욱 맛있습니다... (5000자 계속)</text>
+    </g>
+
+    <!-- Problem Indicators -->
+    <g transform="translate(0, 310)">
+      <rect x="50" y="0" width="320" height="70" rx="15" fill="#ef5350"/>
+      <text x="210" y="25" font-size="20" fill="white" text-anchor="middle">🚫 임베딩 크기 제한</text>
+      <text x="210" y="50" font-size="18" fill="white" text-anchor="middle">(보통 512 토큰)</text>
+
+      <rect x="430" y="0" width="320" height="70" rx="15" fill="#f44336"/>
+      <text x="590" y="25" font-size="20" fill="white" text-anchor="middle">🚫 의미 뒤섞임</text>
+      <text x="590" y="50" font-size="18" fill="white" text-anchor="middle">(여러 주제 혼재)</text>
+    </g>
+
+    <!-- Solution: Chunked -->
+    <g transform="translate(970, 0)">
+      <rect x="0" y="0" width="800" height="380" rx="20" fill="#e8f5e9" filter="url(#shadow006)"/>
+
+      <text x="400" y="50" font-size="32" fill="#2e7d32" text-anchor="middle" font-weight="bold">✅ 적절한 크기로 분할</text>
+
+      <!-- Chunk 1 -->
+      <rect x="50" y="90" width="700" height="70" rx="15" fill="#a5d6a7"/>
+      <text x="80" y="125" font-size="18" fill="#1b5e20" font-weight="bold">Chunk 1 (200자)</text>
+      <text x="80" y="150" font-size="18" fill="#333">김치찌개는 한국의 대표적인 찌개...</text>
+
+      <!-- Chunk 2 -->
+      <rect x="50" y="175" width="700" height="70" rx="15" fill="#a5d6a7"/>
+      <text x="80" y="210" font-size="18" fill="#1b5e20" font-weight="bold">Chunk 2 (200자)</text>
+      <text x="80" y="235" font-size="18" fill="#333">배추김치를 주재료로 사용하며...</text>
+
+      <!-- Chunk 3 -->
+      <rect x="50" y="260" width="700" height="70" rx="15" fill="#a5d6a7"/>
+      <text x="80" y="295" font-size="18" fill="#1b5e20" font-weight="bold">Chunk 3 (200자)</text>
+      <text x="80" y="320" font-size="18" fill="#333">찌개를 끓일 때는 물 대신 육수를...</text>
+    </g>
+
+    <!-- Benefits -->
+    <g transform="translate(970, 410)">
+      <rect x="50" y="0" width="320" height="70" rx="15" fill="#66bb6a"/>
+      <text x="210" y="25" font-size="20" fill="white" text-anchor="middle">✓ 크기 제한 준수</text>
+      <text x="210" y="50" font-size="18" fill="white" text-anchor="middle">(각 청크 512 이하)</text>
+
+      <rect x="430" y="0" width="320" height="70" rx="15" fill="#4caf50"/>
+      <text x="590" y="25" font-size="20" fill="white" text-anchor="middle">✓ 의미 명확</text>
+      <text x="590" y="50" font-size="18" fill="white" text-anchor="middle">(하나의 주제에 집중)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Explanation -->
+  <g transform="translate(150, 730)">
+    <rect x="0" y="0" width="1620" height="250" rx="20" fill="white" opacity="0.95" filter="url(#shadow006)"/>
+
+    <text x="810" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">💡 왜 Chunking이 필요한가?</text>
+
+    <g transform="translate(100, 100)">
+      <text x="0" y="0" font-size="24" fill="#666">1️⃣ <tspan font-weight="bold">모델 제한</tspan>: 임베딩 모델은 보통 512 토큰까지만 처리 가능</text>
+      <text x="0" y="50" font-size="24" fill="#666">2️⃣ <tspan font-weight="bold">검색 정확도</tspan>: 작은 청크일수록 의미가 명확해서 관련성 높은 내용만 검색</text>
+      <text x="0" y="100" font-size="24" fill="#666">3️⃣ <tspan font-weight="bold">맥락 유지</tspan>: 너무 작으면 문맥 손실, 너무 크면 노이즈 증가</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1040" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 6 / 38
+  </text>
+</svg>

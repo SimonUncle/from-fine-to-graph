@@ -1,0 +1,123 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad010" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow010">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad010)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 2</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    Naive RAG의 5단계 🔄
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    기본 RAG는 어떻게 작동할까?
+  </text>
+
+  <!-- Pipeline Flow -->
+  <g transform="translate(260, 280)">
+    <!-- Step 1: Load -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="300" height="120" rx="20" fill="#e3f2fd" filter="url(#shadow010)"/>
+      <circle cx="60" cy="60" r="35" fill="#1976d2"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">1</text>
+
+      <text x="130" y="50" font-size="28" fill="#1976d2" font-weight="bold">Load</text>
+      <text x="130" y="85" font-size="20" fill="#666">문서 불러오기</text>
+    </g>
+
+    <!-- Arrow -->
+    <polygon points="330,60 390,60 370,40 390,60 370,80" fill="#666"/>
+
+    <!-- Step 2: Split -->
+    <g transform="translate(420, 0)">
+      <rect x="0" y="0" width="300" height="120" rx="20" fill="#f3e5f5" filter="url(#shadow010)"/>
+      <circle cx="60" cy="60" r="35" fill="#7b1fa2"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">2</text>
+
+      <text x="130" y="50" font-size="28" fill="#7b1fa2" font-weight="bold">Split</text>
+      <text x="130" y="85" font-size="20" fill="#666">청크로 분할</text>
+    </g>
+
+    <!-- Arrow -->
+    <polygon points="750,60 810,60 790,40 810,60 790,80" fill="#666"/>
+
+    <!-- Step 3: Embed -->
+    <g transform="translate(840, 0)">
+      <rect x="0" y="0" width="300" height="120" rx="20" fill="#fff3e0" filter="url(#shadow010)"/>
+      <circle cx="60" cy="60" r="35" fill="#e65100"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">3</text>
+
+      <text x="130" y="50" font-size="28" fill="#e65100" font-weight="bold">Embed</text>
+      <text x="130" y="85" font-size="20" fill="#666">벡터 변환</text>
+    </g>
+
+    <!-- Arrow Down -->
+    <polygon points="990,140 990,200 970,180 990,200 1010,180" fill="#666"/>
+
+    <!-- Step 4: Store (FAISS) -->
+    <g transform="translate(690, 230)">
+      <rect x="0" y="0" width="600" height="120" rx="20" fill="#e8f5e9" filter="url(#shadow010)"/>
+      <circle cx="60" cy="60" r="35" fill="#2e7d32"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">4</text>
+
+      <text x="130" y="45" font-size="28" fill="#2e7d32" font-weight="bold">Store (FAISS)</text>
+      <text x="130" y="85" font-size="20" fill="#666">벡터 데이터베이스 저장</text>
+      <text x="500" y="65" font-size="48" fill="#4caf50">🗄️</text>
+    </g>
+  </g>
+
+  <!-- User Query Section -->
+  <g transform="translate(150, 680)">
+    <rect x="0" y="0" width="1620" height="130" rx="20" fill="white" opacity="0.95" filter="url(#shadow010)"/>
+
+    <text x="810" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">👤 사용자 질문</text>
+    <rect x="400" y="70" width="820" height="50" rx="10" fill="#fce4ec"/>
+    <text x="810" y="105" font-size="24" fill="#880e4f" text-anchor="middle">"김치찌개 레시피 알려줘"</text>
+  </g>
+
+  <!-- Step 5: Retrieve & Generate -->
+  <g transform="translate(150, 840)">
+    <!-- Retrieve -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="780" height="120" rx="20" fill="#fff9c4" filter="url(#shadow010)"/>
+      <circle cx="60" cy="60" r="35" fill="#f57f17"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">5</text>
+
+      <text x="130" y="45" font-size="28" fill="#f57f17" font-weight="bold">Retrieve</text>
+      <text x="130" y="85" font-size="20" fill="#666">유사 문서 검색 (Top-K)</text>
+      <text x="650" y="65" font-size="48" fill="#fbc02d">🔍</text>
+    </g>
+
+    <!-- Arrow -->
+    <polygon points="810,60 870,60 850,40 870,60 850,80" fill="#666"/>
+
+    <!-- Generate -->
+    <g transform="translate(900, 0)">
+      <rect x="0" y="0" width="720" height="120" rx="20" fill="#ffebee" filter="url(#shadow010)"/>
+      <circle cx="60" cy="60" r="35" fill="#c62828"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">6</text>
+
+      <text x="130" y="45" font-size="28" fill="#c62828" font-weight="bold">Generate</text>
+      <text x="130" y="85" font-size="20" fill="#666">LLM으로 답변 생성</text>
+      <text x="620" y="65" font-size="48" fill="#e53935">🤖</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1040" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 10 / 38
+  </text>
+</svg>

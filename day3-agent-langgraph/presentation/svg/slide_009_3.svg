@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow0093">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Command Pattern</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">동적으로 다음 노드 선택 + State 업데이트</text>
+
+  <!-- Concept Box -->
+  <g transform="translate(200, 220)">
+    <rect width="1520" height="160" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0093)"/>
+    <text x="760" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">💡 Command란?</text>
+    <text x="760" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">노드가 다음 노드를 직접 지정하고, 동시에 State도 업데이트</text>
+  </g>
+
+  <!-- Two Components -->
+  <g transform="translate(200, 420)">
+    <!-- Left: goto -->
+    <rect width="740" height="280" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow0093)"/>
+    <text x="370" y="60" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">goto: 다음 노드</text>
+
+    <rect x="80" y="100" width="580" height="140" rx="15" fill="#e8f5e9"/>
+    <text x="370" y="145" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">어디로 갈지 결정</text>
+    <text x="370" y="185" font-family="monospace" font-size="22" fill="#27AE60" text-anchor="middle">Command(goto="next_node")</text>
+
+    <!-- Right: update -->
+    <g transform="translate(780, 0)">
+      <rect width="740" height="280" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow0093)"/>
+      <text x="370" y="60" font-family="Arial, sans-serif" font-size="36" fill="#ff9800" text-anchor="middle" font-weight="bold">update: 상태 변경</text>
+
+      <rect x="80" y="100" width="580" height="140" rx="15" fill="#fff3e0"/>
+      <text x="370" y="145" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">State에 무엇을 추가할지</text>
+      <text x="370" y="185" font-family="monospace" font-size="22" fill="#ff9800" text-anchor="middle">update={"result": data}</text>
+    </g>
+  </g>
+
+  <!-- Example Flow -->
+  <g transform="translate(200, 740)">
+    <rect width="1520" height="260" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0093)"/>
+    <text x="760" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">📌 실전 예시</text>
+
+    <!-- Left Box -->
+    <rect x="60" y="80" width="680" height="150" rx="15" fill="#e8eaf6"/>
+    <text x="400" y="120" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">호텔이 있으면 → 예약 노드로</text>
+    <text x="100" y="165" font-family="monospace" font-size="20" fill="#667eea">Command(goto="book",</text>
+    <text x="100" y="200" font-family="monospace" font-size="20" fill="#667eea">         update={"hotels": [...]})</text>
+
+    <!-- Right Box -->
+    <rect x="780" y="80" width="680" height="150" rx="15" fill="#ffebee"/>
+    <text x="1120" y="120" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">호텔이 없으면 → 재검색 노드로</text>
+    <text x="820" y="165" font-family="monospace" font-size="20" fill="#e74c3c">Command(goto="retry",</text>
+    <text x="820" y="200" font-family="monospace" font-size="20" fill="#e74c3c">         update={"error": "..."})</text>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad034" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow034"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad034)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 6</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">Context Precision & Recall 🎯</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">검색 품질 지표 (Ground Truth 필요)</text>
+  <g transform="translate(150, 270)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="810" height="600" rx="20" fill="white" opacity="0.95" filter="url(#shadow034)"/>
+      <text x="405" y="50" font-size="32" fill="#e65100" text-anchor="middle" font-weight="bold">Context Precision (정밀도)</text>
+      <g transform="translate(60, 100)">
+        <text x="0" y="0" font-size="24" fill="#333" font-weight="bold">측정 방법:</text>
+        <rect x="0" y="30" width="690" height="90" rx="10" fill="#fff3e0"/>
+        <text x="345" y="60" font-size="22" fill="#666" text-anchor="middle">검색된 문서 중 실제 관련있는</text>
+        <text x="345" y="90" font-size="22" fill="#666" text-anchor="middle">문서 비율 (Cosine ≥ threshold)</text>
+        <text x="0" y="150" font-size="24" fill="#333" font-weight="bold">예시:</text>
+        <rect x="0" y="170" width="690" height="200" rx="10" fill="#fff9c4"/>
+        <g transform="translate(20, 195)">
+          <text x="0" y="0" font-size="20" fill="#666">질문: "김치찌개 레시피"</text>
+          <text x="0" y="35" font-size="20" fill="#666">검색된 Top-5:</text>
+          <text x="20" y="65" font-size="18" fill="#2e7d32">✓ 김치찌개 레시피 (0.92)</text>
+          <text x="20" y="95" font-size="18" fill="#2e7d32">✓ 백종원 김치찌개 (0.88)</text>
+          <text x="20" y="125" font-size="18" fill="#c62828">✗ 조리 용어 사전 (0.25)</text>
+          <text x="0" y="160" font-size="18" fill="#666">→ Precision: 0.67 (4/6 관련)</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(860, 0)">
+      <rect x="0" y="0" width="810" height="600" rx="20" fill="white" opacity="0.95" filter="url(#shadow034)"/>
+      <text x="405" y="50" font-size="32" fill="#1976d2" text-anchor="middle" font-weight="bold">Context Recall (재현율)</text>
+      <g transform="translate(60, 100)">
+        <text x="0" y="0" font-size="24" fill="#333" font-weight="bold">측정 방법:</text>
+        <rect x="0" y="30" width="690" height="90" rx="10" fill="#e3f2fd"/>
+        <text x="345" y="60" font-size="22" fill="#666" text-anchor="middle">필요한 문서(Ground Truth) 중</text>
+        <text x="345" y="90" font-size="22" fill="#666" text-anchor="middle">실제 찾은 문서 비율</text>
+        <text x="0" y="150" font-size="24" fill="#333" font-weight="bold">예시:</text>
+        <rect x="0" y="170" width="690" height="200" rx="10" fill="#fff9c4"/>
+        <g transform="translate(20, 195)">
+          <text x="0" y="0" font-size="20" fill="#666">필요한 문서 (Ground Truth):</text>
+          <text x="20" y="30" font-size="18" fill="#666">• 김치찌개 레시피</text>
+          <text x="20" y="55" font-size="18" fill="#666">• 백종원 김치찌개</text>
+          <text x="20" y="80" font-size="18" fill="#666">• 흑백요리사 김치찌개</text>
+          <text x="0" y="115" font-size="20" fill="#666">실제 찾은 것: 2개</text>
+          <text x="0" y="150" font-size="18" fill="#666">→ Recall: 0.67 (2/3)</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(150, 900)">
+    <rect x="0" y="0" width="1620" height="120" rx="20" fill="#263238" filter="url(#shadow034)"/>
+    <text x="810" y="45" font-size="32" fill="#81c784" text-anchor="middle" font-weight="bold">💡 Precision과 Recall 둘 다 중요!</text>
+    <g transform="translate(200, 75)">
+      <text x="0" y="0" font-size="24" fill="#e0e0e0">Precision 높음 = 노이즈 적음 (정확)</text>
+      <text x="800" y="0" font-size="24" fill="#e0e0e0">Recall 높음 = 누락 적음 (완전)</text>
+    </g>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 34 / 38</text>
+</svg>

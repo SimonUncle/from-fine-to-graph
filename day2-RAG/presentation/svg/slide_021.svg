@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#4ECDC4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#4ECDC4" text-anchor="middle">Section 4: Query Refinement</text>
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">HyDE 코드</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Hypothetical Document 생성"</text>
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+  <rect x="200" y="300" width="1520" height="600" rx="20" fill="#1E1E1E"/>
+  <text x="240" y="350" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># HyDE: 가상 답변 생성 후 검색</text>
+  <text x="240" y="400" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="360" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="410" y="400" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"도박 빚을 갚아야 하나요?"</text>
+  <text x="240" y="460" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># Step 1: LLM이 가상 답변 생성</text>
+  <text x="240" y="500" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">hypothetical_answer</text>
+  <text x="560" y="500" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="620" y="500" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">llm</text>
+  <text x="680" y="500" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="700" y="500" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">generate</text>
+  <text x="880" y="500" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="280" y="540" font-family="Monaco, monospace" font-size="18" fill="#CE9178">f"이 질문에 대한 답변을 작성하세요: {{query}}"</text>
+  <text x="240" y="580" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+  <text x="240" y="640" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># Step 2: 가상 답변으로 검색</text>
+  <text x="240" y="680" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">results</text>
+  <text x="380" y="680" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="430" y="680" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vectorstore</text>
+  <text x="620" y="680" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="640" y="680" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">similarity_search</text>
+  <text x="930" y="680" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="280" y="720" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">hypothetical_answer</text>
+  <text x="640" y="720" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="670" y="720" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> k</text>
+  <text x="710" y="720" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="740" y="720" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">3</text>
+  <text x="240" y="760" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">21 / 63</text>
+</svg>

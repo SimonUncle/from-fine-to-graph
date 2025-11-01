@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="450" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="305" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 5: Metadata Filtering</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">실전 시나리오</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"법률 문서 검색 최적화"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="-90" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Scenario description -->
+  <rect x="200" y="300" width="1520" height="120" rx="20" fill="#FFFFBA" opacity="0.4" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="350" font-size="45" text-anchor="middle">📋</text>
+  <text x="380" y="345" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50">문제 상황</text>
+  <text x="380" y="385" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">법률 DB에 1만 개 문서 (2010~2024년, 민법/형법/상법 혼재)</text>
+
+  <!-- Before: Without filtering -->
+  <g transform="translate(200, 450)">
+    <rect x="0" y="0" width="700" height="450" rx="20" fill="#FFE6E6" stroke="#E74C3C" stroke-width="3" filter="url(#shadow)"/>
+    <text x="350" y="60" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#E74C3C" text-anchor="middle">❌ 필터링 없이</text>
+
+    <rect x="40" y="100" width="620" height="80" rx="15" fill="#FFFFBA" opacity="0.3"/>
+    <text x="350" y="150" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">"2024년 민법 개정 내용은?"</text>
+
+    <text x="350" y="230" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#E74C3C">검색 시간: 3.2초</text>
+    <text x="350" y="270" font-family="system-ui, sans-serif" font-size="22" fill="#7F8C8D">10,000개 전체 문서 스캔</text>
+
+    <text x="60" y="320" font-family="system-ui, sans-serif" font-size="20" fill="#E74C3C">⚠️ Top-3 결과:</text>
+    <text x="60" y="355" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">1위: "민법 총칙 2015년판"</text>
+    <text x="60" y="385" font-family="system-ui, sans-serif" font-size="18" fill="#34495E">2위: "형법 개정 2024년"</text>
+    <text x="60" y="415" font-family="system-ui, sans-serif" font-size="18" fill="#27AE60" font-weight="600">3위: "민법 개정 2024년"</text>
+  </g>
+
+  <!-- After: With filtering -->
+  <g transform="translate(1020, 450)">
+    <rect x="0" y="0" width="700" height="450" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+    <text x="350" y="60" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#27AE60" text-anchor="middle">✅ Metadata 필터링</text>
+
+    <rect x="40" y="100" width="620" height="100" rx="15" fill="#FFFFFF" opacity="0.9"/>
+    <text x="350" y="135" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">"2024년 민법 개정 내용은?"</text>
+    <text x="350" y="165" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D" text-anchor="middle">+ year=2024, category="민법"</text>
+
+    <text x="350" y="250" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#27AE60">검색 시간: 0.4초 (87% 감소!)</text>
+    <text x="350" y="290" font-family="system-ui, sans-serif" font-size="22" fill="#7F8C8D">230개 문서만 스캔 (97% 감소)</text>
+
+    <text x="60" y="340" font-family="system-ui, sans-serif" font-size="20" fill="#27AE60">✅ Top-3 결과: 모두 정확!</text>
+    <text x="60" y="375" font-family="system-ui, sans-serif" font-size="18" fill="#27AE60" font-weight="600">1위: "민법 개정 2024년"</text>
+    <text x="60" y="405" font-family="system-ui, sans-serif" font-size="18" fill="#27AE60" font-weight="600">2위: "민법 시행령 2024"</text>
+    <text x="60" y="435" font-family="system-ui, sans-serif" font-size="18" fill="#27AE60" font-weight="600">3위: "민법 해설 2024"</text>
+  </g>
+
+  <!-- Results box -->
+  <rect x="200" y="930" width="1520" height="90" rx="15" fill="#FFF3CD" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="975" font-size="40" text-anchor="middle">🎯</text>
+  <text x="360" y="970" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#E67E22">결과</text>
+  <text x="360" y="1005" font-family="system-ui, sans-serif" font-size="22" fill="#D68910">Precision +35%, 검색 속도 87% 개선, 관련 없는 문서 97% 제거!</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">30 / 63</text>
+</svg>

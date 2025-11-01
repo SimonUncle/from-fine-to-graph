@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#45B7D1" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1" text-anchor="middle">Section 6: Hybrid Search</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">RRF 코드 구현</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"LangChain EnsembleRetriever"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Code section -->
+  <rect x="200" y="300" width="1520" height="680" rx="20" fill="#1E1E1E"/>
+
+  <text x="240" y="350" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># RRF를 사용한 Hybrid Search 구현</text>
+
+  <text x="240" y="400" font-family="Monaco, monospace" font-size="18" fill="#C586C0">from</text>
+  <text x="310" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> langchain.retrievers </text>
+  <text x="630" y="400" font-family="Monaco, monospace" font-size="18" fill="#C586C0">import</text>
+  <text x="730" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> </text>
+  <text x="760" y="400" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">EnsembleRetriever</text>
+
+  <text x="240" y="440" font-family="Monaco, monospace" font-size="18" fill="#C586C0">from</text>
+  <text x="310" y="440" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> langchain_community.retrievers </text>
+  <text x="770" y="440" font-family="Monaco, monospace" font-size="18" fill="#C586C0">import</text>
+  <text x="870" y="440" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> </text>
+  <text x="900" y="440" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">BM25Retriever</text>
+
+  <text x="240" y="500" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 1. Vector Retriever (이미 생성됨)</text>
+  <text x="240" y="540" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vector_retriever</text>
+  <text x="460" y="540" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="510" y="540" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vectorstore</text>
+  <text x="690" y="540" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="710" y="540" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">as_retriever</text>
+  <text x="900" y="540" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="920" y="540" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">search_kwargs</text>
+  <text x="1140" y="540" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">={</text>
+  <text x="1180" y="540" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"k"</text>
+  <text x="1250" y="540" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">:</text>
+  <text x="1280" y="540" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8"> 5</text>
+  <text x="1310" y="540" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">})</text>
+
+  <text x="240" y="600" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 2. BM25 Retriever 생성</text>
+  <text x="240" y="640" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">bm25_retriever</text>
+  <text x="440" y="640" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="490" y="640" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">BM25Retriever</text>
+  <text x="710" y="640" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="730" y="640" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">from_documents</text>
+  <text x="970" y="640" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="280" y="680" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">documents</text>
+  <text x="450" y="680" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="490" y="680" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">docs</text>
+  <text x="240" y="720" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+  <text x="240" y="760" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">bm25_retriever</text>
+  <text x="440" y="760" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="460" y="760" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">k</text>
+  <text x="500" y="760" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="550" y="760" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">5</text>
+
+  <text x="240" y="820" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 3. Ensemble Retriever로 RRF 융합</text>
+  <text x="240" y="860" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">ensemble_retriever</text>
+  <text x="480" y="860" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="530" y="860" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">EnsembleRetriever</text>
+  <text x="800" y="860" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="280" y="900" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">retrievers</text>
+  <text x="450" y="900" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=[</text>
+  <text x="490" y="900" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vector_retriever</text>
+  <text x="730" y="900" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="760" y="900" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> bm25_retriever</text>
+  <text x="1010" y="900" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">],</text>
+  <text x="280" y="940" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">weights</text>
+  <text x="420" y="940" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=[</text>
+  <text x="450" y="940" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">0.5</text>
+  <text x="510" y="940" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="540" y="940" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8"> 0.5</text>
+  <text x="600" y="940" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">]</text>
+  <text x="640" y="940" font-family="Monaco, monospace" font-size="18" fill="#6A9955">  # Vector:BM25 = 50:50</text>
+  <text x="240" y="980" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">35 / 63</text>
+</svg>

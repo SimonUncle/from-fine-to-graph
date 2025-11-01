@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow0222">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">MCP 3-Tier 구조</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Host ↔ Client ↔ Server</text>
+
+  <!-- HOST Layer -->
+  <g transform="translate(260, 230)">
+    <rect width="1400" height="200" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0222)"/>
+    <text x="50" y="45" font-family="Arial, sans-serif" font-size="36" fill="#667eea" font-weight="bold">💻 HOST (Application)</text>
+
+    <!-- LLM -->
+    <rect x="100" y="80" width="180" height="80" rx="15" fill="#e8eaf6"/>
+    <text x="190" y="130" font-family="Arial, sans-serif" font-size="24" fill="#667eea" text-anchor="middle" font-weight="bold">🤖 LLM</text>
+
+    <!-- Bidirectional Arrow -->
+    <text x="340" y="130" font-family="Arial, sans-serif" font-size="40" fill="#667eea">↔</text>
+
+    <!-- MCP Client -->
+    <rect x="420" y="80" width="220" height="80" rx="15" fill="#e8eaf6"/>
+    <text x="530" y="130" font-family="Arial, sans-serif" font-size="24" fill="#667eea" text-anchor="middle" font-weight="bold">🔌 MCP Client</text>
+
+    <!-- Example Text -->
+    <text x="900" y="100" font-family="Arial, sans-serif" font-size="22" fill="#666">예: Claude Desktop,</text>
+    <text x="900" y="135" font-family="Arial, sans-serif" font-size="22" fill="#666">LangGraph Agent</text>
+  </g>
+
+  <!-- Connection Line -->
+  <g transform="translate(960, 430)">
+    <line x1="0" y1="0" x2="0" y2="90" stroke="#27AE60" stroke-width="6"/>
+    <polygon points="0,90 -10,75 10,75" fill="#27AE60"/>
+
+    <text x="80" y="30" font-family="Arial, sans-serif" font-size="24" fill="#27AE60" font-weight="bold">stdin/stdout</text>
+    <text x="80" y="65" font-family="Arial, sans-serif" font-size="20" fill="#666">(JSON-RPC 2.0)</text>
+  </g>
+
+  <!-- SERVER Layer -->
+  <g transform="translate(260, 520)">
+    <rect width="1400" height="420" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow0222)"/>
+    <text x="50" y="45" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" font-weight="bold">🔧 MCP SERVER (Tool Provider)</text>
+
+    <!-- Server Core -->
+    <rect x="480" y="80" width="440" height="140" rx="15" fill="#e8f5e9"/>
+    <text x="700" y="120" font-family="Arial, sans-serif" font-size="28" fill="#27AE60" text-anchor="middle" font-weight="bold">Server Core</text>
+    <text x="700" y="160" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">• tools/list</text>
+    <text x="700" y="195" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">• tools/call</text>
+
+    <!-- Tools -->
+    <g transform="translate(140, 250)">
+      <!-- Tool 1 -->
+      <rect width="240" height="100" rx="15" fill="#4caf50" filter="url(#shadow0222)"/>
+      <text x="120" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">🔍 Tool 1</text>
+      <text x="120" y="70" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Wikipedia</text>
+
+      <!-- Tool 2 -->
+      <g transform="translate(280, 0)">
+        <rect width="240" height="100" rx="15" fill="#4caf50" filter="url(#shadow0222)"/>
+        <text x="120" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">🌤️ Tool 2</text>
+        <text x="120" y="70" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Weather API</text>
+      </g>
+
+      <!-- Tool 3 -->
+      <g transform="translate(560, 0)">
+        <rect width="240" height="100" rx="15" fill="#4caf50" filter="url(#shadow0222)"/>
+        <text x="120" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">📁 Tool 3</text>
+        <text x="120" y="70" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">File System</text>
+      </g>
+
+      <!-- Tool 4 -->
+      <g transform="translate(840, 0)">
+        <rect width="240" height="100" rx="15" fill="#4caf50" filter="url(#shadow0222)"/>
+        <text x="120" y="40" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">🗄️ Tool 4</text>
+        <text x="120" y="70" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Database</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Key Point -->
+  <g transform="translate(260, 970)">
+    <rect width="1400" height="80" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0222)"/>
+    <text x="700" y="55" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle"><tspan fill="#667eea" font-weight="bold">핵심 포인트</tspan>: 표준 프로토콜로 LLM과 외부 도구를 안전하게 연결</text>
+  </g>
+</svg>

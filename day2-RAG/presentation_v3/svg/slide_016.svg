@@ -1,0 +1,110 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad016" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow016">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad016)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 3</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    Multi-Query Generation 🔀
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    1개 질문 → 3개 다른 표현으로
+  </text>
+
+  <!-- Main Flow -->
+  <g transform="translate(200, 260)">
+    <!-- Original Query -->
+    <rect x="0" y="0" width="1520" height="120" rx="20" fill="white" opacity="0.95" filter="url(#shadow016)"/>
+    <text x="760" y="40" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">원본 질문</text>
+    <rect x="400" y="60" width="720" height="50" rx="10" fill="#e3f2fd"/>
+    <text x="760" y="95" font-size="24" fill="#1976d2" text-anchor="middle" font-weight="bold">
+      "김치찌개 레시피 알려줘"
+    </text>
+  </g>
+
+  <!-- LLM Processing -->
+  <g transform="translate(860, 400)">
+    <rect x="0" y="0" width="200" height="80" rx="20" fill="#667eea"/>
+    <text x="100" y="45" font-size="28" fill="white" text-anchor="middle" font-weight="bold">🤖 LLM</text>
+    <text x="100" y="70" font-size="18" fill="white" text-anchor="middle">변환</text>
+  </g>
+
+  <polygon points="960,390 960,340 940,360 960,340 980,360" fill="#667eea"/>
+  <polygon points="960,500 960,550 940,530 960,550 980,530" fill="#667eea"/>
+
+  <!-- Generated Queries -->
+  <g transform="translate(200, 570)">
+    <!-- Query 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="480" height="120" rx="20" fill="#e3f2fd" filter="url(#shadow016)"/>
+      <circle cx="60" cy="60" r="35" fill="#1976d2"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="120" y="50" font-size="22" fill="#1976d2" font-weight="bold">Query 1</text>
+      <text x="120" y="85" font-size="20" fill="#666">김치찌개 만드는 법</text>
+    </g>
+
+    <!-- Query 2 -->
+    <g transform="translate(520, 0)">
+      <rect x="0" y="0" width="480" height="120" rx="20" fill="#f3e5f5" filter="url(#shadow016)"/>
+      <circle cx="60" cy="60" r="35" fill="#7b1fa2"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="120" y="50" font-size="22" fill="#7b1fa2" font-weight="bold">Query 2</text>
+      <text x="120" y="85" font-size="20" fill="#666">김치찌개 조리법</text>
+    </g>
+
+    <!-- Query 3 -->
+    <g transform="translate(1040, 0)">
+      <rect x="0" y="0" width="480" height="120" rx="20" fill="#fff3e0" filter="url(#shadow016)"/>
+      <circle cx="60" cy="60" r="35" fill="#e65100"/>
+      <text x="60" y="70" font-size="28" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="120" y="50" font-size="22" fill="#e65100" font-weight="bold">Query 3</text>
+      <text x="120" y="85" font-size="20" fill="#666">김치찌개 요리 방법</text>
+    </g>
+  </g>
+
+  <!-- Vector Search -->
+  <g transform="translate(200, 720)">
+    <rect x="0" y="0" width="1520" height="100" rx="20" fill="#fff9c4" filter="url(#shadow016)"/>
+    <text x="760" y="40" font-size="28" fill="#f57f17" text-anchor="middle" font-weight="bold">🔍 각 쿼리로 독립적으로 검색 (3번)</text>
+    <text x="760" y="75" font-size="22" fill="#666" text-anchor="middle">
+      Query 1 → Top-3 | Query 2 → Top-3 | Query 3 → Top-3
+    </text>
+  </g>
+
+  <!-- Merge Results -->
+  <g transform="translate(200, 850)">
+    <rect x="0" y="0" width="1520" height="100" rx="20" fill="#e8f5e9" filter="url(#shadow016)"/>
+    <text x="760" y="40" font-size="28" fill="#2e7d32" text-anchor="middle" font-weight="bold">🔗 결과 합치기 (중복 제거)</text>
+    <text x="760" y="75" font-size="22" fill="#666" text-anchor="middle">
+      9개 문서 → 중복 제거 → 최종 5-7개 unique 문서
+    </text>
+  </g>
+
+  <!-- Bottom Benefits -->
+  <g transform="translate(200, 980)">
+    <rect x="0" y="0" width="1520" height="80" rx="20" fill="#4caf50" filter="url(#shadow016)"/>
+    <text x="760" y="50" font-size="28" fill="white" text-anchor="middle" font-weight="bold">
+      💡 다양한 표현으로 검색 → Recall 향상! "만드는 법", "조리법", "요리 방법" 모두 커버
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 16 / 38
+  </text>
+</svg>

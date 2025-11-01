@@ -1,0 +1,129 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad019" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow019">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad019)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 3</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    HyDE 💡
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    Hypothetical Document Embeddings - 가짜 답변으로 검색
+  </text>
+
+  <!-- Problem First -->
+  <g transform="translate(150, 250)">
+    <rect x="0" y="0" width="1620" height="130" rx="20" fill="#ffebee" filter="url(#shadow019)"/>
+    <text x="810" y="40" font-size="28" fill="#c62828" text-anchor="middle" font-weight="bold">❌ 기존 방식의 문제</text>
+    <text x="810" y="80" font-size="24" fill="#666" text-anchor="middle">
+      질문: "김치찌개 레시피 알려줘" ← 짧고 구체적이지 않음
+    </text>
+    <text x="810" y="115" font-size="22" fill="#999" text-anchor="middle">
+      문서: "김치찌개는 배추김치와 돼지고기를 넣고 20분간 끓입니다..." ← 길고 상세함
+    </text>
+  </g>
+
+  <!-- Main Flow -->
+  <g transform="translate(150, 410)">
+    <!-- Step 1: Generate Hypothetical Answer -->
+    <rect x="0" y="0" width="780" height="560" rx="20" fill="white" opacity="0.95" filter="url(#shadow019)"/>
+
+    <text x="390" y="45" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">Step 1: 가짜 답변 생성</text>
+
+    <g transform="translate(50, 80)">
+      <rect x="0" y="0" width="680" height="80" rx="15" fill="#e3f2fd"/>
+      <text x="340" y="30" font-size="22" fill="#1976d2" text-anchor="middle" font-weight="bold">원본 질문</text>
+      <text x="340" y="60" font-size="20" fill="#666" text-anchor="middle">김치찌개 레시피 알려줘</text>
+    </g>
+
+    <g transform="translate(340, 180)">
+      <rect x="-50" y="0" width="100" height="60" rx="15" fill="#667eea"/>
+      <text x="0" y="40" font-size="22" fill="white" text-anchor="middle" font-weight="bold">🤖 LLM</text>
+    </g>
+
+    <polygon points="390,190 390,250 370,230 390,250 410,230" fill="#667eea"/>
+
+    <g transform="translate(50, 270)">
+      <rect x="0" y="0" width="680" height="260" rx="15" fill="#fff3e0"/>
+      <text x="340" y="35" font-size="22" fill="#e65100" text-anchor="middle" font-weight="bold">가짜 답변 (Hypothetical Document)</text>
+
+      <g transform="translate(40, 60)">
+        <text x="0" y="0" font-size="19" fill="#666">김치찌개는 한국의 대표 찌개 요리입니다.</text>
+        <text x="0" y="35" font-size="19" fill="#666">배추김치 200g과 돼지고기 150g을</text>
+        <text x="0" y="70" font-size="19" fill="#666">준비합니다. 냄비에 김치를 넣고</text>
+        <text x="0" y="105" font-size="19" fill="#666">고기와 함께 중불에서 20분간 끓이면</text>
+        <text x="0" y="140" font-size="19" fill="#666">완성됩니다. 두부와 파를 추가하면</text>
+        <text x="0" y="175" font-size="19" fill="#666">더욱 맛있습니다.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Step 2: Search with Hypothetical Doc -->
+  <g transform="translate(960, 410)">
+    <rect x="0" y="0" width="810" height="560" rx="20" fill="white" opacity="0.95" filter="url(#shadow019)"/>
+
+    <text x="405" y="45" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">Step 2: 가짜 답변으로 검색</text>
+
+    <g transform="translate(50, 90)">
+      <rect x="0" y="0" width="710" height="100" rx="15" fill="#e8f5e9"/>
+      <text x="355" y="35" font-size="22" fill="#2e7d32" text-anchor="middle" font-weight="bold">🔍 Vector Search</text>
+      <text x="355" y="70" font-size="20" fill="#666" text-anchor="middle">
+        가짜 답변 임베딩 ↔️ 문서 임베딩
+      </text>
+    </g>
+
+    <text x="405" y="240" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">검색 결과 (Top-3)</text>
+
+    <g transform="translate(50, 260)">
+      <!-- Rank 1 -->
+      <rect x="0" y="0" width="710" height="75" rx="15" fill="#c8e6c9"/>
+      <circle cx="40" cy="38" r="28" fill="#4caf50"/>
+      <text x="40" y="47" font-size="22" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="90" y="35" font-size="20" fill="#2e7d32" font-weight="bold">김치찌개 레시피</text>
+      <text x="90" y="60" font-size="18" fill="#666">유사도: 0.94 (매우 높음!)</text>
+
+      <!-- Rank 2 -->
+      <rect x="0" y="95" width="710" height="75" rx="15" fill="#dcedc8"/>
+      <circle cx="40" cy="38" r="28" fill="#7cb342"/>
+      <text x="40" y="47" font-size="22" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="90" y="35" font-size="20" fill="#558b2f" font-weight="bold">김치찌개 조리법</text>
+      <text x="90" y="60" font-size="18" fill="#666">유사도: 0.91</text>
+
+      <!-- Rank 3 -->
+      <rect x="0" y="190" width="710" height="75" rx="15" fill="#f0f4c3"/>
+      <circle cx="40" cy="38" r="28" fill="#9e9d24"/>
+      <text x="40" y="47" font-size="22" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="90" y="35" font-size="20" fill="#827717" font-weight="bold">백종원 김치찌개</text>
+      <text x="90" y="60" font-size="18" fill="#666">유사도: 0.88</text>
+    </g>
+  </g>
+</g>
+
+  <!-- Bottom Benefits -->
+  <g transform="translate(150, 1000)">
+    <rect x="0" y="0" width="1620" height="70" rx="20" fill="#4caf50" filter="url(#shadow019)"/>
+    <text x="810" y="47" font-size="26" fill="white" text-anchor="middle" font-weight="bold">
+      💡 짧은 질문 vs 긴 문서 차이 해결! 답변 형식으로 검색하면 유사도 ↑ (Semantic Gap 완화)
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 19 / 38
+  </text>
+</svg>

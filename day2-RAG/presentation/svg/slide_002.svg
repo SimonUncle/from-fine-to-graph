@@ -1,0 +1,104 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8ecff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgLight)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1920" height="140" fill="#667eea"/>
+  <text x="960" y="90" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+    학습 로드맵
+  </text>
+
+  <!-- Part 1 -->
+  <g transform="translate(240, 200)">
+    <rect width="400" height="180" rx="20" fill="white" filter="url(#cardShadow)"/>
+    <circle cx="50" cy="90" r="25" fill="#667eea" opacity="0.2"/>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="28" fill="#667eea" text-anchor="middle" font-weight="bold">1</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">RAG 기초</text>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" fill="#666">• Naive RAG 구현</text>
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="18" fill="#666">• 실패 패턴 분석</text>
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="18" fill="#666">• 개선 방향 도출</text>
+  </g>
+
+  <!-- Part 2 -->
+  <g transform="translate(760, 200)">
+    <rect width="400" height="180" rx="20" fill="white" filter="url(#cardShadow)"/>
+    <circle cx="50" cy="90" r="25" fill="#764ba2" opacity="0.2"/>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="28" fill="#764ba2" text-anchor="middle" font-weight="bold">2</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">프롬프트 개선</text>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" fill="#666">• Few-shot Learning</text>
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="18" fill="#666">• Chain-of-Thought</text>
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="18" fill="#666">• ReAct Pattern</text>
+  </g>
+
+  <!-- Part 3 -->
+  <g transform="translate(1280, 200)">
+    <rect width="400" height="180" rx="20" fill="white" filter="url(#cardShadow)"/>
+    <circle cx="50" cy="90" r="25" fill="#f093fb" opacity="0.2"/>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="28" fill="#f093fb" text-anchor="middle" font-weight="bold">3</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">쿼리 개선</text>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" fill="#666">• Multi-Query</text>
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="18" fill="#666">• HyDE</text>
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="18" fill="#666">• Step-Back</text>
+  </g>
+
+  <!-- Part 4 -->
+  <g transform="translate(240, 440)">
+    <rect width="400" height="180" rx="20" fill="white" filter="url(#cardShadow)"/>
+    <circle cx="50" cy="90" r="25" fill="#4facfe" opacity="0.2"/>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="28" fill="#4facfe" text-anchor="middle" font-weight="bold">4</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">메타데이터 필터</text>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" fill="#666">• Time-based Filter</text>
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="18" fill="#666">• Category Filter</text>
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="18" fill="#666">• Hybrid Filter</text>
+  </g>
+
+  <!-- Part 5 -->
+  <g transform="translate(760, 440)">
+    <rect width="400" height="180" rx="20" fill="white" filter="url(#cardShadow)"/>
+    <circle cx="50" cy="90" r="25" fill="#00f2fe" opacity="0.2"/>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="28" fill="#00f2fe" text-anchor="middle" font-weight="bold">5</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">Hybrid Search</text>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" fill="#666">• Vector + BM25</text>
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="18" fill="#666">• RRF Fusion</text>
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="18" fill="#666">• Reranking</text>
+  </g>
+
+  <!-- Part 6 -->
+  <g transform="translate(1280, 440)">
+    <rect width="400" height="180" rx="20" fill="white" filter="url(#cardShadow)"/>
+    <circle cx="50" cy="90" r="25" fill="#fa709a" opacity="0.2"/>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="28" fill="#fa709a" text-anchor="middle" font-weight="bold">6</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">CRAG & 평가</text>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" fill="#666">• Corrective RAG</text>
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="18" fill="#666">• RAGAS 평가</text>
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="18" fill="#666">• 파라미터 튜닝</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <path d="M 640 290 L 760 290" stroke="#667eea" stroke-width="3" fill="none" stroke-dasharray="5,5" opacity="0.5"/>
+  <path d="M 1160 290 L 1280 290" stroke="#667eea" stroke-width="3" fill="none" stroke-dasharray="5,5" opacity="0.5"/>
+  <path d="M 640 530 L 760 530" stroke="#667eea" stroke-width="3" fill="none" stroke-dasharray="5,5" opacity="0.5"/>
+  <path d="M 1160 530 L 1280 530" stroke="#667eea" stroke-width="3" fill="none" stroke-dasharray="5,5" opacity="0.5"/>
+
+  <!-- Progress bar -->
+  <rect x="240" y="720" width="1440" height="60" rx="30" fill="#e8ecff"/>
+  <rect x="240" y="720" width="240" height="60" rx="30" fill="#667eea"/>
+  <text x="960" y="760" font-family="Arial, sans-serif" font-size="24" fill="#667eea" text-anchor="middle" font-weight="bold">
+    총 9개 실습 + 이론 통합 과정
+  </text>
+
+  <!-- Footer -->
+  <text x="960" y="900" font-family="Arial, sans-serif" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">
+    "이론과 실습을 통한 완전한 RAG 마스터링"
+  </text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 8: RAGAS</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">종합 평가</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Naive vs Advanced RAG 비교"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Comparison Table -->
+  <g transform="translate(200, 300)">
+    <!-- Header -->
+    <rect x="0" y="0" width="1520" height="80" rx="15" fill="#2C3E50"/>
+    <text x="280" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">방식</text>
+    <text x="600" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Faithfulness</text>
+    <text x="850" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Answer Rel.</text>
+    <text x="1100" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Ctx Precision</text>
+    <text x="1350" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Ctx Recall</text>
+
+    <!-- Naive RAG -->
+    <rect x="0" y="100" width="1520" height="100" rx="10" fill="#FFE6E6" opacity="0.3" stroke="#E74C3C" stroke-width="2"/>
+    <text x="280" y="160" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">Naive RAG</text>
+    <text x="600" y="160" font-family="system-ui, sans-serif" font-size="30" fill="#E74C3C" text-anchor="middle">0.72</text>
+    <text x="850" y="160" font-family="system-ui, sans-serif" font-size="30" fill="#E74C3C" text-anchor="middle">0.68</text>
+    <text x="1100" y="160" font-family="system-ui, sans-serif" font-size="30" fill="#E74C3C" text-anchor="middle">0.45</text>
+    <text x="1350" y="160" font-family="system-ui, sans-serif" font-size="30" fill="#E74C3C" text-anchor="middle">0.51</text>
+
+    <!-- Query Refinement -->
+    <rect x="0" y="220" width="1520" height="100" rx="10" fill="#FFEAA7" opacity="0.3" stroke="#F39C12" stroke-width="2"/>
+    <text x="280" y="280" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">+Query Refine</text>
+    <text x="600" y="280" font-family="system-ui, sans-serif" font-size="30" fill="#7F8C8D" text-anchor="middle">0.78</text>
+    <text x="850" y="280" font-family="system-ui, sans-serif" font-size="30" fill="#7F8C8D" text-anchor="middle">0.74</text>
+    <text x="1100" y="280" font-family="system-ui, sans-serif" font-size="30" fill="#F39C12" text-anchor="middle">0.76 <tspan font-size="20">(+69%)</tspan></text>
+    <text x="1350" y="280" font-family="system-ui, sans-serif" font-size="30" fill="#F39C12" text-anchor="middle">0.83 <tspan font-size="20">(+63%)</tspan></text>
+
+    <!-- Hybrid Search -->
+    <rect x="0" y="340" width="1520" height="100" rx="10" fill="#BAE1FF" opacity="0.3" stroke="#45B7D1" stroke-width="2"/>
+    <text x="280" y="400" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">+Hybrid+Rerank</text>
+    <text x="600" y="400" font-family="system-ui, sans-serif" font-size="30" fill="#7F8C8D" text-anchor="middle">0.86</text>
+    <text x="850" y="400" font-family="system-ui, sans-serif" font-size="30" fill="#7F8C8D" text-anchor="middle">0.82</text>
+    <text x="1100" y="400" font-family="system-ui, sans-serif" font-size="30" fill="#45B7D1" text-anchor="middle">0.89 <tspan font-size="20">(+98%)</tspan></text>
+    <text x="1350" y="400" font-family="system-ui, sans-serif" font-size="30" fill="#45B7D1" text-anchor="middle">0.87 <tspan font-size="20">(+71%)</tspan></text>
+
+    <!-- Full Advanced -->
+    <rect x="0" y="460" width="1520" height="100" rx="10" fill="#D5F4E6" opacity="0.7" stroke="#27AE60" stroke-width="4" filter="url(#shadow)"/>
+    <text x="280" y="520" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50" text-anchor="middle">+CRAG 🏆</text>
+    <text x="600" y="520" font-family="system-ui, sans-serif" font-size="34" fill="#27AE60" text-anchor="middle" font-weight="bold">0.93 <tspan font-size="22">(+29%)</tspan></text>
+    <text x="850" y="520" font-family="system-ui, sans-serif" font-size="34" fill="#27AE60" text-anchor="middle" font-weight="bold">0.90 <tspan font-size="22">(+32%)</tspan></text>
+    <text x="1100" y="520" font-family="system-ui, sans-serif" font-size="34" fill="#27AE60" text-anchor="middle" font-weight="bold">0.91 <tspan font-size="22">(+102%)</tspan></text>
+    <text x="1350" y="520" font-family="system-ui, sans-serif" font-size="34" fill="#27AE60" text-anchor="middle" font-weight="bold">0.90 <tspan font-size="22">(+76%)</tspan></text>
+  </g>
+
+  <!-- Key Insights -->
+  <rect x="200" y="780" width="1520" height="200" rx="20" fill="#FFF3CD" stroke="#F39C12" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="830" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50" text-anchor="middle">💡 핵심 인사이트</text>
+
+  <g transform="translate(280, 860)">
+    <text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">1️⃣ Context Precision이 가장 큰 개선</text>
+    <text x="600" y="30" font-family="system-ui, sans-serif" font-size="22" fill="#F39C12">0.45 → 0.91 (+102%) - Hybrid+Rerank 효과!</text>
+
+    <text x="0" y="75" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">2️⃣ Faithfulness 향상</text>
+    <text x="600" y="75" font-family="system-ui, sans-serif" font-size="22" fill="#27AE60">0.72 → 0.93 (+29%) - CRAG의 Web Search로 환각 감소!</text>
+
+    <text x="0" y="120" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#E74C3C">3️⃣ 종합 결론</text>
+    <text x="600" y="120" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">모든 메트릭이 0.9 이상 달성 = Production Ready!</text>
+  </g>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">53 / 63</text>
+</svg>

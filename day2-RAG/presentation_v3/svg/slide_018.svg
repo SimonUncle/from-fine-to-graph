@@ -1,0 +1,124 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad018" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbc2eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a6c1ee;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow018">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad018)"/>
+
+  <!-- Part Label -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 3</text>
+  </g>
+
+  <!-- Title -->
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">
+    RAG-Fusion 🔗
+  </text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">
+    여러 검색 결과를 RRF로 통합
+  </text>
+
+  <!-- Flow -->
+  <g transform="translate(200, 250)">
+    <!-- Step 1: Multi-Query -->
+    <rect x="0" y="0" width="1520" height="120" rx="20" fill="white" opacity="0.95" filter="url(#shadow018)"/>
+    <text x="760" y="40" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">Step 1: Multi-Query Generation</text>
+
+    <g transform="translate(240, 60)">
+      <rect x="0" y="0" width="360" height="50" rx="10" fill="#e3f2fd"/>
+      <text x="180" y="33" font-size="20" fill="#1976d2" text-anchor="middle">Q1: 김치찌개 만드는 법</text>
+
+      <rect x="420" y="0" width="360" height="50" rx="10" fill="#f3e5f5"/>
+      <text x="600" y="33" font-size="20" fill="#7b1fa2" text-anchor="middle">Q2: 김치찌개 조리법</text>
+
+      <rect x="840" y="0" width="360" height="50" rx="10" fill="#fff3e0"/>
+      <text x="1020" y="33" font-size="20" fill="#e65100" text-anchor="middle">Q3: 김치찌개 요리 방법</text>
+    </g>
+  </g>
+
+  <!-- Step 2: Independent Search -->
+  <g transform="translate(200, 400)">
+    <rect x="0" y="0" width="1520" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow018)"/>
+    <text x="760" y="40" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">Step 2: 각각 독립 검색 (3번)</text>
+
+    <!-- Q1 Results -->
+    <g transform="translate(60, 70)">
+      <text x="180" y="0" font-size="22" fill="#1976d2" text-anchor="middle" font-weight="bold">Q1 검색 결과</text>
+      <rect x="0" y="10" width="360" height="100" rx="10" fill="#e3f2fd"/>
+      <text x="30" y="40" font-size="18" fill="#666">1위: 김치찌개 레시피</text>
+      <text x="30" y="70" font-size="18" fill="#666">2위: 백종원 김치찌개</text>
+      <text x="30" y="100" font-size="18" fill="#666">3위: 된장찌개 레시피</text>
+    </g>
+
+    <!-- Q2 Results -->
+    <g transform="translate(480, 70)">
+      <text x="180" y="0" font-size="22" fill="#7b1fa2" text-anchor="middle" font-weight="bold">Q2 검색 결과</text>
+      <rect x="0" y="10" width="360" height="100" rx="10" fill="#f3e5f5"/>
+      <text x="30" y="40" font-size="18" fill="#666">1위: 김치찌개 조리 가이드</text>
+      <text x="30" y="70" font-size="18" fill="#666">2위: 김치찌개 레시피</text>
+      <text x="30" y="100" font-size="18" fill="#666">3위: 찌개류 조리법</text>
+    </g>
+
+    <!-- Q3 Results -->
+    <g transform="translate(900, 70)">
+      <text x="180" y="0" font-size="22" fill="#e65100" text-anchor="middle" font-weight="bold">Q3 검색 결과</text>
+      <rect x="0" y="10" width="360" height="100" rx="10" fill="#fff3e0"/>
+      <text x="30" y="40" font-size="18" fill="#666">1위: 김치찌개 요리법</text>
+      <text x="30" y="70" font-size="18" fill="#666">2위: 찌개 요리 전반</text>
+      <text x="30" y="100" font-size="18" fill="#666">3위: 김치찌개 레시피</text>
+    </g>
+  </g>
+
+  <!-- Step 3: RRF Fusion -->
+  <g transform="translate(200, 630)">
+    <rect x="0" y="0" width="1520" height="160" rx="20" fill="#fff9c4" filter="url(#shadow018)"/>
+    <text x="760" y="40" font-size="28" fill="#f57f17" text-anchor="middle" font-weight="bold">Step 3: RRF (Reciprocal Rank Fusion) 통합</text>
+
+    <g transform="translate(100, 70)" font-family="monospace">
+      <text x="0" y="0" font-size="20" fill="#666">score(doc) = Σ [ 1 / (60 + rank) ]  ← 각 쿼리에서의 순위 합산</text>
+      <text x="0" y="45" font-size="20" fill="#666" font-weight="bold">예시: "김치찌개 레시피"</text>
+      <text x="0" y="75" font-size="20" fill="#666">  Q1에서 1위 + Q2에서 2위 + Q3에서 3위 → 최종 점수: 1/61 + 1/62 + 1/63 = 0.0490</text>
+    </g>
+  </g>
+
+  <!-- Step 4: Final Ranking -->
+  <g transform="translate(200, 820)">
+    <rect x="0" y="0" width="1520" height="140" rx="20" fill="#e8f5e9" filter="url(#shadow018)"/>
+    <text x="760" y="40" font-size="28" fill="#2e7d32" text-anchor="middle" font-weight="bold">Step 4: 최종 순위 (RRF 점수 기준)</text>
+
+    <g transform="translate(150, 70)">
+      <circle cx="30" cy="15" r="25" fill="#4caf50"/>
+      <text x="30" y="23" font-size="20" fill="white" text-anchor="middle" font-weight="bold">1</text>
+      <text x="80" y="23" font-size="22" fill="#2e7d32">김치찌개 레시피 (0.0490)</text>
+
+      <circle cx="490" cy="15" r="25" fill="#66bb6a"/>
+      <text x="490" y="23" font-size="20" fill="white" text-anchor="middle" font-weight="bold">2</text>
+      <text x="540" y="23" font-size="22" fill="#558b2f">백종원 김치찌개 (0.0361)</text>
+
+      <circle cx="980" cy="15" r="25" fill="#81c784"/>
+      <text x="980" y="23" font-size="20" fill="white" text-anchor="middle" font-weight="bold">3</text>
+      <text x="1030" y="23" font-size="22" fill="#689f38">김치찌개 조리 가이드 (0.0328)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Benefits -->
+  <g transform="translate(200, 990)">
+    <rect x="0" y="0" width="1520" height="70" rx="20" fill="#667eea" filter="url(#shadow018)"/>
+    <text x="760" y="47" font-size="26" fill="white" text-anchor="middle" font-weight="bold">
+      💡 Multi-Query + RRF = 여러 관점에서 검색 후 민주적으로 순위 결정! (편향 감소)
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">
+    Slide 18 / 38
+  </text>
+</svg>

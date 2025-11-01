@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad21v2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow21v2">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="#fafbff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Self-RAG</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">답변 품질 자가 평가</text>
+  
+  <g transform="translate(360, 220)">
+    <rect width="1200" height="120" rx="20" fill="white" stroke="#667eea" stroke-width="3" filter="url(#shadow21v2)"/>
+    <text x="600" y="45" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">1. 문서 검색 및 답변 생성</text>
+    <text x="600" y="85" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">김치찌개는 김치와 돼지고기로 만듭니다</text>
+  </g>
+  
+  <text x="960" y="400" font-family="Arial, sans-serif" font-size="48" fill="#667eea" text-anchor="middle">⬇️</text>
+  
+  <g transform="translate(360, 450)">
+    <rect width="1200" height="180" rx="20" fill="white" stroke="#11998e" stroke-width="3" filter="url(#shadow21v2)"/>
+    <text x="600" y="45" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">2. 자가 평가</text>
+    <g transform="translate(80, 80)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#666">검색 문서와 답변이 일치하는가?</text>
+      <text x="0" y="45" font-family="Arial, sans-serif" font-size="24" fill="#666">질문에 충분히 답변했는가?</text>
+    </g>
+  </g>
+  
+  <g transform="translate(360, 680)">
+    <rect width="570" height="300" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow21v2)"/>
+    <text x="285" y="50" font-family="Arial, sans-serif" font-size="32" fill="#27AE60" text-anchor="middle" font-weight="bold">평가 Good</text>
+    <circle cx="285" cy="150" r="50" fill="#e8f5e9"/>
+    <text x="285" y="165" font-family="Arial, sans-serif" font-size="40" fill="#27AE60" text-anchor="middle">✓</text>
+    <text x="285" y="250" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">답변 반환</text>
+  </g>
+  
+  <g transform="translate(990, 680)">
+    <rect width="570" height="300" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow21v2)"/>
+    <text x="285" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff6b6b" text-anchor="middle" font-weight="bold">평가 Bad</text>
+    <circle cx="285" cy="150" r="50" fill="#ffebee"/>
+    <text x="285" y="165" font-family="Arial, sans-serif" font-size="40" fill="#ff6b6b" text-anchor="middle">✗</text>
+    <text x="285" y="250" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">다시 검색</text>
+  </g>
+</svg>

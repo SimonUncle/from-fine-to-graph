@@ -1,0 +1,117 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow023">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">RAGAS 평가 실전</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">실제 점수로 보는 RAG 성능 측정</text>
+
+  <!-- Query Example -->
+  <g transform="translate(360, 220)">
+    <rect width="1200" height="100" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow023)"/>
+    <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">테스트 질문:</text>
+    <text x="600" y="75" font-family="monospace" font-size="26" fill="#667eea" text-anchor="middle">"김치찌개에 들어가는 주재료는 무엇인가요?"</text>
+  </g>
+
+  <!-- Metrics Grid -->
+  <!-- Metric 1: Faithfulness -->
+  <g transform="translate(160, 360)">
+    <rect width="360" height="580" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow023)"/>
+    
+    <text x="180" y="50" font-family="Arial, sans-serif" font-size="32" fill="#27AE60" text-anchor="middle" font-weight="bold">Faithfulness</text>
+    <text x="180" y="85" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">답변의 사실성</text>
+
+    <rect x="30" y="110" width="300" height="120" rx="15" fill="#e8f5e9"/>
+    <text x="180" y="180" font-family="Arial, sans-serif" font-size="72" fill="#27AE60" text-anchor="middle" font-weight="bold">0.92</text>
+
+    <rect x="30" y="250" width="300" height="300" rx="15" fill="#f1f8e9"/>
+    <text x="180" y="290" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">의미:</text>
+    <text x="50" y="330" font-family="Arial, sans-serif" font-size="18" fill="#666">답변이 검색된 문서의</text>
+    <text x="50" y="360" font-family="Arial, sans-serif" font-size="18" fill="#666">내용과 일치하는가?</text>
+
+    <text x="180" y="410" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">평가:</text>
+    <text x="50" y="450" font-family="Arial, sans-serif" font-size="18" fill="#27AE60">✓ 매우 높음</text>
+    <text x="50" y="480" font-family="Arial, sans-serif" font-size="18" fill="#666">답변이 문서에 근거함</text>
+    <text x="50" y="510" font-family="Arial, sans-serif" font-size="18" fill="#666">환각(hallucination)</text>
+    <text x="50" y="540" font-family="Arial, sans-serif" font-size="18" fill="#666">거의 없음</text>
+  </g>
+
+  <!-- Metric 2: Answer Relevancy -->
+  <g transform="translate(560, 360)">
+    <rect width="360" height="580" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow023)"/>
+    
+    <text x="180" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">Answer</text>
+    <text x="180" y="85" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">답변 관련성</text>
+
+    <rect x="30" y="110" width="300" height="120" rx="15" fill="#e8eaf6"/>
+    <text x="180" y="180" font-family="Arial, sans-serif" font-size="72" fill="#667eea" text-anchor="middle" font-weight="bold">0.88</text>
+
+    <rect x="30" y="250" width="300" height="300" rx="15" fill="#f3e5f5"/>
+    <text x="180" y="290" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">의미:</text>
+    <text x="50" y="330" font-family="Arial, sans-serif" font-size="18" fill="#666">답변이 질문에</text>
+    <text x="50" y="360" font-family="Arial, sans-serif" font-size="18" fill="#666">직접적으로 대답하는가?</text>
+
+    <text x="180" y="410" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">평가:</text>
+    <text x="50" y="450" font-family="Arial, sans-serif" font-size="18" fill="#667eea">✓ 높음</text>
+    <text x="50" y="480" font-family="Arial, sans-serif" font-size="18" fill="#666">질문에 잘 대응</text>
+    <text x="50" y="510" font-family="Arial, sans-serif" font-size="18" fill="#666">불필요한 정보</text>
+    <text x="50" y="540" font-family="Arial, sans-serif" font-size="18" fill="#666">거의 없음</text>
+  </g>
+
+  <!-- Metric 3: Context Precision -->
+  <g transform="translate(960, 360)">
+    <rect width="360" height="580" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow023)"/>
+    
+    <text x="180" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff9800" text-anchor="middle" font-weight="bold">Context</text>
+    <text x="180" y="85" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">문맥 정밀도</text>
+
+    <rect x="30" y="110" width="300" height="120" rx="15" fill="#fff3e0"/>
+    <text x="180" y="180" font-family="Arial, sans-serif" font-size="72" fill="#ff9800" text-anchor="middle" font-weight="bold">0.67</text>
+
+    <rect x="30" y="250" width="300" height="300" rx="15" fill="#fff8e1"/>
+    <text x="180" y="290" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">의미:</text>
+    <text x="50" y="330" font-family="Arial, sans-serif" font-size="18" fill="#666">검색된 문서가</text>
+    <text x="50" y="360" font-family="Arial, sans-serif" font-size="18" fill="#666">얼마나 관련있는가?</text>
+
+    <text x="180" y="410" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">평가:</text>
+    <text x="50" y="450" font-family="Arial, sans-serif" font-size="18" fill="#ff9800">⚠️ 중간</text>
+    <text x="50" y="480" font-family="Arial, sans-serif" font-size="18" fill="#666">관련 없는 문서</text>
+    <text x="50" y="510" font-family="Arial, sans-serif" font-size="18" fill="#666">일부 포함됨</text>
+    <text x="50" y="540" font-family="Arial, sans-serif" font-size="18" fill="#e65100">→ 개선 필요!</text>
+  </g>
+
+  <!-- Metric 4: Context Recall -->
+  <g transform="translate(1360, 360)">
+    <rect width="360" height="580" rx="20" fill="white" stroke="#1976d2" stroke-width="4" filter="url(#shadow023)"/>
+    
+    <text x="180" y="50" font-family="Arial, sans-serif" font-size="32" fill="#1976d2" text-anchor="middle" font-weight="bold">Context</text>
+    <text x="180" y="85" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">문맥 재현율</text>
+
+    <rect x="30" y="110" width="300" height="120" rx="15" fill="#e3f2fd"/>
+    <text x="180" y="180" font-family="Arial, sans-serif" font-size="72" fill="#1976d2" text-anchor="middle" font-weight="bold">0.75</text>
+
+    <rect x="30" y="250" width="300" height="300" rx="15" fill="#e1f5fe"/>
+    <text x="180" y="290" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">의미:</text>
+    <text x="50" y="330" font-family="Arial, sans-serif" font-size="18" fill="#666">필요한 정보를</text>
+    <text x="50" y="360" font-family="Arial, sans-serif" font-size="18" fill="#666">얼마나 찾았는가?</text>
+
+    <text x="180" y="410" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">평가:</text>
+    <text x="50" y="450" font-family="Arial, sans-serif" font-size="18" fill="#1976d2">✓ 양호</text>
+    <text x="50" y="480" font-family="Arial, sans-serif" font-size="18" fill="#666">주요 정보 대부분</text>
+    <text x="50" y="510" font-family="Arial, sans-serif" font-size="18" fill="#666">검색됨</text>
+    <text x="50" y="540" font-family="Arial, sans-serif" font-size="18" fill="#666">일부 누락 가능</text>
+  </g>
+
+  <!-- Bottom Summary -->
+  <g transform="translate(360, 980)">
+    <rect width="1200" height="80" rx="15" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow023)"/>
+    <text x="600" y="35" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">💡 개선 방향</text>
+    <text x="600" y="65" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">Context Precision 향상을 위해 Reranking 적용 추천</text>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow022">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">MCP (Model Context Protocol)</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">외부 시스템과 연결하기</text>
+
+  <!-- What is MCP -->
+  <g transform="translate(200, 220)">
+    <rect width="1520" height="180" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow022)"/>
+    <text x="760" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">💡 MCP란?</text>
+    <text x="760" y="110" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">LLM이 외부 데이터/도구에 안전하게 접근할 수 있도록 하는 표준 프로토콜</text>
+    <text x="760" y="150" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">→ API, DB, 파일 시스템, 브라우저 등 다양한 리소스 연결</text>
+  </g>
+
+  <!-- Architecture Diagram -->
+  <g transform="translate(360, 440)">
+    <!-- LLM Agent -->
+    <rect width="340" height="160" rx="20" fill="#667eea" filter="url(#shadow022)"/>
+    <text x="170" y="70" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">🤖 LLM Agent</text>
+    <text x="170" y="115" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">LangGraph</text>
+
+    <!-- Arrow -->
+    <line x1="340" y1="80" x2="480" y2="80" stroke="#333" stroke-width="4"/>
+    <polygon points="480,80 460,70 460,90" fill="#333"/>
+
+    <!-- MCP Server -->
+    <g transform="translate(480, 0)">
+      <rect width="340" height="160" rx="20" fill="#27AE60" filter="url(#shadow022)"/>
+      <text x="170" y="70" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">🔌 MCP Server</text>
+      <text x="170" y="115" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">표준 인터페이스</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="820" y1="80" x2="960" y2="80" stroke="#333" stroke-width="4"/>
+    <polygon points="960,80 940,70 940,90" fill="#333"/>
+
+    <!-- External Systems -->
+    <g transform="translate(960, 0)">
+      <rect width="340" height="160" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow022)"/>
+      <text x="170" y="50" font-family="Arial, sans-serif" font-size="28" fill="#ff9800" text-anchor="middle" font-weight="bold">🌐 외부 시스템</text>
+      <text x="170" y="90" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">• Google Calendar</text>
+      <text x="170" y="120" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">• Notion DB</text>
+      <text x="170" y="150" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">• Weather API</text>
+    </g>
+  </g>
+
+  <!-- Use Cases -->
+  <g transform="translate(200, 660)">
+    <rect width="1520" height="320" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow022)"/>
+    <text x="760" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">📌 MCP 활용 사례</text>
+
+    <g transform="translate(100, 120)">
+      <!-- Use Case 1 -->
+      <rect width="440" height="150" rx="15" fill="#e8eaf6"/>
+      <text x="220" y="40" font-family="Arial, sans-serif" font-size="26" fill="#667eea" text-anchor="middle" font-weight="bold">1️⃣ 여행 Agent</text>
+      <text x="40" y="80" font-family="Arial, sans-serif" font-size="20" fill="#666">• 날씨 API로 실시간 날씨</text>
+      <text x="40" y="110" font-family="Arial, sans-serif" font-size="20" fill="#666">• Google Maps로 거리 계산</text>
+
+      <!-- Use Case 2 -->
+      <g transform="translate(490, 0)">
+        <rect width="440" height="150" rx="15" fill="#e8f5e9"/>
+        <text x="220" y="40" font-family="Arial, sans-serif" font-size="26" fill="#27AE60" text-anchor="middle" font-weight="bold">2️⃣ 업무 Agent</text>
+        <text x="40" y="80" font-family="Arial, sans-serif" font-size="20" fill="#666">• Notion에서 TODO 읽기</text>
+        <text x="40" y="110" font-family="Arial, sans-serif" font-size="20" fill="#666">• Slack으로 알림 전송</text>
+      </g>
+
+      <!-- Use Case 3 -->
+      <g transform="translate(980, 0)">
+        <rect width="440" height="150" rx="15" fill="#fff3e0"/>
+        <text x="220" y="40" font-family="Arial, sans-serif" font-size="26" fill="#ff9800" text-anchor="middle" font-weight="bold">3️⃣ 데이터 Agent</text>
+        <text x="40" y="80" font-family="Arial, sans-serif" font-size="20" fill="#666">• PostgreSQL 쿼리 실행</text>
+        <text x="40" y="110" font-family="Arial, sans-serif" font-size="20" fill="#666">• CSV/Excel 파일 읽기</text>
+      </g>
+    </g>
+  </g>
+</svg>

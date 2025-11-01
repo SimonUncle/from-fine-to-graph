@@ -1,0 +1,73 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow0094">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Checkpointing</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">실행 중 State를 저장하고 나중에 이어서 실행</text>
+
+  <!-- Why Checkpointing -->
+  <g transform="translate(200, 220)">
+    <rect width="1520" height="140" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0094)"/>
+    <text x="760" y="50" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">💡 왜 필요한가?</text>
+    <text x="760" y="95" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle">Human-in-the-Loop: 사용자 검토 후 다시 실행</text>
+  </g>
+
+  <!-- Flow Diagram -->
+  <g transform="translate(360, 400)">
+    <!-- Step 1 -->
+    <rect width="340" height="120" rx="15" fill="#667eea" filter="url(#shadow0094)"/>
+    <text x="170" y="50" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">1️⃣ 실행 시작</text>
+    <text x="170" y="85" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">app.invoke(state)</text>
+
+    <!-- Arrow to Step 2 -->
+    <line x1="340" y1="60" x2="420" y2="60" stroke="#667eea" stroke-width="4"/>
+    <polygon points="420,60 405,50 405,70" fill="#667eea"/>
+
+    <!-- Step 2 -->
+    <g transform="translate(420, 0)">
+      <rect width="340" height="120" rx="15" fill="#27AE60" filter="url(#shadow0094)"/>
+      <text x="170" y="50" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">2️⃣ 중단 (interrupt)</text>
+      <text x="170" y="85" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">State 자동 저장 💾</text>
+    </g>
+
+    <!-- Arrow down to Step 3 -->
+    <line x1="590" y1="120" x2="590" y2="190" stroke="#27AE60" stroke-width="4"/>
+    <polygon points="590,190 580,175 600,175" fill="#27AE60"/>
+
+    <!-- Step 3 -->
+    <g transform="translate(420, 190)">
+      <rect width="340" height="120" rx="15" fill="#ff9800" filter="url(#shadow0094)"/>
+      <text x="170" y="50" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">3️⃣ 사용자 검토</text>
+      <text x="170" y="85" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">피드백 입력 ✍️</text>
+    </g>
+
+    <!-- Arrow down to Step 4 -->
+    <line x1="590" y1="310" x2="590" y2="380" stroke="#ff9800" stroke-width="4"/>
+    <polygon points="590,380 580,365 600,365" fill="#ff9800"/>
+
+    <!-- Step 4 -->
+    <g transform="translate(420, 380)">
+      <rect width="340" height="120" rx="15" fill="#e91e63" filter="url(#shadow0094)"/>
+      <text x="170" y="50" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">4️⃣ 재개 (resume)</text>
+      <text x="170" y="85" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">저장된 State 로드 🔄</text>
+    </g>
+  </g>
+
+  <!-- Code Example -->
+  <g transform="translate(200, 940)">
+    <rect width="1520" height="120" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow0094)"/>
+    <text x="760" y="45" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">💻 코드 예시</text>
+
+    <text x="100" y="85" font-family="monospace" font-size="22" fill="#9cdcfe">checkpointer</text>
+    <text x="300" y="85" font-family="monospace" font-size="22" fill="#d4d4d4"> = MemorySaver()  |  </text>
+    <text x="600" y="85" font-family="monospace" font-size="22" fill="#9cdcfe">app</text>
+    <text x="680" y="85" font-family="monospace" font-size="22" fill="#d4d4d4"> = graph.compile(checkpointer=checkpointer)</text>
+  </g>
+</svg>

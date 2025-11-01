@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow015">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">프롬프트 엔지니어링 실전</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">RAG 프롬프트 Before/After</text>
+
+  <!-- Before: Bad Prompt -->
+  <g transform="translate(150, 240)">
+    <rect width="760" height="720" rx="20" fill="white" stroke="#ff6b6b" stroke-width="4" filter="url(#shadow015)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#ff6b6b" text-anchor="middle" font-weight="bold">❌ 애매한 프롬프트</text>
+
+    <rect x="50" y="90" width="660" height="200" rx="15" fill="#ffebee"/>
+    <text x="80" y="125" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">User Query:</text>
+    <text x="80" y="165" font-family="monospace" font-size="22" fill="#666">"김치찌개 만드는 법 알려줘"</text>
+
+    <text x="80" y="230" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">LLM Prompt:</text>
+    <text x="80" y="270" font-family="monospace" font-size="22" fill="#666">"김치찌개 만드는 법 알려줘"</text>
+
+    <rect x="50" y="320" width="660" height="340" rx="15" fill="#fff5f5"/>
+    <text x="80" y="360" font-family="Arial, sans-serif" font-size="24" fill="#e74c3c" font-weight="bold">LLM 응답:</text>
+    <text x="80" y="400" font-family="Arial, sans-serif" font-size="20" fill="#666">"김치찌개는 한국의 전통 음식입니다.</text>
+    <text x="80" y="435" font-family="Arial, sans-serif" font-size="20" fill="#666">일반적으로 배추김치와 돼지고기를</text>
+    <text x="80" y="470" font-family="Arial, sans-serif" font-size="20" fill="#666">넣고 끓입니다..."</text>
+
+    <text x="380" y="550" font-family="Arial, sans-serif" font-size="22" fill="#e74c3c" font-weight="bold">문제점:</text>
+    <text x="80" y="590" font-family="Arial, sans-serif" font-size="20" fill="#666">• 검색된 문서 무시 (환각 발생)</text>
+    <text x="80" y="625" font-family="Arial, sans-serif" font-size="20" fill="#666">• 일반적인 답변만 제공</text>
+    <text x="80" y="660" font-family="Arial, sans-serif" font-size="20" fill="#666">• 출처 명시 없음</text>
+  </g>
+
+  <!-- After: Good Prompt -->
+  <g transform="translate(1010, 240)">
+    <rect width="760" height="720" rx="20" fill="white" stroke="#27AE60" stroke-width="4" filter="url(#shadow015)"/>
+    <text x="380" y="50" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">✅ 구조화된 프롬프트</text>
+
+    <rect x="50" y="90" width="660" height="350" rx="15" fill="#e8f5e9"/>
+    <text x="80" y="125" font-family="Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">LLM Prompt:</text>
+    <text x="80" y="165" font-family="monospace" font-size="18" fill="#27AE60" font-weight="bold">당신은 레시피 전문가입니다.</text>
+    <text x="80" y="195" font-family="monospace" font-size="18" fill="#666">아래 검색된 문서를 참고하여</text>
+    <text x="80" y="225" font-family="monospace" font-size="18" fill="#666">질문에 답하세요.</text>
+
+    <text x="80" y="265" font-family="monospace" font-size="18" fill="#27AE60" font-weight="bold">검색된 문서:</text>
+    <text x="80" y="295" font-family="monospace" font-size="16" fill="#666">1. 김치찌개 레시피 (유사도: 0.92)</text>
+    <text x="80" y="320" font-family="monospace" font-size="16" fill="#666">   "배추김치 200g, 돼지고기..."</text>
+
+    <text x="80" y="360" font-family="monospace" font-size="18" fill="#27AE60" font-weight="bold">질문: "김치찌개 만드는 법 알려줘"</text>
+
+    <text x="80" y="400" font-family="monospace" font-size="18" fill="#666">문서에 없는 내용은 "모르겠습니다"</text>
+    <text x="80" y="425" font-family="monospace" font-size="18" fill="#666">라고 답하세요.</text>
+
+    <rect x="50" y="470" width="660" height="220" rx="15" fill="#f0fff4"/>
+    <text x="80" y="510" font-family="Arial, sans-serif" font-size="24" fill="#27AE60" font-weight="bold">LLM 응답:</text>
+    <text x="80" y="550" font-family="Arial, sans-serif" font-size="20" fill="#666">"검색된 레시피에 따르면,</text>
+    <text x="80" y="585" font-family="Arial, sans-serif" font-size="20" fill="#666">배추김치 200g과 돼지고기를</text>
+    <text x="80" y="620" font-family="Arial, sans-serif" font-size="20" fill="#666">준비합니다... [출처: 문서 1]"</text>
+
+    <text x="80" y="670" font-family="Arial, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">✓ 문서 기반 답변 + 출처 명시</text>
+  </g>
+</svg>

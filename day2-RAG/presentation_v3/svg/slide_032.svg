@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad032" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbc2eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a6c1ee;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow032"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad032)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 6</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">RAGAS 📊</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">RAG Assessment Score - RAG 성능 평가 지표</text>
+  <g transform="translate(200, 270)">
+    <rect x="0" y="0" width="1520" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow032)"/>
+    <text x="760" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">RAGAS란?</text>
+    <text x="760" y="100" font-size="24" fill="#666" text-anchor="middle">RAG 시스템의 성능을 종합적으로 평가하는 프레임워크</text>
+    <text x="760" y="140" font-size="22" fill="#999" text-anchor="middle">LLM 기반 자동 평가 (Ground Truth 일부 필요)</text>
+  </g>
+  <g transform="translate(200, 500)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="740" height="380" rx="20" fill="#e8f5e9" filter="url(#shadow032)"/>
+      <text x="370" y="50" font-size="32" fill="#2e7d32" text-anchor="middle" font-weight="bold">답변 품질 측정</text>
+      <g transform="translate(60, 100)">
+        <rect x="0" y="0" width="620" height="110" rx="15" fill="#c8e6c9"/>
+        <text x="310" y="35" font-size="26" fill="#1b5e20" text-anchor="middle" font-weight="bold">Faithfulness (충실성)</text>
+        <text x="310" y="70" font-size="20" fill="#666" text-anchor="middle">답변이 검색 문서에만</text>
+        <text x="310" y="100" font-size="20" fill="#666" text-anchor="middle">기반하는가? (환각 방지)</text>
+        <rect x="0" y="130" width="620" height="110" rx="15" fill="#dcedc8"/>
+        <text x="310" y="165" font-size="26" fill="#33691e" text-anchor="middle" font-weight="bold">Answer Relevancy</text>
+        <text x="310" y="200" font-size="20" fill="#666" text-anchor="middle">답변이 질문과 관련있는가?</text>
+        <text x="310" y="230" font-size="20" fill="#666" text-anchor="middle">(질문-답변 일치도)</text>
+      </g>
+    </g>
+    <g transform="translate(780, 0)">
+      <rect x="0" y="0" width="740" height="380" rx="20" fill="#e3f2fd" filter="url(#shadow032)"/>
+      <text x="370" y="50" font-size="32" fill="#1976d2" text-anchor="middle" font-weight="bold">검색 품질 측정</text>
+      <g transform="translate(60, 100)">
+        <rect x="0" y="0" width="620" height="110" rx="15" fill="#bbdefb"/>
+        <text x="310" y="35" font-size="26" fill="#0d47a1" text-anchor="middle" font-weight="bold">Context Precision (정밀도)</text>
+        <text x="310" y="70" font-size="20" fill="#666" text-anchor="middle">검색된 문서가 실제로</text>
+        <text x="310" y="100" font-size="20" fill="#666" text-anchor="middle">관련있는가? (노이즈 적음)</text>
+        <rect x="0" y="130" width="620" height="110" rx="15" fill="#90caf9"/>
+        <text x="310" y="165" font-size="26" fill="#01579b" text-anchor="middle" font-weight="bold">Context Recall (재현율)</text>
+        <text x="310" y="200" font-size="20" fill="#666" text-anchor="middle">필요한 문서를 모두</text>
+        <text x="310" y="230" font-size="20" fill="#666" text-anchor="middle">찾았는가? (누락 없음)</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(200, 910)">
+    <rect x="0" y="0" width="1520" height="110" rx="20" fill="#263238" filter="url(#shadow032)"/>
+    <text x="760" y="40" font-size="28" fill="#81c784" text-anchor="middle" font-weight="bold">💡 RAGAS Score (0~1)</text>
+    <text x="760" y="80" font-size="24" fill="#e0e0e0" text-anchor="middle">= (Faithfulness + Answer Relevancy + Context Precision + Context Recall) / 4</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 32 / 38</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbc2eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a6c1ee;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow15">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="#fafbff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">RAG-Fusion</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">Multi-Query + RRF 결과 통합</text>
+  
+  <g transform="translate(250, 240)">
+    <rect width="420" height="140" rx="20" fill="white" stroke="#667eea" stroke-width="3" filter="url(#shadow15)"/>
+    <text x="210" y="50" font-family="Arial, sans-serif" font-size="26" fill="#667eea" text-anchor="middle" font-weight="bold">Query 1</text>
+    <text x="210" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">김치찌개 만드는 법</text>
+  </g>
+  
+  <g transform="translate(750, 240)">
+    <rect width="420" height="140" rx="20" fill="white" stroke="#11998e" stroke-width="3" filter="url(#shadow15)"/>
+    <text x="210" y="50" font-family="Arial, sans-serif" font-size="26" fill="#11998e" text-anchor="middle" font-weight="bold">Query 2</text>
+    <text x="210" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">김치찌개 조리법</text>
+  </g>
+  
+  <g transform="translate(1250, 240)">
+    <rect width="420" height="140" rx="20" fill="white" stroke="#ff9800" stroke-width="3" filter="url(#shadow15)"/>
+    <text x="210" y="50" font-family="Arial, sans-serif" font-size="26" fill="#ff9800" text-anchor="middle" font-weight="bold">Query 3</text>
+    <text x="210" y="90" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">김치찌개 요리 방법</text>
+  </g>
+  
+  <text x="960" y="450" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle">각각 Top-3 검색 ⬇️</text>
+  
+  <g transform="translate(360, 500)">
+    <rect width="1200" height="200" rx="20" fill="white" stroke="#f57f17" stroke-width="4" filter="url(#shadow15)"/>
+    <text x="600" y="60" font-family="Arial, sans-serif" font-size="38" fill="#f57f17" text-anchor="middle" font-weight="bold">🔗 RRF (Reciprocal Rank Fusion)</text>
+    <text x="600" y="120" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle">순위 기반 점수 계산: score = 1 / (60 + rank)</text>
+    <text x="600" y="165" font-family="Arial, sans-serif" font-size="26" fill="#666" text-anchor="middle">3개 결과 리스트를 하나로 통합</text>
+  </g>
+  
+  <g transform="translate(360, 740)">
+    <rect width="1200" height="250" rx="20" fill="url(#grad15)" filter="url(#shadow15)"/>
+    <text x="600" y="60" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle" font-weight="bold">✅ 최종 결과</text>
+    <g transform="translate(80, 110)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" fill="white">1위: 김치찌개 레시피 (3개 쿼리 모두 상위)</text>
+      <text x="0" y="50" font-family="Arial, sans-serif" font-size="28" fill="white">2위: 백종원 김치찌개 (2개 쿼리 상위)</text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="28" fill="white">→ 편향 감소, 다양한 관점 반영!</text>
+    </g>
+  </g>
+</svg>

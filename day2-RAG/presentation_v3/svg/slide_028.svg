@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad028" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow028"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad028)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 5</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">Query Router 🚦</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">간단한 질문 vs 복잡한 질문 분류</text>
+  <g transform="translate(200, 280)">
+    <rect x="0" y="0" width="1520" height="200" rx="20" fill="white" opacity="0.95" filter="url(#shadow028)"/>
+    <text x="760" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">Query Router 개념</text>
+    <text x="760" y="100" font-size="24" fill="#666" text-anchor="middle">질문의 복잡도를 판단하여 적절한 검색 전략 선택</text>
+    <text x="760" y="140" font-size="22" fill="#999" text-anchor="middle">• 간단한 질문 → Naive RAG (빠름)</text>
+    <text x="760" y="175" font-size="22" fill="#999" text-anchor="middle">• 복잡한 질문 → Advanced RAG (정확함)</text>
+  </g>
+  <g transform="translate(200, 510)">
+    <rect x="0" y="0" width="1520" height="400" rx="20" fill="white" opacity="0.95" filter="url(#shadow028)"/>
+    <g transform="translate(100, 70)">
+      <rect x="0" y="0" width="620" height="280" rx="15" fill="#e8f5e9"/>
+      <text x="310" y="40" font-size="28" fill="#2e7d32" text-anchor="middle" font-weight="bold">✅ 간단한 질문</text>
+      <g transform="translate(40, 80)">
+        <text x="0" y="0" font-size="22" fill="#666">"김치찌개 레시피 알려줘"</text>
+        <text x="0" y="50" font-size="20" fill="#999">→ 단일 정보 요청</text>
+        <text x="0" y="90" font-size="20" fill="#999">→ 명확한 의도</text>
+        <rect x="-20" y="120" width="580" height="60" rx="10" fill="#c8e6c9"/>
+        <text x="270" y="160" font-size="22" fill="#2e7d32" text-anchor="middle" font-weight="bold">→ Naive RAG (0.5초)</text>
+      </g>
+    </g>
+    <g transform="translate(800, 70)">
+      <rect x="0" y="0" width="620" height="280" rx="15" fill="#ffebee"/>
+      <text x="310" y="40" font-size="28" fill="#c62828" text-anchor="middle" font-weight="bold">⚠️ 복잡한 질문</text>
+      <g transform="translate(40, 80)">
+        <text x="0" y="0" font-size="22" fill="#666">"김치찌개를 맛있게 만드는</text>
+        <text x="0" y="30" font-size="22" fill="#666">재료와 조리 시간은?"</text>
+        <text x="0" y="70" font-size="20" fill="#999">→ 다중 정보 요청</text>
+        <rect x="-20" y="100" width="580" height="60" rx="10" fill="#ffcdd2"/>
+        <text x="270" y="140" font-size="22" fill="#c62828" text-anchor="middle" font-weight="bold">→ Sub-Q + Hybrid (2초)</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(200, 940)">
+    <rect x="0" y="0" width="1520" height="80" rx="20" fill="#4caf50" filter="url(#shadow028)"/>
+    <text x="760" y="50" font-size="28" fill="white" text-anchor="middle" font-weight="bold">💡 적절한 전략 선택 = 속도 & 비용 최적화!</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 28 / 38</text>
+</svg>

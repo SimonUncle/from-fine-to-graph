@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow23">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="#fafbff"/>
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">RAGAS Evaluation</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">RAG 성능을 과학적으로 평가</text>
+  
+  <g transform="translate(150, 240)">
+    <rect width="770" height="280" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow23)"/>
+    <text x="385" y="50" font-family="Arial, sans-serif" font-size="32" fill="#667eea" text-anchor="middle" font-weight="bold">1️⃣ Faithfulness</text>
+    <text x="385" y="100" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">답변의 사실 정확도</text>
+    <g transform="translate(60, 140)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#333">문서: "김치찌개는 돼지고기"</text>
+      <text x="0" y="40" font-family="Arial, sans-serif" font-size="22" fill="#27AE60">✅ "돼지고기 넣습니다"</text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="22" fill="#ff6b6b">❌ "소고기 넣습니다"</text>
+    </g>
+  </g>
+  
+  <g transform="translate(1000, 240)">
+    <rect width="770" height="280" rx="20" fill="white" stroke="#11998e" stroke-width="4" filter="url(#shadow23)"/>
+    <text x="385" y="50" font-family="Arial, sans-serif" font-size="32" fill="#11998e" text-anchor="middle" font-weight="bold">2️⃣ Answer Relevancy</text>
+    <text x="385" y="100" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">질문과 답변 연관성</text>
+    <g transform="translate(60, 140)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#333">Q: "김치찌개 만드는 법?"</text>
+      <text x="0" y="40" font-family="Arial, sans-serif" font-size="22" fill="#27AE60">✅ "김치와 돼지고기..."</text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="22" fill="#ff6b6b">❌ "된장찌개는..."</text>
+    </g>
+  </g>
+  
+  <g transform="translate(150, 580)">
+    <rect width="770" height="280" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow23)"/>
+    <text x="385" y="50" font-family="Arial, sans-serif" font-size="32" fill="#ff9800" text-anchor="middle" font-weight="bold">3️⃣ Context Precision</text>
+    <text x="385" y="100" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">검색 정확도</text>
+    <g transform="translate(60, 140)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#333">Top-5 중 관련 문서 비율</text>
+      <text x="0" y="40" font-family="Arial, sans-serif" font-size="22" fill="#27AE60">5개 중 4개 관련</text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="22" fill="#27AE60">Precision = 0.8</text>
+    </g>
+  </g>
+  
+  <g transform="translate(1000, 580)">
+    <rect width="770" height="280" rx="20" fill="white" stroke="#e91e63" stroke-width="4" filter="url(#shadow23)"/>
+    <text x="385" y="50" font-family="Arial, sans-serif" font-size="32" fill="#e91e63" text-anchor="middle" font-weight="bold">4️⃣ Context Recall</text>
+    <text x="385" y="100" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">검색 재현율</text>
+    <g transform="translate(60, 140)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="22" fill="#333">필요 문서를 찾은 비율</text>
+      <text x="0" y="40" font-family="Arial, sans-serif" font-size="22" fill="#27AE60">필요 5개 중 4개 발견</text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="22" fill="#27AE60">Recall = 0.8</text>
+    </g>
+  </g>
+  
+  <g transform="translate(360, 920)">
+    <rect width="1200" height="100" rx="20" fill="url(#grad23)" filter="url(#shadow23)"/>
+    <text x="600" y="65" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">🎯 목표: 4가지 메트릭 모두 0.9 이상 = Production Ready!</text>
+  </g>
+</svg>

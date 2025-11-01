@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs><filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/></filter></defs>
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#FFEAA7" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#F39C12" text-anchor="middle">Section 9: Tuning</text>
+  <rect x="1700" y="60" width="140" height="50" rx="25" fill="#27AE60" opacity="0.3"/>
+  <text x="1770" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#27AE60" text-anchor="middle">✅ 연습</text>
+  <text x="960" y="180" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">최종 연습</text>
+  <text x="960" y="240" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"나만의 최적 파라미터 찾기"</text>
+  <g transform="translate(960, 260)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+  <rect x="200" y="320" width="1520" height="240" rx="20" fill="#FFFFBA" opacity="0.4" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="375" font-size="50" text-anchor="middle">📝</text>
+  <text x="400" y="370" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50">실습 과제</text>
+  <text x="400" y="420" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">1. Notebook 09 열기: <tspan font-weight="bold">rag_tuning_and_customization.ipynb</tspan></text>
+  <text x="400" y="465" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">2. 3가지 파라미터 조합 실험 (chunk/k/threshold)</text>
+  <text x="400" y="510" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">3. RAGAS로 평가 후 <tspan font-weight="bold" fill="#27AE60">가장 높은 점수 찾기</tspan></text>
+  <rect x="200" y="590" width="1520" height="340" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="650" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#27AE60" text-anchor="middle">💡 권장 실험 계획</text>
+  <g transform="translate(240, 690)"><text x="0" y="30" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">Step 1: Baseline</text><text x="400" y="30" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">→ chunk=512, k=5, threshold=0.3 (기본값)</text>
+  <text x="0" y="75" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">Step 2: Chunk Size</text><text x="400" y="75" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">→ 256, 512, 1024 시도</text>
+  <text x="0" y="120" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">Step 3: Top-K</text><text x="400" y="120" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">→ k=3, 5, 7, 10 시도</text>
+  <text x="0" y="165" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">Step 4: Threshold</text><text x="400" y="165" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">→ 0.1, 0.3, 0.5, 0.7 시도</text>
+  <text x="0" y="210" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#27AE60">Step 5: 최종 선택</text><text x="400" y="210" font-family="system-ui, sans-serif" font-size="22" fill="#27AE60" font-weight="bold">→ 최고 RAGAS 점수 조합 = Production 설정!</text></g>
+  <rect x="200" y="960" width="1520" height="60" rx="15" fill="#FFE6E6" stroke="#E74C3C" stroke-width="3"/>
+  <text x="270" y="998" font-size="36" text-anchor="middle">⚠️</text>
+  <text x="360" y="993" font-family="system-ui, sans-serif" font-size="22" fill="#E74C3C">주의: 각 실험마다 RAGAS 평가 필수! 감으로 선택하지 말 것</text>
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">60 / 63</text>
+</svg>

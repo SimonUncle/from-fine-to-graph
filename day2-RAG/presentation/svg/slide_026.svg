@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <rect x="80" y="60" width="380" height="50" rx="25" fill="#4ECDC4" opacity="0.2"/>
+  <text x="270" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#4ECDC4" text-anchor="middle">Section 4: Query Refinement</text>
+
+  <!-- Quiz badge -->
+  <rect x="1700" y="60" width="140" height="50" rx="25" fill="#F39C12" opacity="0.3"/>
+  <text x="1770" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#F39C12" text-anchor="middle">💡 Quiz</text>
+
+  <text x="960" y="180" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">연습 문제</text>
+  <text x="960" y="240" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"언제 어떤 기법을 사용할까요?"</text>
+
+  <g transform="translate(960, 260)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Question -->
+  <rect x="200" y="320" width="1520" height="140" rx="20" fill="#FFFFBA" opacity="0.4" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="375" font-size="50" text-anchor="middle">❓</text>
+  <text x="400" y="370" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#2C3E50">시나리오</text>
+  <text x="400" y="420" font-family="system-ui, sans-serif" font-size="24" fill="#34495E">사용자가 "계약서 작성 시 주의사항"이라는 <tspan font-weight="bold">매우 일반적이고 추상적인 질문</tspan>을 했습니다.</text>
+
+  <!-- Options -->
+  <!-- Option A -->
+  <g transform="translate(200, 500)">
+    <rect x="0" y="0" width="700" height="120" rx="15" fill="#FFB3BA" opacity="0.2" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="50" cy="60" r="25" fill="#FF6B6B" opacity="0.5" stroke="#FF6B6B" stroke-width="2"/>
+    <text x="50" y="70" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">A</text>
+    <text x="110" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">Multi-Query</text>
+    <text x="110" y="85" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D">복잡한 질문을 여러 세부 질문으로 분해</text>
+  </g>
+
+  <!-- Option B -->
+  <g transform="translate(1020, 500)">
+    <rect x="0" y="0" width="700" height="120" rx="15" fill="#BAFFC9" opacity="0.2" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="50" cy="60" r="25" fill="#4ECDC4" opacity="0.5" stroke="#4ECDC4" stroke-width="2"/>
+    <text x="50" y="70" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">B</text>
+    <text x="110" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">HyDE</text>
+    <text x="110" y="85" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D">가상의 답변을 먼저 생성해서 검색</text>
+  </g>
+
+  <!-- Option C -->
+  <g transform="translate(200, 650)">
+    <rect x="0" y="0" width="700" height="120" rx="15" fill="#D5F4E6" opacity="0.5" stroke="#27AE60" stroke-width="4"/>
+    <circle cx="50" cy="60" r="25" fill="#27AE60" opacity="0.7" stroke="#27AE60" stroke-width="3"/>
+    <text x="50" y="70" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">C</text>
+    <text x="110" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#27AE60">Step-Back ✅</text>
+    <text x="110" y="85" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#229954">추상적 질문을 더 일반적 개념으로 확장</text>
+  </g>
+
+  <!-- Option D -->
+  <g transform="translate(1020, 650)">
+    <rect x="0" y="0" width="700" height="120" rx="15" fill="#BAE1FF" opacity="0.2" stroke="#45B7D1" stroke-width="2"/>
+    <circle cx="50" cy="60" r="25" fill="#45B7D1" opacity="0.5" stroke="#45B7D1" stroke-width="2"/>
+    <text x="50" y="70" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">D</text>
+    <text x="110" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">그냥 검색</text>
+    <text x="110" y="85" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D">Naive RAG 방식 유지</text>
+  </g>
+
+  <!-- Answer explanation -->
+  <rect x="200" y="810" width="1520" height="190" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3"/>
+  <text x="270" y="860" font-size="45" text-anchor="middle">💡</text>
+  <text x="380" y="855" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#27AE60">정답: C. Step-Back Prompting</text>
+  <text x="380" y="900" font-family="system-ui, sans-serif" font-size="22" fill="#229954">
+    추상적 질문은 <tspan font-weight="bold">Step-Back</tspan>으로 더 일반적인 개념(예: "계약법 기초", "계약의 성립 요건")으로 확장하여
+  </text>
+  <text x="380" y="935" font-family="system-ui, sans-serif" font-size="22" fill="#229954">
+    포괄적인 배경 지식을 먼저 검색하는 것이 효과적입니다.
+  </text>
+  <text x="380" y="970" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">
+    Multi-Query는 복잡하지만 명확한 질문에 적합 | HyDE는 답변 형태를 알 때 유리
+  </text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">26 / 63</text>
+</svg>

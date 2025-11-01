@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <rect x="80" y="60" width="320" height="50" rx="25" fill="#FF6B6B" opacity="0.2"/>
+  <text x="240" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#FF6B6B" text-anchor="middle">Section 2: 실패 분석</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">실패 1: Semantic Gap</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"키워드 불일치로 인한 검색 실패"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Problem Description -->
+  <g transform="translate(200, 320)">
+    <rect x="0" y="0" width="720" height="520" rx="20" fill="#FFE6E6" stroke="#E74C3C" stroke-width="3"/>
+    <text x="360" y="60" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#E74C3C" text-anchor="middle">❌ 문제 상황</text>
+
+    <rect x="40" y="100" width="640" height="140" rx="15" fill="#FFFFFF"/>
+    <text x="60" y="140" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">사용자 질문:</text>
+    <text x="60" y="180" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">"<tspan font-weight="bold">도박빚</tspan>을 갚아야 하나요?"</text>
+
+    <rect x="40" y="260" width="640" height="140" rx="15" fill="#FFFFFF"/>
+    <text x="60" y="300" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50">문서 내용:</text>
+    <text x="60" y="340" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">"<tspan font-weight="bold">도박 채무</tspan>는 공서양속 위반..."</text>
+
+    <text x="360" y="440" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#E74C3C" text-anchor="middle">↓</text>
+    <text x="360" y="480" font-family="system-ui, sans-serif" font-size="24" fill="#E74C3C" text-anchor="middle">"도박빚" ≠ "도박 채무"</text>
+  </g>
+
+  <!-- Why This Happens -->
+  <g transform="translate(1000, 320)">
+    <rect x="0" y="0" width="720" height="520" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    <text x="360" y="60" font-family="system-ui, sans-serif" font-size="36" font-weight="bold" fill="#2C3E50" text-anchor="middle">💡 왜 발생하나?</text>
+
+    <text x="40" y="130" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#34495E">1. Vector Embedding의 한계</text>
+    <text x="60" y="170" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">• "도박빚"과 "도박 채무"의 벡터가</text>
+    <text x="60" y="205" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">  충분히 가깝지 않음</text>
+    <text x="60" y="240" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">• 띄어쓰기, 한자어/순우리말 차이</text>
+
+    <text x="40" y="300" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#34495E">2. 키워드 매칭 부재</text>
+    <text x="60" y="340" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">• 정확한 키워드가 없으면 검색 실패</text>
+    <text x="60" y="375" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D">• 동의어 사전이 없음</text>
+
+    <text x="40" y="435" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#34495E">3. 실제 영향</text>
+    <text x="60" y="475" font-family="system-ui, sans-serif" font-size="20" fill="#E74C3C">• 관련 문서가 7위로 밀려남</text>
+  </g>
+
+  <!-- Solution Preview -->
+  <rect x="200" y="880" width="1520" height="120" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3"/>
+  <text x="270" y="930" font-size="45" text-anchor="middle">✅</text>
+  <text x="400" y="925" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#27AE60">해결책</text>
+  <text x="400" y="970" font-family="system-ui, sans-serif" font-size="24" fill="#229954"><tspan font-weight="bold">Hybrid Search</tspan> (Vector + BM25) 사용 → 키워드도 잡고, 의미도 잡음!</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">10 / 63</text>
+</svg>

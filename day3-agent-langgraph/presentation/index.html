@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3: LangGraph & Multi-Agent Systems</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #1a1a1a;
+      color: #fff;
+      overflow: hidden;
+    }
+    #container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #slide-container {
+      width: 90vw;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    #slide {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    #controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover { background: #5568d3; }
+    button:disabled { background: #444; cursor: not-allowed; }
+    #counter {
+      font-size: 20px;
+      font-weight: 600;
+      color: #667eea;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="slide-container">
+      <img id="slide" src="svg/slide_001.svg?v=26" alt="Slide">
+    </div>
+    <div id="controls">
+      <button id="prev">← 이전</button>
+      <div id="counter">1 / 35</div>
+      <button id="next">다음 →</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = ["001", "002", "003", "004", "005", "006", "007", "008", "009", "009_2", "010", "009_3", "009_4", "011", "011_2", "012", "013", "014", "015_2", "015", "015_3", "017", "018", "019", "020", "021_2", "021_3", "021_4", "021", "022", "022_2", "022_3", "022_4", "023", "024"];
+    let currentIndex = 0;
+
+    const slideImg = document.getElementById('slide');
+    const counter = document.getElementById('counter');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    function updateSlide() {
+      const slide = slides[currentIndex];
+      slideImg.src = `svg/slide_${slide}.svg?v=26`;
+      counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === slides.length - 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlide();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateSlide();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'ArrowRight') nextBtn.click();
+    });
+
+    updateSlide();
+  </script>
+</body>
+</html>

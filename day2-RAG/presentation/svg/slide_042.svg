@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#7F8C8D"/>
+    </marker>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 7: CRAG</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">3가지 평가 결과</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Correct / Incorrect / Ambiguous → 각기 다른 액션"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Flowchart -->
+  <g transform="translate(460, 310)">
+    <!-- Query -->
+    <rect x="0" y="0" width="200" height="80" rx="15" fill="#FFFFBA" opacity="0.4" stroke="#F39C12" stroke-width="3" filter="url(#shadow)"/>
+    <text x="100" y="45" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#2C3E50" text-anchor="middle">Query</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D" text-anchor="middle">"민법 제103조는?"</text>
+
+    <path d="M 100 80 L 100 150" stroke="#7F8C8D" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Retrieval -->
+    <rect x="-50" y="150" width="300" height="80" rx="15" fill="#BAE1FF" opacity="0.4" stroke="#45B7D1" stroke-width="2" filter="url(#shadow)"/>
+    <text x="100" y="185" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50" text-anchor="middle">Retrieval (검색)</text>
+    <text x="100" y="215" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D" text-anchor="middle">Vector DB → Top-5 문서</text>
+
+    <path d="M 100 230 L 100 280" stroke="#7F8C8D" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Evaluation -->
+    <rect x="-100" y="280" width="400" height="100" rx="15" fill="#E0BBE4" opacity="0.5" stroke="#9B59B6" stroke-width="3" filter="url(#shadow)"/>
+    <text x="100" y="320" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#2C3E50" text-anchor="middle">⚖️ Self-Evaluation</text>
+    <text x="100" y="350" font-family="system-ui, sans-serif" font-size="20" fill="#7F8C8D" text-anchor="middle">LLM이 검색 품질 평가</text>
+    <text x="100" y="373" font-family="system-ui, sans-serif" font-size="18" fill="#9B59B6" text-anchor="middle">"이 문서가 질문에 답할 수 있나?"</text>
+
+    <!-- Branching -->
+    <path d="M -50 380 L -250 460" stroke="#7F8C8D" stroke-width="3"/>
+    <path d="M 100 380 L 100 460" stroke="#7F8C8D" stroke-width="3"/>
+    <path d="M 250 380 L 450 460" stroke="#7F8C8D" stroke-width="3"/>
+  </g>
+
+  <!-- Three outcomes -->
+  <g transform="translate(160, 770)">
+    <!-- Correct -->
+    <rect x="0" y="0" width="480" height="200" rx="20" fill="#D5F4E6" opacity="0.7" stroke="#27AE60" stroke-width="4" filter="url(#shadow)"/>
+    <text x="240" y="50" font-family="system-ui, sans-serif" font-size="30" font-weight="bold" fill="#27AE60" text-anchor="middle">✅ Correct</text>
+    <text x="240" y="90" font-family="system-ui, sans-serif" font-size="22" fill="#229954" text-anchor="middle">검색 성공!</text>
+    <text x="240" y="130" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">문서가 질문과 매우 관련</text>
+    <rect x="40" y="150" width="400" height="40" rx="10" fill="#FFFFFF"/>
+    <text x="240" y="177" font-family="system-ui, sans-serif" font-size="18" fill="#27AE60" font-weight="bold" text-anchor="middle">→ 그대로 사용 (No Action)</text>
+
+    <!-- Incorrect -->
+    <rect x="520" y="0" width="480" height="200" rx="20" fill="#FFE6E6" opacity="0.7" stroke="#E74C3C" stroke-width="4" filter="url(#shadow)"/>
+    <text x="760" y="50" font-family="system-ui, sans-serif" font-size="30" font-weight="bold" fill="#E74C3C" text-anchor="middle">❌ Incorrect</text>
+    <text x="760" y="90" font-family="system-ui, sans-serif" font-size="22" fill="#C0392B" text-anchor="middle">검색 실패!</text>
+    <text x="760" y="130" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">문서가 전혀 관련 없음</text>
+    <rect x="560" y="150" width="400" height="40" rx="10" fill="#FFFFFF"/>
+    <text x="760" y="177" font-family="system-ui, sans-serif" font-size="18" fill="#E74C3C" font-weight="bold" text-anchor="middle">→ Web Search 보완</text>
+
+    <!-- Ambiguous -->
+    <rect x="1040" y="0" width="480" height="200" rx="20" fill="#FFF3CD" opacity="0.7" stroke="#F39C12" stroke-width="4" filter="url(#shadow)"/>
+    <text x="1280" y="50" font-family="system-ui, sans-serif" font-size="30" font-weight="bold" fill="#F39C12" text-anchor="middle">⚠️ Ambiguous</text>
+    <text x="1280" y="90" font-family="system-ui, sans-serif" font-size="22" fill="#D68910" text-anchor="middle">애매모호!</text>
+    <text x="1280" y="130" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">부분적으로만 관련</text>
+    <rect x="1080" y="150" width="400" height="40" rx="10" fill="#FFFFFF"/>
+    <text x="1280" y="177" font-family="system-ui, sans-serif" font-size="18" fill="#F39C12" font-weight="bold" text-anchor="middle">→ 재검색 + 필터링</text>
+  </g>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">42 / 63</text>
+</svg>

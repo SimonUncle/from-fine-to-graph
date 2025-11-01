@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#45B7D1" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1" text-anchor="middle">Section 6: Hybrid Search</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">코드 예시</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Hybrid + Reranker 전체 코드"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Code section -->
+  <rect x="200" y="300" width="1520" height="680" rx="20" fill="#1E1E1E"/>
+
+  <text x="240" y="350" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 완전한 Hybrid Search + Reranker 파이프라인</text>
+
+  <text x="240" y="400" font-family="Monaco, monospace" font-size="18" fill="#C586C0">from</text>
+  <text x="310" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> sentence_transformers </text>
+  <text x="650" y="400" font-family="Monaco, monospace" font-size="18" fill="#C586C0">import</text>
+  <text x="750" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> </text>
+  <text x="780" y="400" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">CrossEncoder</text>
+
+  <text x="240" y="460" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 1. Hybrid Retriever 생성 (앞에서 만든 것 사용)</text>
+  <text x="240" y="500" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="350" y="500" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="400" y="500" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"도박 빚을 갚아야 하나요?"</text>
+
+  <text x="240" y="560" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 2. Hybrid Search로 Top-15 검색</text>
+  <text x="240" y="600" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">hybrid_results</text>
+  <text x="450" y="600" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="500" y="600" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">ensemble_retriever</text>
+  <text x="760" y="600" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="780" y="600" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">get_relevant_documents</text>
+  <text x="1100" y="600" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="1120" y="600" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="1220" y="600" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="240" y="660" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 3. Cross-Encoder Reranker 로드</text>
+  <text x="240" y="700" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">reranker</text>
+  <text x="380" y="700" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="430" y="700" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">CrossEncoder</text>
+  <text x="630" y="700" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="280" y="740" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"cross-encoder/ms-marco-MiniLM-L-6-v2"</text>
+  <text x="890" y="740" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="280" y="780" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">max_length</text>
+  <text x="450" y="780" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="490" y="780" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">512</text>
+  <text x="240" y="820" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="240" y="880" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 4. Reranking: Query + Document 쌍 평가</text>
+  <text x="240" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">pairs</text>
+  <text x="330" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = [[</text>
+  <text x="400" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="500" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="530" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> doc</text>
+  <text x="610" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="630" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">page_content</text>
+  <text x="830" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">] </text>
+  <text x="860" y="920" font-family="Monaco, monospace" font-size="18" fill="#C586C0">for</text>
+  <text x="920" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> doc </text>
+  <text x="1010" y="920" font-family="Monaco, monospace" font-size="18" fill="#C586C0">in</text>
+  <text x="1050" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> hybrid_results</text>
+  <text x="1290" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">]</text>
+
+  <text x="240" y="960" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">scores</text>
+  <text x="360" y="960" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="410" y="960" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">reranker</text>
+  <text x="550" y="960" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="570" y="960" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">predict</text>
+  <text x="700" y="960" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="720" y="960" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">pairs</text>
+  <text x="810" y="960" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">39 / 63</text>
+</svg>

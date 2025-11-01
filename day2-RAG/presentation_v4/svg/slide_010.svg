@@ -1,0 +1,99 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow010">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f8f9ff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">Vector DB 비교</text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">어떤 벡터 데이터베이스를 선택할까?</text>
+
+  <!-- Main Table -->
+  <g transform="translate(160, 240)">
+    <rect width="1600" height="680" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow010)"/>
+
+    <!-- Header Row -->
+    <rect x="40" y="40" width="300" height="80" rx="15" fill="#667eea"/>
+    <text x="190" y="90" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">Vector DB</text>
+
+    <rect x="380" y="40" width="380" height="80" rx="15" fill="#667eea"/>
+    <text x="570" y="90" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">특징</text>
+
+    <rect x="800" y="40" width="380" height="80" rx="15" fill="#667eea"/>
+    <text x="990" y="90" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">장점</text>
+
+    <rect x="1220" y="40" width="340" height="80" rx="15" fill="#667eea"/>
+    <text x="1390" y="90" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold">사용 사례</text>
+
+    <!-- Milvus Row -->
+    <rect x="40" y="140" width="300" height="160" rx="15" fill="#e8f5e9"/>
+    <text x="190" y="200" font-family="Arial, sans-serif" font-size="36" fill="#2e7d32" text-anchor="middle" font-weight="bold">Milvus</text>
+    <text x="190" y="240" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">오픈소스</text>
+    <text x="190" y="270" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">클라우드 네이티브</text>
+
+    <rect x="380" y="140" width="380" height="160" rx="15" fill="#f1f8e9"/>
+    <text x="570" y="185" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 초고속 검색 (HNSW, IVF)</text>
+    <text x="570" y="220" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 대규모 확장성</text>
+    <text x="570" y="255" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• GPU 가속 지원</text>
+
+    <rect x="800" y="140" width="380" height="160" rx="15" fill="#f1f8e9"/>
+    <text x="990" y="185" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 엔터프라이즈급</text>
+    <text x="990" y="220" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 고성능</text>
+    <text x="990" y="255" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 자체 호스팅 가능</text>
+
+    <rect x="1220" y="140" width="340" height="160" rx="15" fill="#f1f8e9"/>
+    <text x="1390" y="200" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">대용량 프로덕션</text>
+    <text x="1390" y="240" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">실시간 검색</text>
+
+    <!-- FAISS Row -->
+    <rect x="40" y="320" width="300" height="160" rx="15" fill="#e3f2fd"/>
+    <text x="190" y="380" font-family="Arial, sans-serif" font-size="36" fill="#1976d2" text-anchor="middle" font-weight="bold">FAISS</text>
+    <text x="190" y="420" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">Facebook AI</text>
+    <text x="190" y="450" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">로컬 라이브러리</text>
+
+    <rect x="380" y="320" width="380" height="160" rx="15" fill="#e1f5fe"/>
+    <text x="570" y="365" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 빠른 검색 알고리즘</text>
+    <text x="570" y="400" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 메모리 효율적</text>
+    <text x="570" y="435" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• Python 통합 쉬움</text>
+
+    <rect x="800" y="320" width="380" height="160" rx="15" fill="#e1f5fe"/>
+    <text x="990" y="365" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 무료</text>
+    <text x="990" y="400" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 가볍고 빠름</text>
+    <text x="990" y="435" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 학습 및 프로토타입</text>
+
+    <rect x="1220" y="320" width="340" height="160" rx="15" fill="#e1f5fe"/>
+    <text x="1390" y="380" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">개발/테스트</text>
+    <text x="1390" y="420" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">소규모 프로젝트</text>
+
+    <!-- Pinecone Row -->
+    <rect x="40" y="500" width="300" height="160" rx="15" fill="#fff3e0"/>
+    <text x="190" y="560" font-family="Arial, sans-serif" font-size="36" fill="#e65100" text-anchor="middle" font-weight="bold">Pinecone</text>
+    <text x="190" y="600" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">SaaS (클라우드)</text>
+    <text x="190" y="630" font-family="Arial, sans-serif" font-size="22" fill="#666" text-anchor="middle">완전 관리형</text>
+
+    <rect x="380" y="500" width="380" height="160" rx="15" fill="#fff8e1"/>
+    <text x="570" y="545" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 관리 불필요</text>
+    <text x="570" y="580" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 자동 스케일링</text>
+    <text x="570" y="615" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• API 기반</text>
+
+    <rect x="800" y="500" width="380" height="160" rx="15" fill="#fff8e1"/>
+    <text x="990" y="545" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 즉시 사용 가능</text>
+    <text x="990" y="580" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 운영 부담 제로</text>
+    <text x="990" y="615" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">• 빠른 시작</text>
+
+    <rect x="1220" y="500" width="340" height="160" rx="15" fill="#fff8e1"/>
+    <text x="1390" y="560" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">스타트업</text>
+    <text x="1390" y="600" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">빠른 MVP</text>
+  </g>
+
+  <!-- Bottom Recommendation -->
+  <g transform="translate(360, 960)">
+    <rect width="1200" height="100" rx="15" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow010)"/>
+    <text x="600" y="40" font-family="Arial, sans-serif" font-size="30" fill="#333" text-anchor="middle" font-weight="bold">💡 실무 선택 가이드</text>
+    <text x="600" y="75" font-family="Arial, sans-serif" font-size="26" fill="#666" text-anchor="middle">개발: FAISS | 프로덕션: Milvus | 빠른 시작: Pinecone</text>
+  </g>
+</svg>

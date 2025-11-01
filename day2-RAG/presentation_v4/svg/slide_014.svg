@@ -1,0 +1,158 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow6">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f0faff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">
+    프롬프트 엔지니어링
+  </text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">
+    LLM과의 효과적인 대화법
+  </text>
+
+  <!-- Three strategies -->
+  <g transform="translate(200, 240)">
+    <!-- Few-shot -->
+    <rect width="450" height="280" rx="20" fill="white" stroke="#4facfe" stroke-width="4" filter="url(#shadow6)"/>
+    <text x="225" y="60" font-family="Arial, sans-serif" font-size="36" fill="#4facfe" text-anchor="middle" font-weight="bold">
+      1️⃣ Few-shot Learning
+    </text>
+    <text x="225" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">
+      예시로 배우기
+    </text>
+
+    <g transform="translate(40, 130)">
+      <rect width="370" height="120" rx="15" fill="#f0faff"/>
+      <text x="10" y="25" font-family="monospace" font-size="16" fill="#666">
+        질문: "AI란?"
+      </text>
+      <text x="10" y="50" font-family="monospace" font-size="16" fill="#27AE60">
+        답변: "인공지능은..."
+      </text>
+      <text x="10" y="80" font-family="monospace" font-size="16" fill="#666">
+        질문: "RAG란?"
+      </text>
+      <text x="10" y="105" font-family="monospace" font-size="16" fill="#F39C12">
+        답변: ___
+      </text>
+    </g>
+  </g>
+
+  <!-- Chain-of-Thought -->
+  <g transform="translate(735, 240)">
+    <rect width="450" height="280" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow6)"/>
+    <text x="225" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">
+      2️⃣ Chain-of-Thought
+    </text>
+    <text x="225" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">
+      단계별 사고
+    </text>
+
+    <g transform="translate(40, 130)">
+      <rect width="370" height="120" rx="15" fill="#f0f4ff"/>
+      <text x="185" y="25" font-family="Arial, sans-serif" font-size="18" fill="#666" text-anchor="middle">
+        "Let's think step by step"
+      </text>
+      <text x="10" y="55" font-family="monospace" font-size="16" fill="#666">
+        1. 먼저 핵심 개념 파악
+      </text>
+      <text x="10" y="80" font-family="monospace" font-size="16" fill="#666">
+        2. 관련 정보 수집
+      </text>
+      <text x="10" y="105" font-family="monospace" font-size="16" fill="#666">
+        3. 논리적으로 결론 도출
+      </text>
+    </g>
+  </g>
+
+  <!-- ReAct -->
+  <g transform="translate(1270, 240)">
+    <rect width="450" height="280" rx="20" fill="white" stroke="#fa709a" stroke-width="4" filter="url(#shadow6)"/>
+    <text x="225" y="60" font-family="Arial, sans-serif" font-size="36" fill="#fa709a" text-anchor="middle" font-weight="bold">
+      3️⃣ ReAct Pattern
+    </text>
+    <text x="225" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">
+      추론 + 행동
+    </text>
+
+    <g transform="translate(40, 130)">
+      <rect width="370" height="120" rx="15" fill="#fff5f8"/>
+      <text x="10" y="25" font-family="monospace" font-size="16" fill="#666" font-weight="bold">
+        Thought: 정보가 부족해
+      </text>
+      <text x="10" y="50" font-family="monospace" font-size="16" fill="#F39C12" font-weight="bold">
+        Action: 검색("최신 데이터")
+      </text>
+      <text x="10" y="75" font-family="monospace" font-size="16" fill="#27AE60" font-weight="bold">
+        Observation: 결과 확인
+      </text>
+      <text x="10" y="100" font-family="monospace" font-size="16" fill="#666" font-weight="bold">
+        Answer: 최종 답변
+      </text>
+    </g>
+  </g>
+
+  <!-- Benefits Section -->
+  <g transform="translate(200, 580)">
+    <rect width="1520" height="200" rx="20" fill="url(#blueGrad)" filter="url(#shadow6)"/>
+    <text x="760" y="60" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle" font-weight="bold">
+      💡 왜 중요한가?
+    </text>
+
+    <g transform="translate(100, 100)">
+      <circle cx="20" cy="20" r="15" fill="white" opacity="0.3"/>
+      <text x="20" y="27" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">✓</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="24" fill="white">
+        더 정확한 답변: LLM이 문제를 더 잘 이해
+      </text>
+    </g>
+
+    <g transform="translate(100, 150)">
+      <circle cx="20" cy="20" r="15" fill="white" opacity="0.3"/>
+      <text x="20" y="27" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">✓</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="24" fill="white">
+        일관성 향상: 매번 비슷한 품질의 답변 생성
+      </text>
+    </g>
+
+    <g transform="translate(800, 100)">
+      <circle cx="20" cy="20" r="15" fill="white" opacity="0.3"/>
+      <text x="20" y="27" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">✓</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="24" fill="white">
+        환각 감소: 근거 기반 답변 유도
+      </text>
+    </g>
+
+    <g transform="translate(800, 150)">
+      <circle cx="20" cy="20" r="15" fill="white" opacity="0.3"/>
+      <text x="20" y="27" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">✓</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="24" fill="white">
+        투명성: 추론 과정 추적 가능
+      </text>
+    </g>
+  </g>
+
+  <!-- Example Comparison -->
+  <g transform="translate(360, 840)">
+    <rect width="1200" height="150" rx="20" fill="#333" filter="url(#shadow6)"/>
+    <text x="600" y="55" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="bold">
+      🎯 실전 팁
+    </text>
+    <text x="600" y="95" font-family="Arial, sans-serif" font-size="26" fill="white" text-anchor="middle">
+      ❌ 나쁜 예: "답변해줘" → ✅ 좋은 예: "단계별로 생각하며 근거와 함께 답변해줘"
+    </text>
+    <text x="600" y="130" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" opacity="0.8">
+      프롬프트가 구체적일수록 답변 품질이 높아집니다!
+    </text>
+  </g>
+</svg>

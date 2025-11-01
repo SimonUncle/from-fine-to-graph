@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 8: RAGAS</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">Answer Relevancy</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"답변이 질문과 직접 관련있는가?"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Definition -->
+  <rect x="200" y="300" width="1520" height="140" rx="20" fill="#E0F7FA" opacity="0.6" stroke="#4ECDC4" stroke-width="3" filter="url(#shadow)"/>
+  <text x="270" y="355" font-size="50" text-anchor="middle">🎯</text>
+  <text x="400" y="350" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#00897B">정의</text>
+  <text x="400" y="390" font-family="system-ui, sans-serif" font-size="22" fill="#34495E">LLM 답변이 사용자 질문에 <tspan font-weight="bold">정확히</tspan> 답하는지 측정</text>
+  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="22" fill="#00897B" font-weight="bold">→ 불필요한 정보나 장황한 설명 감지!</text>
+
+  <!-- Formula -->
+  <g transform="translate(200, 470)">
+    <rect x="0" y="0" width="1520" height="200" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="760" y="50" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">계산 방법</text>
+
+    <text x="760" y="110" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">1. LLM에게 "답변으로부터 원래 질문 역추론" 요청</text>
+    <text x="760" y="150" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">2. 역추론된 질문들과 원래 질문의 유사도 계산 (Cosine Similarity)</text>
+  </g>
+
+  <!-- Example -->
+  <g transform="translate(200, 700)">
+    <rect x="0" y="0" width="1520" height="260" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="760" y="45" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">실제 예시</text>
+
+    <g transform="translate(40, 70)">
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#45B7D1">질문:</text>
+      <text x="0" y="65" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">"민법 제103조가 무엇인가요?"</text>
+
+      <text x="0" y="120" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#27AE60">✅ High Relevancy (0.95):</text>
+      <text x="0" y="155" font-family="system-ui, sans-serif" font-size="20" fill="#229954">"민법 제103조는 공서양속에 위반한 법률행위는 무효라는 조항입니다."</text>
+      <text x="0" y="185" font-family="system-ui, sans-serif" font-size="18" fill="#7F8C8D">(질문에 딱 맞는 답변)</text>
+
+      <text x="800" y="120" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#E74C3C">❌ Low Relevancy (0.6):</text>
+      <text x="800" y="155" font-family="system-ui, sans-serif" font-size="20" fill="#C0392B">"민법은 1958년에 제정되었으며 제103조는 공서양속 위반...</text>
+      <text x="800" y="185" font-family="system-ui, sans-serif" font-size="18" fill="#E74C3C">(불필요한 제정 연도 정보)</text>
+    </g>
+  </g>
+
+  <!-- Bottom tip -->
+  <rect x="200" y="990" width="1520" height="60" rx="15" fill="#FFF3CD" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="1028" font-size="36" text-anchor="middle">💡</text>
+  <text x="360" y="1023" font-family="system-ui, sans-serif" font-size="22" fill="#F39C12">낮으면 프롬프트 개선 필요: "간결하게 답하라"고 지시</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">50 / 63</text>
+</svg>

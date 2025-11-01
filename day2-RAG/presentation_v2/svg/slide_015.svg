@@ -1,0 +1,71 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="finalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#finalGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1700" cy="200" r="150" fill="white" opacity="0.1"/>
+  <circle cx="200" cy="900" r="200" fill="white" opacity="0.08"/>
+
+  <!-- Main Content -->
+  <text x="960" y="320" font-family="Arial Black, sans-serif" font-size="96" fill="white" text-anchor="middle" font-weight="900">
+    축하합니다! 🎉
+  </text>
+
+  <text x="960" y="420" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle">
+    Day 2: Advanced RAG Systems 완료
+  </text>
+
+  <!-- Achievement Box -->
+  <g transform="translate(360, 500)">
+    <rect width="1200" height="350" rx="20" fill="white" opacity="0.95"/>
+    <text x="600" y="70" font-family="Arial, sans-serif" font-size="44" fill="#333" text-anchor="middle" font-weight="bold">
+      🎓 학습한 내용
+    </text>
+
+    <g transform="translate(100, 130)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ Naive RAG의 5가지 실패 패턴 분석
+      </text>
+      <text x="0" y="50" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ Query Refinement: Multi-Query, HyDE, Step-Back
+      </text>
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ Hybrid Search: Vector + BM25 + Reranking
+      </text>
+      <text x="0" y="150" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ CRAG: 검색 품질 자가 평가 및 보완
+      </text>
+      <text x="0" y="200" font-family="Arial, sans-serif" font-size="28" fill="#333">
+        ✅ RAGAS: 과학적 평가 프레임워크
+      </text>
+    </g>
+  </g>
+
+  <!-- Performance Box -->
+  <g transform="translate(460, 900)">
+    <rect width="400" height="120" rx="15" fill="white" opacity="0.95"/>
+    <text x="200" y="45" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">
+      성능 개선
+    </text>
+    <text x="200" y="85" font-family="Arial, sans-serif" font-size="32" fill="#333" text-anchor="middle">
+      35% → 85%+
+    </text>
+  </g>
+
+  <g transform="translate(1060, 900)">
+    <rect width="400" height="120" rx="15" fill="white" opacity="0.95"/>
+    <text x="200" y="45" font-family="Arial, sans-serif" font-size="36" fill="#27AE60" text-anchor="middle" font-weight="bold">
+      다음 단계
+    </text>
+    <text x="200" y="85" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle">
+      Day 3: LangGraph 🤖
+    </text>
+  </g>
+</svg>

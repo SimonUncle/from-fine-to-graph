@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#4ECDC4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#4ECDC4" text-anchor="middle">Section 4: Query Refinement</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">Step-Back 구현</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"일반화 프롬프트 + 병렬 검색"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Code section -->
+  <rect x="200" y="300" width="1520" height="650" rx="20" fill="#1E1E1E"/>
+
+  <text x="240" y="350" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># Step-Back: 추상화로 배경 지식 검색</text>
+
+  <text x="240" y="400" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">original_query</text>
+  <text x="420" y="400" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="470" y="400" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"2023년 임대차 보증금 반환 소송 절차는?"</text>
+
+  <text x="240" y="460" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># Step 1: LLM으로 일반화된 질문 생성</text>
+  <text x="240" y="500" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">step_back_prompt</text>
+  <text x="460" y="500" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="510" y="500" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"""</text>
+  <text x="280" y="530" font-family="Monaco, monospace" font-size="18" fill="#CE9178">다음 질문에 답하기 위해 필요한 배경 지식이나</text>
+  <text x="280" y="560" font-family="Monaco, monospace" font-size="18" fill="#CE9178">일반적인 원칙에 대한 질문을 만드세요.</text>
+  <text x="280" y="590" font-family="Monaco, monospace" font-size="18" fill="#CE9178">원본 질문: {original_query}</text>
+  <text x="240" y="620" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"""</text>
+
+  <text x="240" y="660" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">general_query</text>
+  <text x="440" y="660" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="490" y="660" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">llm</text>
+  <text x="550" y="660" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="570" y="660" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">generate</text>
+  <text x="730" y="660" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="750" y="660" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">step_back_prompt</text>
+  <text x="1020" y="660" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="240" y="710" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># Step 2: 두 질문으로 병렬 검색 후 결과 합침</text>
+  <text x="240" y="750" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">general_docs</text>
+  <text x="450" y="750" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="500" y="750" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vectorstore</text>
+  <text x="690" y="750" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="710" y="750" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">similarity_search</text>
+  <text x="1000" y="750" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="1020" y="750" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">general_query</text>
+  <text x="1240" y="750" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="1270" y="750" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> k</text>
+  <text x="1310" y="750" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="1340" y="750" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">3</text>
+  <text x="1360" y="750" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="240" y="790" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">specific_docs</text>
+  <text x="450" y="790" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="500" y="790" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vectorstore</text>
+  <text x="690" y="790" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="710" y="790" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">similarity_search</text>
+  <text x="1000" y="790" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="1020" y="790" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">original_query</text>
+  <text x="1240" y="790" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="1270" y="790" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> k</text>
+  <text x="1310" y="790" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="1340" y="790" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">3</text>
+  <text x="1360" y="790" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="240" y="840" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># Step 3: 결과 합침 (배경 지식 3개 + 구체적 사례 3개)</text>
+  <text x="240" y="880" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">combined_docs</text>
+  <text x="450" y="880" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="500" y="880" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">general_docs</text>
+  <text x="710" y="880" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> + </text>
+  <text x="750" y="880" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">specific_docs</text>
+
+  <text x="240" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">answer</text>
+  <text x="360" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="410" y="920" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">llm</text>
+  <text x="470" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="490" y="920" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">generate</text>
+  <text x="650" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="670" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">original_query</text>
+  <text x="890" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="920" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> combined_docs</text>
+  <text x="1170" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">23 / 63</text>
+</svg>

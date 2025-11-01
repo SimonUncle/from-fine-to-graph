@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs><style>
+.t{font-family:Arial,sans-serif;font-size:72px;font-weight:900;fill:#2C3E50}
+.st{font-family:Arial,sans-serif;font-size:36px;font-weight:500;fill:#7F8C8D}
+.h1{font-family:Arial,sans-serif;font-size:56px;font-weight:700;fill:#2C3E50}
+.h2{font-family:Arial,sans-serif;font-size:42px;font-weight:700;fill:#2C3E50}
+.bd{font-family:Arial,sans-serif;font-size:32px;font-weight:400;fill:#2C3E50}
+.sm{font-family:Arial,sans-serif;font-size:28px;font-weight:400;fill:#2C3E50}
+.tp{font-family:Arial,sans-serif;font-size:28px;font-weight:500;fill:#7F8C8D}
+</style></defs>
+<rect width="1920" height="1080" fill="white"/>
+<circle cx="885" cy="180" r="12" fill="#FFB6C1"/><circle cx="915" cy="180" r="12" fill="#98D8C8"/><circle cx="945" cy="180" r="12" fill="#B19CD9"/><circle cx="975" cy="180" r="12" fill="#6C9BCF"/><circle cx="1005" cy="180" r="12" fill="#F4D35E"/>
+<text x="960" y="280" class="h1" text-anchor="middle">Section 3 정리</text>
+<rect x="200" y="380" width="1520" height="500" rx="30" fill="#6C9BCF" opacity="0.05"/>
+<text x="960" y="470" class="h2" text-anchor="middle">핵심 개념</text>
+<text x="300" y="560" class="bd">✓ RAFT: 검색 시뮬레이션을 학습 데이터로</text>
+<text x="300" y="640" class="bd">✓ Oracle (정답) + Distractors (노이즈) 섞어서 제공</text>
+<text x="300" y="720" class="bd">✓ 모델이 유용한 문서 선별하는 법 학습</text>
+<text x="300" y="800" class="bd">✓ Label 마스킹으로 답변 부분만 효율적 학습</text>
+<text x="960" y="910" class="h2" text-anchor="middle" fill="#98D8C8">다음: 학습 과정은 어떻게 진행되는가?</text>
+<rect x="80" y="980" width="1760" height="80" rx="15" fill="#F8F9FA"/><text x="120" y="1035" class="tp">💡 RAFT = 현실적인 검색 상황을 학습 데이터로</text>
+</svg>

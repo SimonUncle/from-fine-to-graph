@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="450" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="305" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 5: Metadata Filtering</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">코드 구현</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"LangChain filter 파라미터"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="-90" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Code section -->
+  <rect x="200" y="300" width="1520" height="650" rx="20" fill="#1E1E1E"/>
+
+  <text x="240" y="350" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># Metadata 필터링 - FAISS/Chroma 공통 문법</text>
+
+  <text x="240" y="400" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 1. Time-based Filtering</text>
+  <text x="240" y="440" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">results</text>
+  <text x="360" y="440" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="410" y="440" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vectorstore</text>
+  <text x="590" y="440" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="610" y="440" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">similarity_search</text>
+  <text x="890" y="440" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="280" y="480" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="380" y="480" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="420" y="480" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"임대차법 개정 내용"</text>
+  <text x="780" y="480" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="280" y="520" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">k</text>
+  <text x="320" y="520" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="360" y="520" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">3</text>
+  <text x="390" y="520" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="280" y="560" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">filter</text>
+  <text x="390" y="560" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">={</text>
+  <text x="430" y="560" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"year"</text>
+  <text x="550" y="560" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">: {</text>
+  <text x="590" y="560" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"$gte"</text>
+  <text x="710" y="560" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">:</text>
+  <text x="740" y="560" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8"> 2023</text>
+  <text x="830" y="560" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">}}</text>
+  <text x="240" y="600" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="240" y="660" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 2. Category-based Filtering</text>
+  <text x="240" y="700" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">results</text>
+  <text x="360" y="700" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = </text>
+  <text x="410" y="700" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">vectorstore</text>
+  <text x="590" y="700" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">.</text>
+  <text x="610" y="700" font-family="Monaco, monospace" font-size="18" fill="#DCDCAA">similarity_search</text>
+  <text x="890" y="700" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">(</text>
+  <text x="280" y="740" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">query</text>
+  <text x="380" y="740" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="410" y="740" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE"> k</text>
+  <text x="450" y="740" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">=</text>
+  <text x="490" y="740" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8">3</text>
+  <text x="520" y="740" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">,</text>
+  <text x="280" y="780" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">filter</text>
+  <text x="390" y="780" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">={</text>
+  <text x="430" y="780" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"category"</text>
+  <text x="620" y="780" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">:</text>
+  <text x="660" y="780" font-family="Monaco, monospace" font-size="18" fill="#CE9178"> "법률"</text>
+  <text x="790" y="780" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">}</text>
+  <text x="240" y="820" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">)</text>
+
+  <text x="240" y="880" font-family="Monaco, monospace" font-size="18" fill="#6A9955"># 3. Hybrid (Combined Filters) - AND 조건</text>
+  <text x="240" y="920" font-family="Monaco, monospace" font-size="18" fill="#9CDCFE">filter</text>
+  <text x="350" y="920" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4"> = {</text>
+  <text x="280" y="960" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"$and"</text>
+  <text x="390" y="960" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">: [</text>
+  <text x="320" y="1000" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">{</text>
+  <text x="360" y="1000" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"year"</text>
+  <text x="480" y="1000" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">: {</text>
+  <text x="520" y="1000" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"$gte"</text>
+  <text x="640" y="1000" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">:</text>
+  <text x="670" y="1000" font-family="Monaco, monospace" font-size="18" fill="#B5CEA8"> 2023</text>
+  <text x="760" y="1000" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">}},</text>
+  <text x="320" y="1040" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">{</text>
+  <text x="360" y="1040" font-family="Monaco, monospace" font-size="18" fill="#CE9178">"category"</text>
+  <text x="550" y="1040" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">:</text>
+  <text x="590" y="1040" font-family="Monaco, monospace" font-size="18" fill="#CE9178"> "법률"</text>
+  <text x="720" y="1040" font-family="Monaco, monospace" font-size="18" fill="#D4D4D4">}</text>
+
+  <text x="1850" y="1080" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">29 / 63</text>
+</svg>

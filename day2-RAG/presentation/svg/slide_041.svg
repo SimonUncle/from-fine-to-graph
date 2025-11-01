@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 7: CRAG</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">CRAG란?</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"Corrective RAG - 검색 품질 자가 평가"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Problem vs Solution -->
+  <g transform="translate(200, 300)">
+    <!-- Problem side -->
+    <rect x="0" y="0" width="700" height="560" rx="20" fill="#FFE6E6" opacity="0.3" stroke="#E74C3C" stroke-width="3" filter="url(#shadow)"/>
+    <text x="350" y="50" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#E74C3C" text-anchor="middle">❌ 기존 RAG 문제</text>
+
+    <text x="350" y="120" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">1️⃣ 검색 실패를 모름</text>
+    <text x="350" y="155" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">관련 없는 문서를 검색해도</text>
+    <text x="350" y="185" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">그대로 LLM에게 전달</text>
+
+    <text x="350" y="250" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">2️⃣ 품질 평가 없음</text>
+    <text x="350" y="285" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">검색된 문서가 실제로</text>
+    <text x="350" y="315" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">질문에 답할 수 있는지 모름</text>
+
+    <text x="350" y="380" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">3️⃣ 대안 없음</text>
+    <text x="350" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">DB에 정보가 없으면</text>
+    <text x="350" y="445" font-family="system-ui, sans-serif" font-size="20" fill="#34495E" text-anchor="middle">답변 불가</text>
+
+    <rect x="40" y="490" width="620" height="50" rx="10" fill="#FFFFFF"/>
+    <text x="350" y="522" font-family="system-ui, sans-serif" font-size="22" fill="#E74C3C" text-anchor="middle">결과: 낮은 정확도, 헛소리 (Hallucination)</text>
+
+    <!-- Solution side -->
+    <rect x="820" y="0" width="700" height="560" rx="20" fill="#D5F4E6" opacity="0.7" stroke="#27AE60" stroke-width="4" filter="url(#shadow)"/>
+    <text x="1170" y="50" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#27AE60" text-anchor="middle">✅ CRAG 해결</text>
+
+    <text x="1170" y="120" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">1️⃣ 자가 평가 (Self-Evaluation)</text>
+    <text x="1170" y="155" font-family="system-ui, sans-serif" font-size="20" fill="#229954" text-anchor="middle">검색된 문서 품질을 LLM이 판단</text>
+    <text x="1170" y="185" font-family="system-ui, sans-serif" font-size="20" fill="#229954" text-anchor="middle">Correct / Incorrect / Ambiguous</text>
+
+    <text x="1170" y="250" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">2️⃣ 적응형 액션 (Adaptive)</text>
+    <text x="1170" y="285" font-family="system-ui, sans-serif" font-size="20" fill="#229954" text-anchor="middle">평가 결과에 따라 다른 전략</text>
+    <text x="1170" y="315" font-family="system-ui, sans-serif" font-size="20" fill="#229954" text-anchor="middle">Correct → 그대로 | Incorrect → Web</text>
+
+    <text x="1170" y="380" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#2C3E50" text-anchor="middle">3️⃣ 외부 보완 (Web Search)</text>
+    <text x="1170" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#229954" text-anchor="middle">DB에 정보 없으면</text>
+    <text x="1170" y="445" font-family="system-ui, sans-serif" font-size="20" fill="#229954" text-anchor="middle">Web Search로 자동 보완!</text>
+
+    <rect x="860" y="490" width="620" height="50" rx="10" fill="#FFFFFF"/>
+    <text x="1170" y="522" font-family="system-ui, sans-serif" font-size="22" fill="#27AE60" font-weight="bold" text-anchor="middle">결과: 높은 정확도, 신뢰성 향상</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="200" y="890" width="1520" height="90" rx="15" fill="#FFF3CD" stroke="#F39C12" stroke-width="3"/>
+  <text x="270" y="930" font-size="45" text-anchor="middle">💡</text>
+  <text x="360" y="925" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#2C3E50">핵심 아이디어</text>
+  <text x="360" y="960" font-family="system-ui, sans-serif" font-size="22" fill="#F39C12">검색 결과를 <tspan font-weight="bold">스스로 평가</tspan>하고, 평가 결과에 따라 <tspan font-weight="bold">다른 전략 적용</tspan> → 자동으로 품질 향상!</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">41 / 63</text>
+</svg>

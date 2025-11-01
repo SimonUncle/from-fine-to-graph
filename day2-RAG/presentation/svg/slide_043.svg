@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="420" height="50" rx="25" fill="#96CEB4" opacity="0.2"/>
+  <text x="290" y="92" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#96CEB4" text-anchor="middle">Section 7: CRAG</text>
+
+  <text x="960" y="160" font-family="system-ui, sans-serif" font-size="64" font-weight="bold" fill="#2C3E50" text-anchor="middle">Correct 액션</text>
+  <text x="960" y="220" font-family="system-ui, sans-serif" font-size="28" fill="#7F8C8D" text-anchor="middle">"검색 성공 → 그대로 사용"</text>
+
+  <g transform="translate(960, 240)"><circle cx="-60" cy="0" r="6" fill="#FF6B6B"/><circle cx="-30" cy="0" r="6" fill="#4ECDC4"/><circle cx="0" cy="0" r="6" fill="#45B7D1"/><circle cx="30" cy="0" r="6" fill="#96CEB4"/><circle cx="60" cy="0" r="6" fill="#FFEAA7"/></g>
+
+  <!-- Scenario -->
+  <rect x="200" y="300" width="1520" height="180" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="360" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#27AE60" text-anchor="middle">✅ Correct 상황</text>
+  <text x="960" y="410" font-family="system-ui, sans-serif" font-size="24" fill="#229954" text-anchor="middle">검색된 문서가 <tspan font-weight="bold">질문에 정확히 답할 수 있음</tspan></text>
+  <text x="960" y="450" font-family="system-ui, sans-serif" font-size="22" fill="#34495E" text-anchor="middle">예: "민법 제103조는?" → 민법 제103조 전문 문서 검색됨 (관련도 0.95)</text>
+
+  <!-- Example -->
+  <g transform="translate(200, 510)">
+    <rect x="0" y="0" width="1520" height="380" rx="20" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="760" y="50" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#2C3E50" text-anchor="middle">실제 사례</text>
+
+    <!-- Query -->
+    <rect x="40" y="80" width="680" height="120" rx="15" fill="#FFFFBA" opacity="0.3" stroke="#F39C12" stroke-width="2"/>
+    <text x="60" y="115" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50">질문</text>
+    <text x="60" y="150" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">"민법 제103조 공서양속 위반이란?"</text>
+
+    <!-- Retrieved -->
+    <rect x="800" y="80" width="680" height="120" rx="15" fill="#BAE1FF" opacity="0.3" stroke="#45B7D1" stroke-width="2"/>
+    <text x="820" y="115" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#2C3E50">검색 결과 (Top-1)</text>
+    <text x="820" y="150" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">민법 제103조: 선량한 풍속 기타 사회질서에</text>
+    <text x="820" y="180" font-family="system-ui, sans-serif" font-size="19" fill="#34495E">위반한 사항을 내용으로 하는 법률행위는 무효</text>
+
+    <!-- Evaluation -->
+    <rect x="40" y="230" width="1440" height="120" rx="15" fill="#E0BBE4" opacity="0.3" stroke="#9B59B6" stroke-width="2"/>
+    <text x="60" y="265" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#9B59B6">⚖️ LLM 평가</text>
+    <text x="60" y="300" font-family="system-ui, sans-serif" font-size="20" fill="#34495E">"이 문서는 질문에 <tspan font-weight="bold" fill="#27AE60">정확히 답할 수 있습니다.</tspan> 민법 제103조의 정의와 내용이 명확합니다."</text>
+    <text x="60" y="330" font-family="system-ui, sans-serif" font-size="20" fill="#27AE60" font-weight="bold">평가 결과: ✅ CORRECT (관련도 0.95)</text>
+  </g>
+
+  <!-- Action -->
+  <rect x="200" y="920" width="1520" height="100" rx="20" fill="#D5F4E6" stroke="#27AE60" stroke-width="4" filter="url(#shadow)"/>
+  <text x="270" y="965" font-size="50" text-anchor="middle">✅</text>
+  <text x="380" y="960" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#27AE60">액션: 그대로 사용 (No Correction)</text>
+  <text x="380" y="1000" font-family="system-ui, sans-serif" font-size="22" fill="#229954">검색된 문서를 그대로 LLM에게 전달 → 정확한 답변 생성!</text>
+
+  <text x="1850" y="1040" font-family="system-ui, sans-serif" font-size="24" fill="#BDC3C7" text-anchor="end">43 / 63</text>
+</svg>

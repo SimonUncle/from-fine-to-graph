@@ -1,0 +1,160 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow13">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#fafbff"/>
+
+  <!-- Title -->
+  <text x="960" y="100" font-family="Arial, sans-serif" font-size="60" fill="#333" text-anchor="middle" font-weight="bold">
+    파라미터 튜닝
+  </text>
+  <text x="960" y="160" font-family="Arial, sans-serif" font-size="30" fill="#666" text-anchor="middle">
+    최적의 설정값 찾기
+  </text>
+
+  <!-- Three Parameters -->
+  <!-- Chunk Size -->
+  <g transform="translate(150, 240)">
+    <rect width="500" height="340" rx="20" fill="white" stroke="#667eea" stroke-width="4" filter="url(#shadow13)"/>
+    <text x="250" y="60" font-family="Arial, sans-serif" font-size="36" fill="#667eea" text-anchor="middle" font-weight="bold">
+      1️⃣ Chunk Size
+    </text>
+    <text x="250" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">
+      문서 쪼갤 크기
+    </text>
+
+    <g transform="translate(50, 140)">
+      <rect width="400" height="160" rx="15" fill="#f0f4ff"/>
+      <text x="200" y="30" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        작게 (256)
+      </text>
+      <text x="200" y="60" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">
+        → 정확하지만 맥락 손실
+      </text>
+
+      <text x="200" y="100" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        크게 (1024)
+      </text>
+      <text x="200" y="130" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">
+        → 맥락 좋지만 노이즈
+      </text>
+    </g>
+
+    <rect x="50" y="310" width="400" height="50" rx="10" fill="#27AE60"/>
+    <text x="250" y="343" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">
+      권장: 512 (균형점)
+    </text>
+  </g>
+
+  <!-- Top-K -->
+  <g transform="translate(710, 240)">
+    <rect width="500" height="340" rx="20" fill="white" stroke="#11998e" stroke-width="4" filter="url(#shadow13)"/>
+    <text x="250" y="60" font-family="Arial, sans-serif" font-size="36" fill="#11998e" text-anchor="middle" font-weight="bold">
+      2️⃣ Top-K
+    </text>
+    <text x="250" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">
+      검색할 문서 개수
+    </text>
+
+    <g transform="translate(50, 140)">
+      <rect width="400" height="160" rx="15" fill="#e8fff9"/>
+      <text x="200" y="30" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        적게 (k=1)
+      </text>
+      <text x="200" y="60" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">
+        → 빠르지만 정보 부족
+      </text>
+
+      <text x="200" y="100" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        많이 (k=10)
+      </text>
+      <text x="200" y="130" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">
+        → 정보 많지만 비용↑
+      </text>
+    </g>
+
+    <rect x="50" y="310" width="400" height="50" rx="10" fill="#27AE60"/>
+    <text x="250" y="343" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">
+      권장: k=5 (균형점)
+    </text>
+  </g>
+
+  <!-- Threshold -->
+  <g transform="translate(1270, 240)">
+    <rect width="500" height="340" rx="20" fill="white" stroke="#ff9800" stroke-width="4" filter="url(#shadow13)"/>
+    <text x="250" y="60" font-family="Arial, sans-serif" font-size="36" fill="#ff9800" text-anchor="middle" font-weight="bold">
+      3️⃣ Threshold
+    </text>
+    <text x="250" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle">
+      유사도 임계값
+    </text>
+
+    <g transform="translate(50, 140)">
+      <rect width="400" height="160" rx="15" fill="#fff3e0"/>
+      <text x="200" y="30" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        낮게 (0.1)
+      </text>
+      <text x="200" y="60" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">
+        → 관련성 낮은 문서 포함
+      </text>
+
+      <text x="200" y="100" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle">
+        높게 (0.7)
+      </text>
+      <text x="200" y="130" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">
+        → 너무 엄격, 누락 위험
+      </text>
+    </g>
+
+    <rect x="50" y="310" width="400" height="50" rx="10" fill="#27AE60"/>
+    <text x="250" y="343" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">
+      권장: 0.3 (균형점)
+    </text>
+  </g>
+
+  <!-- Tuning Process -->
+  <g transform="translate(360, 640)">
+    <rect width="1200" height="360" rx="20" fill="url(#blueOrangeGrad)" filter="url(#shadow13)"/>
+    <text x="600" y="70" font-family="Arial, sans-serif" font-size="44" fill="white" text-anchor="middle" font-weight="bold">
+      🎯 튜닝 프로세스
+    </text>
+
+    <g transform="translate(100, 130)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">
+        1️⃣ Baseline 설정
+      </text>
+      <text x="300" y="0" font-family="Arial, sans-serif" font-size="24" fill="white">
+        → 기본값으로 시작 (512 / k=5 / 0.3)
+      </text>
+
+      <text x="0" y="60" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">
+        2️⃣ 하나씩 변경
+      </text>
+      <text x="300" y="60" font-family="Arial, sans-serif" font-size="24" fill="white">
+        → Chunk Size 실험 (256 vs 512 vs 1024)
+      </text>
+
+      <text x="0" y="120" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">
+        3️⃣ RAGAS 평가
+      </text>
+      <text x="300" y="120" font-family="Arial, sans-serif" font-size="24" fill="white">
+        → 4가지 메트릭으로 성능 측정
+      </text>
+
+      <text x="0" y="180" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">
+        4️⃣ 최적값 선택
+      </text>
+      <text x="300" y="180" font-family="Arial, sans-serif" font-size="24" fill="white">
+        → 가장 높은 점수의 파라미터 조합!
+      </text>
+    </g>
+  </g>
+</svg>

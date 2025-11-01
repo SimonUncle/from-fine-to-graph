@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad023" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow023">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad023)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 4</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">Hybrid Search 🔀</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">Vector + BM25 장점 결합</text>
+  <g transform="translate(150, 260)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="520" height="300" rx="20" fill="#e3f2fd" filter="url(#shadow023)"/>
+      <text x="260" y="50" font-size="32" fill="#1976d2" text-anchor="middle" font-weight="bold">Vector Search</text>
+      <circle cx="260" cy="130" r="60" fill="#1976d2"/>
+      <text x="260" y="145" font-size="36" fill="white" text-anchor="middle" font-weight="bold">🔍</text>
+      <text x="260" y="220" font-size="24" fill="#666" text-anchor="middle">의미/문맥 이해</text>
+      <text x="260" y="255" font-size="20" fill="#999" text-anchor="middle">"만드는 법" ≈ "레시피"</text>
+    </g>
+    <g transform="translate(570, 130)">
+      <text x="0" y="0" font-size="56" fill="white" text-anchor="middle">+</text>
+    </g>
+    <g transform="translate(650, 0)">
+      <rect x="0" y="0" width="520" height="300" rx="20" fill="#fff3e0" filter="url(#shadow023)"/>
+      <text x="260" y="50" font-size="32" fill="#e65100" text-anchor="middle" font-weight="bold">BM25 Search</text>
+      <circle cx="260" cy="130" r="60" fill="#e65100"/>
+      <text x="260" y="145" font-size="36" fill="white" text-anchor="middle" font-weight="bold">🔤</text>
+      <text x="260" y="220" font-size="24" fill="#666" text-anchor="middle">키워드 정확성</text>
+      <text x="260" y="255" font-size="20" fill="#999" text-anchor="middle">"김치찌개" 정확 매칭</text>
+    </g>
+    <g transform="translate(1250, 130)">
+      <text x="0" y="0" font-size="56" fill="white" text-anchor="middle">=</text>
+    </g>
+    <g transform="translate(1350, 0)">
+      <rect x="0" y="0" width="420" height="300" rx="20" fill="#e8f5e9" filter="url(#shadow023)"/>
+      <text x="210" y="50" font-size="32" fill="#2e7d32" text-anchor="middle" font-weight="bold">Hybrid</text>
+      <circle cx="210" cy="130" r="60" fill="#4caf50"/>
+      <text x="210" y="145" font-size="36" fill="white" text-anchor="middle" font-weight="bold">💚</text>
+      <text x="210" y="220" font-size="24" fill="#666" text-anchor="middle">둘 다!</text>
+      <text x="210" y="255" font-size="20" fill="#2e7d32" text-anchor="middle" font-weight="bold">최고 성능</text>
+    </g>
+  </g>
+  <g transform="translate(150, 590)">
+    <rect x="0" y="0" width="1620" height="300" rx="20" fill="white" opacity="0.95" filter="url(#shadow023)"/>
+    <text x="810" y="50" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">🔄 Hybrid Search 작동 순서</text>
+    <g transform="translate(100, 100)">
+      <g transform="translate(0, 0)">
+        <circle cx="40" cy="30" r="30" fill="#1976d2"/>
+        <text x="40" y="40" font-size="24" fill="white" text-anchor="middle" font-weight="bold">1</text>
+        <text x="100" y="40" font-size="24" fill="#666">Vector Search 실행 → Top-10</text>
+      </g>
+      <g transform="translate(0, 70)">
+        <circle cx="40" cy="30" r="30" fill="#e65100"/>
+        <text x="40" y="40" font-size="24" fill="white" text-anchor="middle" font-weight="bold">2</text>
+        <text x="100" y="40" font-size="24" fill="#666">BM25 Search 실행 → Top-10</text>
+      </g>
+      <g transform="translate(0, 140)">
+        <circle cx="40" cy="30" r="30" fill="#7b1fa2"/>
+        <text x="40" y="40" font-size="24" fill="white" text-anchor="middle" font-weight="bold">3</text>
+        <text x="100" y="40" font-size="24" fill="#666">RRF로 두 결과 합치기 (score = 1/(60+rank))</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(150, 920)">
+    <rect x="0" y="0" width="1620" height="110" rx="20" fill="#4caf50" filter="url(#shadow023)"/>
+    <text x="810" y="40" font-size="32" fill="white" text-anchor="middle" font-weight="bold">📈 성능 향상</text>
+    <g transform="translate(250, 60)">
+      <text x="0" y="0" font-size="26" fill="white">Vector Only: 60% → Hybrid: 75%+ (+ 15%!)</text>
+      <text x="750" y="0" font-size="26" fill="white">✓ 정확도 & Recall 모두 향상</text>
+    </g>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 23 / 38</text>
+</svg>

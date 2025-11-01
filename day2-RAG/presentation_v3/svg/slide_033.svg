@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad033" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow033"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad033)"/>
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.3"/>
+    <text x="100" y="35" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Part 6</text>
+  </g>
+  <text x="960" y="140" font-size="56" fill="white" text-anchor="middle" font-weight="bold">Faithfulness & Answer Relevancy 📝</text>
+  <text x="960" y="200" font-size="32" fill="white" text-anchor="middle" opacity="0.9">답변 품질 지표</text>
+  <g transform="translate(150, 270)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="810" height="600" rx="20" fill="white" opacity="0.95" filter="url(#shadow033)"/>
+      <text x="405" y="50" font-size="32" fill="#2e7d32" text-anchor="middle" font-weight="bold">Faithfulness (충실성)</text>
+      <g transform="translate(60, 100)">
+        <text x="0" y="0" font-size="24" fill="#333" font-weight="bold">측정 방법:</text>
+        <text x="0" y="40" font-size="22" fill="#666">LLM에게 물음:</text>
+        <rect x="0" y="60" width="690" height="90" rx="10" fill="#e8f5e9"/>
+        <text x="345" y="90" font-size="20" fill="#666" text-anchor="middle">"이 답변의 각 문장이</text>
+        <text x="345" y="120" font-size="20" fill="#666" text-anchor="middle">검색 문서에 근거하는가?"</text>
+        <text x="0" y="180" font-size="24" fill="#333" font-weight="bold">예시:</text>
+        <rect x="0" y="200" width="690" height="160" rx="10" fill="#fff9c4"/>
+        <g transform="translate(20, 225)">
+          <text x="0" y="0" font-size="20" fill="#666">질문: 김치찌개 레시피?</text>
+          <text x="0" y="35" font-size="20" fill="#2e7d32">✓ "김치와 돼지고기를 넣고</text>
+          <text x="0" y="60" font-size="20" fill="#2e7d32">   20분 끓이세요" (문서 기반)</text>
+          <text x="0" y="95" font-size="20" fill="#c62828">✗ "마늘 5개 필수" (문서 없음)</text>
+          <text x="0" y="125" font-size="18" fill="#666">→ Faithfulness: 0.75 (3/4)</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(860, 0)">
+      <rect x="0" y="0" width="810" height="600" rx="20" fill="white" opacity="0.95" filter="url(#shadow033)"/>
+      <text x="405" y="50" font-size="32" fill="#1976d2" text-anchor="middle" font-weight="bold">Answer Relevancy</text>
+      <g transform="translate(60, 100)">
+        <text x="0" y="0" font-size="24" fill="#333" font-weight="bold">측정 방법:</text>
+        <text x="0" y="40" font-size="22" fill="#666">LLM에게 물음:</text>
+        <rect x="0" y="60" width="690" height="90" rx="10" fill="#e3f2fd"/>
+        <text x="345" y="90" font-size="20" fill="#666" text-anchor="middle">"이 답변이 질문에</text>
+        <text x="345" y="120" font-size="20" fill="#666" text-anchor="middle">직접적으로 답하는가?"</text>
+        <text x="0" y="180" font-size="24" fill="#333" font-weight="bold">예시:</text>
+        <rect x="0" y="200" width="690" height="160" rx="10" fill="#fff9c4"/>
+        <g transform="translate(20, 225)">
+          <text x="0" y="0" font-size="20" fill="#666">질문: 김치찌개 조리 시간?</text>
+          <text x="0" y="35" font-size="20" fill="#2e7d32">✓ "20분 끓이세요" (직접 답변)</text>
+          <text x="0" y="70" font-size="20" fill="#c62828">✗ "김치찌개는 한국 음식이고</text>
+          <text x="0" y="95" font-size="20" fill="#c62828">   다양한 재료가..." (관계없음)</text>
+          <text x="0" y="125" font-size="18" fill="#666">→ Answer Relevancy: 0.9</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(150, 900)">
+    <rect x="0" y="0" width="1620" height="120" rx="20" fill="#4caf50" filter="url(#shadow033)"/>
+    <text x="810" y="45" font-size="32" fill="white" text-anchor="middle" font-weight="bold">💡 둘 다 LLM 기반 자동 평가!</text>
+    <text x="810" y="85" font-size="26" fill="white" text-anchor="middle">Faithfulness는 환각 방지, Answer Relevancy는 질문-답변 일치도</text>
+  </g>
+  <text x="960" y="1065" font-size="20" fill="white" text-anchor="middle" opacity="0.8">Slide 33 / 38</text>
+</svg>
